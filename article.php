@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ page.language_code }}">
+<html lang="et">
+	<!-- <html lang="{{ page.language_code }}"> -->
 <head>
 	<?php require("components/html-head.php") ?>
 		<!-- {% include "html-head" %} -->

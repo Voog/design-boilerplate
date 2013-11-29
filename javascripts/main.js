@@ -16,6 +16,14 @@
 		console.log('Do stuff everywhere');
 	};
 
+	// Adds class 'active' to main menu current element (Delete this function if the Edicy generated menu has been set up).
+	var hightlightActivePage = function() {
+		var url = window.location.href;
+		$('.menu a').filter(function() {
+			return this.href == url;
+		}).parent().addClass('active');
+	};
+
 	// Initiations
 	var initCommonPage = function() {
 		commonFunction();
@@ -31,6 +39,7 @@
 
 	var init = function() {
 		globalFunction();
+		hightlightActivePage();
 	};
 
 	window.project = {

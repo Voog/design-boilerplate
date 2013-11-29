@@ -9,11 +9,11 @@
 	<section class="main-header-right">
 		<nav class="main-menu" role="navigation">
 			<ul class="menu menu-horizontal cfx">
-				<li class="active"><a href="index.php">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="blog-and-news.php">News or Blog</a></li>
 				<li><a href="elements-listing.php">Elements listing</a></li>
-				<li><a href="galerii.php">Galerii</a></li>
-				<li><a href="kontaktvorm.php">Kontaktvorm</a></li>
+				<li><a href="gallery.php">Gallery</a></li>
+				<li><a href="form.php">Form</a></li>
 				<li><a href="tabel.php">Tabel</a></li>
 			</ul>
 		</nav>
@@ -57,9 +57,9 @@
 			<button class="lang-btn et">Estonian</button>
 			<nav class="lang-menu-popover">
 				<ul class="menu">
-					<li class="active"><a href="#" class="et">Estionian</a></li>
-					<li><a href="#" class="en">English</a></li>
-					<li><a href="#" class="fi">Finnish</a></li>
+					<li class="active"><a href="#" class="et">Eesti keeles</a></li>
+					<li><a href="#" class="en">In English</a></li>
+					<li><a href="#" class="fi">Suomi</a></li>
 				</ul>
 			</nav>
 		</section>

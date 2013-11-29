@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ page.language_code }}">
+<html lang="et">
+	<!-- <html lang="{{ page.language_code }}"> -->
 <head>
 	<?php require("components/html-head.php") ?>
 		<!-- {% include "html-head" %} -->
@@ -11,7 +12,7 @@
 			<!-- {% include "site-header" %} -->
 
 		<main class="page-content cfx" role="main">
-			<h1>SIIA KIRJUTA PEALKIRI</h1>
+			<h1>TITLE GOES HERE</h1>
 				<!-- <h1>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h1> -->
 			<p>Tere tulemast Edicy'd kasutama — see on sinu leht koos vaiketekstidega. Need tekstid annavad sulle aimu, kuidas lehele oma sisu saad tuua. Kustuta vaikesisu julgelt ning loo selle asemele sind ennast või su ettevõtet tutvustav tekst.</p>
 			<p>Oma lehe välimust saad muuta, kui klõpsid akna allservas asetseval Kujunduste nupul. Muudatusi, mis puudutavad su veebilehte (nt. veebiaadress ja keel), saad seadistada Kodulehe vaate alt.</p>
