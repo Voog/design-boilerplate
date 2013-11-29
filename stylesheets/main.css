@@ -1,0 +1,65 @@
+/* Reset */
+*:not([class*="edy-"]), *:not([class*="edy-"]):before, *:not([class*="edy-"]):after {
+	-webkit-box-sizing: border-box;	-moz-box-sizing: border-box; box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, .menu {
+	margin: 0;
+	padding: 0;
+}
+.cfx:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* General */
+html { font-size: 62.5%; }
+body {
+	color: rgba(105,107,108,1);
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size:  1.6rem;
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 { color: rgba(27,33,36,1); }
+h1 { font-size: 3.6rem; }
+h2 { font-size: 2.4rem; }
+h3, h4, h5, h6 { font-size: 2rem; }
+a {
+	color: rgba(0,102,187,1);
+	text-decoration: none;
+}
+a:hover { color: rgba(0,102,187,0.8); }
+a img {	border: none; }
+a img:hover { opacity: 0.8; }
+pre {
+	background: rgba(250,250,250,1);
+	overflow: auto;
+	padding: 1rem;
+	word-wrap: normal;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.page-wrap {
+	max-width: 94rem;
+	margin: 0 auto;
+}
+
+/* Menus */
+.menu { list-style: none; }
+.menu-horizontal, .menu-horizontal li, .filters-label {	display: inline-block; }
+.menu .active a { font-weight: 600; }
+
+/* Content */
+.site-content { }
+.site-content p {
+	margin-bottom: 1rem;
+}
+.content-wrap .active { font-weight: bold; }
