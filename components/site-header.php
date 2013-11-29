@@ -1,7 +1,7 @@
 <header class="main-header">
 	<section class="main-header-left">
 		<div class="header-logo cfx">
-			<h1 role="banner">Pealkiri</h1>
+			<h1 role="banner">Site title</h1>
 				<!-- {% editable site.header %} -->
 		</div>
 	</section>
@@ -9,9 +9,9 @@
 	<section class="main-header-right">
 		<nav class="main-menu" role="navigation">
 			<ul class="menu menu-horizontal cfx">
-				<li class="active"><a href="index.php">Esileht</a></li>
-				<li><a href="uudised.php">Uudised</a></li>
-				<li><a href="sisuleht.php">Sisuleht</a></li>
+				<li class="active"><a href="index.php">Home</a></li>
+				<li><a href="blog-and-news.php">News or Blog</a></li>
+				<li><a href="elements-listing.php">Elements listing</a></li>
 				<li><a href="galerii.php">Galerii</a></li>
 				<li><a href="kontaktvorm.php">Kontaktvorm</a></li>
 				<li><a href="tabel.php">Tabel</a></li>
@@ -54,12 +54,12 @@
 			-->
 
 		<section class="lang-menu">
-			<button class="lang-btn et">Eesti keel</button>
+			<button class="lang-btn et">Estonian</button>
 			<nav class="lang-menu-popover">
 				<ul class="menu">
-					<li class="active"><a href="#" class="et">Eesti keel</a></li>
-					<li><a href="#" class="en">Inglise keel</a></li>
-					<li><a href="#" class="fi">Soome keel</a></li>
+					<li class="active"><a href="#" class="et">Estionian</a></li>
+					<li><a href="#" class="en">English</a></li>
+					<li><a href="#" class="fi">Finnish</a></li>
 				</ul>
 			</nav>
 		</section>
