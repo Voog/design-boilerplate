@@ -8,7 +8,7 @@
 
 	<section class="main-header-right">
 		<nav class="main-menu" role="navigation">
-			<ul class="menu menu-horizontal cfx">
+			<ul class="menu horizontal">
 				<li><a href="index.php">Home</a></li>
 				<li><a href="products.php">Products</a></li>
 				<li><a href="blog-and-news.php">News or Blog</a></li>
@@ -57,7 +57,7 @@
 		<section class="lang-menu">
 			<button class="lang-btn et">English</button>
 			<nav class="lang-menu-popover">
-				<ul class="menu">
+				<ul class="menu horizontal">
 					<li class="active"><a href="#" class="en">In English</a></li>
 					<li><a href="#" class="et">Eesti keeles</a></li>
 					<li><a href="#" class="fi">Suomi</a></li>
