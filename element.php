@@ -6,7 +6,7 @@
 		<!-- {% include "html-head" %} -->
 </head>
 <body>
-	<section class="site-content cfx">
+	<main class="site-content cfx" role="main">
 		<?php require("components/site-header.php") ?>
 			<!-- {% include "site-header" %} -->
 
@@ -15,7 +15,7 @@
 			<article class="element">
 				<h1><a href="element.php">First element</a></h1>
 				<time datetime="2014-10-09">2014-10-09</time>
-				<img alt="Esimene element" title="Esimene element" src="http://placeimg.com/320/240/any">
+				<img alt="First element" title="First element" src="http://placeimg.com/320/240/any">
 				<div>True</div>
 				<p>Lorem ipsum dolor sit amet.</p>
 			</article>

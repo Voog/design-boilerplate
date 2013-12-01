@@ -14,8 +14,35 @@
 		<main class="page-content cfx" role="main">
 			<h1>Here's a good place for your slogan.</h1>
 				<!-- <h2>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h2> -->
-			<h2>A BETTER WAY TO CREATE A WEBSITE</h2>
-			<p>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</p>
+				<table width="100%">
+					<tbody>
+						<tr>
+							<td><b>First name</b></td>
+							<td><b>Last name</b></td>
+							<td><b>Points</b></td>
+						</tr>
+						<tr>
+							<td>Jill</td>
+							<td>Smith</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>Eve</td>
+							<td>Jackson</td>
+							<td>94</td>
+						</tr>
+						<tr>
+							<td>John</td>
+							<td>Doe</td>
+							<td>80</td>
+						</tr>
+						<tr>
+							<td>Adam</td>
+							<td>Johnson</td>
+							<td>67</td>
+						</tr>
+					</tbody>
+				</table>
 				<!-- {% content %} -->
 		</main>
 

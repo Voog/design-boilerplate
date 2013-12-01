@@ -1,7 +1,7 @@
 <header class="main-header">
 	<section class="main-header-left">
 		<div class="header-logo cfx">
-			<h1 role="banner">Site title</h1>
+			<div role="banner">Site title</div>
 				<!-- {% editable site.header %} -->
 		</div>
 	</section>
@@ -10,11 +10,12 @@
 		<nav class="main-menu" role="navigation">
 			<ul class="menu menu-horizontal cfx">
 				<li><a href="index.php">Home</a></li>
+				<li><a href="products.php">Products</a></li>
 				<li><a href="blog-and-news.php">News or Blog</a></li>
 				<li><a href="elements-listing.php">Elements listing</a></li>
 				<li><a href="gallery.php">Gallery</a></li>
 				<li><a href="form.php">Form</a></li>
-				<li><a href="tabel.php">Tabel</a></li>
+				<li><a href="table.php">Table</a></li>
 			</ul>
 		</nav>
 			<!--
@@ -37,7 +38,7 @@
 		<section class="search-area">
 			<form id="search" class="edys-search" role="search" method="get" action="#">
 				<input id="onpage_search" class="edys-search-input" type="text" placeholder="Search" name="">
-				<input class="search-submit" type="submit" value="Otsi" name="">
+				<input class="search-submit" type="submit" value="Search" name="">
 			</form>
 			<div id="customsearch"></div>
 		</section>
@@ -54,11 +55,11 @@
 			-->
 
 		<section class="lang-menu">
-			<button class="lang-btn et">Estonian</button>
+			<button class="lang-btn et">English</button>
 			<nav class="lang-menu-popover">
 				<ul class="menu">
-					<li class="active"><a href="#" class="et">Eesti keeles</a></li>
-					<li><a href="#" class="en">In English</a></li>
+					<li class="active"><a href="#" class="en">In English</a></li>
+					<li><a href="#" class="et">Eesti keeles</a></li>
 					<li><a href="#" class="fi">Suomi</a></li>
 				</ul>
 			</nav>

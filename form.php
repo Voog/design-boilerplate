@@ -7,13 +7,13 @@
 </head>
 
 <body>
-	<section class="site-content cfx">
+	<main class="site-content cfx" role="main">
 		<?php require("components/site-header.php") ?>
 			<!-- {% include "site-header" %} -->
 
 		<main class="page-content cfx" role="main">
-			<h1>TITLE GOES HERE</h1>
-				<!-- <h1>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h1> -->
+			<h1>Here's a good place for your slogan.</h1>
+				<!-- <h2>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h2> -->
 					<form action="/form" method="post" id="form_285">
 						<div style="margin:0;padding:0;">
 							<input id="ticket_form_id" name="ticket[form_id]" type="hidden" value="285">
@@ -67,7 +67,7 @@
 									<textarea class="form_field_textarea" cols="20" id="field_field_1383817717" name="ticket[data][field_1383817713]" rows="4"></textarea>
 								</div>
 								<div class="form_field">
-									<label>Kirjuta siia välja pealkiri</label>
+									<label>Write a field title here</label>
 									<div>
 										<input class="form_field_checkbox" id="field_field_1359541473814_1" name="ticket[data][field_1359541473814][]" type="checkbox" value="Joy">
 										<label class="form_field_label checkbox_label" for="field_field_1359541473814_1">Joy</label>
@@ -82,7 +82,7 @@
 									</div>
 								</div>
 								<div class="form_field">
-									<label>Kirjuta siia välja pealkiri</label>
+									<label>Write a field title here</label>
 									<div>
 										<input class="form_field_radio" id="field_field_1359541496629_4" name="ticket[data][field_1359541496629]" type="radio" value="Wife">
 										<label class="form_field_label radio_label" for="field_field_1359541496629_4">Knife</label>

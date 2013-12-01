@@ -6,47 +6,47 @@
 		<!-- {% include "html-head" %} -->
 </head>
 <body>
-	<section class="site-content cfx">
+	<main class="site-content cfx" role="main">
 		<?php require("components/site-header.php") ?>
 			<!-- {% include "site-header" %} -->
 
 		<main class="site-content cfx" role="main">
 			<article class="post">
 				<header class="post-header">
-					<h1 class="post-title"><a href="article.php">Siin on näidisblogipostitus, mis kirjeldab viimaseid uudiseid.</a></h1>
-					<time datetime="2013-11-25" class="post-date">25.11.2013</time>
+					<h1 class="post-title"><a href="article.php">How I wrote my first article</a></h1>
+					<time datetime="2013-11-25" class="post-date">06.04.2014</time>
 				</header>
 				<section class="post-excerpt">
-					<p>Siia saad postitada oma ettevõtte või millegi muu kohta uudiseid.</p>
+					<p>Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.</p>
 				</section>
 				<section class="post-body">
-					<p>Blogipostituse kustutamise võimalus avaneb Uudiste ja Blogi nupust. Klõpsi lihtsalt vastava postituse ikooni peale ilmuvale kustutamisnupule.</p>
+					<p>The above is excerpt of the article. It appears in the blog post listing. This here is the body of the post. This only appears here, on the post page.</p>
 				</section>
 			</article>
 
 			<article class="post">
 				<header class="post-header">
-					<h1 class="post-title"><a href="article.php">Siin on näidisblogipostitus, mis kirjeldab viimaseid uudiseid.</a></h1>
-					<time datetime="2013-11-25" class="post-date">25.11.2013</time>
+					<h1 class="post-title"><a href="article.php">Having sample news pieces?</a></h1>
+					<time datetime="2013-11-25" class="post-date">14.02.2014</time>
 				</header>
 				<section class="post-excerpt">
-					<p>Siia saad postitada oma ettevõtte või millegi muu kohta uudiseid.</p>
+					<p>Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.</p>
 				</section>
 				<section class="post-body">
-					<p>Blogipostituse kustutamise võimalus avaneb Uudiste ja Blogi nupust. Klõpsi lihtsalt vastava postituse ikooni peale ilmuvale kustutamisnupule.</p>
+					<p>The above is excerpt of the article. It appears in the blog post listing. This here is the body of the post. This only appears here, on the post page.</p>
 				</section>
 			</article>
 			
 			<article class="post">
 				<header class="post-header">
-					<h1 class="post-title"><a href="article.php">Siin on näidisblogipostitus, mis kirjeldab viimaseid uudiseid.</a></h1>
-					<time datetime="2013-11-25" class="post-date">25.11.2013</time>
+					<h1 class="post-title"><a href="article.php">How I wrote my first article</a></h1>
+					<time datetime="2013-11-25" class="post-date">01.01.2014</time>
 				</header>
 				<section class="post-excerpt">
-					<p>Siia saad postitada oma ettevõtte või millegi muu kohta uudiseid.</p>
+					<p>Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.</p>
 				</section>
 				<section class="post-body">
-					<p>Blogipostituse kustutamise võimalus avaneb Uudiste ja Blogi nupust. Klõpsi lihtsalt vastava postituse ikooni peale ilmuvale kustutamisnupule.</p>
+					<p>The above is excerpt of the article. It appears in the blog post listing. This here is the body of the post. This only appears here, on the post page.</p>
 				</section>
 			</article>
 				<!-- 
