@@ -55,7 +55,7 @@
 			-->
 
 		<section class="lang-menu">
-			<button class="lang-btn et">English</button>
+			<button class="lang-btn en">In English</button>
 			<nav class="lang-menu-popover">
 				<ul class="menu horizontal">
 					<li class="active"><a href="#" class="en">In English</a></li>

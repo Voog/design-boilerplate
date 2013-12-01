@@ -10,18 +10,18 @@
 	clear: both;
 }
 
-html, body, h1, h2, h3, h4, h5, h6, p, input, textarea, .menu {
+html, body, h1, h2, h3, h4, h5, h6, p, input, textarea, button, .menu {
 	margin: 0;
 	padding: 0;
 }
 
 /* Displaying */
 .something { display: inline; }
-.main-header-left, .main-header-right, .main-menu, .search-area, .lang-menu, .horizontal li { display: inline-block; }
+.horizontal li, .main-header-left, .main-header-right, .main-menu, .search-area, .lang-menu, .lang-btn { display: inline-block; }
 .element img { display: block; }
-.something { display: none; }
+.lang-menu-popover { display: none; }
 
-.something { position: absolute; }
+.lang-menu-popover { position: absolute; }
 .something { position: relative; }
 .something { position: static; }
 

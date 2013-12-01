@@ -1,5 +1,5 @@
 ;(function($) {
-	// Functions
+	// Example functions
 	var commonFunction = function() {
 		console.log('Do stuff on common pages');
 	};
@@ -14,6 +14,13 @@
 
 	var globalFunction = function() {
 		console.log('Do stuff everywhere');
+	};
+
+	// General functions
+	var toggleLangMenu = function() {
+		$('.lang-btn').click(function() {
+			$('.lang-menu-popover').fadeToggle(100);
+		});
 	};
 
 	// Adds class 'active' to main menu current element (Delete this function if the Edicy generated menu has been set up).
@@ -39,6 +46,7 @@
 
 	var init = function() {
 		globalFunction();
+		toggleLangMenu();
 		hightlightActivePage();
 	};
 
