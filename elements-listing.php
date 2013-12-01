@@ -13,8 +13,10 @@
 		<main class="site-content cfx" role="main">
 			<a href="#">+ New Object</a>
 			<article class="element">
-				<h1><a href="element.php">First element</a></h1>
-				<time datetime="2014-10-09">2014-10-09</time>
+				<header class="element-header">
+					<h1><a href="element.php">First element</a></h1>
+					<time datetime="2014-10-09">2014-10-09</time>
+				</header>
 				<img alt="First element" title="First element" src="http://placeimg.com/320/240/any">
 				<div>True</div>
 				<p>Lorem ipsum dolor sit amet.</p>

@@ -13,7 +13,7 @@
 
 		<main class="page-content cfx" role="main">
 			<h1>Here's a good place for your slogan.</h1>
-				<!-- <h2>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h2> -->
+				<!-- <h1>{% contentblock name="slogan" %}{{ "title_goes_here" | lc }}{% endcontentblock %}</h1> -->
 				<table width="100%">
 					<tbody>
 						<tr>
