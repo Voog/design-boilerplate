@@ -1,12 +1,17 @@
-<header class="main-header">
-	<section class="main-header-left">
+<header class="site-header">
+	<section class="site-header-left">
 		<div class="header-logo cfx" role="banner">
 			<a href="index.php">Site title</a>
 				<!-- <div role="banner"><a href="{{ site.root_item.url }}">{% editable site.header %}</a></div> -->
 		</div>
 	</section>
 
-	<section class="main-header-right">
+	<section class="site-header-right">
+		<section class="menu-btn">
+			<div class="menu-stripe"></div>
+			<div class="menu-stripe"></div>
+			<div class="menu-stripe"></div>
+		</section>
 		<nav class="main-menu" role="navigation">
 			<ul class="menu horizontal">
 				<li><a href="index.php">Home</a></li>

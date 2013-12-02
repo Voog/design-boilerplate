@@ -17,9 +17,27 @@
 	};
 
 	// General functions
+	var toggleMainMenu = function() {
+		$(".menu-btn").click(function() {
+			$(".main-menu").slideToggle("fast").toggleClass('expanded');
+		});
+	};
+	
 	var toggleLangMenu = function() {
 		$('.lang-btn').click(function() {
 			$('.lang-menu-popover').fadeToggle(100);
+		});
+	};
+
+	var handleWindowResize = function() {
+		$(window).resize(function() {
+			if ($(window).width() <= 480) {
+				if (!$('.main-menu').hasClass('expanded')) {
+					$('.main-menu').hide();
+				}
+			} else {
+				$('.main-menu').show();
+			}
 		});
 	};
 
@@ -46,7 +64,9 @@
 
 	var init = function() {
 		globalFunction();
+		toggleMainMenu();
 		toggleLangMenu();
+		handleWindowResize();
 		hightlightActivePage();
 	};
 

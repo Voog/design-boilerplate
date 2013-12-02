@@ -4,6 +4,7 @@
 <head>
 	<?php require("components/html-head.php") ?>
 		<!-- {% include "html-head" %} -->
+		<!-- {{ blog.rss_link }} -->
 </head>
 <body>
 	<section class="site-content cfx">
@@ -15,6 +16,8 @@
 				<header class="post-header">
 					<h1 class="post-title">How I wrote my first article</h1>
 					<time datetime="2013-11-25" class="post-date">06.04.2014</time>
+					<?php require("components/tags-article.php") ?>
+						<!-- {% include "tags-article" %} -->
 				</header>
 				<section class="post-excerpt">
 					<p>Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.</p>

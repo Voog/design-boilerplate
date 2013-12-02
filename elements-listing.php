@@ -6,7 +6,7 @@
 		<!-- {% include "html-head" %} -->
 </head>
 <body>
-	<main class="site-content cfx" role="main">
+	<section class="site-content cfx">
 		<?php require("components/site-header.php") ?>
 			<!-- {% include "site-header" %} -->
 
