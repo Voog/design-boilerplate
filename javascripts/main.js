@@ -19,7 +19,7 @@
 	// General functions
 	var toggleMainMenu = function() {
 		$('.menu-btn').click(function() {
-			$('.main-menu').slideToggle('fast').toggleClass('expanded');
+			$('.main-menu').toggleClass('expanded');
 		});
 	};
 	
@@ -44,15 +44,6 @@
 	};
 
 	var handleWindowResize = function() {
-		$(window).resize(function() {
-			if ($(window).width() <= 480) {
-				if (!$('.main-menu').hasClass('expanded')) {
-					$('.main-menu').hide();
-				}
-			} else {
-				$('.main-menu').show();
-			}
-		});
 	};
 
 	// Adds class 'active' to main menu current element (Delete this function if the Edicy generated menu has been set up).

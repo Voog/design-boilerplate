@@ -197,6 +197,7 @@ input[type="submit"], button { cursor: pointer; }
 
 	/* Menus */
 	.menu-btn { margin-left: 20px; margin-left: 2rem; }
+	.expanded { display: block; }
 	.main-menu ul li a { padding: 10px 20px; padding: 1rem 2rem; }
 	.main-menu ul .mobile-lang a { padding: 10px 20px 10px 50px; padding: 1rem 2rem 1rem 5rem; }
 
