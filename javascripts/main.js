@@ -18,14 +18,28 @@
 
 	// General functions
 	var toggleMainMenu = function() {
-		$(".menu-btn").click(function() {
-			$(".main-menu").slideToggle("fast").toggleClass('expanded');
+		$('.menu-btn').click(function() {
+			$('.main-menu').slideToggle('fast').toggleClass('expanded');
 		});
 	};
 	
 	var toggleLangMenu = function() {
-		$('.lang-btn').click(function() {
-			$('.lang-menu-popover').fadeToggle(100);
+		$('.lang-btn').click(function(event) {
+			event.stopPropagation();
+			$('.lang-menu-popover').toggleClass('visible');
+			if ($('.lang-menu-popover').hasClass('visible')) {
+				$('.lang-menu-popover').fadeIn('fast');
+			} else {
+				$('.lang-menu-popover').fadeOut('fast');
+			}
+		});
+	};
+
+	var handlePopoverMenuHide = function() {
+		$('html').click(function() {
+			if ($('.lang-menu-popover').hasClass('visible')) {
+				$('.lang-menu-popover').removeClass('visible').fadeOut('fast');
+			}
 		});
 	};
 
@@ -66,6 +80,7 @@
 		globalFunction();
 		toggleMainMenu();
 		toggleLangMenu();
+		handlePopoverMenuHide();
 		handleWindowResize();
 		hightlightActivePage();
 	};
