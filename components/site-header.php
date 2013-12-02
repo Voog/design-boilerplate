@@ -1,8 +1,8 @@
 <header class="main-header">
 	<section class="main-header-left">
-		<div class="header-logo cfx">
-			<div role="banner">Site title</div>
-				<!-- {% editable site.header %} -->
+		<div class="header-logo cfx" role="banner">
+			<a href="index.php">Site title</a>
+				<!-- <div role="banner"><a href="{{ site.root_item.url }}">{% editable site.header %}</a></div> -->
 		</div>
 	</section>
 
@@ -22,7 +22,7 @@
 			<nav class="main-menu cfx" role="navigation">
 				<ul class="menu horizontal">
 					{% unless site.root_item.hidden? %}
-						<li {% if site.root_item.selected? %} class="active"{% endif %}><a href="{{site.root_item.url}}">{{site.root_item.title}}</a></li>
+						<li {% if site.root_item.selected? %} class="active"{% endif %}><a href="{{ site.root_item.url }}">{{ site.root_item.title }}</a></li>
 					{% endunless %}
 					{% for item in site.visible_menuitems %}
 						<li {% if item.selected? %} class="active"{% endif %}{% unless item.translated? %} class="untranslated fci-editor-menuadd"{% endunless %}><a href="{{ item.url }}" >{{ item.title }}</a></li>  
@@ -57,7 +57,7 @@
 		<section class="lang-menu">
 			<button class="lang-btn en">In English</button>
 			<nav class="lang-menu-popover">
-				<ul class="menu horizontal">
+				<ul class="menu">
 					<li class="active"><a href="#" class="en">In English</a></li>
 					<li><a href="#" class="et">Eesti keeles</a></li>
 					<li><a href="#" class="fi">Suomi</a></li>
