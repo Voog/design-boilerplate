@@ -21,6 +21,9 @@
 				<li><a href="gallery.php">Gallery</a></li>
 				<li><a href="form.php">Form</a></li>
 				<li><a href="table.php">Table</a></li>
+				<li class="mobile-lang flags active"><a href="#nothing" class="en">In English</a></li>
+				<li class="mobile-lang flags"><a href="#nothing" class="et">Eesti keeles</a></li>
+				<li class="mobile-lang flags"><a href="#nothing" class="fi">Suomi</a></li>
 			</ul>
 		</nav>
 			<!--

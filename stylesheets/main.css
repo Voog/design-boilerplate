@@ -23,11 +23,11 @@ table {
 /* Displaying */
 .something { display: inline; }
 .horizontal li, .site-header-left, .site-header-right, .main-menu, .search-area, .lang-menu, .lang-btn { display: inline-block; }
-.element img, .menu li a, .flags li a { display: block; }
-.lang-menu-popover, .menu-btn { display: none; }
+.element img, .menu li a, .flags a { display: block; }
+.lang-menu-popover, .menu-btn, .main-menu .menu .mobile-lang { display: none; }
 
-.lang-menu-popover, .flags li a:after { position: absolute; }
-.flags li a { position: relative; }
+.lang-menu-popover, .flags a:after { position: absolute; }
+.flags a { position: relative; }
 .something { position: static; }
 
 .something { vertical-align: bottom; }
@@ -40,7 +40,7 @@ input, select, .site-header-left, .site-header-right, .main-menu, .search-area,
 .something { float: none; }
 
 .something { text-align: left; }
-.flags li { text-align: right; }
+.flags { text-align: right; }
 .something { text-align: center; }
 .something { text-align: justify; }
 
@@ -124,7 +124,7 @@ input[type="submit"], button { cursor: pointer; }
 .menu-stripe:first-child { margin: 0 0 4px; margin: 0 0 0.4rem; }
 .menu-stripe:last-child { margin: 4px 0 0; margin: 0.4rem 0 0; }
 
-.flags li a:after {
+.flags a:after {
   background: url("../images/flags-sprite.png") no-repeat;
 	content: "";
 	height: 13px;
@@ -133,52 +133,52 @@ input[type="submit"], button { cursor: pointer; }
 	width: 20px;
 }
 
-.flags li .sq:after { background-position: 0 0; }/*Albanian*/
-.flags li .hy:after { background-position: -20px 0; }/*Armenia*/
-.flags li .bn:after { background-position: -40px 0; }/*Bangladesh*/
-.flags li .pt:after { background-position: -60px 0; }/*Brazil*/
-.flags li .bg:after { background-position: -80px 0; }/*Bulgaria*/
-.flags li .zh:after { background-position: -100px 0; }/*China*/
-.flags li .hr:after { background-position: -120px 0; }/*Croatia*/
-.flags li .da:after { background-position: -140px 0; }/*Denmark*/
-.flags li .cs:after { background-position: -160px 0; }/*Czech Republic*/
-.flags li .et:after { background-position: -180px 0; }/*Estonia*/
+.flags .sq:after { background-position: 0 0; }/*Albanian*/
+.flags .hy:after { background-position: -20px 0; }/*Armenia*/
+.flags .bn:after { background-position: -40px 0; }/*Bangladesh*/
+.flags .pt:after { background-position: -60px 0; }/*Brazil*/
+.flags .bg:after { background-position: -80px 0; }/*Bulgaria*/
+.flags .zh:after { background-position: -100px 0; }/*China*/
+.flags .hr:after { background-position: -120px 0; }/*Croatia*/
+.flags .da:after { background-position: -140px 0; }/*Denmark*/
+.flags .cs:after { background-position: -160px 0; }/*Czech Republic*/
+.flags .et:after { background-position: -180px 0; }/*Estonia*/
 
-.flags li .fi:after { background-position: 0 -14px; }/*Finland*/
-.flags li .fr:after { background-position: -20px -14px; }/*France*/
-.flags li .ka:after { background-position: -40px -14px; }/*Georgia*/
-.flags li .de:after { background-position: -60px -14px; }/*Germany*/
-.flags li .el:after { background-position: -80px -14px; }/*Grecee*/
-.flags li .hu:after { background-position: -100px -14px; }/*Hungary*/
-.flags li .is:after { background-position: -120px -14px; }/*Iceland*/
-.flags li .hi:after { background-position: -140px -14px; }/*India*/
-.flags li .id:after { background-position: -160px -14px; }/*Indonesia*/
-.flags li .fa:after { background-position: -280px -14px; }/*Iran*/
+.flags .fi:after { background-position: 0 -14px; }/*Finland*/
+.flags .fr:after { background-position: -20px -14px; }/*France*/
+.flags .ka:after { background-position: -40px -14px; }/*Georgia*/
+.flags .de:after { background-position: -60px -14px; }/*Germany*/
+.flags .el:after { background-position: -80px -14px; }/*Grecee*/
+.flags .hu:after { background-position: -100px -14px; }/*Hungary*/
+.flags .is:after { background-position: -120px -14px; }/*Iceland*/
+.flags .hi:after { background-position: -140px -14px; }/*India*/
+.flags .id:after { background-position: -160px -14px; }/*Indonesia*/
+.flags .fa:after { background-position: -280px -14px; }/*Iran*/
 
-.flags li .he:after { background-position: 0 -27px; }/*Israel*/
-.flags li .it:after { background-position: -20px -27px; }/*Italy*/
-.flags li .ja:after { background-position: -40px -27px; }/*Japan*/
-.flags li .ko:after { background-position: -60px -27px; }/*Korea, South*/
-.flags li .lv:after { background-position: -80px -27px; }/*Latvia*/
-.flags li .lt:after { background-position: -100px -27px; }/*Lithuania*/
-.flags li .ms:after { background-position: -120px -27px; }/*Malaysia*/
-.flags li .nl:after { background-position: -140px -27px; }/*Netherlands*/
-.flags li .no:after { background-position: -160px -27px; }/*Norway*/
-.flags li .ur:after { background-position: -280px -27px; }/*Pakistan*/
+.flags .he:after { background-position: 0 -27px; }/*Israel*/
+.flags .it:after { background-position: -20px -27px; }/*Italy*/
+.flags .ja:after { background-position: -40px -27px; }/*Japan*/
+.flags .ko:after { background-position: -60px -27px; }/*Korea, South*/
+.flags .lv:after { background-position: -80px -27px; }/*Latvia*/
+.flags .lt:after { background-position: -100px -27px; }/*Lithuania*/
+.flags .ms:after { background-position: -120px -27px; }/*Malaysia*/
+.flags .nl:after { background-position: -140px -27px; }/*Netherlands*/
+.flags .no:after { background-position: -160px -27px; }/*Norway*/
+.flags .ur:after { background-position: -280px -27px; }/*Pakistan*/
 
-.flags li .fil:after { background-position: 0 -41px; }/*Philipines*/ /*tl?*/
-.flags li .pl:after { background-position: -20px -41px; }/*Poland*/
-.flags li .ro:after { background-position: -40px -41px; }/*Romania*/
-.flags li .ru:after { background-position: -60px -41px; }/*Russia*/
-.flags li .ar:after { background-position: -80px -41px; }/*Saudi Arabia*/
-.flags li .lt:after { background-position: -100px -41px; }/*Slovakia*/
-.flags li .sk:after { background-position: -120px -41px; }/*Slovenia*/
-.flags li .es:after { background-position: -140px -41px; }/*Spain*/
-.flags li .sv:after { background-position: -160px -41px; }/*Sweden*/
-.flags li .tr:after { background-position: -180px -41px; }/*Turkey*/
+.flags .fil:after { background-position: 0 -41px; }/*Philipines*/ /*tl?*/
+.flags .pl:after { background-position: -20px -41px; }/*Poland*/
+.flags .ro:after { background-position: -40px -41px; }/*Romania*/
+.flags .ru:after { background-position: -60px -41px; }/*Russia*/
+.flags .ar:after { background-position: -80px -41px; }/*Saudi Arabia*/
+.flags .lt:after { background-position: -100px -41px; }/*Slovakia*/
+.flags .sk:after { background-position: -120px -41px; }/*Slovenia*/
+.flags .es:after { background-position: -140px -41px; }/*Spain*/
+.flags .sv:after { background-position: -160px -41px; }/*Sweden*/
+.flags .tr:after { background-position: -180px -41px; }/*Turkey*/
 
-.flags li .uk:after { background-position: 0px -54px; }/*Ukraine*/
-.flags li .en:after { background-position: -20px -54px; }/*USA*/
+.flags .uk:after { background-position: 0px -54px; }/*Ukraine*/
+.flags .en:after { background-position: -20px -54px; }/*USA*/
 
 /* Content */
 .page-content p {	margin-bottom: 10px; margin-bottom: 1rem; }
@@ -187,8 +187,10 @@ input[type="submit"], button { cursor: pointer; }
 @media screen and (max-width: 480px) {
 	/* Displaying */
 	.menu-btn { display: inline-block; }
-	.site-header-left, .site-header-right, .main-menu, .main-menu ul li { display: block; }
-	.search-area, .lang-menu { display: none; }
+	.site-header-left, .site-header-right, .main-menu ul li, .main-menu .menu .mobile-lang { display: block; }
+	.search-area, .lang-menu, .main-menu { display: none; }
+
+	.flags { text-align: left; }
 
 	/* Backgrounds */
 	.main-menu ul li a:hover { background: #a4a6a7; background: rgba(164,166,167,1); }
@@ -196,4 +198,11 @@ input[type="submit"], button { cursor: pointer; }
 	/* Menus */
 	.menu-btn { margin-left: 20px; margin-left: 2rem; }
 	.main-menu ul li a { padding: 10px 20px; padding: 1rem 2rem; }
+	.main-menu ul .mobile-lang a { padding: 10px 20px 10px 50px; padding: 1rem 2rem 1rem 5rem; }
+
+	.mobile-lang a:after {
+	left: 2px; left: 2rem;
+	right: auto;
+	top: 12px; top: 1.2rem;
+	}
 }
