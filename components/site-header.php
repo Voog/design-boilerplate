@@ -62,10 +62,10 @@
 		<section class="lang-menu">
 			<button class="lang-btn en">In English</button>
 			<nav class="lang-menu-popover">
-				<ul class="menu">
-					<li class="active"><a href="#" class="en">In English</a></li>
-					<li><a href="#" class="et">Eesti keeles</a></li>
-					<li><a href="#" class="fi">Suomi</a></li>
+				<ul class="menu flags">
+					<li class="active"><a href="#nothing" class="en">In English</a></li>
+					<li><a href="#nothing" class="et">Eesti keeles</a></li>
+					<li><a href="#nothing" class="fi">Suomi</a></li>
 				</ul>
 			</nav>
 		</section>
