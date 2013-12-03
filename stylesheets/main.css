@@ -21,34 +21,34 @@ table {
 }
 
 /* Displaying */
-.something { display: inline; }
-.horizontal li, .site-header-left, .site-header-right, .main-menu, .search-area, .lang-menu, .lang-btn { display: inline-block; }
-.element img, .menu li a, .flags a { display: block; }
-.lang-menu-popover, .menu-btn, .main-menu .menu .mobile-lang { display: none; }
+/*.something { display: inline; }*/
+.horizontal li, .lang-btn, .lang-menu, .main-menu, .search-area, .site-header-left, .site-header-right { display: inline-block; }
+.element img, .flags a, .menu li a { display: block; }
+.lang-menu-popover, .main-menu .menu .mobile-lang, .menu-btn { display: none; }
 
 .lang-menu-popover, .flags a:after { position: absolute; }
 .flags a { position: relative; }
-.something { position: static; }
+/*.something { position: static; }*/
 
-.something { vertical-align: bottom; }
+/*.something { vertical-align: bottom; }*/
 input, select, .site-header-left, .site-header-right, .main-menu, .search-area,
 	.lang-menu, .horizontal li, .menu-btn { vertical-align: middle; }
-.something { vertical-align: top; }
+/*.something { vertical-align: top; }*/
 
-.something { float: left; }
-.something { float: right; }
-.something { float: none; }
+/*.something { float: left; }*/
+/*.something { float: right; }*/
+/*.something { float: none; }*/
 
-.something { text-align: left; }
+/*.something { text-align: left; }*/
 .flags { text-align: right; }
-.something { text-align: center; }
-.something { text-align: justify; }
+/*.something { text-align: center; }*/
+/*.something { text-align: justify; }*/
 
 /* Remove flicker bug from animamated elements in Safari */
-.something {
+/*.something {
 	-webkit-perspective: 1000;
 	-webkit-backface-visibility: hidden;
-}
+}*/
 
 /* Colors */
 body { color: #333; color: rgba(51,51,51,1) }
@@ -102,7 +102,7 @@ input[type="submit"], button { cursor: pointer; }
 	max-width: 1040px; max-width: 104rem;
 }
 
-.site-header-left, .page-content, .site-footer { padding: 0 20px; padding: 0 2rem; }
+.site-header, .page-content, .site-footer { padding: 0 20px; padding: 0 2rem; }
 
 /* Menus */
 .menu {
@@ -196,8 +196,8 @@ input[type="submit"], button { cursor: pointer; }
 	.main-menu ul li a:hover { background: #a4a6a7; background: rgba(164,166,167,1); }
 
 	/* Menus */
-	.menu-btn { margin-left: 20px; margin-left: 2rem; }
 	.expanded { display: block; }
+	.main-menu { margin: 0 -20px; margin: 0 -2rem; }
 	.main-menu ul li a { padding: 10px 20px; padding: 1rem 2rem; }
 	.main-menu ul .mobile-lang a { padding: 10px 20px 10px 50px; padding: 1rem 2rem 1rem 5rem; }
 
