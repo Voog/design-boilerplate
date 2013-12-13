@@ -1,0 +1,376 @@
+{
+  "site": {
+    "updated_at": "2013-10-16T16:46:45Z",
+    "name": "Example site",
+    "languages": [
+      {
+        "created_by": "priit@fraktal.ee",
+        "site_header": "Example site",
+        "updated_at": "2013-10-10T07:35:35Z",
+        "site_title": "Example site",
+        "created_at": "2013-10-10T07:35:35Z",
+        "position": 1,
+        "contents": [
+          {
+            "created_by": "priit@fraktal.ee",
+            "updated_at": "2013-10-10T07:35:35Z",
+            "name": "footer",
+            "content_type": "text",
+            "created_at": "2013-10-10T07:35:35Z",
+            "language": "en",
+            "position": 1,
+            "text": {
+              "autosaved_body": "<b>© My Company 2012.</b>&nbsp;Visit us at 1192 Cambridge Street,&nbsp;Cambridge, MA 02139<div>Call us +1 617-576-1950 &nbsp;Email us at&nbsp;<a href=\"mailto:email@yourname.com\">email@yourname.com</a></div>",
+              "updated_at": "2013-10-10T07:35:35Z",
+              "created_by": "priit@fraktal.ee",
+              "created_at": "2013-10-10T07:35:35Z",
+              "body": "<b>© My Company 2012.</b>&nbsp;Visit us at 1192 Cambridge Street,&nbsp;Cambridge, MA 02139<div>Call us +1 617-576-1950 &nbsp;Email us at&nbsp;<a href=\"mailto:email@yourname.com\">email@yourname.com</a></div>",
+              "updated_by": "priit@fraktal.ee"
+            },
+            "updated_by": "priit@fraktal.ee"
+          }
+        ],
+        "default_language": false,
+        "title": "ENG",
+        "updated_by": "priit@fraktal.ee",
+        "code": "en"
+      }
+    ],
+    "domains": [
+      {
+        "genuine_domain": true,
+        "updated_at": "2013-10-10T07:35:34Z",
+        "name": "example.edicy.co",
+        "primary_domain": true,
+        "created_at": "2013-10-10T07:35:34Z",
+        "category": "subdomain",
+        "status": "active"
+      }
+    ],
+    "design": "Tallinn",
+    "created_at": "2013-10-10T07:35:34Z",
+    "settings": {
+      "beta_tester": false,
+      "updated_at": "2013-10-16T16:46:45Z",
+      "created_by": "priit@fraktal.ee",
+      "meta_keywords": "",
+      "search_enabled": false,
+      "created_at": "2013-10-10T07:35:34Z",
+      "webtools_verified": false,
+      "site_name": "Example site",
+      "updated_by": "priit@fraktal.ee"
+    },
+    "people": [
+      {
+        "owner": true,
+        "status": "ACTIVATED",
+        "created_at": "2013-10-10T07:35:34Z",
+        "updated_at": "2013-10-16T13:46:08Z",
+        "password_digest": "$2a$10$rrJ4AntLi4khZp0g.9GEAeZ8W4es4FgVAZwoiS5I6enRHp70lKx1O",
+        "email": "priit@fraktal.ee",
+        "working_language": "en"
+      }
+    ],
+    "root": {
+      "updated_at": "2013-10-10T07:35:35Z",
+      "pages": [
+        {
+          "hidden": false,
+          "path": "",
+          "created_by": "priit@fraktal.ee",
+          "privacy": false,
+          "published_at": "2013-10-10T07:35:35Z",
+          "updated_at": "2013-10-10T07:35:35Z",
+          "publishing": true,
+          "content_type": "page",
+          "created_at": "2013-10-10T07:35:35Z",
+          "language": "en",
+          "layout": "Front page",
+          "contents": [
+            {
+              "created_by": "priit@fraktal.ee",
+              "updated_at": "2013-10-10T07:35:35Z",
+              "name": "body",
+              "content_type": "text",
+              "created_at": "2013-10-10T07:35:35Z",
+              "language": "en",
+              "position": 1,
+              "text": {
+                "autosaved_body": "<h3>A better way to create a website</h3><div>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</div>",
+                "updated_at": "2013-10-10T07:35:35Z",
+                "created_by": "priit@fraktal.ee",
+                "created_at": "2013-10-10T07:35:35Z",
+                "body": "<h3>A better way to create a website</h3><div>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</div>",
+                "updated_by": "priit@fraktal.ee"
+              },
+              "updated_by": "priit@fraktal.ee"
+            },
+            {
+              "created_by": "priit@fraktal.ee",
+              "updated_at": "2013-10-10T07:35:35Z",
+              "name": "slogan",
+              "content_type": "text",
+              "created_at": "2013-10-10T07:35:35Z",
+              "language": "en",
+              "position": 1,
+              "text": {
+                "autosaved_body": "Here's a good place for your slogan.",
+                "updated_at": "2013-10-10T07:35:35Z",
+                "created_by": "priit@fraktal.ee",
+                "created_at": "2013-10-10T07:35:35Z",
+                "body": "Here's a good place for your slogan.",
+                "updated_by": "priit@fraktal.ee"
+              },
+              "updated_by": "priit@fraktal.ee"
+            }
+          ],
+          "layout_type": "Backoffice::DesignLayout",
+          "title": "Home Page",
+          "published_by": "priit@fraktal.ee",
+          "updated_by": "priit@fraktal.ee"
+        }
+      ],
+      "created_at": "2013-10-10T07:35:35Z",
+      "children": [
+        {
+          "updated_at": "2013-10-10T07:35:35Z",
+          "pages": [
+            {
+              "hidden": false,
+              "path": "products",
+              "created_by": "priit@fraktal.ee",
+              "privacy": false,
+              "published_at": "2013-10-10T07:35:35Z",
+              "updated_at": "2013-10-10T07:35:35Z",
+              "publishing": true,
+              "content_type": "page",
+              "created_at": "2013-10-10T07:35:35Z",
+              "language": "en",
+              "layout": "Common page",
+              "contents": [
+                {
+                  "created_by": "priit@fraktal.ee",
+                  "updated_at": "2013-10-10T07:35:35Z",
+                  "name": "body",
+                  "content_type": "text",
+                  "created_at": "2013-10-10T07:35:35Z",
+                  "language": "en",
+                  "position": 1,
+                  "text": {
+                    "autosaved_body": "<div><h3>Introduction</h3></div><div>Introduce your products by writing text, showing pictures, building forms, adding galleries. If you don't need a Products page you can rename or delete it from the page properties tool on the lower right corner.<br/></div><div><br/></div><div><b>This is an example list</b></div><div><ul><li>Item one</li><li>Another item</li><li>Third one</li></ul><div>If you require a more thorough product database or e-commerce, then we've got some great custom solutions for you. Contact <a href=\"mailto:support@edicy.com\">Edicy support</a> and let's get it done!</div></div>",
+                    "updated_at": "2013-10-10T07:35:35Z",
+                    "created_by": "priit@fraktal.ee",
+                    "created_at": "2013-10-10T07:35:35Z",
+                    "body": "<div><h3>Introduction</h3></div><div>Introduce your products by writing text, showing pictures, building forms, adding galleries. If you don't need a Products page you can rename or delete it from the page properties tool on the lower right corner.<br/></div><div><br/></div><div><b>This is an example list</b></div><div><ul><li>Item one</li><li>Another item</li><li>Third one</li></ul><div>If you require a more thorough product database or e-commerce, then we've got some great custom solutions for you. Contact <a href=\"mailto:support@edicy.com\">Edicy support</a> and let's get it done!</div></div>",
+                    "updated_by": "priit@fraktal.ee"
+                  },
+                  "updated_by": "priit@fraktal.ee"
+                },
+                {
+                  "created_by": "priit@fraktal.ee",
+                  "updated_at": "2013-10-10T07:35:35Z",
+                  "name": "slogan",
+                  "content_type": "text",
+                  "created_at": "2013-10-10T07:35:35Z",
+                  "language": "en",
+                  "position": 1,
+                  "text": {
+                    "autosaved_body": "This is where your products live.",
+                    "updated_at": "2013-10-10T07:35:35Z",
+                    "created_by": "priit@fraktal.ee",
+                    "created_at": "2013-10-10T07:35:35Z",
+                    "body": "This is where your products live.",
+                    "updated_by": "priit@fraktal.ee"
+                  },
+                  "updated_by": "priit@fraktal.ee"
+                }
+              ],
+              "layout_type": "Backoffice::DesignLayout",
+              "title": "Products",
+              "published_by": "priit@fraktal.ee",
+              "updated_by": "priit@fraktal.ee"
+            }
+          ],
+          "created_at": "2013-10-10T07:35:35Z",
+          "position": 2,
+          "title": "Products"
+        },
+        {
+          "updated_at": "2013-10-10T07:35:35Z",
+          "pages": [
+            {
+              "hidden": false,
+              "path": "blog",
+              "created_by": "priit@fraktal.ee",
+              "privacy": false,
+              "published_at": "2013-10-10T07:35:35Z",
+              "updated_at": "2013-10-10T07:35:35Z",
+              "publishing": true,
+              "articles": [
+                {
+                  "autosaved_body": "The above is excerpt of the article. It appears in the blog post listing. This here is the body of the post. This only appears here, on the post page.",
+                  "path": "having-sample-news-pieces",
+                  "autosaved_title": "Having sample news pieces?",
+                  "created_by": "priit@fraktal.ee",
+                  "published_at": "2013-10-10T07:35:35Z",
+                  "updated_at": "2013-10-10T07:35:35Z",
+                  "publishing": true,
+                  "excerpt": "Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.",
+                  "comments_count": 0,
+                  "created_at": "2013-10-10T07:35:35Z",
+                  "language": "en",
+                  "body": "The above is excerpt of the article. It appears in the blog post listing. This here is the body of the post. This only appears here, on the post page.",
+                  "title": "Having sample news pieces?",
+                  "autosaved_excerpt": "Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.",
+                  "published_by": "priit@fraktal.ee",
+                  "updated_by": "priit@fraktal.ee",
+                  "public_comments_count": 0
+                },
+                {
+                  "autosaved_body": "The above is excerpt of the article. It appears in the blog post listing. This here is the body of the post. This only appears here, on the post page.",
+                  "path": "how-i-wrote-my-first-article",
+                  "autosaved_title": "How I wrote my first article",
+                  "created_by": "priit@fraktal.ee",
+                  "published_at": "2013-10-10T07:35:35Z",
+                  "updated_at": "2013-10-10T07:35:35Z",
+                  "publishing": true,
+                  "excerpt": "Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.",
+                  "comments_count": 0,
+                  "created_at": "2013-10-10T07:35:35Z",
+                  "language": "en",
+                  "body": "The above is excerpt of the article. It appears in the blog post listing. This here is the body of the post. This only appears here, on the post page.",
+                  "title": "How I wrote my first article",
+                  "autosaved_excerpt": "Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.",
+                  "published_by": "priit@fraktal.ee",
+                  "updated_by": "priit@fraktal.ee",
+                  "public_comments_count": 0
+                }
+              ],
+              "content_type": "blog",
+              "created_at": "2013-10-10T07:35:35Z",
+              "language": "en",
+              "layout": "Blog & News",
+              "contents": [
+                {
+                  "created_by": "priit@fraktal.ee",
+                  "updated_at": "2013-10-10T07:35:35Z",
+                  "name": "sidebar",
+                  "content_type": "text",
+                  "created_at": "2013-10-10T07:35:35Z",
+                  "language": "en",
+                  "position": 1,
+                  "text": {
+                    "autosaved_body": "<h3>Sidebar</h3><div>Tell the visitors briefly about this site and the blog authors here. It's also a great spot for including Facebook Like Box or some other widget to strengthen the social element of your blog.</div>",
+                    "updated_at": "2013-10-10T07:35:35Z",
+                    "created_by": "priit@fraktal.ee",
+                    "created_at": "2013-10-10T07:35:35Z",
+                    "body": "<h3>Sidebar</h3><div>Tell the visitors briefly about this site and the blog authors here. It's also a great spot for including Facebook Like Box or some other widget to strengthen the social element of your blog.</div>",
+                    "updated_by": "priit@fraktal.ee"
+                  },
+                  "updated_by": "priit@fraktal.ee"
+                },
+                {
+                  "created_by": "priit@fraktal.ee",
+                  "updated_at": "2013-10-10T07:35:35Z",
+                  "name": "slogan",
+                  "content_type": "text",
+                  "created_at": "2013-10-10T07:35:35Z",
+                  "language": "en",
+                  "position": 1,
+                  "text": {
+                    "autosaved_body": "Behind the scenes.",
+                    "updated_at": "2013-10-10T07:35:35Z",
+                    "created_by": "priit@fraktal.ee",
+                    "created_at": "2013-10-10T07:35:35Z",
+                    "body": "Behind the scenes.",
+                    "updated_by": "priit@fraktal.ee"
+                  },
+                  "updated_by": "priit@fraktal.ee"
+                }
+              ],
+              "layout_type": "Backoffice::DesignLayout",
+              "title": "Blog",
+              "published_by": "priit@fraktal.ee",
+              "updated_by": "priit@fraktal.ee"
+            }
+          ],
+          "created_at": "2013-10-10T07:35:35Z",
+          "position": 3,
+          "title": "Blog"
+        },
+        {
+          "updated_at": "2013-10-10T07:35:35Z",
+          "pages": [
+            {
+              "hidden": false,
+              "path": "contact",
+              "created_by": "priit@fraktal.ee",
+              "privacy": false,
+              "published_at": "2013-10-10T07:35:35Z",
+              "updated_at": "2013-10-10T07:35:35Z",
+              "publishing": true,
+              "content_type": "page",
+              "created_at": "2013-10-10T07:35:35Z",
+              "language": "en",
+              "layout": "Common page",
+              "contents": [
+                {
+                  "created_by": "priit@fraktal.ee",
+                  "updated_at": "2013-10-10T07:35:35Z",
+                  "name": "body",
+                  "content_type": "text",
+                  "created_at": "2013-10-10T07:35:35Z",
+                  "language": "en",
+                  "position": 1,
+                  "text": {
+                    "autosaved_body": "<h3>My company</h3><div>1192 Cambridge Street<br/></div><div>Cambridge, MA 02139</div><div>United States</div><div><br/></div><div>Phone: +1 617-576-1950</div><div>Email:&nbsp;<a href=\"mailto:email@yourname.com\">email@yourname.com</a>&nbsp;<div><br/></div><div>Find us on the map:</div><div><br/><div><iframe src=\"http://maps.google.com/maps?f=q&amp;hl=en&amp;q=1192+Cambridge+Street,+Cambridge,+MA+02139+@42.3730906,-71.0972844&amp;ie=UTF8&amp;ll=42.3730906,-71.0972844&amp;z=12&amp;iwloc=A&amp;output=embed\" width=\"100%\" height=\"300\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" style=\"display: inline; width: 100%; height: 300px;\"></iframe></div></div></div>",
+                    "updated_at": "2013-10-10T07:35:35Z",
+                    "created_by": "priit@fraktal.ee",
+                    "created_at": "2013-10-10T07:35:35Z",
+                    "body": "<h3>My company</h3><div>1192 Cambridge Street<br/></div><div>Cambridge, MA 02139</div><div>United States</div><div><br/></div><div>Phone: +1 617-576-1950</div><div>Email:&nbsp;<a href=\"mailto:email@yourname.com\">email@yourname.com</a>&nbsp;<div><br/></div><div>Find us on the map:</div><div><br/><div><iframe src=\"http://maps.google.com/maps?f=q&amp;hl=en&amp;q=1192+Cambridge+Street,+Cambridge,+MA+02139+@42.3730906,-71.0972844&amp;ie=UTF8&amp;ll=42.3730906,-71.0972844&amp;z=12&amp;iwloc=A&amp;output=embed\" width=\"100%\" height=\"300\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" style=\"display: inline; width: 100%; height: 300px;\"></iframe></div></div></div>",
+                    "updated_by": "priit@fraktal.ee"
+                  },
+                  "updated_by": "priit@fraktal.ee"
+                },
+                {
+                  "created_by": "priit@fraktal.ee",
+                  "updated_at": "2013-10-10T07:35:35Z",
+                  "name": "slogan",
+                  "content_type": "text",
+                  "created_at": "2013-10-10T07:35:35Z",
+                  "language": "en",
+                  "position": 1,
+                  "text": {
+                    "autosaved_body": "Contact us",
+                    "updated_at": "2013-10-10T07:35:35Z",
+                    "created_by": "priit@fraktal.ee",
+                    "created_at": "2013-10-10T07:35:35Z",
+                    "body": "Contact us",
+                    "updated_by": "priit@fraktal.ee"
+                  },
+                  "updated_by": "priit@fraktal.ee"
+                }
+              ],
+              "layout_type": "Backoffice::DesignLayout",
+              "title": "Contact",
+              "published_by": "priit@fraktal.ee",
+              "updated_by": "priit@fraktal.ee"
+            }
+          ],
+          "created_at": "2013-10-10T07:35:35Z",
+          "position": 4,
+          "title": "Contact"
+        }
+      ],
+      "position": 1,
+      "title": "Home Page"
+    },
+    "signup": {
+      "user_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.71 (KHTML, like Gecko) Version/6.1 Safari/537.71",
+      "email": "priit@fraktal.ee",
+      "user_ip": "::1",
+      "language_code": "en",
+      "user_accept_language": "et-ee"
+    }
+  }
+}

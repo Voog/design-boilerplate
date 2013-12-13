@@ -25,18 +25,13 @@
 <link rel="apple-touch-icon" href="{{ images_path }}/apple-touch-icon.png">
 
 <!-- STYLESHEETS -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-	<!-- http://www.google.com/fonts -->
-<link rel="stylesheet" href="stylesheets/main.css" type="text/css">
-	<!--{% stylesheet_link "main.css?1" %}-->
-<!--[if lt IE 9]><link rel="stylesheet" href="stylesheets/ie8.css" type="text/css"><![endif]-->
-	<!--[if lt IE 9]>{% stylesheet_link "ie8.css?1" %}<![endif]-->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700&amp;subset=latin,cyrillic-ext" rel="stylesheet" type="text/css"> <!-- http://www.google.com/fonts -->
+<link rel="stylesheet" href="stylesheets/main.css" type="text/css"> <!--{% stylesheet_link "main.css?1" %}-->
+<!--[if lt IE 9]><link rel="stylesheet" href="stylesheets/ie8.css" type="text/css"><![endif]--> <!--[if lt IE 9]>{% stylesheet_link "ie8.css?1" %}<![endif]-->
 
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
-<script type="text/javascript" src="javascripts/modernizr.custom.js"></script>
-	<!--<script src="{{ javascripts_path }}/modernizr.custom.js"></script>-->
-	<!-- http://modernizr.com/download/ - Check for updates -->
+<script type="text/javascript" src="javascripts/modernizr.custom.js"></script> <!--<script src="{{ javascripts_path }}/modernizr.custom.js"></script>-->
+<!-- http://modernizr.com/download/ - Check for updates -->
 
 <!-- SITE TITLE -->
-<title>Edicy template</title>
-	<!-- <title>{% if article %}{{ article.title }} | {{page.site_title}}{% else %}{{page.site_title}} | {{ page.title }}{% endif %}</title>
+<title>Edicy template</title> <!-- <title>{% if article %}{{ article.title }} | {{page.site_title}}{% else %}{{page.site_title}} | {{ page.title }}{% endif %}</title>
