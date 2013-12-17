@@ -1,20 +1,14 @@
 <header class="site-header">
-  <section class="site-header-left">
-    <div class="header-logo cfx" role="banner">
-        <div role="banner"><a href="#">Site title</a></div>
+  <section class="header-left">
+    <div class="menu-btn">
+      <div class="menu-stripe"></div>
+      <div class="menu-stripe"></div>
+      <div class="menu-stripe"></div>
     </div>
-  </section>
 
-  <section class="site-header-right">
-    <section class="menu-btn">
-      <div class="menu-stripe"></div>
-      <div class="menu-stripe"></div>
-      <div class="menu-stripe"></div>
-    </section>
-
-    <nav class="main-menu cfx" role="navigation">
-      <ul class="menu horizontal">
-          <li><a class="#" href="#">Home</a></li>
+    <nav class="main-menu" role="navigation">
+      <ul class="menu horizontal cfx">
+          <li><a class="active" href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Contact</a></li>
@@ -24,8 +18,11 @@
           -->
       </ul>
     </nav>
+  </section>
 
-    <section class="search-wrap">
+  <section class="header-right">
+
+    <section class="site-search">
       <form id="search" class="edys-search" role="search" method="get" action="#">
         <input id="onpage_search" class="edys-search-input" type="text" placeholder="Search" name="">
         <input class="search-submit" type="submit" value="Search" name="">
@@ -33,7 +30,13 @@
       <div id="customsearch"></div>
     </section>
 
-    <!-- TODO: Add language menu -->
+    <nav class="lang-menu">
+      <select class="lang-select">
+        <option value="ENG">In English</option>
+        <option value="EST">eesti keeles</option>
+        <option value="FIN">Suomi</option>
+      </select>
+    </nav>
 
   </section>
 </header>

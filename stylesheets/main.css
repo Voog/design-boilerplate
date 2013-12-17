@@ -1,12 +1,73 @@
-html {
-  margin: 0;
-  padding: 0;
+/* GENERAL */
+.cfx:after {
+	content: "";
+	display: table;
+	clear: both;
 }
-html body {
-  color: #1b2124;
-  font-family: arial;
-  font-size: 16px;
+
+body {
+	margin: 0;
+	padding: 0;
+	font: 400 18px/1.3 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #727272;
 }
-html body.some {
-  background: yellow;
+.site-content {
+	max-width: 920px;
+	margin: 0 auto;
+}
+.site-content a {
+	text-decoration: none
+}
+
+/* HEADER */
+.site-header {
+	position: relative;
+	margin-top: 45px;
+}
+.header-left {
+	
+}
+.header-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* MAIN MENU */
+.main-menu {
+	
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.horizontal li {
+	float: left;
+	margin-right: 14px;
+}
+.horizontal li a {
+	display: block;
+	color: #06b;
+}
+.horizontal li a.active {
+	font-weight: 700;
+	color: #727272;
+}
+
+/* SEARCH */
+.site-search {
+	display: inline-block;
+}
+.edys-search-input {
+	width: 150px;
+	padding: 10px;
+	border: 1px solid #8d9091;
+	border-radius: 3px;
+}
+
+/* LANGUAGE MENU */
+.lang-menu {
+	display: inline-block;
 }
