@@ -13,24 +13,29 @@ body {
 }
 .site-content {
 	max-width: 920px;
-	margin: 0 auto;
+	margin: 27px auto;
+	padding: 0 20px;
 }
 .site-content a {
-	text-decoration: none
+	text-decoration: none;
+	color: #06b;
+}
+.site-content a:hover {
+	color: #7da3d3;
 }
 
 /* HEADER */
 .site-header {
 	position: relative;
-	margin-top: 45px;
+	margin-bottom: 69px;
 }
 .header-left {
-	
+	display: inline-block;
+	vertical-align: middle;
 }
 .header-right {
-	position: absolute;
-	top: 0;
-	right: 0;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 /* MAIN MENU */
@@ -49,7 +54,6 @@ body {
 }
 .horizontal li a {
 	display: block;
-	color: #06b;
 }
 .horizontal li a.active {
 	font-weight: 700;
@@ -70,4 +74,32 @@ body {
 /* LANGUAGE MENU */
 .lang-menu {
 	display: inline-block;
+}
+
+/* CONTENT AREA */
+.page-content {
+	margin-bottom: 54px;
+}
+.page-content h1, .page-content h2, .page-content h3 {
+	color: #1b2124;
+}
+.page-content h1 {
+	margin: 0 0 13px;
+	font-size: 100px;
+	line-height: 1;
+}
+.page-content h2 {
+	margin: 0 0 89px;
+	font-size: 50px;
+	font-weight: 400;
+	line-height: 1;
+}
+.page-content h3 {
+	margin: 0 0 17px;
+}
+.page-content p {
+	margin: 0 0 17px;
+}
+.page-content p:last-child {
+	margin: 0;
 }
