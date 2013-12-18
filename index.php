@@ -4,7 +4,7 @@
   <?php require("components/html-head.php") ?>
 </head>
 
-<body>
+<body class="front-page">
   <section class="site-content cfx">
     <?php require("components/site-header.php") ?>
 

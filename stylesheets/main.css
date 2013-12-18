@@ -28,6 +28,10 @@ body {
 .site-content img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 20px;
+}
+.site-content .edys-gallery-image {
+  margin-bottom: 0;
 }
 .site-content pre {
   overflow: auto;
@@ -93,20 +97,28 @@ body {
 
 /* CONTENT AREA */
 .page-content {
-  margin-bottom: 54px;
+  margin-bottom: 37px;
   padding: 0 20px;
 }
 .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6 {
   color: #1b2124;
 }
-.page-content h1 {
+.front-page .page-content h1 {
   margin: 0 0 13px;
   font-size: 100px;
+}
+.page-content h1 {
+  margin: 0 0 33px;
+  font-size: 50px;
   line-height: 1;
 }
-.page-content h2 {
+.front-page .page-content h2 {
   margin: 0 0 89px;
   font-size: 50px;
+}
+.page-content h2 {
+  margin: 0 0 29px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1;
 }
@@ -117,11 +129,17 @@ body {
 .page-content p {
   margin: 0 0 17px;
 }
-.page-content p:last-child {
-  margin: 0;
-}
 
 /* GALLERY */
+.edys-gallery-area {
+  margin-bottom: 40px;
+}
+.edys-gallery-area:hover img {
+  opacity: 0.6;
+}
+.edys-gallery-area img:hover {
+  opacity: 1;
+}
 .edys-gallery-item {
   float: left;
   padding-right: 0 !important;
@@ -129,12 +147,6 @@ body {
 .edys-gallery-image {
   display: block;
   width: 140px;
-}
-.edys-gallery-area:hover img {
-  opacity: 0.6;
-}
-.edys-gallery-area img:hover {
-  opacity: 1;
 }
 
 /* FOOTER */
@@ -222,22 +234,40 @@ body {
 
   /* CONTENT AREA */
   .page-content {
-    margin-bottom: 54px;
     padding: 0 20px;
   }
   .page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6 {
     color: #1b2124;
   }
-  .page-content h1 {
-    margin: 0 0 13px;
-    font-size: 60px;
-  }
-  .page-content h2 {
-    margin: 0 0 49px;
+  .front-page .page-content h1, .page-content h1 {
+    margin: 0 0 23px;
     font-size: 40px;
+  }
+  .front-page .page-content h2, .page-content h2 {
+    margin: 0 0 19px;
+    font-size: 35px;    
   }
   .page-content h3, .page-content h4, .page-content h5, .page-content h6 {
     margin: 0 0 17px;
     font-size: 25px;
+  }
+
+  /* GALLERY */
+  .edys-gallery-area {
+    margin-bottom: 30px;
+  }
+  .edys-gallery-item {
+    width: 33.3%;
+  }
+  .edys-gallery-image {
+    width: 100%;
+  }
+}
+
+/* SMALLER MOBILE VIEW */
+@media screen and (max-width: 320px) {
+  /* GALLERY */
+  .edys-gallery-item {
+    width: 50%;
   }
 }

@@ -10,7 +10,7 @@
 
     <main class="page-content cfx" role="main">
       <header class="content-header">
-        <h1>THIS IS WHERE YOUR PRODUCTS LIVE.</h1>
+        <h1>This is where your products live.</h1>
       </header>
       <section class="content-body">
         <div class="photo_gallery_area edys-gallery-area cfx">
@@ -47,7 +47,7 @@
         <img src="http://placeimg.com/320/240/any">
         <h4>Heading 4</h4>
         <h5>Heading 5</h5>
-        <h6>And heading 6 will be styles the same as heading 3</h6>
+        <h6>And heading 6 will be styled the same as heading 3</h6>
       </section>
     </main>
 
