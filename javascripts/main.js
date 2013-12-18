@@ -9,6 +9,13 @@
     }).parent().addClass('active');
   };
 
+  // Toggle mobile menu
+  var menuToggle = function() {
+    $('.js-menu-toggle').click(function() {
+      $(this).next().toggleClass('expanded');
+    });
+  };
+
   // Initiations
   var initCommonPage = function() {
     
@@ -24,6 +31,7 @@
 
   var init = function() {
     hightlightActivePage();
+    menuToggle();
   };
 
   window.project = {
