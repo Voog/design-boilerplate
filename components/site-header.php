@@ -12,6 +12,26 @@
           <li><a href="products.php">Products</a></li>
           <li><a href="blog-and-news.php">Blog</a></li>
           <li><a href="contacts.php">Contact</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample larger</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample larger</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample larger</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample larger</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample larger</a></li>
+          <li><a href="#">Sample</a></li>
+          <li><a href="#">Sample</a></li>
           <!--
           <li>{% menubtn site.hidden_menuitems %}</li>
           <li>{% menuadd %}</li>

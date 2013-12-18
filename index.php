@@ -13,10 +13,12 @@
         <h1>Site title</h1>
         <h2>Here’s a good place for your slogan.</h2>
       </header>
-      <h3>A better way to create a website</h3>
-      <p>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</p>
-      <p>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</p>
-      <p>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</p>
+      <section class="content-body">
+        <h3>A better way to create a website</h3>
+        <p>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</p>
+        <p>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</p>
+        <p>Introduce your company (or yourself) here. Click around, try out how to edit text, choose a different design theme, upload pictures etc. This site is fully customizable — you can add, delete, modify any text or pictures as you desire.</p>
+      </section>
     </main>
 
     <?php require("components/site-footer.php") ?>
