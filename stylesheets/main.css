@@ -55,7 +55,7 @@ body {
 .horizontal li a {
 	display: block;
 }
-.horizontal li a.active {
+.horizontal li.active a {
 	font-weight: 700;
 	color: #727272;
 }
