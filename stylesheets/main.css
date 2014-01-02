@@ -58,7 +58,7 @@ body {
   text-align: right;
 }
 
-/* MENUS */
+/* MAIN MENU */
 .menu-btn {
   display: none;
 }
@@ -130,6 +130,27 @@ body {
   margin: 0 0 17px;
 }
 
+/* BLOG */
+.post-tags {
+  margin-bottom: 20px;
+}
+.post {
+  margin-bottom: 50px;
+}
+.post:last-child {
+  margin-bottom: 0;
+}
+.post .post-title {
+  margin: 0;
+  color: #1b2124;
+}
+.post .post-title a {
+  color: #1b2124;
+}
+.post .post-title a:hover {
+  color: #626566;
+}
+
 /* GALLERY */
 .edys-gallery-area {
   margin-bottom: 40px;
@@ -175,20 +196,20 @@ body {
     display: block;
     padding: 0;
   }
+  .header-left {
+    text-align: right;
+  }
   .header-right {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    display: inline-block;
+    display: none;
   }
 
-  /* MENUS */
+  /* MAIN MENU */
   .menu-btn {
     display: inline-block;
     vertical-align: middle;
     overflow: visible;
     position: relative;
-    left: 20px;
+    right: 20px;
     margin: 0;
     padding: 0;
     font-size: 0;
@@ -217,6 +238,7 @@ body {
   nav.expanded {
     display: block;
     margin-top: 27px;
+    text-align: left;
     border-bottom: 1px solid #8d9091;
   }
   .main-menu .horizontal li {
@@ -227,7 +249,7 @@ body {
   .main-menu .horizontal li a {
     padding: 10px 20px;
   }
-  .main-menu .horizontal li.active a, .horizontal a:hover {
+  .main-menu .horizontal li.active a, .main-menu .horizontal a:hover {
     color: #06b;
     background: #c7e5ff;
   }

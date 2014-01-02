@@ -14,7 +14,9 @@
             <h1 class="post-title"><a href="article.php">Site title</a></h1>
             <time datetime="88.10.21" class="post-date">21.10.88</time>
           </header>
-          <section class="post-excerpt">Excerpt</section>
+          <section class="post-excerpt">
+            <p>Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.</p>
+          </section>
         </article>
 
         <article class="post">
@@ -22,7 +24,9 @@
             <h1 class="post-title"><a href="article.php">Site title</a></h1>
             <time datetime="88.10.21" class="post-date">21.10.88</time>
           </header>
-          <section class="post-excerpt">Excerpt</section>
+          <section class="post-excerpt">
+            <p>Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.</p>
+          </section>
         </article>
 
         <article class="post">
@@ -30,7 +34,9 @@
             <h1 class="post-title"><a href="article.php">Site title</a></h1>
             <time datetime="88.10.21" class="post-date">21.10.88</time>
           </header>
-          <section class="post-excerpt">Excerpt</section>
+          <section class="post-excerpt">
+            <p>Post news of any subject your audience would appreciate. Delete this temporary post from the Blogs section below. By the way, you can add any kind of content to your blog post — text, pictures, tables, forms, and galleries.</p>
+          </section>
         </article>
     </main>
 
