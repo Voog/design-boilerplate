@@ -53,13 +53,16 @@ body {
   max-width: 490px;
   padding-left: 20px;
 }
+.mobile-site-title {
+  display: none;
+}
 .header-right {
   padding-right: 20px;
   text-align: right;
 }
 
 /* MAIN MENU */
-.menu-btn {
+.menu-btn, .mobile-lang {
   display: none;
 }
 .menu {
@@ -199,7 +202,14 @@ body {
   .header-left {
     text-align: right;
   }
-  .header-right {
+  .mobile-site-title {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    margin: 0;
+  }
+  .lang-menu {
     display: none;
   }
 
@@ -252,6 +262,10 @@ body {
   .main-menu .horizontal li.active a, .main-menu .horizontal a:hover {
     color: #06b;
     background: #c7e5ff;
+  }
+  .mobile-lang {
+    display: block;
+    font-size: 12px;
   }
 
   /* CONTENT AREA */

@@ -11,7 +11,7 @@
       <?php require("components/tags-blog.php") ?>
         <article class="post">
           <header class="post-header">
-            <h1 class="post-title"><a href="article.php">Site title</a></h1>
+            <h1 class="post-title"><a href="article.php">How I wrote my first article</a></h1>
             <time datetime="88.10.21" class="post-date">21.10.88</time>
           </header>
           <section class="post-excerpt">
@@ -21,7 +21,7 @@
 
         <article class="post">
           <header class="post-header">
-            <h1 class="post-title"><a href="article.php">Site title</a></h1>
+            <h1 class="post-title"><a href="article.php">How I wrote my second article</a></h1>
             <time datetime="88.10.21" class="post-date">21.10.88</time>
           </header>
           <section class="post-excerpt">
@@ -31,7 +31,7 @@
 
         <article class="post">
           <header class="post-header">
-            <h1 class="post-title"><a href="article.php">Site title</a></h1>
+            <h1 class="post-title"><a href="article.php">How I wrote my third article</a></h1>
             <time datetime="88.10.21" class="post-date">21.10.88</time>
           </header>
           <section class="post-excerpt">

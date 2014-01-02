@@ -1,5 +1,6 @@
 <header class="site-header">
   <section class="header-left">
+    <h1 class="mobile-site-title">Site title</h1>
     <button class="menu-btn js-menu-toggle">
       <div class="btn-inner">
         <div class="menu-stripe"></div>
@@ -14,6 +15,9 @@
           <li><a href="products.php">Products</a></li>
           <li><a href="blog-and-news.php">Blog</a></li>
           <li><a href="contacts.php">Contact</a></li>
+          <li class="mobile-lang"><a href="contacts.php">In English</a></li>
+          <li class="mobile-lang"><a href="contacts.php">eesti keeles</a></li>
+          <li class="mobile-lang"><a href="contacts.php">Suomi</a></li>
           <!--
           <li>{% menubtn site.hidden_menuitems %}</li>
           <li>{% menuadd %}</li>
