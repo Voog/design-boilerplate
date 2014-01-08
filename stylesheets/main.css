@@ -153,9 +153,13 @@ body {
 .post .post-title a:hover {
   color: #626566;
 }
+.post-excerpt {
+  margin-bottom: 17px;
+}
 
 /* GALLERY */
 .edys-gallery-area {
+  overflow: hidden;
   margin-bottom: 40px;
 }
 .edys-gallery-area:hover img {
@@ -269,6 +273,9 @@ body {
   }
 
   /* CONTENT AREA */
+  .front-page-title {
+    display: none;
+  }
   .page-content {
     padding: 0 20px;
   }

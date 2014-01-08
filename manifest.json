@@ -1,0 +1,139 @@
+{
+  "description": "Boilerplate",
+  "preview_medium": "http://static.edicy.com/designs/previews/boilerplate_medium.jpg",
+  "author": "Tõnu Runnel",
+  "layouts": [
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/article.tpl",
+      "layout_name": "component",
+      "title": "article"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/html-head.tpl",
+      "layout_name": "component",
+      "title": "html-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/javascripts.tpl",
+      "layout_name": "component",
+      "title": "javascripts"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/lang-menu.tpl",
+      "layout_name": "component",
+      "title": "lang-menu"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/nav-menu.tpl",
+      "layout_name": "component",
+      "title": "nav-menu"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/search.tpl",
+      "layout_name": "content",
+      "title": "search"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-footer.tpl",
+      "layout_name": "component",
+      "title": "site-footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-header.tpl",
+      "layout_name": "component",
+      "title": "site-header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/tags-article.tpl",
+      "layout_name": "component",
+      "title": "tags-article"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/tags-blog.tpl",
+      "layout_name": "component",
+      "title": "tags-blog"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
+    },
+    {
+      "content_type": "blog",
+      "component": false,
+      "file": "layouts/blog___news.tpl",
+      "layout_name": "blog",
+      "title": "Blog & News"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/blog_article.tpl",
+      "layout_name": "",
+      "title": "Blog article"
+    }
+  ],
+  "preview_small": "http://static.edicy.com/designs/previews/boilerplate_small.jpg",
+  "name": "Tõnu Runnel",
+  "assets": [
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/main.css",
+      "kind": "stylesheets",
+      "filename": "main.css"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/jquery-1.10.2.min.js",
+      "kind": "javascripts",
+      "filename": "jquery-1.10.2.min.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/main.js",
+      "kind": "javascripts",
+      "filename": "main.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/modernizr.custom.js",
+      "kind": "javascripts",
+      "filename": "modernizr.custom.js"
+    },
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/retina-1.1.0.min.js",
+      "kind": "javascripts",
+      "filename": "retina-1.1.0.min.js"
+    }
+  ]
+}

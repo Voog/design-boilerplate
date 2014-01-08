@@ -7,32 +7,34 @@
     }).parent().addClass('active');
   };
 
-  // Toggle mobile menu
-  var menuToggle = function() {
-    $('.js-menu-toggle').click(function() {
-      $(this).next().toggleClass('expanded');
-    });
+  // Shows and hides specific elements on common, blog and article pages (Use liquid instead).
+  var commonPageSettings = function() {
+    $('.header-banner').hide();
   };
 
   // Initiations
+  var initFrontPage = function() {
+    $('.header-left').hide();
+  };
+
   var initCommonPage = function() {
-    
+    commonPageSettings();
   };
 
   var initBlogPage = function() {
-    
+    commonPageSettings();
   };
 
   var initArticlePage = function() {
-    
+    commonPageSettings();
   };
 
   var init = function() {
     hightlightActivePage();
-    menuToggle();
   };
 
   window.project = {
+    initFrontPage: initFrontPage,
     initCommonPage: initCommonPage,
     initBlogPage: initBlogPage,
     initArticlePage: initArticlePage

@@ -8,14 +8,14 @@
 <meta name="author" content="{{ site.author }}">
 
 <!-- FACEBOOK OPENGRAPH -->
-<meta property="fb:admins" content="1227335529"> <!--Site admin's Facebook user id -->
+<meta property="fb:admins" content="XXXXXXXXXX"> <!--Site admin's Facebook user id -->
+<!-- http://graph.facebook.com/"username" - Replace "username" with site admin's username to get admin's ID) -->
 <meta property="og:title" content="{{ site.title }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.url }}">
 <meta property="og:image" content="{{ site.url }}/{{ photos_path }}/tbw-esileht-th.jpg">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:description" content="{{ description }}">
-<!-- http://graph.facebook.com/username - Site admin's username -->
 <!-- https://developers.facebook.com/tools/debug - Debug after each modification-->
 
 <!-- FAV ICON -->
@@ -25,11 +25,11 @@
 <link rel="apple-touch-icon" href="{{ images_path }}/apple-touch-icon.png">
 
 <!-- STYLESHEETS -->
-<link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+{% stylesheet_link "main.css" %}
 
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
-<script type="text/javascript" src="javascripts/modernizr.custom.js"></script>
+<script type="text/javascript" src="javascripts/modernizr.custom.js?2"></script>
 <!-- http://modernizr.com/download/ - Check for updates -->
 
 <!-- SITE TITLE -->
-<title>Edicy template</title>
+<title>{% if article %}{{ article.title }} | {{ page.site_title }}{% else %}{% if site.root_item %}{{ page.site_title }}{% else %}{{ page.site_title }} | {{ page.title }}{% endif %}{% endif %}</title>
