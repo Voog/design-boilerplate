@@ -1,6 +1,8 @@
 
-sftp-config.json
-
 .DS_Store
 
-*.scssc
+.edicy
+
+*.html
+
+site.json
