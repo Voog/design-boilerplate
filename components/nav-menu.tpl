@@ -3,9 +3,9 @@
     {% for item in site.menuitems %}
       <li{% if item.selected? %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
-    <li class="mobile-lang"><a href="contacts.php">In English</a></li>
-    <li class="mobile-lang"><a href="contacts.php">eesti keeles</a></li>
-    <li class="mobile-lang"><a href="contacts.php">Suomi</a></li>
+    {% for language in site.languages %}
+      <li class="mobile-lang{% if language.selected? %} active{% endif %}"><a href="{{ language.url }}">{{ language.title }}</a></li>
+    {% endfor %}
     {% if editmode %}
       {% if site.hidden_menuitems.size > 0 %}
         <li>{% menubtn site.hidden_menuitems %}</li>

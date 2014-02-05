@@ -1,8 +1,8 @@
-<script src="javascripts/jquery-1.10.2.min.js?2"></script>
-<script src="javascripts/main.js?2"></script>
+<script src="{{ javascripts_path }}/jquery.js?1"></script>
+<script src="{{ javascripts_path }}/main.js?1"></script>
 
 <!-- REPLACE IMAGES WITH RETINA READY DUPLICATES -->
-<script type="text/javascript" src="{{ javascripts_path }}/retina.js?2"></script>
+<script src="{{ javascripts_path }}/retina.js?1"></script>
 
 <!-- EDICY SITE SEARCH PLUGIN -->
 {% if site.search.enabled %}
@@ -16,7 +16,7 @@
 {% endif %}
 
 <!-- LANGUAGE SWITCHER -->
-<script type="text/javascript">
+<script>
   $(function() {  
     $('.lang-select').change(function() { window.location = $(this).find(':selected').val(); });
   });

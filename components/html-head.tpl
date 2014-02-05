@@ -28,7 +28,7 @@
 {% stylesheet_link "main.css" %}
 
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
-<script type="text/javascript" src="javascripts/modernizr.custom.js?2"></script>
+<script src="{{ javascripts_path }}/modernizr.js?1"></script>
 <!-- http://modernizr.com/download/ - Check for updates -->
 
 <!-- SITE TITLE -->
