@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="{{ page.language_code }}">
   <head>
     {% include "html-head" %}
     <!-- FACEBOOK OPENGRAPH -->
@@ -9,24 +9,22 @@
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
-
+  
   <body class="front-page">
-    <section class="site-content cfx">
-      {% include "site-header" %}
-
-      <main class="page-content cfx" role="main">
+    <div class="container cfx">
+      {% include "header" %}
+  
+      <main class="content cfx" role="main">
         <header class="content-header">
-          <h1 class="front-page-title">{% editable site.header %}</h1>
-          <h2>{% content name="slogan" %}</h2>
+          <h1 class="content-title user-content">{% editable site.header %}</h1>
+          <h2 class="user-content">{% content name="slogan" %}</h2>
         </header>
-        <section class="content-body">
-          {% content %}
-        </section>
+        <section class="content-body user-content">{% content %}</section>
       </main>
-
-      {% include "site-footer" %}
-    </section>
-
+  
+      {% include "footer" %}
+    </div>
+  
     {% include "javascripts" %}
     <script>project.initCommonPage();</script>
   </body>
