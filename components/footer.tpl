@@ -1,4 +1,4 @@
-  <footer class="site-footer cfx">
+  <footer class="footer user-content cfx">
     {% xcontent name="footer" %}
   </footer>
 </div>

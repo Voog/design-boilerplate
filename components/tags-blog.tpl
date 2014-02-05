@@ -1,6 +1,6 @@
 {% if site.has_language_tags? %}
   <nav class="post-tags cfx">
-    <ul class="menu horizontal tags-menu">
+    <ul class="menu tags-menu">
       <li class="posts-all"><a href="/{{ site.blogs.first.page.path }}">{% case page.language_code %}{% when 'et' %}Kõik teemad{% else %}All topics{% endcase %}</a></li>
       {% for tag in site.language_tags %}
         {% assign activestr = " " %}

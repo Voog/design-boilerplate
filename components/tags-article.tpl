@@ -1,8 +1,9 @@
 <nav class="post-tags cfx">
-  <ul class="menu horizontal tags-menu">
+  <ul class="menu tags-menu">
     {% if article.tags? %}
       <div class="filters-label">Filter posts</div>
     {% endif %}
+    
     {% if editmode %}
       {% editable article.tags %}
     {% else %}
