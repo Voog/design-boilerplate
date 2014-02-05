@@ -15,6 +15,7 @@
 
 <!-- STYLESHEETS -->
 {% stylesheet_link "main.css" %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.css?1" %}<![endif]-->
 
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
 <script src="{{ javascripts_path }}/modernizr.js?1"></script>
