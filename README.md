@@ -213,4 +213,8 @@ File location: **/layouts/common_page.tpl**
 #### 2.2.2 Comments
 * ```<body>``` element has unique class name **common-page**
 * **Blog & News** layout ```<main>``` element contains the ```{{ content }}``` area with no name to render default page sample content.
+<<<<<<< HEAD
 * 
+=======
+* 
+>>>>>>> fb8499e455d0ba18048b2207bd7f25c29d3d1bdc
