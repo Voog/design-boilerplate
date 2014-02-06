@@ -16,7 +16,7 @@
   
       <main class="content cfx" role="main">
         <header class="content-header">
-          <h1 class="user-content">{% content iname="slogan" %}</h1>
+          <h1 class="user-content">{% content name="slogan" %}</h1>
         </header>
         <section class="content-body user-content">{% content %}</section>
       </main>
@@ -38,10 +38,28 @@
   * ```<div class="container cfx">``` element holds all layout components - header, content, sidebar, footer etc
   * ```<div class="container cfx">``` element is used for styling basic layout. For example website content area positioning, width, background etc
 * ```<main class="content cfx" role="main">```
-  * Each layout ```container``` element contains ```<main>``` element with class names **content** and **cfx**. ```<main>``` element also has the ```role``` attribute with value **main**
-  * ```<main class="content cfx" role="main">``` element holds the main content of the page - Articles listing, article, text, images etc
+  * Each layout ```container``` element contains ```<main>``` element with class names **content** and **cfx**.
+  * ```<main``` element also has the ```role``` attribute with value **main**
+  * ```<main class="content cfx" role="main">``` element holds the main content of the page - Articles listing, article, text areas, images etc
+  * 
 
-## 2. Layouts
+## 2. Content areas
+Content areas are user-editable areas that can be included with ```{{ content }}``` or ```{{ contentblock }}{{ endcontentblock }}``` tags.
+
+Content areas can contain text and images, photo galleries and form fields.
+
+## 2.1 {{ content }}
+* ```{{ content }}``` is an optional content area. ```{{ content }}``` without name contains default sample page code.
+
+## 2.2 {{ contentblock }}{{ endcontentblock }}
+* ```{{ content }}<!-- Some text -->{{ endcontentblock }}``` is a content area with predefined content.
+
+## 2.3 Content area names
+* Examples: ```{{ content name="sample" }}```, ```{{ contentblock name="sample_name" }}{{ endcontentblock }}```
+* Names should be declared in lowercases
+* Words should be separated with undescores (to distinct them from class names).
+
+## 3. Layouts
 Layout is a html/liquid code that is used for rendering website pages.
 
 Layouts are located in the folder **/layouts**.
@@ -51,13 +69,13 @@ Basic design has 4 layouts:
 * Common page
 * Front page
 
-### 2.1 Blog & News / Blog article
-#### 2.1.1 Blog & News
+### 3.1 Blog & News / Blog article
+#### 3.1.1 Blog & News
 Blog and/or news page article listing view.
 
 File location: **/layouts/blog___news.tpl**
 
-##### 2.1.1.1 Sample code
+##### 3.1.1.1 Sample code
 ```html
 <!DOCTYPE html>
 <html lang="{{ page.language_code }}">
@@ -103,12 +121,12 @@ File location: **/layouts/blog___news.tpl**
 </html>
 ```
 
-#### 2.1.2 Blog article
+#### 3.1.2 Blog article
 Blog and/or news page article detail view.
 
 File location: **/layouts/blog_article.tpl**
 
-##### 2.1.2.1 Sample code
+##### 3.1.2.1 Sample code
 ```html
 <!DOCTYPE html>
 <html lang="{{ page.language_code }}">
@@ -149,7 +167,7 @@ File location: **/layouts/blog_article.tpl**
 </html>
 ```
 
-#### 2.1.3 Comments
+#### 3.1.3 Comments
 * **Blog & News** layout **<main>** element contains the for loop that renders a list of the blog/news articles.
 * **Blog & News** ```<body>``` element has unique class name **blog-page**
 * **Blog article** layout **<main>** element contains the code that renders a blog/news single article.
@@ -171,12 +189,12 @@ File location: **/layouts/blog_article.tpl**
       * The article excerpt ```{{ article.excerpt }}``` must be inside element with ```class="post-excerpt"```
       * The article body ```{{ article.body }}``` must be inside element with ```class="post-body"```
 
-### 2.2 Common page
+### 3.2 Common page
 Common content page view.
 
 File location: **/layouts/common_page.tpl**
 
-#### 2.2.1 Sample code
+#### 3.2.1 Sample code
 ```html
 <!DOCTYPE html>
 <html lang="{{ page.language_code }}">
@@ -210,7 +228,46 @@ File location: **/layouts/common_page.tpl**
 </html>
 ```
 
-#### 2.2.2 Comments
+#### 3.2.2 Comments
 * ```<body>``` element has unique class name **common-page**
 * **Blog & News** layout ```<main>``` element contains the ```{{ content }}``` area with no name to render default page sample content.
-* 
+
+### 3.3 Front page
+Front page view.
+
+File location: **/layouts/front_page.tpl**
+
+#### 3.3.1 Sample code
+```html
+<!DOCTYPE html>
+<html lang="{{ page.language_code }}">
+  <head>
+    {% include "html-head" %}
+    <!-- FACEBOOK OPENGRAPH -->
+    <!-- Global opengraph tags are located in "header" component -->
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="{{ site.name }}">
+    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+    <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
+  </head>
+  
+  <body class="front-page">
+    <div class="container cfx">
+      {% include "header" %}
+  
+      <main class="content cfx" role="main">
+        <header class="content-header">
+          <h1 class="content-title user-content">{% editable site.header %}</h1>
+          <h2 class="user-content">{% content name="slogan" %}</h2>
+        </header>
+        <section class="content-body user-content">{% content %}</section>
+      </main>
+  
+      {% include "footer" %}
+    </div>
+  
+    {% include "javascripts" %}
+    <script>project.initCommonPage();</script>
+  </body>
+</html>
+```
