@@ -6,13 +6,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/article.tpl",
-      "layout_name": "component",
-      "title": "article"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/html-head.tpl",
       "layout_name": "component",
       "title": "html-head"
@@ -48,16 +41,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-footer.tpl",
+      "file": "components/footer.tpl",
       "layout_name": "component",
-      "title": "site-footer"
+      "title": "footer"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-header.tpl",
+      "file": "components/header.tpl",
       "layout_name": "component",
-      "title": "site-header"
+      "title": "header"
     },
     {
       "content_type": "component",
@@ -113,9 +106,9 @@
     },
     {
       "content_type": "text/javascript",
-      "file": "javascripts/jquery-1.10.2.min.js",
+      "file": "javascripts/jquery.js",
       "kind": "javascripts",
-      "filename": "jquery-1.10.2.min.js"
+      "filename": "jquery.js"
     },
     {
       "content_type": "text/javascript",
@@ -125,15 +118,15 @@
     },
     {
       "content_type": "text/javascript",
-      "file": "javascripts/modernizr.custom.js",
+      "file": "javascripts/modernizr.js",
       "kind": "javascripts",
-      "filename": "modernizr.custom.js"
+      "filename": "modernizr.js"
     },
     {
       "content_type": "text/javascript",
-      "file": "javascripts/retina-1.1.0.min.js",
+      "file": "javascripts/retina.js",
       "kind": "javascripts",
-      "filename": "retina-1.1.0.min.js"
+      "filename": "retina.js"
     }
   ]
 }
