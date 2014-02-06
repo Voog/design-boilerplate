@@ -11,26 +11,28 @@ c) Common page
 d) Front page
 
 1.1 Code sample
-<!DOCTYPE html>
-<html lang="{{ page.language_code }}">
-<head>
-  {% include "html-head" %}
-</head>
+<pre>
+  <!DOCTYPE html>
+  <html lang="{{ page.language_code }}">
+  <head>
+    {% include "html-head" %}
+  </head>
 
-<body class="**unique-class-name**">
-  <div class="container cfx">
-    {% include "site-header" %}
+  <body class="**unique-class-name**">
+    <div class="container cfx">
+      {% include "site-header" %}
 
-    <main class="content cfx" role="main">
-      **TEMPLATE CONTENT AREA**
-    </main>
+      <main class="content cfx" role="main">
+        **TEMPLATE CONTENT AREA**
+      </main>
 
-    {% include "site-footer" %}
-  </div>
+      {% include "site-footer" %}
+    </div>
 
-  {% include "javascripts" %}
-</body>
-</html>
+    {% include "javascripts" %}
+  </body>
+  </html>
+</pre>
 
 1.2 Comments
 <ul>
