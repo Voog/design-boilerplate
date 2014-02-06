@@ -16,7 +16,7 @@
   
       <main class="content cfx" role="main">
         <header class="content-header">
-          <h1 class="user-content">{% content name="slogan" %}</h1>
+          <h1 class="user-content">{% content iname="slogan" %}</h1>
         </header>
         <section class="content-body user-content">{% content %}</section>
       </main>
@@ -149,16 +149,11 @@ File location: **/layouts/blog_article.tpl**
 </html>
 ```
 
-#### 2.1.3 Blog & News comments
-**Blog & News** layout **<main>** element contains the for loop that renders a list of the blog/news articles.
-* ```<body>``` element has unique class name **blog-page**
-* Article name in for loop: **article**
-
-#### 2.1.4 Blog article comments
-**Blog article** layout **<main>** element contains the code that renders a blog/news single article.
-* ```<body>``` element has unique class name **post-page**
-
-#### 2.1.5 Common Comments
+#### 2.1.3 Comments
+* **Blog & News** layout **<main>** element contains the for loop that renders a list of the blog/news articles.
+* **Blog & News** ```<body>``` element has unique class name **blog-page**
+* **Blog article** layout **<main>** element contains the code that renders a blog/news single article.
+* **Blog article** ```<body>``` element has unique class name **post-page**
 * Blog article container element is ```<article>``` and has class attribute named **post**
   * If post listing and detail views use identical **post** output, then the code should be a separate **component**.
 * Each element class name in ```<article class="post"></article>``` has prefix **post-**
@@ -175,3 +170,47 @@ File location: **/layouts/blog_article.tpl**
       * The article creation date ```{{ article.created_at }}``` must be inside element with ```class="post-date"``` and have datetime attribute in the following format: ```{{ article.created_at | date : "%Y-%m-%d" }}```
       * The article excerpt ```{{ article.excerpt }}``` must be inside element with ```class="post-excerpt"```
       * The article body ```{{ article.body }}``` must be inside element with ```class="post-body"```
+
+### 2.2 Common page
+Common content page view.
+
+File location: **/layouts/common_page.tpl**
+
+#### 2.2.1 Sample code
+```html
+<!DOCTYPE html>
+<html lang="{{ page.language_code }}">
+  <head>
+    {% include "html-head" %}
+    <!-- FACEBOOK OPENGRAPH -->
+    <!-- Global opengraph tags are located in "header" component -->
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="{{ site.name }}">
+    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+    <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
+  </head>
+  
+  <body class="common-page">
+    <div class="container cfx">
+      {% include "header" %}
+  
+      <main class="content cfx" role="main">
+        <header class="content-header">
+          <h1 class="user-content">{% content name="slogan" %}</h1>
+        </header>
+        <section class="content-body user-content">{% content %}</section>
+      </main>
+  
+      {% include "footer" %}
+    </div>
+  
+    {% include "javascripts" %}
+    <script>project.initCommonPage();</script>
+  </body>
+</html>
+```
+
+#### 2.2.2 Comments
+* ```<body>``` element has unique class name **common-page**
+* **Blog & News** layout ```<main>``` element contains the ```{{ content }}``` area with no name to render default page sample content.
+* 
