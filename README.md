@@ -30,7 +30,7 @@
 </html>
 ```
 
-### 1.2 Comments
+### 1.2 Info
 * ```<body class="UNIQUE-CLASS-NAME">```
   * Each layout has its own class name for ```<body>``` element to write layout-specific CSS code.
 * ```<div class="container cfx">```
@@ -48,10 +48,10 @@ Content areas are user-editable areas that can be included with ```{{ content }}
 
 Content areas can contain text and images, photo galleries and form fields.
 
-## 2.1 {{ content }}
+### 2.1 {{ content }}
 * ```{{ content }}``` is an optional content area. ```{{ content }}``` without name contains default sample page code.
 
-## 2.2 {{ contentblock }}{{ endcontentblock }}
+### 2.2 {{ contentblock }}{{ endcontentblock }}
 * ```{{ content }}<!-- Some text -->{{ endcontentblock }}``` is a content area with predefined content.
 
 ## 2.3 Content area names
@@ -167,7 +167,7 @@ File location: **/layouts/blog_article.tpl**
 </html>
 ```
 
-#### 3.1.3 Comments
+#### 3.1.3 Info
 * **Blog & News** layout **<main>** element contains the for loop that renders a list of the blog/news articles.
 * **Blog & News** ```<body>``` element has unique class name **blog-page**
 * **Blog article** layout **<main>** element contains the code that renders a blog/news single article.
@@ -228,7 +228,7 @@ File location: **/layouts/common_page.tpl**
 </html>
 ```
 
-#### 3.2.2 Comments
+#### 3.2.2 Info
 * ```<body>``` element has unique class name **common-page**
 * **Blog & News** layout ```<main>``` element contains the ```{{ content }}``` area with no name to render default page sample content.
 
@@ -271,3 +271,30 @@ File location: **/layouts/front_page.tpl**
   </body>
 </html>
 ```
+
+## 4. Components
+Components are reusable code snippets that can be included in layouts or other components.
+
+Components are located in the folder **/components**.
+Basic design components are:
+* footer
+* header
+* html-head
+* javascripts
+* lang-menu
+* nav-menu
+* search
+* sidebar
+* tags-article
+* tags-blog
+* topbar
+
+
+### 4.1 footer
+**Optional** component
+Contains site footer area code.
+
+### 4.1.1 Sample code
+
+
+File location: **/layouts/blog___news.tpl**
