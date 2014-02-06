@@ -160,15 +160,17 @@ File location: **/layouts/blog_article.tpl**
 
 #### 2.1.5 Common Comments
 * Blog article container element is ```<article>``` and has class attribute named **post**
+  * If post listing and detail views use identical **post** output, then the code should be a separate **component**.
 * Each element class name in ```<article class="post"></article>``` has prefix **post-**
-  * ```<article class="post"></article>``` element containers:
+  * ```<article class="post"></article>``` element can have three different containers:
     * ```<header class="post-header"></header>```
       * Post header element. Contains the title, creation date, author etc
     * ```<section class="post-content"></section>```
       * Post content element. Contains the excerpt, body etc
     * ```<footer class="post-footer"></footer>```
       * Post footer element. Contains the title, creation date, author etc
-    * Each container can contain specific components:
+    * If containers are not needed for styleing, then they can be left out from the code.
+    * ```<article class="post"></article>``` can contain specific components:
       * The article title ```{{ article.title }}``` must be inside element with ```class="post-title"```
       * The article creation date ```{{ article.created_at }}``` must be inside element with ```class="post-date"``` and have datetime attribute in the following format: ```{{ article.created_at | date : "%Y-%m-%d" }}```
       * The article excerpt ```{{ article.excerpt }}``` must be inside element with ```class="post-excerpt"```
