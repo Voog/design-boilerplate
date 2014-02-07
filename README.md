@@ -44,8 +44,7 @@
   * 
 
 ## 2. Content areas
-Content areas are user-editable areas that can be included with ```{{ content }}``` or ```{{ contentblock }}{{ endcontentblock }}``` tags.
-
+Content areas are user-editable areas that can be included with ```{{ content }}``` or ```{{ contentblock }}{{ endcontentblock }}``` tags.  
 Content areas can contain text and images, photo galleries and form fields.
 
 ### 2.1 {{ content }}
@@ -60,9 +59,8 @@ Content areas can contain text and images, photo galleries and form fields.
 * Words should be separated with undescores (to distinct them from class names).
 
 ## 3. Layouts
-Layout is a html/liquid code that is used for rendering website pages.
-
-Layouts are located in the folder **/layouts**.
+Layout is a html/liquid code that is used for rendering website pages.  
+Layouts are located in the folder **/layouts**.  
 Basic design has 4 layouts:
 * Blog & News
 * Blog article
@@ -71,8 +69,7 @@ Basic design has 4 layouts:
 
 ### 3.1 Blog & News / Blog article
 #### 3.1.1 Blog & News
-Blog and/or news page article listing view.
-
+Blog and/or news page article listing view.  
 File location: **/layouts/blog___news.tpl**
 
 ##### 3.1.1.1 Sample code
@@ -122,8 +119,7 @@ File location: **/layouts/blog___news.tpl**
 ```
 
 #### 3.1.2 Blog article
-Blog and/or news page article detail view.
-
+Blog and/or news page article detail view.  
 File location: **/layouts/blog_article.tpl**
 
 ##### 3.1.2.1 Sample code
@@ -190,8 +186,7 @@ File location: **/layouts/blog_article.tpl**
       * The article body ```{{ article.body }}``` must be inside element with ```class="post-body"```
 
 ### 3.2 Common page
-Common content page view.
-
+Common content page view.  
 File location: **/layouts/common_page.tpl**
 
 #### 3.2.1 Sample code
@@ -291,10 +286,19 @@ Basic design components are:
 
 
 ### 4.1 footer
-**Optional** component
-Contains site footer area code.
+**Optional** component  
+Contains site footer area code.  
+File location: **/layouts/common_page.tpl**
 
 ### 4.1.1 Sample code
+```html
+  <footer class="footer user-content cfx">
+    {% xcontent name="footer" %}
+  </footer>
+</div>
+```
+
+
 
 
 File location: **/layouts/blog___news.tpl**
