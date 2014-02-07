@@ -295,10 +295,6 @@ File location: **/layouts/common_page.tpl**
   <footer class="footer user-content cfx">
     {% xcontent name="footer" %}
   </footer>
-</div>
 ```
 
-
-
-
-File location: **/layouts/blog___news.tpl**
+### 4.1.2 Info
