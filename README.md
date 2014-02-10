@@ -60,11 +60,6 @@ Content areas can contain text and images, photo galleries and form fields.
 * Words should be separated with undescores (to distinct them from class names).
 
 
-## 3. Other user-editable areas
-### 3.1 Article areas
-Article areas are user-editable areas for each article.
-
-
 ## 3. Layouts
 Layout is a html/liquid code that is used for rendering website pages.  
 Layouts are located in the folder **/layouts**.  
@@ -108,7 +103,7 @@ File location: **/layouts/blog___news.tpl**
               <time datetime="{{ article.created_at | date : "%Y-%m-%d" }}" class="post-date">{{ article.created_at | date : "%b %d, %Y" }}</time>
             </header>
             <section class="post-content">
-              <div class="post-excerpt">{{ article.excerpt }}</div>
+              <div class="post-excerpt content-formatted">{{ article.excerpt }}</div>
             </section>
             <section class="post-footer">
               <div class="post-author">{{ article.author }}</div>
@@ -155,10 +150,21 @@ File location: **/layouts/blog_article.tpl**
             {% include "tags-article" %}
           </header>
           <section class="post-content">
-            <div class="post-excerpt">{% editable article.excerpt %}</div>
-            <div class="post-body">{% editable article.body %}</div>
+            <div class="post-excerpt content-formatted">{% editable article.excerpt %}</div>
+            <div class="post-body content-formatted">{% editable article.body %}</div>
           </section>
         </article>
+        
+        <section class="comments">
+          <h2 class="comments-title">
+            {% case article.comments_count %}{% when 0 %}{{ "no_comments" | lc }}{% else %}{{ "comments_for_count" | lc }}: <span class="comments-count">{{ article.comments_count }}</span>{% endcase %}</h2>
+          
+          {% for comment in article.comments %}
+            <div class="comment">{{ comment.body }} {{ comment.author }}, ({{ comment.created_at | date : "%b %d, %Y" }})</div>
+          {% endfor %}
+          
+          {% include "comment-form" %}
+        </section>
       </main>
   
       {% include "footer" %}
@@ -216,9 +222,9 @@ File location: **/layouts/common_page.tpl**
   
       <main class="content cfx" role="main">
         <header class="content-header">
-          <h1 class="user-content">{% content name="slogan" %}</h1>
+          <h1 class="content-formatted">{% content name="slogan" %}</h1>
         </header>
-        <section class="content-body user-content">{% content %}</section>
+        <section class="content-body content-formatted">{% content %}</section>
       </main>
   
       {% include "footer" %}
@@ -259,10 +265,10 @@ File location: **/layouts/front_page.tpl**
   
       <main class="content cfx" role="main">
         <header class="content-header">
-          <h1 class="content-title user-content">{% editable site.header %}</h1>
-          <h2 class="user-content">{% content name="slogan" %}</h2>
+          <h1 class="content-title content-formatted">{% editable site.header %}</h1>
+          <h2 class="content-slogan content-formatted">{% content name="slogan" %}</h2>
         </header>
-        <section class="content-body user-content">{% content %}</section>
+        <section class="content-body content-formatted">{% content %}</section>
       </main>
   
       {% include "footer" %}
