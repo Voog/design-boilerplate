@@ -428,6 +428,52 @@ File location: [/components/html-head.tpl](/components/html-head.tpl)
   * Basic meta info
   * Fav- and touch-icons
   * Stylesheets
-  * Javascripts (that must be loaded before the ```<body>```)
+  * Javascripts (that must be loaded before the ```<body>``` element)
   * Title tag
   * Facebook opengraph (global settings)
+
+### 4.4 javascripts
+**Required** component.  
+Contains site javascript links and inline javascripts that must be loaded at the end of the code.
+File location: [/components/html-head.tpl](/components/html-head.tpl)
+
+### 4.3.1 Example
+```html
+<script src="{{ javascripts_path }}/jquery.js?1"></script>
+<script src="{{ javascripts_path }}/main.js?1"></script>
+
+<!-- REPLACE IMAGES WITH RETINA READY DUPLICATES -->
+<script src="{{ javascripts_path }}/retina.js?1"></script>
+
+<!-- EDICY SITE SEARCH PLUGIN -->
+{% if site.search.enabled %}
+  <script src="http://static.edicy.com/assets/site_search/3.0/site_search.js?2"></script>
+  <script>
+    var edys_site_search_options = {
+      texts: { noresults: "{{ "search_noresults"|lc }}" },
+      default_stylesheet_enabled: false
+    }
+  </script>
+{% endif %}
+
+<!-- LANGUAGE SWITCHER -->
+<script>
+  $(function() {  
+    $('.lang-select').change(function() { window.location = $(this).find(':selected').val(); });
+  });
+</script>
+
+<!-- EDICY GOOGLE ANALYTICS SHORTCODE -->
+{% unless editmode %}{{ site.analytics }}{% endunless %}
+```
+
+### 4.3.2 Info
+* **javascripts** code should be divided into separate blocks in the following order:
+  * Javascripts in the [/javascripts](/javascripts) folder
+    * **jQuery** file link (if used)
+    * **main.js** file link (if used)
+    * **retina.js** file link (if used)
+    * Additional javascripts links (plugins etc)
+  * Site search plugin code
+  * Additional inline javascripts (plugins initiations etc)
+  * Google analytics code
