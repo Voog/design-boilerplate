@@ -517,4 +517,6 @@ File location: [/components/lang-menu.tpl](/components/lang-menu.tpl)
   * If ```<select>``` is used, the loop generates ```<option>``` elements (with class name **lang-select** if needed ).
   * If ```<ul>``` is used, the loop generates ```<li>``` elements (with class **lang-link** if needed).
 * Language menu code is inside ```{% if editmode or site.has_many_languages? %}{% endif %}``` condition (to show language menu only in editmode or when site has more then one language).
+* After the languge listing, additonal element (```<li>``` when ```<ul>``` is used ) with add langugage button is included.
+  * This element is wrapped with the ```{% if %}{% endif %}``` condition to prevent rendering the empty ```<li>``` or other container in the preview- or publicmode.
 [Language documentation](http://www.edicy.com/developer/template-api/objects/language)
