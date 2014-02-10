@@ -11,14 +11,14 @@
   </head>
   
   <body class="UNIQUE-CLASS-NAME">
-    <div class="container cfx">
+    <div class="container">
       {% include "header" %}
   
-      <main class="content cfx" role="main">
+      <main class="content" role="main">
         <header class="content-header">
-          <h1 class="user-content">{% content name="slogan" %}</h1>
+          <h1 class="content-formatted cfx">{% content name="slogan" %}</h1>
         </header>
-        <section class="content-body user-content">{% content %}</section>
+        <section class="content-body content-formatted cfx">{% content %}</section>
       </main>
   
       {% include "footer" %}
@@ -43,44 +43,54 @@
   * ```<main class="content cfx" role="main">``` element holds the main content of the page - Articles listing, article, text areas, images etc
 
 
-## 2. Editable areas
-Editable areas are user-editable areas that can be included with liquid markup.
-Content areas with formattable content must be wrapped with an element that has class ```content-formatted```  
+## 2. Formattable areas
+Formattable areas are user-editable areas that can be formatted with HTML and included with liquid markup tags.
+User-editable areas that can be formatted using HTML, must be wrapped with an element that has class ```content-formatted```  
 
 ### 2.1 Content areas
-Content areas can be included with ```{{ content }}``` or ```{{ contentblock }}{{ endcontentblock }}``` tags.  
+Content areas can be included with ```{% content %}``` or ```{% contentblock %}{% endcontentblock %}``` tags.  
 * Content areas can contain text and images, photo galleries and form fields.  
-* ```{{ content }}``` and ```{{ contentblock }}{{ endcontentblock }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.  
+* ```{% content %}``` and ```{% contentblock %}{% endcontentblock %}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.  
 Examples: 
 ```html
-<h1 class="content-formatted">{% content name="slogan" %}</h1>
-<section class="content-body content-formatted">{% content %}</section>
+<h1 class="content-formatted cfx">{% content name="slogan" %}</h1>
+<section class="content-body content-formatted cfx">{% content %}</section>
 ```
-[{{ content }} documentation](http://www.edicy.com/developer/template-api/tags/content)  
-[{{ contentblock }} documentation](http://www.edicy.com/developer/template-api/tags/contentblock)
+[{% content %} documentation](http://www.edicy.com/developer/template-api/tags/content)  
+[{% contentblock %} documentation](http://www.edicy.com/developer/template-api/tags/contentblock)
 
 #### 2.1.1 Content area names  
 Examples:  
 ```html
-{{ content name="sample" }}
-{{ contentblock name="sample_name" }}{{ endcontentblock }}
+{% content name="sample" %}
+{% contentblock name="sample_name" %}{% endcontentblock %}
 ```
 * Names should be declared in lowercases
 * Words should be separated with undescores (to distinct them from class names).
 
-### 2.2 Article editable areas
-Article editable areas are user-editable areas that are binded to blog/news article.  
-Article has 3 editable areas:
-* Article title - ```{{ article.title }}```
-* Article excerpt - ```{{ article.excerpt }}```
-* Article body - ```{{ article.body }}```
+### 2.2 Article formattable areas
+Article formattable areas are user-editable areas that can be formatted using HTML and are part of the **article** complex.  
+Article has 2 formattable areas:
+* Article excerpt - ```{{ article.excerpt }}``` or ```{% editable article.excerpt %}```
+* Article body - ```{{ article.body }}``` or ```{% editable article.body %}```
 ```{{ article.excerpt }}``` and ```{{ article.body }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.  
 Examples: 
 ```html
-  <div class="post-excerpt content-formatted">{% editable article.excerpt %}</div>
-  <div class="post-body content-formatted">{% editable article.body %}</div>
+  <div class="post-excerpt content-formatted cfx">{% editable article.excerpt %}</div>
+  <div class="post-body content-formatted cfx">{% editable article.body %}</div>
+
+  <div class="post-excerpt content-formatted">{{ article.excerpt }}</div>
+  <div class="post-body content-formatted">{{ editable article.body }}</div>
 ```
 [Article documentation](http://www.edicy.com/developer/template-api/objects/article)
+
+### 2.3 Site header area
+Site header area is an user-editable area for defining site header.
+Example:  
+```html
+<h1 class="header-title content-formatted cfx"><a href="{{ site.root_item.url }}">{{ site.header }}</a></h1>
+<h1 class="content-title content-formatted cfx">{% editable site.header %}</h1>
+```
 
 ## 3. Layouts
 Layout is a html/liquid code that is used for rendering website pages.  
@@ -108,14 +118,14 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
     <meta property="og:title" content="{{ page.title }} — {{ site.name }}">
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
-    {{ blog.rss_link }}
+    {{blog.rss_link}}
   </head>
   
   <body class="blog-page">
-    <div class="container cfx">
+    <div class="container">
       {% include "header" %}
   
-      <main class="content cfx" role="main">
+      <main class="content" role="main">
         {% include "tags-blog" %}
         
         {% for article in articles %}
@@ -125,10 +135,7 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
               <time datetime="{{ article.created_at | date : "%Y-%m-%d" }}" class="post-date">{{ article.created_at | date : "%b %d, %Y" }}</time>
             </header>
             <section class="post-content">
-              <div class="post-excerpt content-formatted">{{ article.excerpt }}</div>
-            </section>
-            <section class="post-footer">
-              <div class="post-author">{{ article.author }}</div>
+              <div class="post-excerpt content-formatted cfx">{{ article.excerpt }}</div>
             </section>
           </article>
         {% endfor %}
@@ -154,7 +161,7 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
     {% include "html-head" %}
     <!-- FACEBOOK OPENGRAPH -->
     <!-- Global opengraph tags are located in "header" component -->
-    <meta property="og:url" content="{{ site.url }}{{ article.url }}">
+    <meta property="og:url" content="{{ site.url }}/{{ article.url }}">
     <meta property="og:title" content="{{ article.title }} — {{ article.excerpt | strip_html }} — {{ page.site_title }}">
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
@@ -164,7 +171,7 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
     <div class="container cfx">
       {% include "header" %}
   
-      <main class="content user-content cfx" role="main">
+      <main class="content user-content" role="main">
         <article class="post">
           <header class="post-header">
             <h1 class="post-title">{% editable article.title %}</h1>
@@ -172,9 +179,12 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
             {% include "tags-article" %}
           </header>
           <section class="post-content">
-            <div class="post-excerpt content-formatted">{% editable article.excerpt %}</div>
-            <div class="post-body content-formatted">{% editable article.body %}</div>
+            <div class="post-excerpt content-formatted cfx">{% editable article.excerpt %}</div>
+            <div class="post-body content-formatted cfx">{% editable article.body %}</div>
           </section>
+          <footer class="post-footer">
+            <div class="post-author">{{ article.author }}</div>
+          </footer>
         </article>
         
         <section class="comments">
@@ -232,8 +242,8 @@ File location: [/layouts/common_page.tpl](/layouts/common_page.tpl)
     {% include "html-head" %}
     <!-- FACEBOOK OPENGRAPH -->
     <!-- Global opengraph tags are located in "header" component -->
-    <meta property="og:url" content="{{ site.url }}">
-    <meta property="og:title" content="{{ site.name }}">
+    <meta property="og:url" content="{{ site.url }}/{{ page.path }}">
+    <meta property="og:title" content="{{ page.title }} — {{ site.name }}">
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
@@ -242,11 +252,11 @@ File location: [/layouts/common_page.tpl](/layouts/common_page.tpl)
     <div class="container cfx">
       {% include "header" %}
   
-      <main class="content cfx" role="main">
+      <main class="content" role="main">
         <header class="content-header">
-          <h1 class="content-formatted">{% content name="slogan" %}</h1>
+          <h1 class="content-formatted cfx">{% content name="slogan" %}</h1>
         </header>
-        <section class="content-body content-formatted">{% content %}</section>
+        <section class="content-body content-formatted cfx">{% content %}</section>
       </main>
   
       {% include "footer" %}
@@ -282,15 +292,15 @@ File location: [/layouts/front_page.tpl](/layouts/front_page.tpl)
   </head>
   
   <body class="front-page">
-    <div class="container cfx">
+    <div class="container">
       {% include "header" %}
   
-      <main class="content cfx" role="main">
+      <main class="content" role="main">
         <header class="content-header">
-          <h1 class="content-title content-formatted">{% editable site.header %}</h1>
-          <h2 class="content-slogan content-formatted">{% content name="slogan" %}</h2>
+          <h1 class="content-title content-formatted cfx">{% editable site.header %}</h1>
+          <h2 class="content-slogan content-formatted cfx">{% content name="slogan" %}</h2>
         </header>
-        <section class="content-body content-formatted">{% content %}</section>
+        <section class="content-body content-formatted cfx">{% content %}</section>
       </main>
   
       {% include "footer" %}
@@ -319,7 +329,6 @@ Basic design components are:
 * tags-blog
 * topbar
 
-
 ### 4.1 footer
 **Optional** component  
 Contains site footer area code.  
@@ -334,6 +343,41 @@ File location: [/components/footer.tpl](/components/footer.tpl)
 
 ### 4.1.2 Info
 * Footer is wrapped with ```<footer>``` element with class names **footer** and **cfx**.
-* Footer content area name is **footer**.
-* Footer content area is global so it must have the **x** prefix before {% content %}.
+* If footer has one content area it name should be **footer**.
+* If footer has many content areas their names should start with the **header_** prefixes.
+* Footer content area is global so it must have the **x** prefix before {% content %}.  
 [{{ xcontent }} documentation](http://www.edicy.com/developer/template-api/tags/xcontent)
+
+### 4.1 header
+**Optional** component  
+Contains site header area code.  
+File location: [/components/header.tpl](/components/header.tpl)
+
+### 4.1.1 Example
+```html
+<header class="header">
+  <section class="header-left">
+    <h1 class="header-title"><a href="{{ site.root_item.url }}">{{ site.header }}</a></h1>
+    <button class="menu-btn js-menu-toggle">
+      <span class="btn-inner"><span class="menu-stripe"></span><span class="menu-stripe"></span><span class="menu-stripe"></span></span>
+    </button>
+
+    <nav class="main-menu" role="navigation">
+      {% include "nav-menu" %}
+    </nav>
+  </section>
+
+  <section class="header-right">
+    {% include "search" %}
+    {% include "lang-menu" %}
+  </section>
+</header>
+```
+
+### 4.1.2 Info
+* Header is wrapped with ```<header>``` element with class names **header**.
+* If header has one content area it name should be **header**.
+* If header has many content areas their names should start with the **header_** prefixes.
+* header content area is global so it must have the **x** prefix before {% content %}.  
+[{{ xcontent }} documentation](http://www.edicy.com/developer/template-api/tags/xcontent)
+* 
