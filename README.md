@@ -435,9 +435,9 @@ File location: [/components/html-head.tpl](/components/html-head.tpl)
 ### 4.4 javascripts
 **Required** component.  
 Contains site javascript links and inline javascripts that must be loaded at the end of the code.
-File location: [/components/html-head.tpl](/components/html-head.tpl)
+File location: [/components/javascripts.tpl](/components/javascripts.tpl)
 
-#### 4.3.1 Example
+#### 4.4.1 Example
 ```html
 <script src="{{ javascripts_path }}/jquery.js?1"></script>
 <script src="{{ javascripts_path }}/main.js?1"></script>
@@ -450,76 +450,71 @@ File location: [/components/html-head.tpl](/components/html-head.tpl)
   <script src="http://static.edicy.com/assets/site_search/3.0/site_search.js?2"></script>
   <script>
     var edys_site_search_options = {
-      texts: { noresults: "{{ "search_noresults"|lc }}" },
+      texts: { noresults: "{{ "search_noresults" | lc }}" },
       default_stylesheet_enabled: false
     }
   </script>
 {% endif %}
 
-<!-- LANGUAGE SWITCHER -->
 <script>
-  $(function() {  
-    $('.lang-select').change(function() { window.location = $(this).find(':selected').val(); });
-  });
+  // ADDITIONAL INLINE SCRIPTS AREA
 </script>
 
 <!-- EDICY GOOGLE ANALYTICS SHORTCODE -->
 {% unless editmode %}{{ site.analytics }}{% endunless %}
 ```
 
-#### 4.3.2 Info
-* **javascripts** code should be divided into separate blocks in the following order:
-  * Javascripts in the [/javascripts](/javascripts) folder
-    * **jQuery** file link (if used)
-    * **main.js** file link (if used)
-    * **retina.js** file link (if used)
-    * Additional javascripts links (plugins etc)
-  * Site search plugin code
-  * Additional inline javascripts (plugins initiations etc)
-  * Google analytics code
+#### 4.4.2 Info
+**javascripts** code should be divided into separate blocks in the following order:
+* Javascripts in the [/javascripts](/javascripts) folder
+  * **jQuery** file link (if used)
+  * **main.js** file link (if used)
+  * **retina.js** file link (if used)
+  * Additional javascripts links (plugins etc)
+* Site search plugin code
+* Additional inline javascripts (plugins initiations etc)
+* Google analytics code
 
-#### 4.5 javascripts
-**Required** component.  
-Contains site javascript links and inline javascripts that must be loaded at the end of the code.
-File location: [/components/html-head.tpl](/components/html-head.tpl)
 
-#### 4.3.1 Example
+### 4.5 lang-menu
+**Optional** component.  
+Contains site language menu.
+File location: [/components/lang-menu.tpl](/components/lang-menu.tpl)
+
+#### 4.5.1 Examples
 ```html
-<script src="{{ javascripts_path }}/jquery.js?1"></script>
-<script src="{{ javascripts_path }}/main.js?1"></script>
-
-<!-- REPLACE IMAGES WITH RETINA READY DUPLICATES -->
-<script src="{{ javascripts_path }}/retina.js?1"></script>
-
-<!-- EDICY SITE SEARCH PLUGIN -->
-{% if site.search.enabled %}
-  <script src="http://static.edicy.com/assets/site_search/3.0/site_search.js?2"></script>
-  <script>
-    var edys_site_search_options = {
-      texts: { noresults: "{{ "search_noresults"|lc }}" },
-      default_stylesheet_enabled: false
-    }
-  </script>
+{% if editmode or site.has_many_languages? %}
+  <nav class="lang-menu">
+    <select class="lang-select">
+      {% for language in site.languages %}
+        <option value="{{language.url}}" {% if language.selected? %}selected="selected"{% endif %}>{{language.title}}</option>
+      {% endfor %}
+    </select>
+    {% if editmode %}{% languageadd %}{% endif %}
+  </nav>
 {% endif %}
-
-<!-- LANGUAGE SWITCHER -->
-<script>
-  $(function() {  
-    $('.lang-select').change(function() { window.location = $(this).find(':selected').val(); });
-  });
-</script>
-
-<!-- EDICY GOOGLE ANALYTICS SHORTCODE -->
-{% unless editmode %}{{ site.analytics }}{% endunless %}
 ```
 
-#### 4.3.2 Info
-* **javascripts** code should be divided into separate blocks in the following order:
-  * Javascripts in the [/javascripts](/javascripts) folder
-    * **jQuery** file link (if used)
-    * **main.js** file link (if used)
-    * **retina.js** file link (if used)
-    * Additional javascripts links (plugins etc)
-  * Site search plugin code
-  * Additional inline javascripts (plugins initiations etc)
-  * Google analytics code
+```html
+{% if editmode or site.has_many_languages? %}
+  <nav class="lang-menu">
+    <ul class="menu">
+      {% for language in site.languages %}
+        <li class="lang-link {% if language.selected? %} active{% endif %}"><a href="{{language.url}}">{{language.title}}</a></li>
+      {% endfor %}
+      {% if editmode %}<li class="lang-add">{% languageadd %}</li>{% endif %}
+    </ul>
+  </nav>
+{% endif %}
+```
+
+#### 4.5.2 Info
+* **Language menu** is **<nav>** element that contains the ```<select>``` element or the ```<ul>``` element that lists available page languages.
+* **Language menu** **<nav>** element has class **lang-menu**.
+* **Language menu** ```<select>``` element has class **lang-select**.
+* **Language menu** ```<ul>``` element has class **menu**.
+* **Language menu** ```<select>``` or ```<ul>``` element contains the for loop that renders available page languages.
+  * If ```<select>``` is used, the loop generates ```<option>``` elements (with class name **lang-select** if needed ).
+  * If ```<ul>``` is used, the loop generates ```<li>``` elements (with class **lang-link** if needed).
+* Language menu code is inside ```{% if editmode or site.has_many_languages? %}{% endif %}``` condition (to show language menu only in editmode or when site has more then one language).
+[Language documentation](http://www.edicy.com/developer/template-api/objects/language)
