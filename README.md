@@ -43,20 +43,27 @@
   * ```<main class="content cfx" role="main">``` element holds the main content of the page - Articles listing, article, text areas, images etc
   * 
 
-## 2. Content areas
+## 2. Editable areas
+### 2.1 Content areas
 Content areas are user-editable areas that can be included with ```{{ content }}``` or ```{{ contentblock }}{{ endcontentblock }}``` tags.  
 Content areas can contain text and images, photo galleries and form fields.
 
-### 2.1 {{ content }}
+#### 2.1.1 {{ content }}
 * ```{{ content }}``` is an optional content area. ```{{ content }}``` without name contains default sample page code.
 
-### 2.2 {{ contentblock }}{{ endcontentblock }}
+#### 2.1.2 {{ contentblock }}{{ endcontentblock }}
 * ```{{ content }}<!-- Some text -->{{ endcontentblock }}``` is a content area with predefined content.
 
-## 2.3 Content area names
+### 2.2 Content area names
 * Examples: ```{{ content name="sample" }}```, ```{{ contentblock name="sample_name" }}{{ endcontentblock }}```
 * Names should be declared in lowercases
 * Words should be separated with undescores (to distinct them from class names).
+
+
+## 3. Other user-editable areas
+### 3.1 Article areas
+Article areas are user-editable areas for each article.
+
 
 ## 3. Layouts
 Layout is a html/liquid code that is used for rendering website pages.  
