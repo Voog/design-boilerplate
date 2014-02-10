@@ -12,10 +12,10 @@
   </head>
   
   <body class="blog-page">
-    <div class="container cfx">
+    <div class="container">
       {% include "header" %}
   
-      <main class="content cfx" role="main">
+      <main class="content" role="main">
         {% include "tags-blog" %}
         
         {% for article in articles %}
@@ -25,7 +25,7 @@
               <time datetime="{{ article.created_at | date : "%Y-%m-%d" }}" class="post-date">{{ article.created_at | date : "%b %d, %Y" }}</time>
             </header>
             <section class="post-content">
-              <div class="post-excerpt">{{ article.excerpt }}</div>
+              <div class="post-excerpt content-formatted cfx">{{ article.excerpt }}</div>
             </section>
           </article>
         {% endfor %}
