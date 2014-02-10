@@ -80,6 +80,7 @@ Examples:
   <div class="post-excerpt content-formatted">{% editable article.excerpt %}</div>
   <div class="post-body content-formatted">{% editable article.body %}</div>
 ```
+[Article documentation](http://www.edicy.com/developer/template-api/objects/article)
 
 ## 3. Layouts
 Layout is a html/liquid code that is used for rendering website pages.  
@@ -107,7 +108,7 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
     <meta property="og:title" content="{{ page.title }} — {{ site.name }}">
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
-    {{blog.rss_link}}
+    {{ blog.rss_link }}
   </head>
   
   <body class="blog-page">
@@ -326,9 +327,13 @@ File location: [/components/footer.tpl](/components/footer.tpl)
 
 ### 4.1.1 Example
 ```html
-  <footer class="footer user-content cfx">
+  <footer class="footer content-formatted cfx">
     {% xcontent name="footer" %}
   </footer>
 ```
 
 ### 4.1.2 Info
+* Footer is wrapped with ```<footer>``` element with class names **footer** and **cfx**.
+* Footer content area name is **footer**.
+* Footer content area is global so it must have the **x** prefix before {% content %}.
+[{{ xcontent }} documentation](http://www.edicy.com/developer/template-api/tags/xcontent)
