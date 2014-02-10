@@ -62,8 +62,8 @@ Content areas can contain text and images, photo galleries and form fields.
 
 ## 3. Layouts
 Layout is a html/liquid code that is used for rendering website pages.  
-Layouts are located in the [layouts](/layouts) folder.
-Basic design has 4 layouts:
+Layouts are located in the [/layouts](/layouts) folder.  
+Basic design has 4 layouts: 
 * Blog & News
 * Blog article
 * Common page
@@ -72,7 +72,7 @@ Basic design has 4 layouts:
 ### 3.1 Blog & News / Blog article
 #### 3.1.1 Blog & News
 Blog and/or news page article listing view.  
-File location: [layouts](/layouts/blog___news.tpl)
+File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
 
 ##### 3.1.1.1 Sample code
 ```html
@@ -122,7 +122,7 @@ File location: [layouts](/layouts/blog___news.tpl)
 
 #### 3.1.2 Blog article
 Blog and/or news page article detail view.  
-File location: **/layouts/blog_article.tpl**
+File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
 
 ##### 3.1.2.1 Sample code
 ```html
@@ -200,7 +200,7 @@ File location: **/layouts/blog_article.tpl**
 
 ### 3.2 Common page
 Common content page view.  
-File location: **/layouts/common_page.tpl**
+File location: [/layouts/common_page.tpl](/layouts/common_page.tpl)
 
 #### 3.2.1 Sample code
 ```html
@@ -243,7 +243,7 @@ File location: **/layouts/common_page.tpl**
 ### 3.3 Front page
 Front page view.
 
-File location: **/layouts/front_page.tpl**
+File location: [/layouts/front_page.tpl](/layouts/front_page.tpl)
 
 #### 3.3.1 Sample code
 ```html
@@ -283,7 +283,7 @@ File location: **/layouts/front_page.tpl**
 ## 4. Components
 Components are reusable code snippets that can be included in layouts or other components.
 
-Components are located in the folder **/components**.
+Components are located in the folder [/components/](/components/)
 Basic design components are:
 * footer
 * header
@@ -301,7 +301,7 @@ Basic design components are:
 ### 4.1 footer
 **Optional** component  
 Contains site footer area code.  
-File location: **/layouts/common_page.tpl**
+File location: [/components/footer.tpl](/components/footer.tpl)
 
 ### 4.1.1 Sample code
 ```html
