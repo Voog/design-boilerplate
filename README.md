@@ -62,7 +62,7 @@ Content areas can contain text and images, photo galleries and form fields.
 
 ## 3. Layouts
 Layout is a html/liquid code that is used for rendering website pages.  
-Layouts are located in the folder **/layouts**.  
+Layouts are located in the [layouts](/layouts) folder.
 Basic design has 4 layouts:
 * Blog & News
 * Blog article
@@ -72,7 +72,7 @@ Basic design has 4 layouts:
 ### 3.1 Blog & News / Blog article
 #### 3.1.1 Blog & News
 Blog and/or news page article listing view.  
-File location: **/layouts/blog___news.tpl**
+File location: [layouts](/layouts/blog___news.tpl)
 
 ##### 3.1.1.1 Sample code
 ```html
