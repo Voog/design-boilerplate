@@ -1,7 +1,7 @@
 # Edicy design boilerplate
 
 ## 1. Basic layout structure
-### 1.1 Sample code:
+### 1.1 Example:
 ```html
 <!DOCTYPE html>
 <html lang="{{ page.language_code }}">
@@ -41,24 +41,45 @@
   * Each layout ```container``` element contains ```<main>``` element with class names **content** and **cfx**.
   * ```<main``` element also has the ```role``` attribute with value **main**
   * ```<main class="content cfx" role="main">``` element holds the main content of the page - Articles listing, article, text areas, images etc
-  * 
+
 
 ## 2. Editable areas
+Editable areas are user-editable areas that can be included with liquid markup.
+Content areas with formattable content must be wrapped with an element that has class ```content-formatted```  
+
 ### 2.1 Content areas
-Content areas are user-editable areas that can be included with ```{{ content }}``` or ```{{ contentblock }}{{ endcontentblock }}``` tags.  
-Content areas can contain text and images, photo galleries and form fields.
+Content areas can be included with ```{{ content }}``` or ```{{ contentblock }}{{ endcontentblock }}``` tags.  
+* Content areas can contain text and images, photo galleries and form fields.  
+* ```{{ content }}``` and ```{{ contentblock }}{{ endcontentblock }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.
+* Examples: 
+```html
+<h1 class="content-formatted">{% content name="slogan" %}</h1>
+<section class="content-body content-formatted">{% content %}</section>
+```
+[{{ content }} documentation](http://www.edicy.com/developer/template-api/tags/content)  
+[{{ contentblock }} documentation](http://www.edicy.com/developer/template-api/tags/contentblock)
 
-#### 2.1.1 {{ content }}
-* ```{{ content }}``` is an optional content area. ```{{ content }}``` without name contains default sample page code.
-
-#### 2.1.2 {{ contentblock }}{{ endcontentblock }}
-* ```{{ content }}<!-- Some text -->{{ endcontentblock }}``` is a content area with predefined content.
-
-### 2.2 Content area names
-* Examples: ```{{ content name="sample" }}```, ```{{ contentblock name="sample_name" }}{{ endcontentblock }}```
+#### 2.1.1 Content area names
+* Examples:  
+```html
+{{ content name="sample" }}
+{{ contentblock name="sample_name" }}{{ endcontentblock }}
+```
 * Names should be declared in lowercases
 * Words should be separated with undescores (to distinct them from class names).
 
+### 2.2 Article editable areas
+* Article editable areas are user-editable areas that are binded to blog/news article.
+* Article has 3 editable areas:
+  * Article title - ```{{ article.title }}```
+  * Article excerpt - ```{{ article.excerpt }}```
+  * Article body - ```{{ article.body }}```
+* ```{{ article.excerpt }}``` and ```{{ article.body }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.
+* Examples: 
+```html
+  <div class="post-excerpt content-formatted">{% editable article.excerpt %}</div>
+  <div class="post-body content-formatted">{% editable article.body %}</div>
+```
 
 ## 3. Layouts
 Layout is a html/liquid code that is used for rendering website pages.  
@@ -74,7 +95,7 @@ Basic design has 4 layouts:
 Blog and/or news page article listing view.  
 File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
 
-##### 3.1.1.1 Sample code
+##### 3.1.1.1 Example
 ```html
 <!DOCTYPE html>
 <html lang="{{ page.language_code }}">
@@ -124,7 +145,7 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
 Blog and/or news page article detail view.  
 File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
 
-##### 3.1.2.1 Sample code
+##### 3.1.2.1 Example
 ```html
 <!DOCTYPE html>
 <html lang="{{ page.language_code }}">
@@ -202,7 +223,7 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
 Common content page view.  
 File location: [/layouts/common_page.tpl](/layouts/common_page.tpl)
 
-#### 3.2.1 Sample code
+#### 3.2.1 Example
 ```html
 <!DOCTYPE html>
 <html lang="{{ page.language_code }}">
@@ -245,7 +266,7 @@ Front page view.
 
 File location: [/layouts/front_page.tpl](/layouts/front_page.tpl)
 
-#### 3.3.1 Sample code
+#### 3.3.1 Example
 ```html
 <!DOCTYPE html>
 <html lang="{{ page.language_code }}">
@@ -303,7 +324,7 @@ Basic design components are:
 Contains site footer area code.  
 File location: [/components/footer.tpl](/components/footer.tpl)
 
-### 4.1.1 Sample code
+### 4.1.1 Example
 ```html
   <footer class="footer user-content cfx">
     {% xcontent name="footer" %}
