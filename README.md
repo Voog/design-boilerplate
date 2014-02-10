@@ -50,8 +50,8 @@ Content areas with formattable content must be wrapped with an element that has 
 ### 2.1 Content areas
 Content areas can be included with ```{{ content }}``` or ```{{ contentblock }}{{ endcontentblock }}``` tags.  
 * Content areas can contain text and images, photo galleries and form fields.  
-* ```{{ content }}``` and ```{{ contentblock }}{{ endcontentblock }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.
-* Examples: 
+* ```{{ content }}``` and ```{{ contentblock }}{{ endcontentblock }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.  
+Examples: 
 ```html
 <h1 class="content-formatted">{% content name="slogan" %}</h1>
 <section class="content-body content-formatted">{% content %}</section>
@@ -59,8 +59,8 @@ Content areas can be included with ```{{ content }}``` or ```{{ contentblock }}{
 [{{ content }} documentation](http://www.edicy.com/developer/template-api/tags/content)  
 [{{ contentblock }} documentation](http://www.edicy.com/developer/template-api/tags/contentblock)
 
-#### 2.1.1 Content area names
-* Examples:  
+#### 2.1.1 Content area names  
+Examples:  
 ```html
 {{ content name="sample" }}
 {{ contentblock name="sample_name" }}{{ endcontentblock }}
@@ -69,13 +69,13 @@ Content areas can be included with ```{{ content }}``` or ```{{ contentblock }}{
 * Words should be separated with undescores (to distinct them from class names).
 
 ### 2.2 Article editable areas
-* Article editable areas are user-editable areas that are binded to blog/news article.
-* Article has 3 editable areas:
-  * Article title - ```{{ article.title }}```
-  * Article excerpt - ```{{ article.excerpt }}```
-  * Article body - ```{{ article.body }}```
-* ```{{ article.excerpt }}``` and ```{{ article.body }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.
-* Examples: 
+Article editable areas are user-editable areas that are binded to blog/news article.  
+Article has 3 editable areas:
+* Article title - ```{{ article.title }}```
+* Article excerpt - ```{{ article.excerpt }}```
+* Article body - ```{{ article.body }}```
+```{{ article.excerpt }}``` and ```{{ article.body }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.  
+Examples: 
 ```html
   <div class="post-excerpt content-formatted">{% editable article.excerpt %}</div>
   <div class="post-body content-formatted">{% editable article.body %}</div>
