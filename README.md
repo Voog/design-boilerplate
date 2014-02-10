@@ -334,14 +334,14 @@ Basic design components are:
 Contains site footer area code.  
 File location: [/components/footer.tpl](/components/footer.tpl)
 
-### 4.1.1 Example
+#### 4.1.1 Example
 ```html
   <footer class="footer content-formatted cfx">
     {% xcontent name="footer" %}
   </footer>
 ```
 
-### 4.1.2 Info
+#### 4.1.2 Info
 * Footer is wrapped with ```<footer>``` element with class names **footer** and **cfx**.
 * If footer has one content area it name should be **footer**.
 * If footer has many content areas their names should start with the **header_** prefixes.
@@ -353,7 +353,7 @@ File location: [/components/footer.tpl](/components/footer.tpl)
 Contains site header area code. For example navigation menu, language menu, mobile-menu button etc.  
 File location: [/components/header.tpl](/components/header.tpl)
 
-### 4.2.1 Example
+#### 4.2.1 Example
 ```html
 <header class="header">
   <section class="header-left">
@@ -374,7 +374,7 @@ File location: [/components/header.tpl](/components/header.tpl)
 </header>
 ```
 
-### 4.2.2 Info
+#### 4.2.2 Info
 * Header is wrapped with ```<header>``` element with class names **header**.
 * If header has one content area it name should be **header**.
 * If header has many content areas their names should start with the **header_** prefixes.
@@ -386,7 +386,7 @@ File location: [/components/header.tpl](/components/header.tpl)
 Contains site ```<head>``` tag code.
 File location: [/components/html-head.tpl](/components/html-head.tpl)
 
-### 4.3.1 Example
+#### 4.3.1 Example
 ```html
 <!-- BASIC META INFO -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -423,7 +423,7 @@ File location: [/components/html-head.tpl](/components/html-head.tpl)
 <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
 ```
 
-### 4.3.2 Info
+#### 4.3.2 Info
 * **html-head** code should be divided into separate blocks in the following order:
   * Basic meta info
   * Fav- and touch-icons
@@ -437,7 +437,7 @@ File location: [/components/html-head.tpl](/components/html-head.tpl)
 Contains site javascript links and inline javascripts that must be loaded at the end of the code.
 File location: [/components/html-head.tpl](/components/html-head.tpl)
 
-### 4.3.1 Example
+#### 4.3.1 Example
 ```html
 <script src="{{ javascripts_path }}/jquery.js?1"></script>
 <script src="{{ javascripts_path }}/main.js?1"></script>
@@ -467,7 +467,53 @@ File location: [/components/html-head.tpl](/components/html-head.tpl)
 {% unless editmode %}{{ site.analytics }}{% endunless %}
 ```
 
-### 4.3.2 Info
+#### 4.3.2 Info
+* **javascripts** code should be divided into separate blocks in the following order:
+  * Javascripts in the [/javascripts](/javascripts) folder
+    * **jQuery** file link (if used)
+    * **main.js** file link (if used)
+    * **retina.js** file link (if used)
+    * Additional javascripts links (plugins etc)
+  * Site search plugin code
+  * Additional inline javascripts (plugins initiations etc)
+  * Google analytics code
+
+#### 4.5 javascripts
+**Required** component.  
+Contains site javascript links and inline javascripts that must be loaded at the end of the code.
+File location: [/components/html-head.tpl](/components/html-head.tpl)
+
+#### 4.3.1 Example
+```html
+<script src="{{ javascripts_path }}/jquery.js?1"></script>
+<script src="{{ javascripts_path }}/main.js?1"></script>
+
+<!-- REPLACE IMAGES WITH RETINA READY DUPLICATES -->
+<script src="{{ javascripts_path }}/retina.js?1"></script>
+
+<!-- EDICY SITE SEARCH PLUGIN -->
+{% if site.search.enabled %}
+  <script src="http://static.edicy.com/assets/site_search/3.0/site_search.js?2"></script>
+  <script>
+    var edys_site_search_options = {
+      texts: { noresults: "{{ "search_noresults"|lc }}" },
+      default_stylesheet_enabled: false
+    }
+  </script>
+{% endif %}
+
+<!-- LANGUAGE SWITCHER -->
+<script>
+  $(function() {  
+    $('.lang-select').change(function() { window.location = $(this).find(':selected').val(); });
+  });
+</script>
+
+<!-- EDICY GOOGLE ANALYTICS SHORTCODE -->
+{% unless editmode %}{{ site.analytics }}{% endunless %}
+```
+
+#### 4.3.2 Info
 * **javascripts** code should be divided into separate blocks in the following order:
   * Javascripts in the [/javascripts](/javascripts) folder
     * **jQuery** file link (if used)
