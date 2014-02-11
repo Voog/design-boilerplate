@@ -1,12 +1,8 @@
 <header class="header">
   <section class="header-left">
-    <h1 class="header-title"><a href="{{ site.root_item.url }}">{{ site.header }}</a></h1>
+    <h1 class="header-title content-formatted cfx"><a href="{{ site.root_item.url }}">{{ site.header }}</a></h1>
     <button class="menu-btn js-menu-toggle">
-      <div class="btn-inner">
-        <div class="menu-stripe"></div>
-        <div class="menu-stripe"></div>
-        <div class="menu-stripe"></div>
-      </div>
+      <span class="btn-inner"><span class="menu-stripe"></span><span class="menu-stripe"></span><span class="menu-stripe"></span></span>
     </button>
 
     <nav class="main-menu" role="navigation">
