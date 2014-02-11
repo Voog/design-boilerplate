@@ -290,12 +290,14 @@ body {
     cursor: pointer;
   }
   .btn-inner {
+    display: block;
     width: 25px;
   }
   .menu-btn:hover {
     opacity: 0.8;
   }
   .menu-stripe {
+    display: block;
     background: #666a6c;
     border-radius: 5px;
     height: 4px;
