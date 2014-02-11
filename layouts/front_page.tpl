@@ -11,15 +11,15 @@
   </head>
   
   <body class="front-page">
-    <div class="container cfx">
+    <div class="container">
       {% include "header" %}
   
-      <main class="content cfx" role="main">
+      <main class="content" role="main">
         <header class="content-header">
-          <h1 class="content-title user-content">{% editable site.header %}</h1>
-          <h2 class="user-content">{% content name="slogan" %}</h2>
+          <h1 class="content-title content-formatted cfx">{% editable site.header %}</h1>
+          <h2 class="content-slogan content-formatted cfx">{% content name="slogan" %}</h2>
         </header>
-        <section class="content-body user-content">{% content %}</section>
+        <section class="content-body content-formatted cfx">{% content %}</section>
       </main>
   
       {% include "footer" %}
