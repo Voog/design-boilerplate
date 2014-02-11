@@ -1,11 +1,11 @@
 <!-- BASIC META INFO -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="keywords" content="{{ page.keywords }}">
 <meta name="description" content="{{ page.description }}">
 <meta name="author" content="{{ site.author }}">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
 <!-- FAV ICON -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -22,12 +22,11 @@
 <!-- http://modernizr.com/download/ - Check for updates -->
 
 <!-- SITE TITLE -->
-<title>{% if article %}{{ article.title }} | {{ page.site_title }}{% else %}{% if site.root_item %}{{ page.site_title }}{% else %}{{ page.site_title }} | {{ page.title }}{% endif %}{% endif %}</title>
+<title>{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}</title>
 
 <!-- FACEBOOK OPENGRAPH -->
 <!-- Page specific opengraph tags are located in each page template -->
 <meta property="fb:admins" content="XXXXXXXXXX"> <!--Site admin's Facebook user id -->
 <!-- http://graph.facebook.com/"username" - Replace "username" with site admin's username to get admin's ID) -->
 <meta property="og:type" content="website">
-<meta property="og:description" content="{{ page.description }}">
 <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->

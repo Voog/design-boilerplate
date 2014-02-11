@@ -6,6 +6,7 @@
     <!-- Global opengraph tags are located in "header" component -->
     <meta property="og:url" content="{{ site.url }}/{{ page.path }}">
     <meta property="og:title" content="{{ page.title }} — {{ site.name }}">
+    <meta property="og:description" content="{{ page.description }}">
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
