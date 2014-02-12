@@ -18,7 +18,7 @@
               </span>
             {% endunless %}
           </label>
-          <input type="text" class="form_field_textfield form_field_size_small" id="commentform-name" value="{{ comment.author }}" name="comment[author]">
+          <input type="text" id="commentform-name" class="form_field_textfield form_field_size_small" name="comment[author]">
         </div>
         
         <div class="form_field{% unless comment.valid? %} form_field_with_errors{% endunless %}">
@@ -34,7 +34,7 @@
               </span>
             {% endunless %}
           </label>
-          <input type="text" class="form_field_textfield form_field_size_small" id="commentform-email" value="{{ comment.author_email }}" name="comment[author_email]">
+          <input type="text" id="commentform-email" class="form_field_textfield form_field_size_small" name="comment[author_email]">
         </div>
         
         <div class="form_field{% unless comment.valid? %} form_field_with_errors{% endunless %}">
@@ -50,7 +50,7 @@
               </span>
             {% endunless %}
           </label>
-          <textarea class="form_field_textarea form_field_size_medium" id="commentform-body" name="comment[body]">{{ comment.body }}</textarea>
+          <textarea id="commentform-body" class="form_field_textarea form_field_size_medium" name="comment[body]"></textarea>
         </div>
         
       </div>
