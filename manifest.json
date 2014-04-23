@@ -1,9 +1,9 @@
 {
-  "description": "Pripyat design template",
-  "name": "Pripyat",
+  "description": "New design",
+  "name": "New design",
   "preview_medium": "",
   "preview_small": "",
-  "author": "Tõnu Runnel",
+  "author": "",
   "layouts": [
     {
       "content_type": "page",
@@ -36,23 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/comment-form.tpl",
+      "file": "components/background-picker.tpl",
       "layout_name": "",
-      "title": "comment-form"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/footer.tpl",
-      "layout_name": "",
-      "title": "footer"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/header.tpl",
-      "layout_name": "",
-      "title": "header"
+      "title": "background-picker"
     },
     {
       "content_type": "component",
@@ -71,30 +57,65 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/lang-menu.tpl",
+      "file": "components/menu-language.tpl",
       "layout_name": "",
-      "title": "lang-menu"
+      "title": "menu-language"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/nav-menu.tpl",
+      "file": "components/menu-main.tpl",
       "layout_name": "",
-      "title": "nav-menu"
+      "title": "menu-main"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/search.tpl",
+      "file": "components/menu-sub.tpl",
       "layout_name": "",
-      "title": "search"
+      "title": "menu-sub"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-article.tpl",
+      "file": "components/post-comment-form.tpl",
       "layout_name": "",
-      "title": "tags-article"
+      "title": "post-comment-form"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-footer.tpl",
+      "layout_name": "",
+      "title": "site-footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-header.tpl",
+      "layout_name": "",
+      "title": "site-header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-search.tpl",
+      "layout_name": "",
+      "title": "site-search"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-sidebar.tpl",
+      "layout_name": "",
+      "title": "site-sidebar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-topbar.tpl",
+      "layout_name": "",
+      "title": "site-topbar"
     },
     {
       "content_type": "component",
@@ -102,9 +123,22 @@
       "file": "components/tags-blog.tpl",
       "layout_name": "",
       "title": "tags-blog"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/tags-post.tpl",
+      "layout_name": "",
+      "title": "tags-post"
     }
   ],
   "assets": [
+    {
+      "content_type": "text/javascript",
+      "file": "javascripts/autogrow.js",
+      "kind": "javascripts",
+      "filename": "autogrow.js"
+    },
     {
       "content_type": "text/javascript",
       "file": "javascripts/jquery.js",
@@ -131,6 +165,12 @@
     },
     {
       "content_type": "text/css",
+      "file": "stylesheets/.DS_Store",
+      "kind": "stylesheets",
+      "filename": ".DS_Store"
+    },
+    {
+      "content_type": "text/css",
       "file": "stylesheets/ie8.css",
       "kind": "stylesheets",
       "filename": "ie8.css"
@@ -140,6 +180,12 @@
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
       "filename": "main.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/sass",
+      "kind": "stylesheets",
+      "filename": "sass"
     }
   ]
 }
