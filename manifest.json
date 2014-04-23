@@ -85,16 +85,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-main.tpl",
+      "file": "components/menu-level-1.tpl",
       "layout_name": "",
-      "title": "menu-main"
+      "title": "menu-level-1"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-sub.tpl",
+      "file": "components/menu-level-2.tpl",
       "layout_name": "",
-      "title": "menu-sub"
+      "title": "menu-level-2"
     },
     {
       "content_type": "component",
