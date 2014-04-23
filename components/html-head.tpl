@@ -1,3 +1,6 @@
+<!-- IE SETTINGS -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+
 <!-- BASIC META INFO -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -5,7 +8,6 @@
 <meta name="keywords" content="{{ page.keywords }}">
 <meta name="description" content="{{ page.description }}">
 <meta name="author" content="{{ site.author }}">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
 <!-- FAV ICON -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -13,13 +15,13 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="{{ images_path }}/{{ page.data.touchicon }}"> <!-- TODO: Add image location data tag -->
 
-<!-- STYLESHEETS -->
-{% stylesheet_link "main.css" %}
-<!--[if lt IE 9]>{% stylesheet_link "ie8.css?1" %}<![endif]-->
-
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
-<script src="{{ javascripts_path }}/modernizr.js?1"></script>
-<!-- http://modernizr.com/download/ - Check for updates -->
+<script src="{{ javascripts_path }}/modernizr.js?19"></script>
+
+<!-- STYLESHEETS -->
+{% stylesheet_link "main.css?1" %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.css?1" %}<![endif]-->
+<!--[if lt IE 10]>{% stylesheet_link "ie9.css?1" %}<![endif]-->
 
 <!-- SITE TITLE -->
 <title>{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}</title>
