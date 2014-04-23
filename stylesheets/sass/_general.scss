@@ -1,1 +1,133 @@
 /* GENERAL */
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  @include color($primary-color);
+}
+
+.background-color {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.container {
+  a {
+    img {
+      border: none;
+    }
+  }
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content-formatted {
+  @include clearfix;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  img,
+  pre,
+  code,
+  table {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include color($secondary-color);
+    word-wrap: break-word;
+  }
+
+  h1 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 29px;
+  }
+
+  h2 {
+    margin-top: 0px;
+    font-size: 20px;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0px;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  p {
+    margin-top: 0px;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+    }
+  }
+
+  a {
+    @include color($blue);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  img,
+  pre,
+  code {
+    margin-top: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  pre,
+  code {
+    display: block;
+    overflow: auto;
+    padding: 10px;
+    @include color($white);
+    @include bg($black, 0.3);
+  }
+  .edy-texteditor-view {
+    min-height: 24px;
+  }
+}
