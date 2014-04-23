@@ -1,0 +1,74 @@
+// GENERAL
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin stretch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin perspective($value: 1000) {
+  -webkit-perspective: $value;
+  -webkit-backface-visibility: hidden;
+}
+
+// COLORS
+@mixin bg($color, $opacity: 1) {
+  @if $opacity == 1 {
+    background-color: rgba($color, $opacity);
+  } @else {
+    background-color: $color;
+    background-color: rgba($color, $opacity);
+  }
+}
+
+@mixin color($color, $opacity: 1) {
+  @if $opacity == 1 {
+    color: rgba($color, $opacity);
+  } @else {
+    color: $color;
+    color: rgba($color, $opacity);
+  }
+}
+
+// BORDERS
+@mixin border($side, $width, $style, $color, $opacity: 1) {
+  @if $side == 'all' {
+    @if $opacity == 1 {
+      border: $width $style rgba($color, $opacity);
+    } @else {
+      border: $width $style $color;
+      border: $width $style rgba($color, $opacity);
+    }
+  } @else {
+    @if $opacity == 1 {
+      border-#{$side}: $width $style rgba($color, $opacity);
+    } @else {
+      border-#{$side}: $width $style $color;
+      border-#{$side}: $width $style rgba($color, $opacity);
+    }
+  }
+}
+
+// BOXES
+@mixin box-shadow($top, $left, $blur, $color, $opacity: 1, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur rgba($color, $opacity);
+    box-shadow: inset $top $left $blur rgba($color, $opacity);
+  } @else {
+    -webkit-box-shadow: $top $left $blur rgba($color, $opacity);
+    box-shadow: $top $left $blur rgba($color, $opacity);
+  }
+}
+
+// MEDIA QUERY
+@mixin query($value: $tablet-1) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
