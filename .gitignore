@@ -3,6 +3,10 @@
 
 .edicy
 
+.sass-cache
+
 *.html
+
+*.css
 
 site.json
