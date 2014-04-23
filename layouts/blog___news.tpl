@@ -11,14 +11,14 @@
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
     {{ blog.rss_link }}
   </head>
-  
+
   <body class="blog-page">
     <div class="container">
-      {% include "header" %}
-  
+      {% include "site-header" %}
+
       <main class="content" role="main">
         {% include "tags-blog" %}
-        
+
         {% for article in articles %}
           <article class="post">
             <header class="post-header">
@@ -31,8 +31,8 @@
           </article>
         {% endfor %}
       </main>
-  
-      {% include "footer" %}
+
+      {% include "site-footer" %}
     </div>
     {% include "javascripts" %}
     <script>project.initBlogPage();</script>

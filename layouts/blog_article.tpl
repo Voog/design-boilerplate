@@ -10,11 +10,11 @@
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
-  
+
   <body class="post-page">
     <div class="container cfx">
-      {% include "header" %}
-  
+      {% include "site-header" %}
+
       <main class="content user-content" role="main">
         <article class="post">
           <header class="post-header">
@@ -27,22 +27,22 @@
             <div class="post-body content-formatted cfx">{% editable article.body %}</div>
           </section>
         </article>
-        
+
         <section class="comments">
           <h2 class="comments-title">
             {% case article.comments_count %}{% when 0 %}{{ "no_comments" | lc }}{% else %}{{ "comments_for_count" | lc }}: <span class="comments-count">{{ article.comments_count }}</span>{% endcase %}</h2>
-          
+
           {% for comment in article.comments %}
             <div class="comment">{{ comment.body }} {{ comment.author }}, ({{ comment.created_at | date : "%b %d, %Y" }})</div>
           {% endfor %}
-          
-          {% include "comment-form" %}
+
+          {% include "post-comment-form" %}
         </section>
       </main>
-  
-      {% include "footer" %}
+
+      {% include "site-footer" %}
     </div>
-  
+
     {% include "javascripts" %}
     <script>project.initArticlePage();</script>
   </body>
