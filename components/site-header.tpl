@@ -6,12 +6,12 @@
     </button>
 
     <nav class="main-menu" role="navigation">
-      {% include "nav-menu" %}
+      {% include "menu-main" %}
     </nav>
   </section>
 
   <section class="header-right">
-    {% include "search" %}
-    {% include "lang-menu" %}
+    {% include "site-search" %}
+    {% include "menu-lang" %}
   </section>
 </header>
