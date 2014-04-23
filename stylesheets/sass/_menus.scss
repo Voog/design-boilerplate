@@ -1,50 +1,48 @@
 /* MENUS */
 .menu-btn {
   display: none;
-  @include query($tablet-2) {
-    position: absolute;
-    top: 8px;
-    right: 20px;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    &.open {
-      .menu-stripe {
-        @include bg($secondary-color, 0.47);
-      }
-    }
-    &::-moz-focus-inner {
-      padding: 0;
-      border: 0;
-    }
-
-    .menu-stripe {
-      display: block;
-      width: 23px;
-      height: 4px;
-      margin: 4px 0;
-      @include bg($secondary-color, 0.67);
-      border-radius: 5px;
-      &:first-child,
-      &:last-child {
-        margin: 0;
-      }
-    }
-  }
 }
 
 .menu {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  line-height: 1;
+}
+
+.menu-main {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 9px;
+    line-height: 1;
+
+    &.mobile-lang {
+      display: none;
+    }
+  }
+
+  a {
+    display: block;
+    @include color($blue);
+
+    &:hover {
+      @include color($primary-color);
+    }
+
+    &.active {
+      font-weight: bold;
+      @include color($primary-color, 0.8);
+    }
+  }
+
+}
+
+.menu-lang {
+  display: inline-block;
 
   li {
-    display: inline;
-    font-size: 14px;
+    display: inline-block;
+    margin-right: 9px;
   }
 }

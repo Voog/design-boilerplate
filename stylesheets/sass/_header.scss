@@ -1,1 +1,20 @@
 /* HEADER */
+.header {
+
+  .header-left,
+  .header-right {
+  }
+
+
+  .header-left {
+
+    .header-title {
+      display: none;
+    }
+  }
+
+  .header-right {
+    padding-right: 20px;
+    text-align: right;
+  }
+}
