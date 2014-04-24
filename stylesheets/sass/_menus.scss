@@ -3,18 +3,22 @@
   display: none;
 }
 
+.add-btn {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0.8;
+}
+
 .menu {
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: 1;
 }
 
 .menu-main {
   li {
     display: inline-block;
-    vertical-align: middle;
-    margin-right: 9px;
+    margin-right: 20px;
     line-height: 1;
 
     &.mobile-lang {
@@ -44,5 +48,14 @@
   li {
     display: inline-block;
     margin-right: 9px;
+  }
+
+  .menu {
+    vertical-align: middle;
+  }
+
+  .add-btn {
+    position: relative;
+    top: 1px;
   }
 }
