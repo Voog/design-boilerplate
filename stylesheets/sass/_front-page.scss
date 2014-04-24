@@ -1,23 +1,25 @@
 /* FRONT PAGE */
-.content-header {
-  .content-title,
-  .content-slogan {
-    @include color($secondary-color);
+.front-page {
+  .content-header {
+    .content-title,
+    .content-slogan {
+      @include color($secondary-color);
+    }
+
+    .content-title {
+      font-weight: bold;
+      font-size: 100px;
+      line-height: 1.1;
+    }
+
+    .content-slogan {
+      margin-top: 3px;
+      font-size: 50px;
+      line-height: 1.2;
+    }
   }
 
-  .content-title {
-    font-weight: bold;
-    font-size: 100px;
-    line-height: 1.1;
+  .content-body {
+    margin-top: 90px;
   }
-
-  .content-slogan {
-    margin-top: 3px;
-    font-size: 50px;
-    line-height: 1.2;
-  }
-}
-
-.content-body {
-  margin-top: 90px;
 }
