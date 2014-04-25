@@ -11,8 +11,7 @@
     padding: 7px 10px;
     font-family: inherit;
     font-size: 14px;
-    @include color($primary-color);
-    border: 1px solid #8d9091;
+    @include border(all, 1px, solid, $grey);
     border-radius: 3px;
   }
 }

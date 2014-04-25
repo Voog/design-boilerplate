@@ -1,4 +1,10 @@
 /* CONTENT */
 .content {
   margin-top: 70px;
+
+  .content-header {
+    .edy-texteditor-view {
+      min-height: 50px;
+    }
+  }
 }
