@@ -8,6 +8,8 @@
   <meta property="og:title" content="{{ site.name }}">
   <meta property="og:description" content="{{ page.description }}">
   <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+
+  {{ blog.rss_link }}
 </head>
 
 <body class="blog-page js-bgpicker-body-image" {% if site.data.body_image %}style="background-image: url('{{ site.data.body_image}}');"{% endif %}>
