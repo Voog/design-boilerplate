@@ -1,13 +1,18 @@
 /* HEADER */
 .header {
-  @include flexbox;
+  display: table-cell;
+  .flexbox & {
+    @include flexbox;
+  }
   @include align-items(flex-start);
   .header-left,
   .header-right {
   }
 
   .header-left {
-    @include flex;
+    .flexbox & {
+      @include flex(1 690px);
+    }
 
     .header-title {
       display: none;
@@ -15,8 +20,11 @@
   }
 
   .header-right {
-    display: inline-block;
-    vertical-align: top;
+    min-width: 270px;
     text-align: right;
+
+    .flexbox & {
+      @include flex(1 270px);
+    }
   }
 }
