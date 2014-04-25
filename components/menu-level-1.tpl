@@ -5,8 +5,8 @@
   {% endfor %}
   {% if editmode %}
     {% if site.hidden_menuitems.size > 0 %}
-      <li>{% menubtn site.hidden_menuitems %}</li>
+      <li class="edit-btn">{% menubtn site.hidden_menuitems %}</li>
     {% endif %}
-    {% if editmode %}<li class="add-btn">{% menuadd %}</li>{% endif %}
+    {% if editmode %}<li class="edit-btn">{% menuadd %}</li>{% endif %}
   {% endif %}
 </ul>

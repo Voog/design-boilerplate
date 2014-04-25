@@ -3,7 +3,7 @@
   display: none;
 }
 
-.add-btn {
+.edit-btn {
   display: inline-block;
   vertical-align: middle;
   line-height: 0.8;
@@ -27,6 +27,10 @@
 
       &.mobile-lang {
         display: none;
+      }
+
+      &.edit-btn {
+        margin-right: 0;
       }
     }
 
@@ -55,7 +59,7 @@
     li {
       margin-right: 9px;
 
-      &.add-btn {
+      &.edit-btn {
         position: relative;
         top: 1px;
       }
