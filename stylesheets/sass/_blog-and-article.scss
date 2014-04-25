@@ -1,18 +1,21 @@
 /* BLOG & BLOG ARTICLE */
 .post {
-  margin-top: 50px;
-  padding-bottom: 50px;
-  @include border(bottom, 1px, solid, $primary-color, 0.3);
-
   .post-header {
-
     .post-title {
+      margin-top: 0;
       margin-bottom: 0;
       line-height: 1.1;
 
+      &,
       a {
         font-size: 50px;
         @include color($secondary-color);
+      }
+
+      a {
+        &:hover {
+          @include color($secondary-color, 0.8);
+        }
       }
     }
 
@@ -29,7 +32,8 @@
     .post-excerpt {
     }
 
-    .post-content {
+    .post-body {
+      margin-top: 20px;
     }
   }
 
@@ -37,5 +41,20 @@
     .post-author {
       font-size: 12px;
     }
+  }
+}
+
+// Styles for blog listing view
+.blog-page {
+  .post {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    @include border(bottom, 1px, solid, $primary-color, 0.3);
+  }
+}
+
+// Styles for single article view
+.post-page {
+  .post {
   }
 }

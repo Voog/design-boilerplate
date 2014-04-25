@@ -10,7 +10,7 @@
   <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
 </head>
 
-<body class="common-page blog-page js-bgpicker-body-image" {% if site.data.body_image %}style="background-image: url('{{ site.data.body_image}}');"{% endif %}>
+<body class="blog-page js-bgpicker-body-image" {% if site.data.body_image %}style="background-image: url('{{ site.data.body_image}}');"{% endif %}>
   <a class="js-bgpicker-body-settings" data-bg-image="{{ site.data.body_image }}" data-bg-color="{{ site.data.body_color }}"></a>
   <div class="background-color js-bgpicker-body-color"{% if site.data.body_color %} style="background-color: {{ site.data.body_color }};{% if site.data.body_image %} opacity: 0.5;{% endif %}"{% endif %}></div>
 
@@ -18,6 +18,8 @@
     {% include "header" %}
 
     <main class="content" role="main">
+      {% include "tags-blog" %}
+
       {% for article in articles %}
         {% include "post-box" %}
       {% endfor %}
@@ -29,5 +31,17 @@
 
   {% include "javascripts" %}
   {% include "bg-picker" %}
+
+  <script>
+    $(document).ready(function() {
+      currentUrl = window.location.href;
+      blogUrl = '{{ site.url }}/{{ page.path }}';
+      if (currentUrl === blogUrl) {
+        $('.js-tags-all').addClass('active');
+      };
+    });
+
+    site.initBlogPage();
+  </script>
 </body>
 </html>

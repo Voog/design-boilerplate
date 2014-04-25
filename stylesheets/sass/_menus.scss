@@ -13,49 +13,70 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  li {
+    display: inline-block;
+  }
 }
 
 .menu-main {
-  li {
-    display: inline-block;
-    margin-right: 20px;
-    line-height: 1;
+  .menu {
+    li {
+      margin-right: 20px;
+      line-height: 1;
 
-    &.mobile-lang {
-      display: none;
+      &.mobile-lang {
+        display: none;
+      }
+    }
+
+    a {
+      display: block;
+      @include color($blue);
+
+      &:hover {
+        @include color($primary-color);
+      }
+
+      &.active {
+        font-weight: bold;
+        @include color($primary-color, 0.8);
+      }
     }
   }
-
-  a {
-    display: block;
-    @include color($blue);
-
-    &:hover {
-      @include color($primary-color);
-    }
-
-    &.active {
-      font-weight: bold;
-      @include color($primary-color, 0.8);
-    }
-  }
-
 }
 
 .menu-lang {
   display: inline-block;
 
-  li {
-    display: inline-block;
-    margin-right: 9px;
-  }
-
   .menu {
     vertical-align: middle;
-  }
 
-  .add-btn {
-    position: relative;
-    top: 1px;
+    li {
+      margin-right: 9px;
+
+      &.add-btn {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+.menu-tags {
+  .menu {
+    li {
+      margin-right: 15px;
+
+      a {
+        @include color($blue);
+        &:hover {
+          @include color($blue, 0.8);
+        }
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
