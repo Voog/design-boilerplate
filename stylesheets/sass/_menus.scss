@@ -4,7 +4,7 @@
 }
 
 .edit-btn {
-  display: inline-block;
+  @extend %inline-block;
   vertical-align: middle;
   line-height: 0.8;
 }
@@ -15,11 +15,13 @@
   list-style: none;
 
   li {
-    display: inline-block;
+    @extend %inline-block;
   }
 }
 
 .menu-main {
+  padding: 6px 0;
+
   .menu {
     li {
       margin-right: 20px;
@@ -51,7 +53,7 @@
 }
 
 .menu-lang {
-  display: inline-block;
+  @extend %inline-block;
 
   .menu {
     vertical-align: middle;

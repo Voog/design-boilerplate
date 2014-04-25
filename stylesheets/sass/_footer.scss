@@ -9,7 +9,7 @@
     text-align: center;
 
     a {
-      display: inline-block;
+      @extend %inline-block;
       padding: 7px 9px;
       font-family: "Avenir Next";
       font-size: 10px;

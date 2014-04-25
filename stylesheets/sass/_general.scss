@@ -13,6 +13,10 @@ body {
   background-size: cover;
 }
 
+%inline-block {
+  display: inline-block;
+}
+
 .background-color {
   position: fixed;
   top: 0;
