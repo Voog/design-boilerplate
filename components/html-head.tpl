@@ -16,7 +16,7 @@
 <link rel="apple-touch-icon" href="{{ images_path }}/{{ page.data.touchicon }}"> <!-- TODO: Add image location data tag -->
 
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
-<script src="{{ javascripts_path }}/modernizr.js?19"></script>
+<script src="{{ javascripts_path }}/modernizr.js?1"></script>
 
 <!-- STYLESHEETS -->
 {% stylesheet_link "main.css?1" %}
