@@ -20,11 +20,11 @@
   }
 
   .header-right {
-    min-width: 270px;
+    min-width: 350px;
     text-align: right;
 
     .flexbox & {
-      @include flex(1 270px);
+      @include flex(1 350px);
     }
   }
 }
