@@ -4,17 +4,16 @@
   #{$property}: calc(#{$expression});
 }
 
-@mixin stretch {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+// BOXES
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow: $top $left $blur $color #{$inset};
+       -moz-box-shadow: $top $left $blur $color #{$inset};
+            box-shadow: $top $left $blur $color #{$inset};
 }
-
-@mixin perspective($value: 1000) {
-  -webkit-perspective: $value;
-  -webkit-backface-visibility: hidden;
+@mixin no-box-shadow($value: none) {
+  -webkit-box-shadow: $value;
+     -moz-box-shadow: $value;
+          box-shadow: $value;
 }
 
 // COLORS
@@ -55,18 +54,23 @@
   }
 }
 
-// BOXES
-@mixin box-shadow($top, $left, $blur, $color, $opacity: 1, $inset: false) {
-  @if $inset {
-    -webkit-box-shadow: inset $top $left $blur rgba($color, $opacity);
-    box-shadow: inset $top $left $blur rgba($color, $opacity);
-  } @else {
-    -webkit-box-shadow: $top $left $blur rgba($color, $opacity);
-    box-shadow: $top $left $blur rgba($color, $opacity);
-  }
+// PERSPECTIVE
+@mixin perspective($value: 1000) {
+  -webkit-perspective: $value;
+  -webkit-backface-visibility: hidden;
 }
 
-// MEDIA QUERY
+// STRETCH
+@mixin stretch {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// Media query
+
 @mixin query($value: $tablet-1) {
   @media screen and (max-width: $value) {
     @content;

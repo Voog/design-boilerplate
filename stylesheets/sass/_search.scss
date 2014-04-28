@@ -1,8 +1,8 @@
 /* SEARCH */
-.search,
-.search-left,
-.search-right {
-  display: inline-block;
+.search {
+  @include query($tablet-1) {
+    display: none;
+  }
 }
 
 .search-left {
@@ -20,4 +20,10 @@
   .search-submit {
     vertical-align: middle;
   }
+}
+
+.search,
+.search-left,
+.search-right {
+  @extend %inline-block
 }

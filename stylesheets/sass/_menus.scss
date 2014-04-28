@@ -1,6 +1,46 @@
 /* MENUS */
 .menu-btn {
   display: none;
+
+  @include query($tablet-2) {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &.open {
+      .menu-stripe {
+        @include bg($secondary-color, 0.47);
+      }
+    }
+    &::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
+    .menu-stripe {
+      display: block;
+      width: 23px;
+      height: 4px;
+      margin: 4px 0;
+      @include bg($secondary-color, 0.67);
+      border-radius: 5px;
+      &:first-child,
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  @include query($mobile-1) {
+    top: 7px;
+    right: 0;
+  }
 }
 
 .edit-btn {
@@ -16,6 +56,23 @@
 
   li {
     @extend %inline-block;
+  }
+
+  @include query($tablet-2) {
+    & {
+      li {
+        display: block;
+        @include border(top, 1px, solid, $primary-color, 0.2);
+
+        a {
+          display: block;
+        }
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+    }
   }
 }
 
@@ -50,6 +107,81 @@
       }
     }
   }
+
+  .menu-lang {
+    display: none;
+  }
+
+  @include query($tablet-2) {
+    display: none;
+
+    &.expanded {
+      display: block;
+      min-width: 350px;
+      margin: 0 -20px;
+      padding: 0;
+      text-align: left;
+      @include bg($white);
+      @include box-shadow(0, 0, 5px, rgba($black, 0.3));
+
+      .menu {
+        li {
+          margin-right: 0;
+        }
+      }
+
+      .menu-lang {
+        display: block;
+        margin-top: 0;
+        @include border(top, 1px, solid, $primary-color, 0.2);
+      }
+    }
+  }
+
+  @include query($tablet-2) {
+    &.expanded {
+      position: absolute;
+      top: 40px;
+      right: 20px;
+
+      .menu {
+        li {
+          a {
+            padding: 10px 20px;
+            font-size: 20px;
+
+            &:hover,
+            &.active {
+              @include bg($blue-2);
+            }
+          }
+        }
+      }
+
+      .menu-lang {
+        li {
+          a {
+            font-size: 12px;
+
+            &:hover,
+            &.active {
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include query($mobile-1) {
+    &.expanded {
+      position: static;
+      margin-top: 20px;
+      @include border(top, 1px, solid, $primary-color, 0.2);
+      @include border(bottom, 1px, solid, $primary-color, 0.2);
+      @include no-box-shadow;
+    }
+  }
 }
 
 .menu-lang {
@@ -67,6 +199,14 @@
       }
     }
   }
+
+  @include query($tablet-1) {
+    margin-top: 5px;
+  }
+
+  @include query($tablet-2) {
+    display: block;
+  }
 }
 
 .menu-tags {
@@ -76,9 +216,11 @@
 
       a {
         @include color($blue);
+
         &:hover {
           @include color($blue, 0.8);
         }
+
         &.active {
           font-weight: bold;
         }

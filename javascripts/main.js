@@ -11,7 +11,7 @@
   var toggleMainMenu = function() {
     $('.js-menu-btn').click(function() {
       $(this).toggleClass('open');
-      $('.js-main-menu').toggleClass('expanded');
+      $('.js-menu-main').toggleClass('expanded');
     });
   };
 

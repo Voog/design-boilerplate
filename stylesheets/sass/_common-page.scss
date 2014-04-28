@@ -1,10 +1,6 @@
 /* COMMON PAGE */
 .common-page {
   .content-header {
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 1;
-    @include color($secondary-color);
   }
 
   .content-body {
