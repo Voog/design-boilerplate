@@ -1,21 +1,37 @@
 /* HEADER */
 .header {
-  display: table-cell;
   .flexbox & {
     @include flexbox;
-  }
-  @include align-items(flex-start);
-  .header-left,
-  .header-right {
+    @include align-items(flex-start);
   }
 
   .header-left {
     .flexbox & {
-      @include flex(1 690px);
+      @include flex(1 610px);
     }
 
     .header-title {
       display: none;
+
+      @include query($tablet-2) {
+        display: inline-block;
+
+        &,
+        & a {
+          font-size: 28px;
+          font-weight: bold;
+          @include color($primary-color);
+
+          &:hover {
+            @include color($primary-color, 0.8);
+          }
+        }
+      }
+    }
+
+    @include query($tablet-2) {
+      position: relative;
+      margin: 20px 0;
     }
   }
 
@@ -25,6 +41,25 @@
 
     .flexbox & {
       @include flex(1 350px);
+    }
+
+    @include query($tablet-2) {
+      display: none;
+    }
+  }
+
+  .header-left,
+  .header-right {
+    .flexbox & {
+      @include query($tablet-2) {
+        @include flex(none)
+      }
+    }
+  }
+
+  @include query($tablet-2) {
+    .flexbox & {
+      display: block;
     }
   }
 }
