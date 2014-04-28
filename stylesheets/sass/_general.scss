@@ -125,22 +125,25 @@ body {
   }
 
   img,
-  pre,
-  code,
-  iframe {
-    margin-top: 25px;
-  }
-
-  img,
   iframe {
     max-width: 100%;
+  }
+
+  img {
     height: auto;
+  }
+
+  pre,
+  code,
+  .edy-texteditor-container {
+    margin-top: 25px;
   }
 
   pre,
   code {
     display: block;
     overflow: auto;
+    white-space: nowrap;
     padding: 10px;
     font-size: 14px;
     @include bg($code-bg);
