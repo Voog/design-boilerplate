@@ -5,6 +5,13 @@
   }
 }
 
+.search,
+.search-left,
+.search-right {
+  @extend %inline-block
+}
+
+
 .search-left {
   .edys-search-input {
     width: 128px;
@@ -20,10 +27,4 @@
   .search-submit {
     vertical-align: middle;
   }
-}
-
-.search,
-.search-left,
-.search-right {
-  @extend %inline-block
 }
