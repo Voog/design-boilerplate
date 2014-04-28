@@ -1,1 +1,40 @@
 /* IMAGE DROP AREA */
+// 1. Set up the imgDropArea plugin using the tutorial provided in this link: http://www.edicy.com/developer/code-examples/javascript-tricks/image-binding-to-content.
+// TODO: CHANGE THE LINK.
+// 2. Uncomment the "_image-drop-area.scss" partial in the "main.scss" file.
+
+// Styling rules for the site's image drop areas. These rules affect the entire site.
+// Image drop areas are activated using the "imgDropArea.js" plugin and the areas are used to save the information about the dropped image into the custom data fields.
+.drop-area {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 218px;
+  margin-top: 56px;
+  background-position: center;
+  background-size: cover;
+  @include border(all, 1px, dashed, $grey);
+  &:hover,
+  &.drop-over {
+    @include bg($black, 0.3);
+  }
+
+  &.active .drop-title,
+  .drop-delete {
+    display: none;
+  }
+  &.active {
+    .drop-delete {
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .drop-title {
+    padding: 129px 10px;
+    text-align: center;
+    font-size: 14px;
+    @include color($grey);
+  }
+}

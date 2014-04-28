@@ -1,1 +1,10 @@
 /* TOPBAR */
+// Styling rules for the site's topbar. These rules affect the entire site.
+
+// NB! Topbar is not the part of the current template by default, but it can be easily included:
+// 1. Add "topbar" component to the site's template components folder.
+// 2. Include the component into the appropriate place (or places) in the layout.
+// 3. Uncomment the "_topbar.scss" partial in the "main.scss" file.
+// 4. Add the styling rules for the generated component.
+.topbar {
+}

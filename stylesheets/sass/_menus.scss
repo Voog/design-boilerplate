@@ -1,4 +1,7 @@
 /* MENUS */
+// Styling rules for the site's menus. These rules affect the entire site.
+
+// Menu button. Only visible on smaller screens.
 .menu-btn {
   display: none;
 
@@ -43,12 +46,14 @@
   }
 }
 
+// Wrapper for the CMS adminmode on-page buttons. For example "hidden menu-items" or "add-page" buttons.
 .edit-btn {
   @extend %inline-block;
   vertical-align: middle;
   line-height: 0.8;
 }
 
+// General rules for the menus. These rules affect all menus on the site.
 .menu {
   margin: 0;
   padding: 0;
@@ -59,6 +64,7 @@
   }
 }
 
+// Styling rules for the site's main menu. Usually the first level menu but can have the sub menu in it aswell.
 .menu-main {
   padding: 6px 0;
 
@@ -132,6 +138,7 @@
         }
       }
 
+      // Styling rules for the language menu in the site's main menu. Only visible on smaller screens.
       .menu-lang {
         display: block;
         margin-top: 0;
@@ -178,6 +185,8 @@
               content: '';
             }
 
+            // Language flag iconst positioning in the spritemap.
+            // TODO: Recheck the positions.
             &.sq:after {
               background-position: 0 0;
             }
@@ -365,6 +374,7 @@
   }
 }
 
+// Styling rules for the site's language menu.
 .menu-lang {
   @extend %inline-block;
 
@@ -390,6 +400,7 @@
   }
 }
 
+// Styling rules for the site's blog article tags menu. These rules affects both - the blog article listing view and the single blog article view.
 .menu-tags {
   margin-bottom: 20px;
 

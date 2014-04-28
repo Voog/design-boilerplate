@@ -1,4 +1,5 @@
 /* FORMS */
+// Styling rules for the site's form-fields area. These rules affect the entire site's form-fields that are in the editable content area.
 .content-formatted {
   form {
     max-width: 100%;
@@ -18,7 +19,6 @@
   .edy-fe-label {
     display: block;
     font-weight: bold;
-    // font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: inherit;
     line-height: 1.3;
   }

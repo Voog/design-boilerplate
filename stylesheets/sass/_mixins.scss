@@ -1,3 +1,6 @@
+// CUSTOM MIXINS
+// Comment out the "_mixins.scss" partial in the "main.scss" file if not used.
+
 // GENERAL
 @mixin calc($property, $expression) {
   #{$property}: -webkit-calc(#{$expression});
