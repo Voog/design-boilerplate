@@ -13,6 +13,12 @@ body {
   background-size: cover;
 }
 
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 %inline-block {
   display: inline-block;
 }
@@ -39,10 +45,14 @@ body {
       border: none;
     }
   }
+
+  @include query($tablet-2) {
+    padding: 0 20px
+  }
 }
 
 .content-formatted {
-  @include clearfix;
+  @extend %clearfix;
   h1,
   h2,
   h3,
