@@ -1,23 +1,25 @@
 /* TABLES */
 .content-formatted {
-  table {
-    width: 100%;
-  }
   .table-container {
     margin-top: 20px;
   }
+
   .overthrow {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
+
   .horizontal-scroll {
     @include border(left,1px,dashed,$third-color);
     @include border(right,1px,dashed,$third-color);
   }
+
   table {
+    width: 100%;
     margin-top: 20px;
     font-size: 16px;
     border-collapse: collapse;
+
     td {
       padding: 10px;
       @include border(top,1px,solid,$third-color);
