@@ -148,6 +148,12 @@
   ],
   "assets": [
     {
+      "content_type": "image/png",
+      "file": "images/ico-flags.png",
+      "kind": "images",
+      "filename": "ico-flags.png"
+    },
+    {
       "content_type": "text/javascript",
       "file": "javascripts/.DS_Store",
       "kind": "javascripts",
