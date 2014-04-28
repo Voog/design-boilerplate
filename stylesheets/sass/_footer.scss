@@ -25,4 +25,8 @@
     }
   }
 
+  @include query($tablet-2) {
+    margin-top: 35px;
+  }
+
 }
