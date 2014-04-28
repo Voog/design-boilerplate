@@ -57,23 +57,6 @@
   li {
     @extend %inline-block;
   }
-
-  @include query($tablet-2) {
-    & {
-      li {
-        display: block;
-        @include border(top, 1px, solid, $primary-color, 0.2);
-
-        a {
-          display: block;
-        }
-
-        &:first-child {
-          border-top: none;
-        }
-      }
-    }
-  }
 }
 
 .menu-main {
@@ -116,6 +99,9 @@
     display: none;
 
     &.expanded {
+      position: absolute;
+      top: 40px;
+      right: 20px;
       display: block;
       min-width: 350px;
       margin: 0 -20px;
@@ -126,31 +112,23 @@
 
       .menu {
         li {
+          display: block;
           margin-right: 0;
-        }
-      }
+          @include border(top, 1px, solid, $primary-color, 0.2);
 
-      .menu-lang {
-        display: block;
-        margin-top: 0;
-        @include border(top, 1px, solid, $primary-color, 0.2);
-      }
-    }
-  }
+          &:first-child {
+            border-top: none;
+          }
 
-  @include query($tablet-2) {
-    &.expanded {
-      position: absolute;
-      top: 40px;
-      right: 20px;
-
-      .menu {
-        li {
           a {
+            display: block;
             padding: 11px 20px;
             font-size: 20px;
 
-            &:hover,
+            &:hover {
+              @include bg($blue-2, 0.5);
+            }
+
             &.active {
               @include bg($blue-2);
             }
@@ -159,6 +137,10 @@
       }
 
       .menu-lang {
+        display: block;
+        margin-top: 0;
+        @include border(top, 1px, solid, $primary-color, 0.2);
+
         li {
           a {
             position: relative;
@@ -184,11 +166,11 @@
             &:before,
             &:after {
               position: absolute;
-              top: 13.5px;
+              top: 14px;
               left: 20px;
               display: block;
               width: 20px;
-              height: 13.5px;
+              height: 14px;
               content: '';
             }
 
@@ -370,6 +352,7 @@
   @include query($mobile-1) {
     &.expanded {
       position: static;
+      min-width: 100%;
       margin-top: 20px;
       @include border(top, 1px, solid, $primary-color, 0.2);
       @include border(bottom, 1px, solid, $primary-color, 0.2);
@@ -404,6 +387,8 @@
 }
 
 .menu-tags {
+  margin-bottom: 20px;
+
   .menu {
     li {
       margin-right: 15px;

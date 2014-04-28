@@ -28,11 +28,6 @@
         }
       }
     }
-
-    @include query($tablet-2) {
-      position: relative;
-      margin: 20px 0;
-    }
   }
 
   .header-right {
@@ -43,9 +38,6 @@
       @include flex(1 350px);
     }
 
-    @include query($tablet-2) {
-      display: none;
-    }
   }
 
   .header-left,
@@ -60,6 +52,14 @@
   @include query($tablet-2) {
     .flexbox & {
       display: block;
+    }
+
+    .header-left {
+      position: relative;
+    }
+
+    .header-right {
+      display: none;
     }
   }
 }
