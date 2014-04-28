@@ -67,10 +67,6 @@
       margin-right: 20px;
       line-height: 1;
 
-      &.mobile-lang {
-        display: none;
-      }
-
       &.edit-btn {
         margin-right: 0;
       }
@@ -146,9 +142,17 @@
             position: relative;
             padding: 15px 20px 15px 50px;
             font-size: 12px;
+            @include color($secondary-color);
 
-            &:hover,
+            &,
             &.active {
+              &:hover {
+                @include bg($grey-2, 0.1);
+              }
+            }
+
+            &.active {
+              @include color($grey-2);
               background: none;
             }
 
