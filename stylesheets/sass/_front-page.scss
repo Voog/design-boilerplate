@@ -6,11 +6,18 @@
 
   .content-body {
     margin-top: 90px;
-  }
 
-  @include query($tablet-2) {
-    .content-body {
+    @include query($tablet-2) {
       margin-top: 35px;
+    }
+
+    &,
+    p {
+      font-size: 25px;
+
+      @include query($tablet-2) {
+        font-size: 18px;
+      }
     }
   }
 }

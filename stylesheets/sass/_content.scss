@@ -3,6 +3,10 @@
 .content {
   margin-top: 70px;
 
+  @include query($tablet-2) {
+    margin-top: 20px;
+  }
+
   .content-header {
     font-weight: bold;
     font-size: 50px;
@@ -12,9 +16,5 @@
     .edy-texteditor-view {
       min-height: 50px;
     }
-  }
-
-  @include query($tablet-2) {
-    margin-top: 20px;
   }
 }

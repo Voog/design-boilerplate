@@ -4,9 +4,23 @@
   .flexbox & {
     @include flexbox;
     @include align-items(flex-start);
+
+    @include query($tablet-2) {
+      display: block;
+    }
+  }
+
+  .no-flexbox & {
+    display: table;
+    vertical-align: top;
+    width: 100%;
   }
 
   .header-left {
+    @include query($tablet-2) {
+      position: relative;
+    }
+
     .flexbox & {
       @include flex(1 610px);
     }
@@ -16,16 +30,16 @@
 
       @include query($tablet-2) {
         display: inline-block;
+      }
 
-        &,
-        & a {
-          font-size: 28px;
-          font-weight: bold;
-          @include color($primary-color);
+      &,
+      & a {
+        font-size: 28px;
+        font-weight: bold;
+        @include color($primary-color);
 
-          &:hover {
-            @include color($primary-color, 0.8);
-          }
+        &:hover {
+          @include color($primary-color, 0.8);
         }
       }
     }
@@ -34,6 +48,10 @@
   .header-right {
     min-width: 350px;
     text-align: right;
+
+    @include query($tablet-2) {
+      display: none;
+    }
 
     .flexbox & {
       @include flex(1 350px);
@@ -45,22 +63,12 @@
   .header-right {
     .flexbox & {
       @include query($tablet-2) {
-        @include flex(none)
+        @include flex(none);
       }
     }
-  }
 
-  @include query($tablet-2) {
-    .flexbox & {
-      display: block;
-    }
-
-    .header-left {
-      position: relative;
-    }
-
-    .header-right {
-      display: none;
+    .no-flexbox & {
+      display: table-cell;
     }
   }
 }

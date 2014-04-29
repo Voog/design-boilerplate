@@ -42,16 +42,16 @@ body {
   padding: 40px 20px;
   @include bg($white);
 
+  @include query($tablet-2) {
+    padding: 20px
+  }
+
   a {
     text-decoration: none;
 
     img {
       border: none;
     }
-  }
-
-  @include query($tablet-2) {
-    padding: 20px
   }
 }
 

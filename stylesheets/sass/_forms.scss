@@ -58,6 +58,7 @@
 
   .form_field_size_medium {
     width: 420px;
+
     @include query($mobile-2) {
       width: 100%;
     }
