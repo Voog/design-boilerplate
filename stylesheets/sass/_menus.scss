@@ -85,6 +85,10 @@
       display: block;
       @include color($blue);
 
+      &.untranslated {
+        @include color($red, 0.5);
+      }
+
       &:hover {
         @include color($primary-color);
       }
