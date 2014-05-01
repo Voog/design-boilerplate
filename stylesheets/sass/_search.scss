@@ -1,17 +1,13 @@
 /* SEARCH */
 // Styling rules for the site's search box. These rules affect the entire site.
-.search {
-  @include query($tablet-1) {
-    display: none;
-  }
-}
-
 .search,
 .search-left,
 .search-right {
-  @extend %inline-block
+  @extend %inline-block;
 }
 
+.search {
+}
 
 .search-left {
   .edys-search-input {
