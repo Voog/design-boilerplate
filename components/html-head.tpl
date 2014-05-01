@@ -16,12 +16,13 @@
 <link rel="apple-touch-icon" href="{{ images_path }}/{{ page.data.touchicon }}"> <!-- TODO: Add image location data tag -->
 
 <!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->
-<script src="{{ javascripts_path }}/modernizr.js?20"></script>
+<script src="{{ javascripts_path }}/modernizr.js?21"></script>
 
 <!-- STYLESHEETS -->
-{% stylesheet_link "main.css?20" %}
-<!--[if lt IE 9]>{% stylesheet_link "ie8.css?20" %}<![endif]-->
-<!--[if lt IE 10]>{% stylesheet_link "ie9.css?20" %}<![endif]-->
+{% stylesheet_link "main.css?21" %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.css?21" %}<![endif]-->
+<!--[if lt IE 10]>{% stylesheet_link "ie9.css?21" %}<![endif]-->
+<link rel="stylesheet" href="/assets/admin/tools/0.1.1/edicy-tools.css">
 
 <!-- SITE TITLE -->
 <title>{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}</title>
