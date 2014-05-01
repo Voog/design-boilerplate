@@ -9,9 +9,9 @@
 
 // BOXES
 @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
-    -webkit-box-shadow: $top $left $blur $color #{$inset};
-       -moz-box-shadow: $top $left $blur $color #{$inset};
-            box-shadow: $top $left $blur $color #{$inset};
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+     -moz-box-shadow: $top $left $blur $color #{$inset};
+          box-shadow: $top $left $blur $color #{$inset};
 }
 @mixin no-box-shadow($value: none) {
   -webkit-box-shadow: $value;
@@ -63,17 +63,14 @@
   -webkit-backface-visibility: hidden;
 }
 
-// STRETCH
-@mixin stretch {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+// WEBKIT INPUT BUTTON STYLE RESET
+@mixin inputiosreset {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
 }
 
-// Media query
-
+// MEDIA QUERY
 @mixin query($value: $tablet-1) {
   @media screen and (max-width: $value) {
     @content;
