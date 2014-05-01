@@ -165,7 +165,7 @@ body {
     white-space: nowrap;
     padding: 10px;
     font-size: 14px;
-    @include bg($code-bg);
+    @include bg($grey-3);
   }
 
   // Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
