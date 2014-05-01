@@ -149,6 +149,12 @@
   "assets": [
     {
       "content_type": "image/png",
+      "file": "images/ico-flags-small.png",
+      "kind": "images",
+      "filename": "ico-flags-small.png"
+    },
+    {
+      "content_type": "image/png",
       "file": "images/ico-flags.png",
       "kind": "images",
       "filename": "ico-flags.png"
@@ -200,12 +206,6 @@
       "file": "stylesheets/.DS_Store",
       "kind": "stylesheets",
       "filename": ".DS_Store"
-    },
-    {
-      "content_type": "text/css",
-      "file": "stylesheets/bgpicker-image-preview.css",
-      "kind": "stylesheets",
-      "filename": "bgpicker-image-preview.css"
     },
     {
       "content_type": "text/css",
