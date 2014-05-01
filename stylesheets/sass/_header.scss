@@ -1,10 +1,8 @@
 /* HEADER */
 // Styling rules for the site's header. These rules affect the entire site.
 .header {
+  .no-flexbox &,
   .flexbox & {
-    @include flexbox;
-    @include align-items(flex-start);
-
     @include query($tablet-2) {
       display: block;
     }
@@ -14,6 +12,24 @@
     display: table;
     vertical-align: top;
     width: 100%;
+  }
+
+  .flexbox & {
+    @include flexbox;
+    @include align-items(flex-start);
+  }
+
+  .header-left,
+  .header-right {
+    .no-flexbox & {
+      display: table-cell;
+    }
+
+    .flexbox & {
+      @include query($tablet-2) {
+        @include flex(none);
+      }
+    }
   }
 
   .header-left {
@@ -50,25 +66,14 @@
     text-align: right;
 
     @include query($tablet-2) {
-      display: none;
-    }
-
-    .flexbox & {
-      @include flex(1 350px);
-    }
-
-  }
-
-  .header-left,
-  .header-right {
-    .flexbox & {
-      @include query($tablet-2) {
-        @include flex(none);
+      .no-flexbox &,
+      .flexbox & {
+        display: none;
       }
     }
+  }
 
-    .no-flexbox & {
-      display: table-cell;
-    }
+  .flexbox & {
+    @include flex(1 350px);
   }
 }
