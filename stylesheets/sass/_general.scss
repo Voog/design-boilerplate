@@ -26,6 +26,14 @@ body {
 }
 
 // Styling rules for the independent elements that can be located everywhere in the DOM and always have the same styling rules.
+.bgpicker-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .background-color {
   position: fixed;
   top: 0;
@@ -170,6 +178,6 @@ body {
 
   // Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
   .edy-texteditor-view {
-    min-height: 24px;
+    min-height: 32px;
   }
 }
