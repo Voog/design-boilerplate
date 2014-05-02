@@ -30,8 +30,11 @@ body {
   position: absolute;
   background: none;
   border: none;
-  outline: none;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .background-color {

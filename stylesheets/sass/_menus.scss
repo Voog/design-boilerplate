@@ -14,13 +14,16 @@
     padding: 0;
     background: none;
     border: none;
-    outline: none;
     cursor: pointer;
 
     &.open {
       .menu-stripe {
         @include bg($secondary-color, 0.47);
       }
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &::-moz-focus-inner {
