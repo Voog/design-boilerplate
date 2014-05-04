@@ -148,10 +148,16 @@
   ],
   "assets": [
     {
-      "content_type": "image/png",
-      "file": "images/ico-flags-small.png",
+      "content_type": "unknown/unknown",
+      "file": "assets/ico-flags.svg",
+      "kind": "assets",
+      "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/DS_Store",
+      "file": "images/.DS_Store",
       "kind": "images",
-      "filename": "ico-flags-small.png"
+      "filename": ".DS_Store"
     },
     {
       "content_type": "image/png",
