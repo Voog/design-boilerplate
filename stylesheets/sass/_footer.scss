@@ -2,13 +2,15 @@
 // Styling rules for the site's footer. These rules affect the entire site.
 .footer {
   margin-top: 50px;
-  font-size: 14px;
 
   @include query($tablet-2) {
     margin-top: 35px;
   }
 
   .content-formatted {
+    font-size: 14px;
+    line-height: 1.5;
+
     .edy-texteditor-view {
       min-height: 18px;
     }
@@ -22,7 +24,6 @@
     a {
       @extend %inline-block;
       padding: 7px 9px;
-      font-family: "Avenir Next";
       font-size: 10px;
       @include color($secondary-color, 0.75);
       line-height: 1;
