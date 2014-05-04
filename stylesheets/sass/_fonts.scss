@@ -7,6 +7,6 @@
 // 3. Replace the "custom-font-file-name" with the fonts file names (without the file extension).
 // 4. Add more fonts with the same pattern if needed.
 // 5. Uncomment the "_fonts.scss" partial in the "main.scss" file.
-@include font-face('Custom Font name', '../assets/custom-font-file-name');
-@include font-face('Custom Font name', '../assets/custom-font-file-name', bold);
-@include font-face('Custom Font name', '../assets/custom-font-file-name', normal, italic);
+@include font-face('Custom Font name', '../assets/custom-font-file-name', 400);
+@include font-face('Custom Font name', '../assets/custom-font-file-name', 700);
+@include font-face('Custom Font name', '../assets/custom-font-file-name', 400, italic);

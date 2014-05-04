@@ -97,7 +97,7 @@
       }
 
       &.active {
-        font-weight: bold;
+        font-weight: 700;
         @include color($primary-color, 0.8);
       }
     }
@@ -426,7 +426,7 @@
         }
 
         &.active {
-          font-weight: bold;
+          font-weight: 700;
         }
       }
     }
