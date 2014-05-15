@@ -12,21 +12,21 @@
     {% include "html-head" %}
     <!-- Additional template specific <head> element code. -->
   </head>
-  
+
   <body class="UNIQUE-CLASS-NAME">
     <div class="container">
       {% include "header" %}
-  
+
       <main class="content" role="main">
         <header class="content-header">
           <h1 class="content-formatted cfx">{% content name="slogan" %}</h1>
         </header>
         <section class="content-body content-formatted cfx">{% content %}</section>
       </main>
-  
+
       {% include "footer" %}
     </div>
-  
+
     {% include "javascripts" %}
     <script>project.initCommonPage();</script>
   </body>
@@ -48,22 +48,22 @@
 
 ## 2. Formattable areas
 Formattable areas are user-editable areas that can be formatted with HTML and included with liquid markup tags.
-User-editable areas that can be formatted using HTML, must be wrapped with an element that has class ```content-formatted```  
+User-editable areas that can be formatted using HTML, must be wrapped with an element that has class ```content-formatted```
 
 ### 2.1 Content areas
-Content areas can be included with ```{% content %}``` or ```{% contentblock %}{% endcontentblock %}``` tags.  
-* Content areas can contain text and images, photo galleries and form fields.  
-* ```{% content %}``` and ```{% contentblock %}{% endcontentblock %}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.  
-Examples: 
+Content areas can be included with ```{% content %}``` or ```{% contentblock %}{% endcontentblock %}``` tags.
+* Content areas can contain text and images, photo galleries and form fields.
+* ```{% content %}``` and ```{% contentblock %}{% endcontentblock %}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.
+Examples:
 ```html
 <h1 class="content-formatted cfx">{% content name="slogan" %}</h1>
 <section class="content-body content-formatted cfx">{% content %}</section>
 ```
-[{% content %} documentation](http://www.edicy.com/developer/template-api/tags/content)  
+[{% content %} documentation](http://www.edicy.com/developer/template-api/tags/content)
 [{% contentblock %} documentation](http://www.edicy.com/developer/template-api/tags/contentblock)
 
-#### 2.1.1 Content area names  
-Examples:  
+#### 2.1.1 Content area names
+Examples:
 ```html
 {% content name="sample" %}
 {% contentblock name="sample_name" %}{% endcontentblock %}
@@ -72,12 +72,12 @@ Examples:
 * Words should be separated with undescores (to distinct them from class names).
 
 ### 2.2 Article formattable areas
-Article formattable areas are user-editable areas that can be formatted using HTML and are part of the **article** complex.  
+Article formattable areas are user-editable areas that can be formatted using HTML and are part of the **article** complex.
 Article has 2 formattable areas:
 * Article excerpt - ```{{ article.excerpt }}``` or ```{% editable article.excerpt %}```
 * Article body - ```{{ article.body }}``` or ```{% editable article.body %}```
-```{{ article.excerpt }}``` and ```{{ article.body }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.  
-Examples: 
+```{{ article.excerpt }}``` and ```{{ article.body }}``` areas are formattable content areas so they must be wrapped with an element that has class ```content-formatted```.
+Examples:
 ```html
   <div class="post-excerpt content-formatted cfx">{% editable article.excerpt %}</div>
   <div class="post-body content-formatted cfx">{% editable article.body %}</div>
@@ -89,16 +89,16 @@ Examples:
 
 ### 2.3 Site header area
 Site header area is an user-editable area for defining site header.
-Example:  
+Example:
 ```html
 <h1 class="header-title content-formatted cfx"><a href="{{ site.root_item.url }}">{{ site.header }}</a></h1>
 <h1 class="content-title content-formatted cfx">{% editable site.header %}</h1>
 ```
 
 ## 3. Layouts
-Layout is a html/liquid code that is used for rendering website pages.  
-Layouts are located in the [/layouts](/layouts) folder.  
-Basic design has 4 layouts: 
+Layout is a html/liquid code that is used for rendering website pages.
+Layouts are located in the [/layouts](/layouts) folder.
+Basic design has 4 layouts:
 * Blog & News
 * Blog article
 * Common page
@@ -106,7 +106,7 @@ Basic design has 4 layouts:
 
 ### 3.1 Blog & News / Blog article
 #### 3.1.1 Blog & News
-Blog and/or news page article listing view.  
+Blog and/or news page article listing view.
 File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
 
 ##### 3.1.1.1 Example
@@ -123,14 +123,14 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
     {{blog.rss_link}}
   </head>
-  
+
   <body class="blog-page">
     <div class="container">
       {% include "header" %}
-  
+
       <main class="content" role="main">
         {% include "tags-blog" %}
-        
+
         {% for article in articles %}
           <article class="post">
             <header class="post-header">
@@ -143,7 +143,7 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
           </article>
         {% endfor %}
       </main>
-  
+
       {% include "footer" %}
     </div>
     {% include "javascripts" %}
@@ -153,7 +153,7 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
 ```
 
 #### 3.1.2 Blog article
-Blog and/or news page article detail view.  
+Blog and/or news page article detail view.
 File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
 
 ##### 3.1.2.1 Example
@@ -169,11 +169,11 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
-  
+
   <body class="post-page">
     <div class="container cfx">
       {% include "header" %}
-  
+
       <main class="content user-content" role="main">
         <article class="post">
           <header class="post-header">
@@ -189,22 +189,22 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
             <div class="post-author">{{ article.author }}</div>
           </footer>
         </article>
-        
+
         <section class="comments">
           <h2 class="comments-title">
             {% case article.comments_count %}{% when 0 %}{{ "no_comments" | lc }}{% else %}{{ "comments_for_count" | lc }}: <span class="comments-count">{{ article.comments_count }}</span>{% endcase %}</h2>
-          
+
           {% for comment in article.comments %}
-            <div class="comment">{{ comment.body }} {{ comment.author }}, ({{ comment.created_at | date : "%b %d, %Y" }})</div>
+            <div class="comment">{{ comment.body_html }} {{ comment.author }}, ({{ comment.created_at | date : "%b %d, %Y" }})</div>
           {% endfor %}
-          
+
           {% include "comment-form" %}
         </section>
       </main>
-  
+
       {% include "footer" %}
     </div>
-  
+
     {% include "javascripts" %}
     <script>project.initArticlePage();</script>
   </body>
@@ -234,7 +234,7 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
       * The article body ```{{ article.body }}``` must be inside element with ```class="post-body"```
 
 ### 3.2 Common page
-Common content page view.  
+Common content page view.
 File location: [/layouts/common_page.tpl](/layouts/common_page.tpl)
 
 #### 3.2.1 Example
@@ -250,21 +250,21 @@ File location: [/layouts/common_page.tpl](/layouts/common_page.tpl)
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
-  
+
   <body class="common-page">
     <div class="container cfx">
       {% include "header" %}
-  
+
       <main class="content" role="main">
         <header class="content-header">
           <h1 class="content-formatted cfx">{% content name="slogan" %}</h1>
         </header>
         <section class="content-body content-formatted cfx">{% content %}</section>
       </main>
-  
+
       {% include "footer" %}
     </div>
-  
+
     {% include "javascripts" %}
     <script>project.initCommonPage();</script>
   </body>
@@ -293,11 +293,11 @@ File location: [/layouts/front_page.tpl](/layouts/front_page.tpl)
     <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
-  
+
   <body class="front-page">
     <div class="container">
       {% include "header" %}
-  
+
       <main class="content" role="main">
         <header class="content-header">
           <h1 class="content-title content-formatted cfx">{% editable site.header %}</h1>
@@ -305,10 +305,10 @@ File location: [/layouts/front_page.tpl](/layouts/front_page.tpl)
         </header>
         <section class="content-body content-formatted cfx">{% content %}</section>
       </main>
-  
+
       {% include "footer" %}
     </div>
-  
+
     {% include "javascripts" %}
     <script>project.initCommonPage();</script>
   </body>
@@ -333,8 +333,8 @@ Basic design components are:
 * topbar
 
 ### 4.1 footer
-**Optional** component  
-Contains site footer area code.  
+**Optional** component
+Contains site footer area code.
 File location: [/components/footer.tpl](/components/footer.tpl)
 
 #### 4.1.1 Example
@@ -348,12 +348,12 @@ File location: [/components/footer.tpl](/components/footer.tpl)
 * Footer is wrapped with ```<footer>``` element with class names **footer** and **cfx**.
 * If footer has one content area it name should be **footer**.
 * If footer has many content areas their names should start with the **header_** prefixes.
-* Footer content areas are global so they must have the **x** prefix before {% content %}.  
+* Footer content areas are global so they must have the **x** prefix before {% content %}.
 [{{ xcontent }} documentation](http://www.edicy.com/developer/template-api/tags/xcontent)
 
 ### 4.2 header
-**Optional** component  
-Contains site header area code. For example navigation menu, language menu, mobile-menu button etc.  
+**Optional** component
+Contains site header area code. For example navigation menu, language menu, mobile-menu button etc.
 File location: [/components/header.tpl](/components/header.tpl)
 
 #### 4.2.1 Example
@@ -381,11 +381,11 @@ File location: [/components/header.tpl](/components/header.tpl)
 * Header is wrapped with ```<header>``` element with class names **header**.
 * If header has one content area it name should be **header**.
 * If header has many content areas their names should start with the **header_** prefixes.
-* header content areas are global so they must have the **x** prefix before {% content %}.  
+* header content areas are global so they must have the **x** prefix before {% content %}.
 [{{ xcontent }} documentation](http://www.edicy.com/developer/template-api/tags/xcontent)
 
 ### 4.3 html-head
-**Required** component.  
+**Required** component.
 Contains site ```<head>``` tag code.
 File location: [/components/html-head.tpl](/components/html-head.tpl)
 
@@ -436,7 +436,7 @@ File location: [/components/html-head.tpl](/components/html-head.tpl)
   * Facebook opengraph (global settings)
 
 ### 4.4 javascripts
-**Required** component.  
+**Required** component.
 Contains site javascript links and inline javascripts that must be loaded at the end of the code.
 File location: [/components/javascripts.tpl](/components/javascripts.tpl)
 
@@ -480,7 +480,7 @@ File location: [/components/javascripts.tpl](/components/javascripts.tpl)
 
 
 ### 4.5 lang-menu
-**Optional** component.  
+**Optional** component.
 Contains site language menu.
 File location: [/components/lang-menu.tpl](/components/lang-menu.tpl)
 
