@@ -37,118 +37,118 @@
       "content_type": "component",
       "component": true,
       "file": "components/bg-picker.tpl",
-      "layout_name": "",
+      "layout_name": "bg-picker",
       "title": "bg-picker"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/comment-form.tpl",
-      "layout_name": "",
+      "layout_name": "comment-form",
       "title": "comment-form"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/footer.tpl",
-      "layout_name": "",
+      "layout_name": "footer",
       "title": "footer"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/header.tpl",
-      "layout_name": "",
+      "layout_name": "header",
       "title": "header"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/html-head.tpl",
-      "layout_name": "",
+      "layout_name": "html-head",
       "title": "html-head"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/javascripts.tpl",
-      "layout_name": "",
+      "layout_name": "javascripts",
       "title": "javascripts"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/menu-lang-mobile.tpl",
-      "layout_name": "",
+      "layout_name": "menu-lang-mobile",
       "title": "menu-lang-mobile"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/menu-lang.tpl",
-      "layout_name": "",
+      "layout_name": "menu-lang",
       "title": "menu-lang"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/menu-level-1.tpl",
-      "layout_name": "",
+      "layout_name": "menu-level-1",
       "title": "menu-level-1"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/menu-level-2.tpl",
-      "layout_name": "",
+      "layout_name": "menu-level-2",
       "title": "menu-level-2"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/post-box.tpl",
-      "layout_name": "",
+      "layout_name": "post-box",
       "title": "post-box"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/search.tpl",
-      "layout_name": "",
+      "layout_name": "search",
       "title": "search"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/sidebar.tpl",
-      "layout_name": "",
+      "layout_name": "sidebar",
       "title": "sidebar"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/tags-blog.tpl",
-      "layout_name": "",
+      "layout_name": "tags-blog",
       "title": "tags-blog"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/tags-post.tpl",
-      "layout_name": "",
+      "layout_name": "tags-post",
       "title": "tags-post"
     },
     {
       "content_type": "component",
       "component": true,
       "file": "components/topbar.tpl",
-      "layout_name": "",
+      "layout_name": "topbar",
       "title": "topbar"
     }
   ],
   "assets": [
     {
-      "content_type": "unknown/unknown",
+      "content_type": "image/svg+xml",
       "file": "assets/ico-flags.svg",
       "kind": "assets",
       "filename": "ico-flags.svg"
@@ -160,46 +160,40 @@
       "filename": "ico-flags.png"
     },
     {
-      "content_type": "text/javascript",
+      "content_type": "application/javascript",
       "file": "javascripts/autogrow.js",
       "kind": "javascripts",
       "filename": "autogrow.js"
     },
     {
-      "content_type": "text/javascript",
+      "content_type": "application/javascript",
       "file": "javascripts/jquery.js",
       "kind": "javascripts",
       "filename": "jquery.js"
     },
     {
-      "content_type": "text/javascript",
+      "content_type": "application/javascript",
       "file": "javascripts/main.js",
       "kind": "javascripts",
       "filename": "main.js"
     },
     {
-      "content_type": "text/javascript",
+      "content_type": "application/javascript",
       "file": "javascripts/modernizr.js",
       "kind": "javascripts",
       "filename": "modernizr.js"
     },
     {
-      "content_type": "text/javascript",
+      "content_type": "application/javascript",
       "file": "javascripts/overthrow.js",
       "kind": "javascripts",
       "filename": "overthrow.js"
     },
     {
-      "content_type": "text/javascript",
+      "content_type": "application/javascript",
       "file": "javascripts/retina.js",
       "kind": "javascripts",
       "filename": "retina.js"
-    },
-    {
-      "content_type": "text/css",
-      "file": "stylesheets/comments.css",
-      "kind": "stylesheets",
-      "filename": "comments.css"
     },
     {
       "content_type": "text/css",
