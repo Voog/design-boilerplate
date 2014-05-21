@@ -54,7 +54,7 @@
 
 // Wrapper for the CMS adminmode on-page buttons. For example "hidden menu items" or "add-page" buttons.
 .edit-btn {
-  @extend %inline-block;
+  display: inline-block;
   vertical-align: middle;
   line-height: 0.8;
 }
