@@ -10,8 +10,7 @@
 
 .content-title,
 .content-header {
-
-  .content-formatted {
+  &.content-formatted {
     font-weight: 700;
     line-height: 1;
     @include color($secondary-color);
