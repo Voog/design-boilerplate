@@ -147,9 +147,9 @@ body {
   }
 
   a {
-    @include color($blue);
+    @include color($blue-1);
     &:hover {
-      @include color($blue, 0.8);
+      @include color($blue-1, 0.8);
     }
   }
 
