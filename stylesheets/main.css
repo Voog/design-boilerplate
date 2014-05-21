@@ -136,14 +136,22 @@ body {
 .content-formatted .edy-texteditor-container {
   margin-top: 25px;
 }
-.content-formatted pre,
-.content-formatted code {
-  display: block;
+.content-formatted pre {
+  margin-top: 10px;
+  margin-bottom: 0;
   overflow: auto;
   white-space: nowrap;
+}
+.content-formatted pre,
+.content-formatted pre code {
   padding: 10px;
   font-size: 14px;
   background-color: #fafafa;
+}
+.content-formatted pre code {
+  display: block;
+  margin-top: 0;
+  padding: 0;
 }
 .content-formatted .edy-texteditor-view {
   min-height: 32px;

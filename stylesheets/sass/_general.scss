@@ -171,14 +171,24 @@ body {
     margin-top: 25px;
   }
 
-  pre,
-  code {
-    display: block;
+  pre {
+    margin-top: 10px;
+    margin-bottom: 0;
     overflow: auto;
     white-space: nowrap;
-    padding: 10px;
-    font-size: 14px;
-    @include bg($grey-3);
+
+    &,
+    code {
+      padding: 10px;
+      font-size: 14px;
+      @include bg($grey-3);
+    }
+
+    code {
+      display: block;
+      margin-top: 0;
+      padding: 0;
+    }
   }
 
   // Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
