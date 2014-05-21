@@ -174,8 +174,8 @@
               background: none;
             }
 
-            &.ico-lang:before,
-            &.ico-lang:after {
+            &.lang-flag:before,
+            &.lang-flag:after {
               position: absolute;
               top: 14px;
               left: 20px;
@@ -185,11 +185,11 @@
               content: '';
             }
 
-            &.ico-lang:before {
+            &.lang-flag:before {
               @include bg($black);
             }
 
-            &.ico-lang:after {
+            &.lang-flag:after {
               opacity: 0.95;
               background-size: 200px;
               background-repeat: no-repeat;
@@ -278,174 +278,53 @@
 }
 
 // Language flag icons positioning in the spritemap.
-.sq:after {
-  background-position: 0 0;
-}
+$flags:
+  (sq,   0        0),
+  (hy,  -20px     0),
+  (bn,  -40px     0),
+  (pt,  -60px     0),
+  (bg,  -80px     0),
+  (zh, -100px     0),
+  (hr, -120px     0),
+  (da, -140px     0),
+  (cs, -160px     0),
+  (et, -180px     0),
+  (fi,    0px -14px),
+  (fr,  -20px -14px),
+  (ka,  -40px -14px),
+  (de,  -60px -14px),
+  (el,  -80px -14px),
+  (hu, -100px -14px),
+  (is, -120px -14px),
+  (hi, -140px -14px),
+  (id, -160px -14px),
+  (fa, -180px -14px),
+  (he,    0px -28px),
+  (it,  -20px -28px),
+  (ja,  -40px -28px),
+  (ko,  -60px -28px),
+  (lv,  -80px -28px),
+  (lt, -100px -28px),
+  (ms, -120px -28px),
+  (nl, -140px -28px),
+  (no, -160px -28px),
+  (ur, -180px -28px),
+  (fil,   0px -42px),
+  (pl,  -20px -42px),
+  (ro,  -40px -42px),
+  (ru,  -60px -42px),
+  (ar,  -80px -42px),
+  (lt, -100px -42px),
+  (sk, -120px -42px),
+  (es, -140px -42px),
+  (sv, -160px -42px),
+  (tr, -180px -42px),
+  (uk, 0px -56px),
+  (en, -20px -56px)
+;
 
-.hy:after {
-  background-position: -20px 0;
-}
-
-.bn:after {
-  background-position: -40px 0;
-}
-
-.pt:after {
-  background-position: -60px 0;
-}
-
-.bg:after {
-  background-position: -80px 0;
-}
-
-.zh:after {
-  background-position: -100px 0;
-}
-
-.hr:after {
-  background-position: -120px 0;
-}
-
-.da:after {
-  background-position: -140px 0;
-}
-
-.cs:after {
-  background-position: -160px 0;
-}
-
-.et:after {
-  background-position: -180px 0;
-}
-
-.fi:after {
-  background-position: 0 -14px;
-}
-
-.fr:after {
-  background-position: -20px -14px;
-}
-
-.ka:after {
-  background-position: -40px -14px;
-}
-
-.de:after {
-  background-position: -60px -14px;
-}
-
-.el:after {
-  background-position: -80px -14px;
-}
-
-.hu:after {
-  background-position: -100px -14px;
-}
-
-.is:after {
-  background-position: -120px -14px;
-}
-
-.hi:after {
-  background-position: -140px -14px;
-}
-
-.id:after {
-  background-position: -160px -14px;
-}
-
-.fa:after {
-  background-position: -180px -14px;
-}
-
-.he:after {
-  background-position: 0 -28px;
-}
-
-.it:after {
-  background-position: -20px -28px;
-}
-
-.ja:after {
-  background-position: -40px -28px;
-}
-
-
-.ko:after {
-  background-position: -60px -28px;
-}
-
-.lv:after {
-  background-position: -80px -28px;
-}
-
-.lt:after {
-  background-position: -100px -28px;
-}
-
-.ms:after {
-  background-position: -120px -28px;
-}
-
-.nl:after {
-  background-position: -140px -28px;
-}
-
-.no:after {
-  background-position: -160px -28px;
-}
-
-.ur:after {
-  background-position: -180px -28px;
-}
-
-.fil:after {
-  background-position: 0 -42px;
-}
-
-.pl:after {
-  background-position: -20px -42px;
-}
-
-.ro:after {
-  background-position: -40px -42px;
-}
-
-.ru:after {
-  background-position: -60px -42px;
-}
-
-.ar:after {
-  background-position: -80px -42px;
-}
-
-.sr:after {
-  background-position: -100px -42px;
-}
-
-.sk:after {
-  background-position: -120px -42px;
-}
-
-.es:after {
-  background-position: -140px -42px;
-}
-
-.sv:after {
-  background-position: -160px -42px;
-}
-
-.tr:after {
-  background-position: -180px -42px;
-}
-
-
-.uk:after {
-  background-position: 0px -56px;
-}
-
-.en:after {
-  background-position: -20px -56px;
+@each $flag, $pos in $flags {
+  .lang-flag-#{$flag}:after { background-position: $pos; }
 }
 
 // Styling rules for the site's blog article tags menu. These rules affects both - the blog article listing view and the single blog article view.

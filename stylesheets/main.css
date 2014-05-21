@@ -306,7 +306,7 @@ body {
     color: #838586;
     background: none;
   }
-  .menu-main.expanded .menu-lang li a.ico-lang:before, .menu-main.expanded .menu-lang li a.ico-lang:after {
+  .menu-main.expanded .menu-lang li a.lang-flag:before, .menu-main.expanded .menu-lang li a.lang-flag:after {
     position: absolute;
     top: 14px;
     left: 20px;
@@ -315,18 +315,18 @@ body {
     height: 13px;
     content: '';
   }
-  .menu-main.expanded .menu-lang li a.ico-lang:before {
+  .menu-main.expanded .menu-lang li a.lang-flag:before {
     background-color: black;
   }
-  .menu-main.expanded .menu-lang li a.ico-lang:after {
+  .menu-main.expanded .menu-lang li a.lang-flag:after {
     opacity: 0.95;
     background-size: 200px;
     background-repeat: no-repeat;
   }
-  .no-svg .menu-main.expanded .menu-lang li a.ico-lang:after {
+  .no-svg .menu-main.expanded .menu-lang li a.lang-flag:after {
     background-image: url("../images/ico-flags.png");
   }
-  .svg .menu-main.expanded .menu-lang li a.ico-lang:after {
+  .svg .menu-main.expanded .menu-lang li a.lang-flag:after {
     background-image: url("../assets/ico-flags.svg");
   }
   .menu-main.expanded .menu-lang li a.edy-menu-langadd {
@@ -390,171 +390,171 @@ body {
   }
 }
 
-.sq:after {
+.lang-flag-sq:after {
   background-position: 0 0;
 }
 
-.hy:after {
+.lang-flag-hy:after {
   background-position: -20px 0;
 }
 
-.bn:after {
+.lang-flag-bn:after {
   background-position: -40px 0;
 }
 
-.pt:after {
+.lang-flag-pt:after {
   background-position: -60px 0;
 }
 
-.bg:after {
+.lang-flag-bg:after {
   background-position: -80px 0;
 }
 
-.zh:after {
+.lang-flag-zh:after {
   background-position: -100px 0;
 }
 
-.hr:after {
+.lang-flag-hr:after {
   background-position: -120px 0;
 }
 
-.da:after {
+.lang-flag-da:after {
   background-position: -140px 0;
 }
 
-.cs:after {
+.lang-flag-cs:after {
   background-position: -160px 0;
 }
 
-.et:after {
+.lang-flag-et:after {
   background-position: -180px 0;
 }
 
-.fi:after {
-  background-position: 0 -14px;
+.lang-flag-fi:after {
+  background-position: 0px -14px;
 }
 
-.fr:after {
+.lang-flag-fr:after {
   background-position: -20px -14px;
 }
 
-.ka:after {
+.lang-flag-ka:after {
   background-position: -40px -14px;
 }
 
-.de:after {
+.lang-flag-de:after {
   background-position: -60px -14px;
 }
 
-.el:after {
+.lang-flag-el:after {
   background-position: -80px -14px;
 }
 
-.hu:after {
+.lang-flag-hu:after {
   background-position: -100px -14px;
 }
 
-.is:after {
+.lang-flag-is:after {
   background-position: -120px -14px;
 }
 
-.hi:after {
+.lang-flag-hi:after {
   background-position: -140px -14px;
 }
 
-.id:after {
+.lang-flag-id:after {
   background-position: -160px -14px;
 }
 
-.fa:after {
+.lang-flag-fa:after {
   background-position: -180px -14px;
 }
 
-.he:after {
-  background-position: 0 -28px;
+.lang-flag-he:after {
+  background-position: 0px -28px;
 }
 
-.it:after {
+.lang-flag-it:after {
   background-position: -20px -28px;
 }
 
-.ja:after {
+.lang-flag-ja:after {
   background-position: -40px -28px;
 }
 
-.ko:after {
+.lang-flag-ko:after {
   background-position: -60px -28px;
 }
 
-.lv:after {
+.lang-flag-lv:after {
   background-position: -80px -28px;
 }
 
-.lt:after {
+.lang-flag-lt:after {
   background-position: -100px -28px;
 }
 
-.ms:after {
+.lang-flag-ms:after {
   background-position: -120px -28px;
 }
 
-.nl:after {
+.lang-flag-nl:after {
   background-position: -140px -28px;
 }
 
-.no:after {
+.lang-flag-no:after {
   background-position: -160px -28px;
 }
 
-.ur:after {
+.lang-flag-ur:after {
   background-position: -180px -28px;
 }
 
-.fil:after {
-  background-position: 0 -42px;
+.lang-flag-fil:after {
+  background-position: 0px -42px;
 }
 
-.pl:after {
+.lang-flag-pl:after {
   background-position: -20px -42px;
 }
 
-.ro:after {
+.lang-flag-ro:after {
   background-position: -40px -42px;
 }
 
-.ru:after {
+.lang-flag-ru:after {
   background-position: -60px -42px;
 }
 
-.ar:after {
+.lang-flag-ar:after {
   background-position: -80px -42px;
 }
 
-.sr:after {
+.lang-flag-lt:after {
   background-position: -100px -42px;
 }
 
-.sk:after {
+.lang-flag-sk:after {
   background-position: -120px -42px;
 }
 
-.es:after {
+.lang-flag-es:after {
   background-position: -140px -42px;
 }
 
-.sv:after {
+.lang-flag-sv:after {
   background-position: -160px -42px;
 }
 
-.tr:after {
+.lang-flag-tr:after {
   background-position: -180px -42px;
 }
 
-.uk:after {
+.lang-flag-uk:after {
   background-position: 0px -56px;
 }
 
-.en:after {
+.lang-flag-en:after {
   background-position: -20px -56px;
 }
 
