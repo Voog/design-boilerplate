@@ -264,9 +264,12 @@
     vertical-align: middle;
   }
 
-  .edit-btn {
-    margin-left: 20px;
+  .header-right & {
+    .edit-btn {
+      margin-left: 20px;
+    }
   }
+
 
   @include query($tablet-1) {
     margin-top: 5px;
@@ -279,48 +282,51 @@
 
 // Language flag icons positioning in the spritemap.
 $flags:
-  (sq,   0        0),
-  (hy,  -20px     0),
-  (bn,  -40px     0),
-  (pt,  -60px     0),
-  (bg,  -80px     0),
-  (zh, -100px     0),
-  (hr, -120px     0),
-  (da, -140px     0),
-  (cs, -160px     0),
-  (et, -180px     0),
-  (fi,    0px -14px),
-  (fr,  -20px -14px),
-  (ka,  -40px -14px),
-  (de,  -60px -14px),
-  (el,  -80px -14px),
-  (hu, -100px -14px),
-  (is, -120px -14px),
-  (hi, -140px -14px),
-  (id, -160px -14px),
-  (fa, -180px -14px),
-  (he,    0px -28px),
-  (it,  -20px -28px),
-  (ja,  -40px -28px),
-  (ko,  -60px -28px),
-  (lv,  -80px -28px),
-  (lt, -100px -28px),
-  (ms, -120px -28px),
-  (nl, -140px -28px),
-  (no, -160px -28px),
-  (ur, -180px -28px),
-  (fil,   0px -42px),
-  (pl,  -20px -42px),
-  (ro,  -40px -42px),
-  (ru,  -60px -42px),
-  (ar,  -80px -42px),
-  (lt, -100px -42px),
-  (sk, -120px -42px),
-  (es, -140px -42px),
-  (sv, -160px -42px),
-  (tr, -180px -42px),
-  (uk, 0px -56px),
-  (en, -20px -56px)
+(sq,   0        0),
+(hy,  -20px     0),
+(bn,  -40px     0),
+(pt,  -60px     0),
+(bg,  -80px     0),
+(zh, -100px     0),
+(hr, -120px     0),
+(da, -140px     0),
+(cs, -160px     0),
+(et, -180px     0),
+
+(fi,    0px -14px),
+(fr,  -20px -14px),
+(ka,  -40px -14px),
+(de,  -60px -14px),
+(el,  -80px -14px),
+(hu, -100px -14px),
+(is, -120px -14px),
+(hi, -140px -14px),
+(id, -160px -14px),
+(fa, -180px -14px),
+
+(he,    0px -28px),
+(it,  -20px -28px),
+(ja,  -40px -28px),
+(ko,  -60px -28px),
+(lv,  -80px -28px),
+(lt, -100px -28px),
+(ms, -120px -28px),
+(nl, -140px -28px),
+(no, -160px -28px),
+(ur, -180px -28px),
+
+(fil,   0px -42px),
+(pl,  -20px -42px),
+(ro,  -40px -42px),
+(ru,  -60px -42px),
+(ar,  -80px -42px),
+(lt, -100px -42px),
+(sk, -120px -42px),
+(es, -140px -42px),
+(sv, -160px -42px),
+(tr, -180px -42px),
+(uk,    0px -56px),
+(en,  -20px -56px)
 ;
 
 @each $flag, $pos in $flags {

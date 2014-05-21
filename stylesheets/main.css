@@ -376,7 +376,7 @@ body {
 .menu-lang .menu {
   vertical-align: middle;
 }
-.menu-lang .edit-btn {
+.header-right .menu-lang .edit-btn {
   margin-left: 20px;
 }
 @media screen and (max-width: 900px) {

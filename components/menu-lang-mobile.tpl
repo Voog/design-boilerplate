@@ -4,5 +4,3 @@
   {% endfor %}
   {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
 </ul>
-
-lang-flag {% for language in site.languages %}{% if language.selected? %}lang-flag-{{ language.code }}{% endif %}{% endfor %}
