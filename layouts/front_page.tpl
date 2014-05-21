@@ -17,6 +17,7 @@
     {% include "header" %}
 
     <main class="content" role="main">
+      <div class="content-title content-formatted">{% editable site.header %}</div>
       <header class="content-header content-formatted">{% content name="slogan" %}</header>
       <section class="content-body content-formatted">{% content %}</section>
     </main>

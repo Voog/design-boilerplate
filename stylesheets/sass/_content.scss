@@ -7,20 +7,26 @@
     margin-top: 20px;
   }
 
+  .content-title,
   .content-header {
     font-weight: 700;
     line-height: 1;
+    @include color($secondary-color);
 
-    .edy-texteditor-view {
-      min-height: 18px;
-    }
-
+    .front-page &,
     h1 {
       font-size: 100px;
     }
 
+    .common-page &,
+    .blog-page &,
+    .post-page &,
     h2 {
       font-size: 50px;
+    }
+
+    .edy-texteditor-view {
+      min-height: 18px;
     }
   }
 }
