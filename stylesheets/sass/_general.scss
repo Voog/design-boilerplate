@@ -166,8 +166,7 @@ body {
   }
 
   pre,
-  code,
-  .edy-texteditor-container {
+  code {
     margin-top: 25px;
   }
 
@@ -194,5 +193,10 @@ body {
   // Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
   .edy-texteditor-view {
     min-height: 32px;
+  }
+
+  // Margin between the editable content areast in editmode.
+  .edy-partial-view {
+    margin-top: 25px;
   }
 }
