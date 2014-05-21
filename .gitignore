@@ -1,7 +1,9 @@
 
 .DS_Store
 
-.edicy
+.construction
+
+.live
 
 .demo
 
@@ -10,6 +12,8 @@
 .template
 
 .test
+
+.voog
 
 .sass-cache
 
