@@ -11,16 +11,10 @@
 <!-- Use this code if you want a list type language menu -->
 <!--
 <ul class="menu">
-  <li><a {% if site.root_item.selected? %} class="active"{% endif %} href="{{ site.root_item.url }}">{{ site.root_item.title }}</a></li>
-  {% for item in site.visible_menuitems %}
-    <li><a{% if item.selected? %} class="active"{% endif %}{% unless item.translated? %} class="untranslated fci-editor-menuadd"{% endunless %} href="{{ item.url }}">{{ item.title }}</a></li>
+  {% for language in site.languages %}
+    <li><a class="ico-lang {{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}">{{ language.title }}</a></li>
   {% endfor %}
-  {% if editmode %}
-    {% if site.hidden_menuitems.size > 0 %}
-      <li class="edit-btn">{% menubtn site.hidden_menuitems %}</li>
-    {% endif %}
-    {% if editmode %}<li class="edit-btn">{% menuadd %}</li>{% endif %}
-  {% endif %}
+  {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
 </ul>
 -->
 {% endcomment %}
