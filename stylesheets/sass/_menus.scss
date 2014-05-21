@@ -52,7 +52,7 @@
   }
 }
 
-// Wrapper for the CMS adminmode on-page buttons. For example "hidden menu-items" or "add-page" buttons.
+// Wrapper for the CMS adminmode on-page buttons. For example "hidden menu items" or "add-page" buttons.
 .edit-btn {
   @extend %inline-block;
   vertical-align: middle;
@@ -221,6 +221,37 @@
       @include border(top, 1px, solid, $primary-color, 0.2);
       @include border(bottom, 1px, solid, $primary-color, 0.2);
       @include no-box-shadow;
+    }
+  }
+}
+
+// Styling rules for the site's sub menu.
+.menu-sub {
+  margin-top: 30px;
+
+  .menu {
+    text-align: center;
+
+    li {
+      margin-left: 15px;
+      font-size: 14px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      a {
+        @include color($blue-1);
+
+        &.active {
+          font-weight: 700;
+          @include color($primary-color);
+        }
+
+        &:hover {
+          @include color($blue-1, 0.8);
+        }
+      }
     }
   }
 }

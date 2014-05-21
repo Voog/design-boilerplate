@@ -348,6 +348,31 @@ body {
   }
 }
 
+.menu-sub {
+  margin-top: 30px;
+}
+.menu-sub .menu {
+  text-align: center;
+}
+.menu-sub .menu li {
+  margin-left: 15px;
+  font-size: 14px;
+}
+.menu-sub .menu li:first-child {
+  margin-left: 0;
+}
+.menu-sub .menu li a {
+  color: #0066bb;
+}
+.menu-sub .menu li a.active {
+  font-weight: 700;
+  color: #727272;
+}
+.menu-sub .menu li a:hover {
+  color: #0066bb;
+  color: rgba(0, 102, 187, 0.8);
+}
+
 .menu-lang .menu {
   vertical-align: middle;
 }

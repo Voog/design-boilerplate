@@ -17,6 +17,7 @@
 
   <div class="container">
     {% include "header" %}
+    {% include "menu-level-2" %}
 
     <main class="content" role="main">
       <header class="content-header content-formatted">{% content name="slogan" %}</header>
