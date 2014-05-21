@@ -112,8 +112,9 @@
 
     &.expanded {
       position: absolute;
-      top: 40px;
+      top: 50px;
       right: 0;
+      z-index: 1;
       display: block;
       min-width: 350px;
       margin-bottom: 60px;
@@ -216,7 +217,7 @@
     &.expanded {
       min-width: 100%;
       left: 0;
-      margin: 10px -20px 60px;
+      margin: 0 -20px 60px;
       @include border(top, 1px, solid, $primary-color, 0.2);
       @include border(bottom, 1px, solid, $primary-color, 0.2);
       @include no-box-shadow;
@@ -230,15 +231,10 @@
 
   .menu {
     vertical-align: middle;
+  }
 
-    li {
-      margin-right: 9px;
-
-      &.edit-btn {
-        position: relative;
-        top: 1px;
-      }
-    }
+  .edit-btn {
+    margin-left: 20px;
   }
 
   @include query($tablet-1) {
