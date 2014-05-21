@@ -1,6 +1,26 @@
+{% comment %}<!-- Use this code if you want a select type language menu -->{% endcomment %}
 <select class="menu">
   {% for language in site.languages %}
     <option value="{{ language.url }}" {% if language.selected? %}selected="selected"{% endif %}>{{ language.title }}</option>
   {% endfor %}
 </select>
 {% if editmode %}<div class="edit-btn">{% languageadd %}</div>{% endif %}
+
+
+{% comment %}
+<!-- Use this code if you want a list type language menu -->
+<!--
+<ul class="menu">
+  <li><a {% if site.root_item.selected? %} class="active"{% endif %} href="{{ site.root_item.url }}">{{ site.root_item.title }}</a></li>
+  {% for item in site.visible_menuitems %}
+    <li><a{% if item.selected? %} class="active"{% endif %}{% unless item.translated? %} class="untranslated fci-editor-menuadd"{% endunless %} href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  {% if editmode %}
+    {% if site.hidden_menuitems.size > 0 %}
+      <li class="edit-btn">{% menubtn site.hidden_menuitems %}</li>
+    {% endif %}
+    {% if editmode %}<li class="edit-btn">{% menuadd %}</li>{% endif %}
+  {% endif %}
+</ul>
+-->
+{% endcomment %}
