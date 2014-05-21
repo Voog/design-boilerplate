@@ -251,10 +251,10 @@ body {
   .menu-main.expanded {
     position: absolute;
     top: 40px;
-    right: 20px;
+    right: 0;
     display: block;
     min-width: 350px;
-    margin: 0 -20px;
+    margin-bottom: 60px;
     padding: 0;
     text-align: left;
     background-color: white;
@@ -329,9 +329,9 @@ body {
 }
 @media screen and (max-width: 480px) {
   .menu-main.expanded {
-    position: static;
+    left: 0;
     min-width: 100%;
-    margin-top: 20px;
+    margin: 10px -20px 60px;
     border-top: 1px solid #727272;
     border-top: 1px solid rgba(114, 114, 114, 0.2);
     border-bottom: 1px solid #727272;
@@ -604,7 +604,7 @@ body {
 }
 @media screen and (max-width: 752px) {
   .header .header-left .header-title {
-    display: blockblock;
+    display: block;
     margin-right: 40px;
   }
 }
