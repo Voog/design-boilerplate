@@ -13,6 +13,27 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+ // Layout specific body classes
+.front-page {
+
+}
+
+.common-page {
+
+}
+
+.blog-page,
+.post-page {
+
+}
+
+.blog-page {
+
+}
+
+.post-page {
+
+}
 
 // Pseudo classes for declaring commonly used styling rules for different elements.
 %clearfix:after {

@@ -693,11 +693,11 @@ body {
 .content-header.content-formatted .edy-texteditor-view {
   min-height: 18px;
 }
-
-/* FRONT PAGE */
-.front-page .content-header h2 {
+.front-page .content-title h2, .front-page
+.content-header h2 {
   font-weight: 400;
 }
+
 .front-page .content-body {
   margin-top: 90px;
 }
@@ -716,8 +716,6 @@ body {
     font-size: 18px;
   }
 }
-
-/* COMMON PAGE */
 .common-page .content-body {
   margin-top: 35px;
 }

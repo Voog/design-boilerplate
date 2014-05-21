@@ -43,4 +43,34 @@
       min-height: 18px;
     }
   }
+
+  .front-page & {
+    h2 {
+      font-weight: 400;
+    }
+  }
+}
+
+.content-body {
+  .front-page & {
+    margin-top: 90px;
+
+    @include query($tablet-2) {
+      margin-top: 35px;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 25px;
+      line-height: 1.5;
+
+      @include query($tablet-2) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .common-page  & {
+    margin-top: 35px;
+  }
 }
