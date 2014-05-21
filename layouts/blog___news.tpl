@@ -21,6 +21,7 @@
     <main class="content" role="main">
       {% include "tags-blog" %}
 
+      {% addbutton %}
       {% for article in articles %}
         {% include "post-box" %}
       {% endfor %}
