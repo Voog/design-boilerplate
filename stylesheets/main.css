@@ -132,8 +132,7 @@ body {
   height: auto;
 }
 .content-formatted pre,
-.content-formatted code,
-.content-formatted .edy-texteditor-container {
+.content-formatted code {
   margin-top: 25px;
 }
 .content-formatted pre {
@@ -155,6 +154,9 @@ body {
 }
 .content-formatted .edy-texteditor-view {
   min-height: 32px;
+}
+.content-formatted .edy-partial-view {
+  margin-top: 25px;
 }
 
 /* MENUS */
@@ -250,8 +252,9 @@ body {
   }
   .menu-main.expanded {
     position: absolute;
-    top: 40px;
+    top: 50px;
     right: 0;
+    z-index: 1;
     display: block;
     min-width: 350px;
     margin-bottom: 60px;
@@ -334,7 +337,7 @@ body {
   .menu-main.expanded {
     min-width: 100%;
     left: 0;
-    margin: 10px -20px 60px;
+    margin: 0 -20px 60px;
     border-top: 1px solid #727272;
     border-top: 1px solid rgba(114, 114, 114, 0.2);
     border-bottom: 1px solid #727272;
@@ -348,12 +351,8 @@ body {
 .menu-lang .menu {
   vertical-align: middle;
 }
-.menu-lang .menu li {
-  margin-right: 9px;
-}
-.menu-lang .menu li.edit-btn {
-  position: relative;
-  top: 1px;
+.menu-lang .edit-btn {
+  margin-left: 20px;
 }
 @media screen and (max-width: 900px) {
   .menu-lang {
@@ -751,6 +750,14 @@ body {
 .post .post-footer .post-author {
   font-size: 12px;
 }
+.post .post-comments-count a {
+  font-size: 14px;
+  color: #0066bb;
+}
+.post .post-comments-count a:hover {
+  color: #0066bb;
+  color: rgba(0, 102, 187, 0.8);
+}
 
 .blog-page .post {
   margin-bottom: 50px;
@@ -818,7 +825,7 @@ body {
 /* FORMS */
 .content-formatted form {
   max-width: 100%;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .content-formatted .form_field,
 .content-formatted .edy-fe-label {
