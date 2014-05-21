@@ -11,42 +11,51 @@
 .content-title,
 .content-header {
   &.content-formatted {
-    font-weight: 700;
     line-height: 1;
     @include color($secondary-color);
 
-    .front-page &,
     h1 {
       font-size: 100px;
-
-      @include query($mobile-1) {
-        font-size: 50px
-      }
     }
 
-    .common-page &,
-    .blog-page &,
-    .post-page &,
     h2 {
       font-size: 50px;
-
-      @include query($mobile-1) {
-        font-size: 30px;
-      }
     }
 
     h3 {
       font-size: 30px;
     }
+  }
+}
+
+.content-title {
+  &.content-formatted {
+    font-weight: 700;
+    font-size: 100px;
+
+    @include query($mobile-1) {
+      h1 {
+        font-size: 50px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.content-header {
+  &.content-formatted {
+    font-weight: 400;
+    font-size: 50px;
 
     .edy-texteditor-view {
       min-height: 18px;
-    }
-  }
-
-  .front-page & {
-    h2 {
-      font-weight: 400;
     }
   }
 }
