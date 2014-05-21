@@ -7,7 +7,6 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="keywords" content="{{ page.keywords }}">
 <meta name="description" content="{{ page.description }}">
-<meta name="author" content="{{ site.author }}">
 
 <!-- FAV ICON -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon">

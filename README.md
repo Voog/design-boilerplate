@@ -392,13 +392,12 @@ File location: [/components/html-head.tpl](/components/html-head.tpl)
 #### 4.3.1 Example
 ```html
 <!-- BASIC META INFO -->
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="keywords" content="{{ page.keywords }}">
 <meta name="description" content="{{ page.description }}">
-<meta name="author" content="{{ site.author }}">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 
 <!-- FAV ICON -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
