@@ -29,7 +29,7 @@
 
 <!-- FACEBOOK OPENGRAPH -->
 <!-- Page specific opengraph tags are located in each page template -->
-<meta property="fb:admins" content="XXXXXXXXXX"> <!--Site admin's Facebook user id -->
+{% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">;{% comment %}<!-- TODO: Add functionality -->{% endcomment %}{% endif %}
 <!-- http://graph.facebook.com/"username" - Replace "username" with site admin's username to get admin's ID) -->
 <meta property="og:type" content="website">
 <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->

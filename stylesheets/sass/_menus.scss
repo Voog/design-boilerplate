@@ -173,8 +173,8 @@
               background: none;
             }
 
-            &:before,
-            &:after {
+            &.ico-lang:before,
+            &.ico-lang:after {
               position: absolute;
               top: 14px;
               left: 20px;
@@ -184,11 +184,11 @@
               content: '';
             }
 
-            &:before {
+            &.ico-lang:before {
               @include bg($black);
             }
 
-            &:after {
+            &.ico-lang:after {
               opacity: 0.95;
               background-size: 200px;
               background-repeat: no-repeat;
@@ -201,7 +201,12 @@
                 background-image: url('../assets/ico-flags.svg');
               }
             }
+
+            &.edy-menu-langadd {
+              padding-left: 20px;
+            }
           }
+
         }
       }
     }
@@ -209,8 +214,8 @@
 
   @include query($mobile-1) {
     &.expanded {
-      left: 0;
       min-width: 100%;
+      left: 0;
       margin: 10px -20px 60px;
       @include border(top, 1px, solid, $primary-color, 0.2);
       @include border(bottom, 1px, solid, $primary-color, 0.2);

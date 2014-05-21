@@ -303,7 +303,7 @@ body {
     color: #838586;
     background: none;
   }
-  .menu-main.expanded .menu-lang li a:before, .menu-main.expanded .menu-lang li a:after {
+  .menu-main.expanded .menu-lang li a.ico-lang:before, .menu-main.expanded .menu-lang li a.ico-lang:after {
     position: absolute;
     top: 14px;
     left: 20px;
@@ -312,25 +312,28 @@ body {
     height: 13px;
     content: '';
   }
-  .menu-main.expanded .menu-lang li a:before {
+  .menu-main.expanded .menu-lang li a.ico-lang:before {
     background-color: black;
   }
-  .menu-main.expanded .menu-lang li a:after {
+  .menu-main.expanded .menu-lang li a.ico-lang:after {
     opacity: 0.95;
     background-size: 200px;
     background-repeat: no-repeat;
   }
-  .no-svg .menu-main.expanded .menu-lang li a:after {
+  .no-svg .menu-main.expanded .menu-lang li a.ico-lang:after {
     background-image: url("../images/ico-flags.png");
   }
-  .svg .menu-main.expanded .menu-lang li a:after {
+  .svg .menu-main.expanded .menu-lang li a.ico-lang:after {
     background-image: url("../assets/ico-flags.svg");
+  }
+  .menu-main.expanded .menu-lang li a.edy-menu-langadd {
+    padding-left: 20px;
   }
 }
 @media screen and (max-width: 480px) {
   .menu-main.expanded {
-    left: 0;
     min-width: 100%;
+    left: 0;
     margin: 10px -20px 60px;
     border-top: 1px solid #727272;
     border-top: 1px solid rgba(114, 114, 114, 0.2);

@@ -1,6 +1,6 @@
-<select class="menu">
+<ul class="menu">
   {% for language in site.languages %}
-    <option value="{{ language.url }}" {% if language.selected? %}selected="selected"{% endif %}>{{ language.title }}</option>
+    <li><a class="ico-lang {{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}">{{ language.title }}</a></li>
   {% endfor %}
-</select>
-{% if editmode %}<div class="edit-btn">{% languageadd %}</div>{% endif %}
+  {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
+</ul>
