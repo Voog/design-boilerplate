@@ -62,6 +62,9 @@ body {
   border: none;
 }
 
+.content-formatted {
+  word-wrap: break-word;
+}
 .content-formatted h1:first-child,
 .content-formatted h2:first-child,
 .content-formatted h3:first-child,

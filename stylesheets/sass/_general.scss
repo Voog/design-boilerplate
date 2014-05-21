@@ -71,6 +71,8 @@ body {
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-formatted {
   @extend %clearfix;
+  word-wrap: break-word;
+
   // Resets the top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
   h1,
   h2,
