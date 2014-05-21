@@ -643,28 +643,51 @@ body {
     margin-top: 20px;
   }
 }
-.content .content-title,
-.content .content-header {
+
+.content-title .content-formatted,
+.content-header .content-formatted {
   font-weight: 700;
   line-height: 1;
   color: #1b2124;
 }
-.front-page .content .content-title,
-.content .content-title h1, .front-page
-.content .content-header,
-.content .content-header h1 {
+.front-page .content-title .content-formatted,
+.content-title .content-formatted h1, .front-page
+.content-header .content-formatted,
+.content-header .content-formatted h1 {
   font-size: 100px;
 }
-.common-page .content .content-title, .blog-page .content .content-title, .post-page .content .content-title,
-.content .content-title h2, .common-page
-.content .content-header, .blog-page
-.content .content-header, .post-page
-.content .content-header,
-.content .content-header h2 {
+@media screen and (max-width: 480px) {
+  .front-page .content-title .content-formatted,
+  .content-title .content-formatted h1, .front-page
+  .content-header .content-formatted,
+  .content-header .content-formatted h1 {
+    font-size: 50px;
+  }
+}
+.common-page .content-title .content-formatted, .blog-page .content-title .content-formatted, .post-page .content-title .content-formatted,
+.content-title .content-formatted h2, .common-page
+.content-header .content-formatted, .blog-page
+.content-header .content-formatted, .post-page
+.content-header .content-formatted,
+.content-header .content-formatted h2 {
   font-size: 50px;
 }
-.content .content-title .edy-texteditor-view,
-.content .content-header .edy-texteditor-view {
+@media screen and (max-width: 480px) {
+  .common-page .content-title .content-formatted, .blog-page .content-title .content-formatted, .post-page .content-title .content-formatted,
+  .content-title .content-formatted h2, .common-page
+  .content-header .content-formatted, .blog-page
+  .content-header .content-formatted, .post-page
+  .content-header .content-formatted,
+  .content-header .content-formatted h2 {
+    font-size: 30px;
+  }
+}
+.content-title .content-formatted h3,
+.content-header .content-formatted h3 {
+  font-size: 30px;
+}
+.content-title .content-formatted .edy-texteditor-view,
+.content-header .content-formatted .edy-texteditor-view {
   min-height: 18px;
 }
 

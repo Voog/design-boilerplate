@@ -6,9 +6,12 @@
   @include query($tablet-2) {
     margin-top: 20px;
   }
+}
 
-  .content-title,
-  .content-header {
+.content-title,
+.content-header {
+
+  .content-formatted {
     font-weight: 700;
     line-height: 1;
     @include color($secondary-color);
@@ -16,6 +19,10 @@
     .front-page &,
     h1 {
       font-size: 100px;
+
+      @include query($mobile-1) {
+        font-size: 50px
+      }
     }
 
     .common-page &,
@@ -23,6 +30,14 @@
     .post-page &,
     h2 {
       font-size: 50px;
+
+      @include query($mobile-1) {
+        font-size: 30px;
+      }
+    }
+
+    h3 {
+      font-size: 30px;
     }
 
     .edy-texteditor-view {
