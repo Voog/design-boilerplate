@@ -800,6 +800,9 @@ body {
 .content-formatted .form_field {
   margin-top: 20px;
 }
+.content-formatted .form_field_required :after {
+  content: ' *';
+}
 .content-formatted .form_field label,
 .content-formatted .edy-fe-label {
   display: block;
@@ -855,8 +858,16 @@ body {
 .content-formatted .form_submit {
   margin-top: 10px;
 }
+.content-formatted .form_error,
 .content-formatted .form_field_error {
   color: #cc0000;
+}
+.content-formatted .form_field_with_errors .form_field_textfield,
+.content-formatted .form_field_with_errors .form_field_textarea {
+  border: 1px solid #cc0000;
+}
+.content-formatted .form_notice {
+  color: #60a740;
 }
 
 /* COMMENTS */

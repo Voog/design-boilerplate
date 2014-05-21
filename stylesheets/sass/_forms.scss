@@ -15,6 +15,12 @@
     margin-top: 20px;
   }
 
+  .form_field_required {
+    :after {
+      content: ' *';
+    }
+  }
+
   .form_field label,
   .edy-fe-label {
     display: block;
@@ -74,12 +80,19 @@
     }
   }
 
+  .form_error,
   .form_field_error {
     @include color($red);
   }
+
   .form_field_with_errors {
     .form_field_textfield,
     .form_field_textarea {
+      @include border(all, 1px, solid, $red);
     }
+  }
+
+  .form_notice {
+    @include color($green);
   }
 }
