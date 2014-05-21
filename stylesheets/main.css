@@ -604,7 +604,8 @@ body {
 }
 @media screen and (max-width: 752px) {
   .header .header-left .header-title {
-    display: inline-block;
+    display: blockblock;
+    margin-right: 40px;
   }
 }
 .header .header-left .header-title, .header .header-left .header-title a {

@@ -45,7 +45,8 @@
       display: none;
 
       @include query($tablet-2) {
-        display: inline-block;
+        display: block;
+        margin-right: 40px;
       }
 
       &,
