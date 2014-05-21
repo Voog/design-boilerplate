@@ -119,7 +119,7 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
     <!-- Global opengraph tags are located in "header" component -->
     <meta property="og:url" content="{{ site.url }}/{{ page.path }}">
     <meta property="og:title" content="{{ page.title }} — {{ site.name }}">
-    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fb_image }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
     {{blog.rss_link}}
   </head>
@@ -166,7 +166,7 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
     <!-- Global opengraph tags are located in "header" component -->
     <meta property="og:url" content="{{ site.url }}/{{ article.url }}">
     <meta property="og:title" content="{{ article.title }} — {{ article.excerpt | strip_html }} — {{ page.site_title }}">
-    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fb_image }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
 
@@ -247,7 +247,7 @@ File location: [/layouts/common_page.tpl](/layouts/common_page.tpl)
     <!-- Global opengraph tags are located in "header" component -->
     <meta property="og:url" content="{{ site.url }}/{{ page.path }}">
     <meta property="og:title" content="{{ page.title }} — {{ site.name }}">
-    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fb_image }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
 
@@ -290,7 +290,7 @@ File location: [/layouts/front_page.tpl](/layouts/front_page.tpl)
     <!-- Global opengraph tags are located in "header" component -->
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:title" content="{{ site.name }}">
-    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+    <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fb_image }}"><!-- TODO: Add image location data tag -->
     <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
   </head>
 

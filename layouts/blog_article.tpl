@@ -6,7 +6,7 @@
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:title" content="{{ site.name }}">
   <meta property="og:description" content="{{ page.description }}">
-  <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fbimage }}"><!-- TODO: Add image location data tag -->
+  <meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fb_image }}"><!-- TODO: Add image location data tag -->
 </head>
 
 <body class="post-page js-bgpicker-body-image" {% if site.data.body_image %}style="background-image: url('{{ site.data.body_image}}');"{% endif %}>
