@@ -86,7 +86,7 @@
 
     a {
       display: block;
-      @include color($blue);
+      @include color($blue-1);
 
       &.untranslated {
         @include color($red, 0.5);
@@ -425,7 +425,7 @@
       margin-right: 15px;
 
       a {
-        @include color($blue);
+        @include color($blue-1);
 
         &:hover {
           @include color($blue-1, 0.8);
