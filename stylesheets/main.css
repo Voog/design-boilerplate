@@ -729,11 +729,11 @@ body {
   margin-top: 0;
 }
 
-.edys-gallery:hover .edys-gallery-item .edys-gallery-image {
-  opacity: 0.6;
+.edys-gallery .edys-gallery-item {
+  display: inline-block;
 }
-.edys-gallery .edys-gallery-item .edys-gallery-image:hover {
-  opacity: 1;
+.edys-gallery .edys-gallery-item .edys-gallery-image.inactive {
+  opacity: 0.6;
 }
 .edys-gallery .edys-gallery-item:hover {
   opacity: 1;

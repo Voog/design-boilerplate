@@ -24,10 +24,14 @@
     });
   };
 
-  // HIDES THE FORM FIELD ERROR WHEN THE FIELD IS FOCUSED
-  var handleFormFieldClick = function() {
-    $('.form_field_with_errors').click(function() {
-      $(this).removeClass('form_field_with_errors');
+  // REDUCES OPACITY OF THE GALLERY IMAGES THAT ARE NOT UNDER THE CURSOR
+  var handleGalleryHover = function() {
+    $('.edys-gallery-item').mouseover(function() {
+      $(this).siblings('.edys-gallery-item').find('.edys-gallery-image').addClass('inactive');
+    });
+
+    $('.edys-gallery-item').mouseout(function() {
+      $(this).siblings('.edys-gallery-item').find('.edys-gallery-image').removeClass('inactive');
     });
   };
 
@@ -82,7 +86,6 @@
 
     var initArticlePage = function() {
       // ADD SINGLE POST VIEW SPECIFIC FUNCTIONS HERE
-      handleFormFieldClick();
       focusCommentsWithErrors();
     };
 
@@ -97,6 +100,7 @@
       handleLanguageSwitch();
       toggleMainMenu();
       handlePopoverMenuHide();
+      handleGalleryHover();
       handleWindowResize();
       wrapTables();
       if ($('.table-container').length > 0) {
@@ -109,8 +113,7 @@
     window.site = $.extend(window.site || {}, {
       initBlogPage: initBlogPage,
       initArticlePage: initArticlePage,
-      initCommonPage: initCommonPage,
-      handleFormFieldClick: handleFormFieldClick
+      initCommonPage: initCommonPage
     });
 
     init();
