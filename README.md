@@ -135,7 +135,7 @@ File location: [/layouts/blog___news.tpl](/layouts/blog___news.tpl)
           <article class="post">
             <header class="post-header">
               <h1 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
-              <time datetime="{{ article.created_at | date : "%Y-%m-%d" }}" class="post-date">{{ article.created_at | date : "%b %d, %Y" }}</time>
+              <time datetime="{{ article.created_at | date : "%Y-%m-%d" }}" class="post-date">{{ article.created_at | format_date : "long" }}</time>
             </header>
             <section class="post-content">
               <div class="post-excerpt content-formatted cfx">{{ article.excerpt }}</div>
@@ -178,7 +178,7 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
         <article class="post">
           <header class="post-header">
             <h1 class="post-title">{% editable article.title %}</h1>
-            <time datetime="{{ article.created_at | date : "%Y-%m-%d" }}" class="post-date">{{ article.created_at | date : "%b %d, %Y" }}</time>
+            <time datetime="{{ article.created_at | date : "%Y-%m-%d" }}" class="post-date">{{ article.created_at | format_date : "long" }}</time>
             {% include "tags-article" %}
           </header>
           <section class="post-content">
@@ -195,7 +195,7 @@ File location: [/layouts/blog_article.tpl](/layouts/blog_article.tpl)
             {% case article.comments_count %}{% when 0 %}{{ "no_comments" | lc }}{% else %}{{ "comments_for_count" | lc }}: <span class="comments-count">{{ article.comments_count }}</span>{% endcase %}</h2>
 
           {% for comment in article.comments %}
-            <div class="comment">{{ comment.body_html }} {{ comment.author }}, ({{ comment.created_at | date : "%b %d, %Y" }})</div>
+            <div class="comment">{{ comment.body_html }} {{ comment.author }}, ({{ comment.created_at | format_date : "long" }})</div>
           {% endfor %}
 
           {% include "comment-form" %}
