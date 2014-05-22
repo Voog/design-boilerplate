@@ -32,7 +32,7 @@
 
       &:hover {
         @include color($secondary-color, 0.75);
-        @include border(all,1px,solid,$black, 0.75);
+        @include border(all, 1px, solid, $black, 0.75);
       }
     }
   }

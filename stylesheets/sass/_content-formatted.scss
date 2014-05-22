@@ -110,8 +110,8 @@
 
   // Adds dashed border to indicate that the table is too wide and can be scrolled horizontally.
   .horizontal-scroll {
-    @include border(left,1px,dashed,$third-color);
-    @include border(right,1px,dashed,$third-color);
+    @include border(left, 1px, dashed, $third-color);
+    @include border(right, 1px, dashed, $third-color);
   }
 
   table {
@@ -122,8 +122,8 @@
 
     td {
       padding: 10px;
-      @include border(top,1px,solid,$third-color);
-      @include border(bottom,1px,solid,$third-color);
+      @include border(top, 1px, solid, $third-color);
+      @include border(bottom, 1px, solid, $third-color);
     }
   }
 

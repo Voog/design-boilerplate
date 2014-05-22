@@ -157,8 +157,7 @@
             font-size: 12px;
             @include color($secondary-color);
 
-            &,
-            &.active {
+            &, &.active {
               &:hover {
                 @include bg($grey-2, 0.1);
               }

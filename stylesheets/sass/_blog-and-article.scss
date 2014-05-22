@@ -7,8 +7,7 @@
       margin-bottom: 0;
       line-height: 1.1;
 
-      &,
-      a {
+      &, a {
         font-size: 50px;
         @include color($secondary-color);
       }
