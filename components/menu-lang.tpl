@@ -1,7 +1,7 @@
 {% comment %}<!-- Use this code if you want a select type language menu -->{% endcomment %}
 <select class="menu">
   {% for language in site.languages %}
-    <option value="{{ language.url }}" {% if language.selected? %}selected="selected"{% endif %}>{{ language.title }}</option>
+    <option class="menu-item" value="{{ language.url }}" {% if language.selected? %}selected="selected"{% endif %}>{{ language.title }}</option>
   {% endfor %}
 </select>
 {% if editmode %}<div class="edit-btn">{% languageadd %}</div>{% endif %}

@@ -65,7 +65,7 @@
   padding: 0;
   list-style: none;
 
-  li {
+  .menu-item {
     @extend %inline-block;
   }
 }
@@ -75,7 +75,7 @@
   padding: 6px 0;
 
   .menu {
-    li {
+    .menu-item {
       margin-right: 20px;
       line-height: 1;
 
@@ -84,7 +84,7 @@
       }
     }
 
-    a {
+    .menu-link {
       display: block;
       @include color($blue-1);
 
@@ -124,7 +124,7 @@
       @include box-shadow(0, 0, 5px, rgba($black, 0.3));
 
       .menu {
-        li {
+        .menu-item {
           display: block;
           margin-right: 0;
           @include border(top, 1px, solid, $primary-color, 0.2);
@@ -133,7 +133,7 @@
             border-top: none;
           }
 
-          a {
+          .menu-link {
             display: block;
             padding: 11px 20px;
             font-size: 20px;
@@ -155,8 +155,8 @@
         margin-top: 0;
         @include border(top, 1px, solid, $primary-color, 0.2);
 
-        li {
-          a {
+        .menu-item {
+          .menu-link {
             position: relative;
             padding: 14px 20px 14px 50px;
             font-size: 12px;
@@ -232,7 +232,7 @@
   .menu {
     text-align: center;
 
-    li {
+    .menu-item {
       margin-left: 15px;
       font-size: 14px;
 
@@ -240,7 +240,7 @@
         margin-left: 0;
       }
 
-      a {
+      .menu-link {
         @include color($blue-1);
 
         &.active {
@@ -338,10 +338,10 @@ $flags:
   margin-bottom: 20px;
 
   .menu {
-    li {
+    .menu-item {
       margin-right: 15px;
 
-      a {
+      .menu-link {
         @include color($blue-1);
 
         &:hover {
