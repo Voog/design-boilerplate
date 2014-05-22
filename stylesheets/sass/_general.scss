@@ -98,43 +98,19 @@ body {
   @extend %clearfix;
   word-wrap: break-word;
 
-  // Resets the top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul,
-  img,
-  pre,
-  code,
-  table {
+  // Resets the bottom margin for all elements and top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
+  h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, img, table form {
     &:first-child {
       margin-top: 0;
     }
-  }
 
-  // Resets the bottom margin for all first elements in the editable content-area (to prevent unwanted white-space at the end of a content-area).
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   // Styling rules for the editable content area headings.
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     @include color($secondary-color);
     word-wrap: break-word;
   }
@@ -150,10 +126,7 @@ body {
     font-size: 30px;
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
+  h3, h4, h5, h6 {
     margin-top: 20px;
     font-size: 20px;
   }
@@ -181,8 +154,7 @@ body {
   }
 
   // Styling rules for the editable content area images, embedded videos, preformatted texts, code examples etc.
-  img,
-  iframe {
+  img, iframe {
     max-width: 100%;
   }
 
@@ -190,8 +162,7 @@ body {
     height: auto;
   }
 
-  pre,
-  code {
+  pre, code {
     margin-top: 25px;
   }
 
@@ -201,8 +172,7 @@ body {
     overflow: auto;
     white-space: nowrap;
 
-    &,
-    code {
+    &, code {
       padding: 10px;
       font-size: 14px;
       @include bg($grey-3);
@@ -215,12 +185,10 @@ body {
     }
   }
 
-  // Minimal height of the editable content area (to avoid content area visual "jumping" when content-area is focused).
   .edy-texteditor-view {
     min-height: 32px;
   }
 
-  // Margin between the editable content areast in editmode.
   .edy-partial-view {
     margin-top: 25px;
   }
