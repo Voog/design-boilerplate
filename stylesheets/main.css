@@ -676,20 +676,28 @@ body {
 .content-header.content-formatted h3 {
   font-size: 30px;
 }
+@media screen and (max-width: 480px) {
+  .content-title.content-formatted h1,
+  .content-header.content-formatted h1 {
+    font-size: 50px;
+  }
+  .content-title.content-formatted h2,
+  .content-header.content-formatted h2 {
+    font-size: 30px;
+  }
+  .content-title.content-formatted h3,
+  .content-header.content-formatted h3 {
+    font-size: 20px;
+  }
+}
 
 .content-title.content-formatted {
   font-weight: 700;
   font-size: 100px;
 }
 @media screen and (max-width: 480px) {
-  .content-title.content-formatted h1 {
+  .content-title.content-formatted {
     font-size: 50px;
-  }
-  .content-title.content-formatted h2 {
-    font-size: 30px;
-  }
-  .content-title.content-formatted h3 {
-    font-size: 20px;
   }
 }
 
