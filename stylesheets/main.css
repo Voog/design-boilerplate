@@ -166,8 +166,8 @@ body {
 @media screen and (max-width: 752px) {
   .menu-btn {
     position: absolute;
-    top: 8px;
-    right: 0;
+    top: 28px;
+    right: 20px;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -197,12 +197,6 @@ body {
   }
   .menu-btn .menu-stripe:first-child, .menu-btn .menu-stripe:last-child {
     margin: 0;
-  }
-}
-@media screen and (max-width: 480px) {
-  .menu-btn {
-    top: 7px;
-    right: 0;
   }
 }
 
@@ -607,9 +601,6 @@ body {
 .no-flexbox .header .header-left, .no-flexbox
 .header .header-right {
   display: table-cell;
-}
-.header .header-left {
-  position: relative;
 }
 .flexbox .header .header-left {
   width: 580px;
