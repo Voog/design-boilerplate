@@ -67,12 +67,13 @@ body {
 
 .content-formatted {
   word-wrap: break-word;
-}
-.content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6, .content-formatted p, .content-formatted ul, .content-formatted ol, .content-formatted pre, .content-formatted code, .content-formatted img, .content-formatted table form {
-  margin-bottom: 0;
+  /* TABLES */
 }
 .content-formatted h1:first-child, .content-formatted h2:first-child, .content-formatted h3:first-child, .content-formatted h4:first-child, .content-formatted h5:first-child, .content-formatted h6:first-child, .content-formatted p:first-child, .content-formatted ul:first-child, .content-formatted ol:first-child, .content-formatted pre:first-child, .content-formatted code:first-child, .content-formatted img:first-child, .content-formatted table form:first-child {
   margin-top: 0;
+}
+.content-formatted h1:last-child, .content-formatted h2:last-child, .content-formatted h3:last-child, .content-formatted h4:last-child, .content-formatted h5:last-child, .content-formatted h6:last-child, .content-formatted p:last-child, .content-formatted ul:last-child, .content-formatted ol:last-child, .content-formatted pre:last-child, .content-formatted code:last-child, .content-formatted img:last-child, .content-formatted table form:last-child {
+  margin-bottom: 0;
 }
 .content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   color: #1b2124;
@@ -125,6 +126,28 @@ body {
   display: block;
   margin-top: 0;
   padding: 0;
+}
+.content-formatted .table-container {
+  margin-top: 20px;
+}
+.content-formatted .overthrow {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.content-formatted .horizontal-scroll {
+  border-left: 1px dashed #303132;
+  border-right: 1px dashed #303132;
+}
+.content-formatted table {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  border-collapse: collapse;
+}
+.content-formatted table td {
+  padding: 10px;
+  border-top: 1px solid #303132;
+  border-bottom: 1px solid #303132;
 }
 .content-formatted .edy-texteditor-view {
   min-height: 32px;
@@ -757,30 +780,6 @@ body {
 }
 .edys-gallery .edys-gallery-item:hover {
   opacity: 1;
-}
-
-/* TABLES */
-.content-formatted .table-container {
-  margin-top: 20px;
-}
-.content-formatted .overthrow {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.content-formatted .horizontal-scroll {
-  border-left: 1px dashed #303132;
-  border-right: 1px dashed #303132;
-}
-.content-formatted table {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 16px;
-  border-collapse: collapse;
-}
-.content-formatted table td {
-  padding: 10px;
-  border-top: 1px solid #303132;
-  border-bottom: 1px solid #303132;
 }
 
 /* SEARCH */
