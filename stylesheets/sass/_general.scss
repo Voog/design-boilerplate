@@ -42,6 +42,13 @@ body {
   clear: both;
 }
 
+%stretch {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 %inline-block {
   display: inline-block;
 }
@@ -59,11 +66,8 @@ body {
 }
 
 .background-color {
+  @extend %stretch;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: -2;
 }
 
