@@ -107,8 +107,8 @@
 
     &.expanded {
       position: absolute;
-      top: 50px;
-      right: 0;
+      top: 75px;
+      right: 20px;
       z-index: 1;
       display: block;
       min-width: 350px;
@@ -211,8 +211,9 @@
   @include query($mobile-1) {
     &.expanded {
       min-width: 100%;
+      right: 0;
       left: 0;
-      margin: 0 -20px 60px;
+      margin: 0 0 60px;
       @include border(top, 1px, solid, $primary-color, 0.2);
       @include border(bottom, 1px, solid, $primary-color, 0.2);
       @include no-box-shadow;
