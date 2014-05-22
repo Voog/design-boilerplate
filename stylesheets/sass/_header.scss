@@ -2,8 +2,11 @@
 // Styling rules for the site's header. These rules affect the entire site.
 .header {
   .no-flexbox &,
-  .flexbox &
-   {
+  .flexbox & {
+    @include query($tablet-1) {
+      width: 100%;
+    }
+
     @include query($tablet-2) {
       display: block;
     }
@@ -29,13 +32,6 @@
 
   .header-left {
     position: relative;
-
-    @include query($tablet-2) {
-      .no-flexbox &,
-      .flex-box & {
-        width: auto;
-      }
-    }
 
     .flexbox & {
       width: 580px;
