@@ -19,9 +19,9 @@ body {
   clear: both;
 }
 
-.edit-btn, .menu li, .menu-lang, .search,
+.menu li, .menu-lang, .search,
 .search-left,
-.search-right, .footer .voog-reference a {
+.search-right {
   display: inline-block;
 }
 
@@ -207,6 +207,7 @@ body {
 }
 
 .edit-btn {
+  display: inline-block;
   vertical-align: middle;
   line-height: 0.8;
 }
@@ -619,12 +620,7 @@ body {
   }
 }
 .flexbox .header .header-left {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 610px;
-  -moz-box-flex: 1;
-  -moz-flex: 1 610px;
-  -ms-flex: 1 610px;
-  flex: 1 610px;
+  width: 580px;
 }
 .header .header-left .header-title {
   display: none;
@@ -645,7 +641,7 @@ body {
   color: rgba(114, 114, 114, 0.8);
 }
 .header .header-right {
-  min-width: 350px;
+  width: 380px;
   text-align: right;
 }
 @media screen and (max-width: 752px) {
@@ -654,12 +650,11 @@ body {
   }
 }
 .flexbox .header {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 350px;
-  -moz-box-flex: 1;
-  -moz-flex: 1 350px;
-  -ms-flex: 1 350px;
-  flex: 1 350px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* CONTENT */
@@ -949,6 +944,7 @@ body {
   text-align: center;
 }
 .footer .voog-reference a {
+  display: inline-block;
   padding: 7px 9px;
   font-size: 10px;
   color: #1b2124;

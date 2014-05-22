@@ -38,7 +38,7 @@
     }
 
     .flexbox & {
-      @include flex(1 610px);
+      width: 580px;
     }
 
     .header-title {
@@ -63,7 +63,7 @@
   }
 
   .header-right {
-    min-width: 350px;
+    width: 380px;
     text-align: right;
 
     @include query($tablet-2) {
@@ -75,6 +75,6 @@
   }
 
   .flexbox & {
-    @include flex(1 350px);
+    @include flexbox;
   }
 }
