@@ -70,12 +70,11 @@
     height: auto;
   }
 
-  pre, code {
+  img, iframe, pre {
     margin-top: 25px;
   }
 
   pre {
-    margin-top: 10px;
     margin-bottom: 0;
     overflow: auto;
     white-space: nowrap;

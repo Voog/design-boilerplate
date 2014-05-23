@@ -108,11 +108,10 @@ body {
 .content-formatted img {
   height: auto;
 }
-.content-formatted pre, .content-formatted code {
+.content-formatted img, .content-formatted iframe, .content-formatted pre {
   margin-top: 25px;
 }
 .content-formatted pre {
-  margin-top: 10px;
   margin-bottom: 0;
   overflow: auto;
   white-space: nowrap;
