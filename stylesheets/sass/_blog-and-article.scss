@@ -2,27 +2,28 @@
 // Styling rules for both - the blog listing view and the blog single article view
 .post {
   .post-header {
-    .post-title {
-      margin-top: 0;
-      margin-bottom: 0;
-      line-height: 1.1;
+  }
 
-      &, a {
-        font-size: 50px;
-        @include color($secondary-color);
-      }
+  .post-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.1;
 
-      a {
-        &:hover {
-          @include color($secondary-color, 0.8);
-        }
-      }
-    }
-
-    .post-date {
-      font-size: 14px;
+    &, a {
+      font-size: 50px;
       @include color($secondary-color);
     }
+
+    a {
+      &:hover {
+        @include color($secondary-color, 0.8);
+      }
+    }
+  }
+
+  .post-date {
+    font-size: 14px;
+    @include color($secondary-color);
   }
 
   .post-content {

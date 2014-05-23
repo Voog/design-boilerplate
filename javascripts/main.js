@@ -49,7 +49,7 @@
     $('.content-formatted table').wrap('<div class="table-container overthrow"></div>');
   };
 
-  // TODO: Add comment
+  // CHECK THE PRESENCE OF THE SCROLLBAR
   var checkScrollBar = function() {
     jQuery.fn.hasScrollBar = function(direction) {
       if (direction == 'vertical') {

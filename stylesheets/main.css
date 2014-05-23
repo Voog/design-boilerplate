@@ -720,20 +720,20 @@ body {
 }
 
 /* BLOG & BLOG ARTICLE */
-.post .post-header .post-title {
+.post .post-title {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.1;
 }
-.post .post-header .post-title, .post .post-header .post-title a {
+.post .post-title, .post .post-title a {
   font-size: 50px;
   color: #1b2124;
 }
-.post .post-header .post-title a:hover {
+.post .post-title a:hover {
   color: #1b2124;
   color: rgba(27, 33, 36, 0.8);
 }
-.post .post-header .post-date {
+.post .post-date {
   font-size: 14px;
   color: #1b2124;
 }
