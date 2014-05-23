@@ -8,7 +8,7 @@
 }
 
 // BOXES
-@mixin box-shadow($top, $left, $blur, $color, $inset: "") {
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
   -webkit-box-shadow: $top $left $blur $color #{$inset};
      -moz-box-shadow: $top $left $blur $color #{$inset};
           box-shadow: $top $left $blur $color #{$inset};
@@ -68,6 +68,14 @@
   -webkit-appearance: none;
   -webkit-border-radius: 0;
           border-radius: 0;
+}
+
+// OPACITY
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
 }
 
 // MEDIA QUERY
