@@ -214,7 +214,7 @@ body {
   margin-right: 20px;
   line-height: 1;
 }
-.menu-main .menu .menu-item.edit-btn {
+.menu-main .menu .edit-btn {
   margin-right: 0;
 }
 .menu-main .menu .menu-link {
@@ -266,7 +266,7 @@ body {
   }
   .menu-main.expanded .menu .menu-item .menu-link {
     display: block;
-    padding: 11px 20px;
+    padding: 10px 20px;
     font-size: 20px;
   }
   .menu-main.expanded .menu .menu-item .menu-link:hover {
@@ -275,6 +275,12 @@ body {
   }
   .menu-main.expanded .menu .menu-item .menu-link.active {
     background-color: #c7e5ff;
+  }
+  .menu-main.expanded .menu .edit-btn {
+    display: block;
+    padding: 12px 25px;
+    border-top: 1px solid #727272;
+    border-top: 1px solid rgba(114, 114, 114, 0.2);
   }
   .menu-main.expanded .menu-lang {
     display: block;

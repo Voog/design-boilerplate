@@ -74,9 +74,10 @@
       margin-right: 20px;
       line-height: 1;
 
-      &.edit-btn {
-        margin-right: 0;
-      }
+    }
+
+    .edit-btn {
+      margin-right: 0;
     }
 
     .menu-link {
@@ -131,7 +132,7 @@
 
           .menu-link {
             display: block;
-            padding: 11px 20px;
+            padding: 10px 20px;
             font-size: 20px;
 
             &:hover {
@@ -142,6 +143,12 @@
               @include bg($blue-2);
             }
           }
+        }
+
+        .edit-btn {
+          display: block;
+          padding: 12px 25px;
+          @include border(top, 1px, solid, $primary-color, 0.2);
         }
       }
 
