@@ -115,6 +115,10 @@
     }
   }
 
+  .menu-sub {
+    display: none;
+  }
+
   // Styling rules for the mobile language menu. On
   .menu-lang {
     display: none;
@@ -165,6 +169,27 @@
           display: block;
           padding: 12px 25px;
           @include border(top, 1px, solid, $primary-color, 0.2);
+        }
+      }
+
+      // Styling rules for the sub menu in the site's main menu. Only visible on smaller screens.
+      .menu-sub {
+        display: block;
+        margin-top: 0;
+
+        .menu {
+          text-align: left;
+
+          .menu-item {
+            &:first-child {
+              @include border(top, 1px, solid, $primary-color, 0.2);
+            }
+          }
+
+          .menu-link {
+            padding: 10px 40px;
+            font-size: 14px;
+          }
         }
       }
 

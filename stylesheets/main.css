@@ -238,6 +238,9 @@ body {
 .menu-main .menu .edit-btn {
   margin-right: 0;
 }
+.menu-main .menu-sub {
+  display: none;
+}
 .menu-main .menu-lang {
   display: none;
 }
@@ -286,6 +289,21 @@ body {
     padding: 12px 25px;
     border-top: 1px solid #727272;
     border-top: 1px solid rgba(114, 114, 114, 0.2);
+  }
+  .menu-main.expanded .menu-sub {
+    display: block;
+    margin-top: 0;
+  }
+  .menu-main.expanded .menu-sub .menu {
+    text-align: left;
+  }
+  .menu-main.expanded .menu-sub .menu .menu-item:first-child {
+    border-top: 1px solid #727272;
+    border-top: 1px solid rgba(114, 114, 114, 0.2);
+  }
+  .menu-main.expanded .menu-sub .menu .menu-link {
+    padding: 10px 40px;
+    font-size: 14px;
   }
   .menu-main.expanded .menu-lang {
     display: block;
