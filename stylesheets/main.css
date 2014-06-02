@@ -68,11 +68,11 @@ body {
 .content-formatted {
   word-wrap: break-word;
 }
-.content-formatted h1:first-child, .content-formatted h2:first-child, .content-formatted h3:first-child, .content-formatted h4:first-child, .content-formatted h5:first-child, .content-formatted h6:first-child, .content-formatted p:first-child, .content-formatted ul:first-child, .content-formatted ol:first-child, .content-formatted pre:first-child, .content-formatted code:first-child, .content-formatted img:first-child, .content-formatted table form:first-child, .content-formatted .edy-partial-view:first-child {
-  margin-top: 0;
-}
-.content-formatted h1:last-child, .content-formatted h2:last-child, .content-formatted h3:last-child, .content-formatted h4:last-child, .content-formatted h5:last-child, .content-formatted h6:last-child, .content-formatted p:last-child, .content-formatted ul:last-child, .content-formatted ol:last-child, .content-formatted pre:last-child, .content-formatted code:last-child, .content-formatted img:last-child, .content-formatted table form:last-child, .content-formatted .edy-partial-view:last-child {
+.content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6, .content-formatted p, .content-formatted ul, .content-formatted ol, .content-formatted pre, .content-formatted code, .content-formatted img, .content-formatted iframe, .content-formatted table form {
   margin-bottom: 0;
+}
+.content-formatted h1:first-child, .content-formatted h2:first-child, .content-formatted h3:first-child, .content-formatted h4:first-child, .content-formatted h5:first-child, .content-formatted h6:first-child, .content-formatted p:first-child, .content-formatted ul:first-child, .content-formatted ol:first-child, .content-formatted pre:first-child, .content-formatted code:first-child, .content-formatted img:first-child, .content-formatted iframe:first-child, .content-formatted table form:first-child {
+  margin-top: 0;
 }
 .content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   color: #1b2124;
