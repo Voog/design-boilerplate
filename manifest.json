@@ -142,7 +142,7 @@
       "content_type": "component",
       "component": true,
       "file": "components/tags-variables.tpl",
-      "layout_name": "",
+      "layout_name": "tags-variables",
       "title": "tags-variables"
     },
     {
