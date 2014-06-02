@@ -36,6 +36,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/bg-picker-variables.tpl",
+      "layout_name": "bg-picker-variables",
+      "title": "bg-picker-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/bg-picker.tpl",
       "layout_name": "bg-picker",
       "title": "bg-picker"
@@ -171,6 +178,12 @@
       "file": "javascripts/autogrow.js",
       "kind": "javascripts",
       "filename": "autogrow.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/backstretch.js",
+      "kind": "javascripts",
+      "filename": "backstretch.js"
     },
     {
       "content_type": "application/javascript",

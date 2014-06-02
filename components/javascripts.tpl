@@ -1,6 +1,7 @@
 <!-- SITE WIDE JAVASCRIPTS -->
 <script src="{{ javascripts_path }}/jquery.js?1"></script>
 <script src="{{ javascripts_path }}/main.js?1"></script>
+<script src="{{ javascripts_path }}/backstretch.js?1"></script>
 <script src="{{ javascripts_path }}/retina.js?1"></script>
 <script src="{{ javascripts_path }}/overthrow.js?1"></script>
 

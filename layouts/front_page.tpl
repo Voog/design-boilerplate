@@ -3,17 +3,20 @@
 <head>
   {% include "html-head" %}
 
-  <!-- FACEBOOK OPENGRAPH -->
-  <!-- site specific opengraph tags are located in "html-head" component -->
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:title" content="{{ site.name }}">
   {% unless page.description == nil or page.description == "" %}<meta property="og:description" content="{{ page.description }}">{% endunless %}
-  {% if page.data.fb_image %}<meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fb_image }}"><!-- TODO: Add functionality -->{% endif %}
+  {% comment %}<!-- TODO: Add functionality after the CMS is going to support it -->{% endcomment %}
+  {% if page.data.fb_image %}<meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fb_image }}">{% endif %}
+
+  {% include "bg-picker-variables" %}
+
+  {{ site.stats_header }}
 </head>
 
-<body class="front-page js-bgpicker-body-image" {% if site.data.body_image %}style="background-image: url('{{ site.data.body_image}}');"{% endif %}>
-  {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ site.data.body_image }}" data-bg-color="{{ site.data.body_color }}"></button>{% endif %}
-  <div class="background-color js-bgpicker-body-color"{% if site.data.body_color %} style="background-color: {{ site.data.body_color }};{% if site.data.body_image %} opacity: 0.5;{% endif %}"{% endif %}></div>
+<body class="front-page">
+  {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ body_image }}" data-bg-color="{{ body_color }}"></button>{% endif %}
+  <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
 
   <div class="container">
     {% include "header" %}
@@ -31,5 +34,8 @@
 
   {% include "javascripts" %}
   {% include "bg-picker" %}
+  <script>
+    {% unless page.data.body_image == '' %}$.backstretch('{{ body_image }}');{% endunless %}
+  </script>
 </body>
 </html>

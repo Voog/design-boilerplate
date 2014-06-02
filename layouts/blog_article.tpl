@@ -2,16 +2,20 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head>
   {% include "html-head" %}
-
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:title" content="{{ site.name }}">
-  <meta property="og:description" content="{{ page.description }}">{% comment %}<!-- TODO: Add correct value -->{% endcomment %}
+  <meta property="og:description" content="{{ article.excerpt | strip_html | truncate: 120 }}">
+  {% comment %}<!-- TODO: Add functionality after the CMS is going to support it -->{% endcomment %}
   {% unless article.data.fb_image == nil or article.data.fb_image == "" %}<meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ article.data.fb_image }}">{% endunless %}{% comment %}<!-- TODO: Add image location data tag -->{% endcomment %}
+
+  {% include 'bg-picker-variables' with 'article' %}
+
+  {{ site.stats_header }}
 </head>
 
-<body class="post-page js-bgpicker-body-image" {% if site.data.body_image %}style="background-image: url('{{ site.data.body_image}}');"{% endif %}>
-  {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ site.data.body_image }}" data-bg-color="{{ site.data.body_color }}"></button>{% endif %}
-  <div class="background-color js-bgpicker-body-color"{% if site.data.body_color %} style="background-color: {{ site.data.body_color }};{% if site.data.body_image %} opacity: 0.5;{% endif %}"{% endif %}></div>
+<body class="post-page">
+  {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ body_image }}" data-bg-color="{{ body_color }}"></button>{% endif %}
+  <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
 
   <div class="container">
     {% include "header" %}
@@ -43,6 +47,12 @@
   </div>
 
   {% include "javascripts" %}
-  {% include "bg-picker" %}
+  {% include "bg-picker" with 'article' %}
+
+  <script>
+    {% unless article.data.body_image == '' %}$.backstretch('{{ body_image }}');{% endunless %}
+
+    site.initBlogPage();
+  </script>
 </body>
 </html>

@@ -26,8 +26,8 @@
 <title>{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}</title>
 
 <!-- FACEBOOK OPENGRAPH -->
-<!-- Page specific opengraph tags are located in each page template -->
-{% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">;{% comment %}<!-- TODO: Add functionality -->{% endcomment %}{% endif %}
-<!-- http://graph.facebook.com/"username" - Replace "username" with site admin's username to get admin's ID) -->
+{% comment %}<!-- Page specific opengraph tags are located in each page template -->{% endcomment %}
+{% comment %}<!-- TODO: Add functionality after the CMS is going to support it -->{% endcomment %}
+{% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">{% endif %}
 <meta property="og:type" content="website">
 <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->

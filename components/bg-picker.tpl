@@ -1,33 +1,49 @@
 {% editorjsblock %}
   <script src='/assets/admin/tools/0.1.1/edicy-tools.js'></script>
   <script>
-    // Body background image/color data preview and save logic
-    var siteData = new Edicy.CustomData({
-      type: 'site'
-    });
+    // Body background image and color data preview and save logic
+    {% if bg-picker == "article" %}
+      var articleData = new Edicy.CustomData({
+        type: 'article',
+        id: '{{ article.id }}'
+      });
+    {% else %}
+      var pageData = new Edicy.CustomData({
+        type: 'page',
+        id: '{{ page.id }}'
+      });
+    {% endif %}
 
     var bgPickerBody = new Edicy.BgPicker($('.js-bgpicker-body-settings'), {
       picture: true,
       color: true,
 
       preview: function(data) {
-        var img = (data.image && data.image !== '') ? 'url("' + data.image + '")' : '',
-            col = (data.color && data.color !== '') ? data.color : '';
+        var img = (data.image && data.image !== '') ? 'url("' + data.image + '")' : 'none',
+            col = (data.color && data.color !== '') ? data.color : 'none';
 
-        $('.js-bgpicker-body-image').css({'background-image' : img});
+        // $('.js-bgpicker-body-image').css({'background-image' : img});
         $('.js-bgpicker-body-color').css({'background-color' : col});
 
         if (data.image === null || data.image === '') {
+          $('.backstretch').remove();
           $('.js-bgpicker-body-color').css({'opacity' : 1});
         } else {
+          $.backstretch(data.image);
           $('.js-bgpicker-body-color').css({'opacity' : 0.5});
         }
       },
 
       commit: function(data) {
-        siteData.set({
-          'body_image': data.image || null,
-          'body_color': data.color || null
+        {% if bg-picker == "article" %}
+          console.log('articleData');
+          articleData.set({
+        {% else %}
+          console.log('pageData');
+          pageData.set({
+        {% endif %}
+          'body_image': data.image || '',
+          'body_color': data.color || ''
         });
       }
     });
