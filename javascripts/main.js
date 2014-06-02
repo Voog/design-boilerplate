@@ -80,18 +80,22 @@
   };
 
   // FUNCTIONS INITIATIONS
+  var initFrontPage = function() {
+    // Add front page layout specific functions here.
+  };
+
+  var initCommonPage = function() {
+    // Add common page specific functions here.
+    handleFormFieldClick();
+    focusCommentsWithErrors();
+  };
+
   var initBlogPage = function() {
     // Add blog listing layout specific functions here.
   };
 
   var initArticlePage = function() {
     // Add single post layout specific functions here.
-    focusCommentsWithErrors();
-  };
-
-  var initCommonPage = function() {
-    // Add common page specific functions here.
-    handleFormFieldClick();
     focusCommentsWithErrors();
   };
 
@@ -112,6 +116,7 @@
   // Enables the usage of the initiations outside this file.
   // For example add "<script>site.initBlogPage();</script>" at the end of the "Blog & News" page to initiate blog listing view functions.
   window.site = $.extend(window.site || {}, {
+    initFrontPage: initFrontPage,
     initBlogPage: initBlogPage,
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage
