@@ -110,6 +110,9 @@ body {
 .content-formatted img, .content-formatted iframe, .content-formatted pre {
   margin-top: 25px;
 }
+.content-formatted blockquote {
+  margin: 20px 40px;
+}
 .content-formatted pre {
   margin-bottom: 0;
   overflow: auto;
