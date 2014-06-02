@@ -346,7 +346,7 @@ body {
   text-align: center;
 }
 .menu-sub .menu .menu-item {
-  margin-left: 15px;
+  margin-right: 20px;
   font-size: 14px;
 }
 .menu-sub .menu .menu-item:first-child {
