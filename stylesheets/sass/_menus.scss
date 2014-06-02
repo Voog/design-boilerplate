@@ -63,6 +63,24 @@
   .menu-item {
     @extend %inline-block;
   }
+
+  .menu-link {
+    display: block;
+    @include color($blue-1);
+
+    &.untranslated {
+      @include color($red, 0.5);
+    }
+
+    &.active {
+      font-weight: 700;
+      @include color($primary-color, 0.8);
+    }
+
+    &:hover {
+      @include color($primary-color);
+    }
+  }
 }
 
 // Styling rules for the site's main menu.
@@ -76,26 +94,24 @@
 
     }
 
-    .edit-btn {
-      margin-right: 0;
-    }
-
     .menu-link {
-      display: block;
-      @include color($blue-1);
 
       &.untranslated {
-        @include color($red, 0.5);
+
       }
 
       &:hover {
-        @include color($primary-color);
+
       }
 
       &.active {
         font-weight: 700;
         @include color($primary-color, 0.8);
       }
+    }
+
+    .edit-btn {
+      margin-right: 0;
     }
   }
 
@@ -135,12 +151,12 @@
             padding: 10px 20px;
             font-size: 20px;
 
-            &:hover {
-              @include bg($blue-2, 0.5);
-            }
-
             &.active {
               @include bg($blue-2);
+            }
+
+            &:hover {
+              @include bg($blue-2, 0.5);
             }
           }
         }
@@ -244,15 +260,16 @@
       }
 
       .menu-link {
-        @include color($blue-1);
+        &.untranslated {
+
+        }
 
         &.active {
-          font-weight: 700;
-          @include color($primary-color);
+
         }
 
         &:hover {
-          @include color($blue-1, 0.8);
+
         }
       }
     }

@@ -206,6 +206,22 @@ body {
   padding: 0;
   list-style: none;
 }
+.menu .menu-link {
+  display: block;
+  color: #0066bb;
+}
+.menu .menu-link.untranslated {
+  color: #cc0000;
+  color: rgba(204, 0, 0, 0.5);
+}
+.menu .menu-link.active {
+  font-weight: 700;
+  color: #727272;
+  color: rgba(114, 114, 114, 0.8);
+}
+.menu .menu-link:hover {
+  color: #727272;
+}
 
 .menu-main {
   padding: 6px 0;
@@ -214,24 +230,13 @@ body {
   margin-right: 20px;
   line-height: 1;
 }
-.menu-main .menu .edit-btn {
-  margin-right: 0;
-}
-.menu-main .menu .menu-link {
-  display: block;
-  color: #0066bb;
-}
-.menu-main .menu .menu-link.untranslated {
-  color: #cc0000;
-  color: rgba(204, 0, 0, 0.5);
-}
-.menu-main .menu .menu-link:hover {
-  color: #727272;
-}
 .menu-main .menu .menu-link.active {
   font-weight: 700;
   color: #727272;
   color: rgba(114, 114, 114, 0.8);
+}
+.menu-main .menu .edit-btn {
+  margin-right: 0;
 }
 .menu-main .menu-lang {
   display: none;
@@ -269,12 +274,12 @@ body {
     padding: 10px 20px;
     font-size: 20px;
   }
+  .menu-main.expanded .menu .menu-item .menu-link.active {
+    background-color: #c7e5ff;
+  }
   .menu-main.expanded .menu .menu-item .menu-link:hover {
     background-color: #c7e5ff;
     background-color: rgba(199, 229, 255, 0.5);
-  }
-  .menu-main.expanded .menu .menu-item .menu-link.active {
-    background-color: #c7e5ff;
   }
   .menu-main.expanded .menu .edit-btn {
     display: block;
@@ -357,17 +362,6 @@ body {
 }
 .menu-sub .menu .menu-item:first-child {
   margin-left: 0;
-}
-.menu-sub .menu .menu-item .menu-link {
-  color: #0066bb;
-}
-.menu-sub .menu .menu-item .menu-link.active {
-  font-weight: 700;
-  color: #727272;
-}
-.menu-sub .menu .menu-item .menu-link:hover {
-  color: #0066bb;
-  color: rgba(0, 102, 187, 0.8);
 }
 
 .menu-lang .menu {
