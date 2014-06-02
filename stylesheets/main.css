@@ -67,7 +67,6 @@ body {
 
 .content-formatted {
   word-wrap: break-word;
-  /* TABLES */
 }
 .content-formatted h1:first-child, .content-formatted h2:first-child, .content-formatted h3:first-child, .content-formatted h4:first-child, .content-formatted h5:first-child, .content-formatted h6:first-child, .content-formatted p:first-child, .content-formatted ul:first-child, .content-formatted ol:first-child, .content-formatted pre:first-child, .content-formatted code:first-child, .content-formatted img:first-child, .content-formatted table form:first-child, .content-formatted .edy-partial-view:first-child {
   margin-top: 0;

@@ -1,7 +1,7 @@
 {% editorjsblock %}
   <script src='/assets/admin/tools/0.1.1/edicy-tools.js'></script>
   <script>
-    // Body background image and color data preview and save logic
+    // Body background image/color data preview and save logic
     var siteData = new Edicy.CustomData({
       type: 'site'
     });

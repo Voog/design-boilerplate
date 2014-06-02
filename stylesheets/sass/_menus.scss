@@ -1,5 +1,5 @@
 /* MENUS */
-// Styling rules for the site's menus. These rules affect the entire site.
+// Styling rules for the site's menus.
 
 // Menu button. Only visible on smaller screens.
 .menu-btn {
@@ -54,7 +54,7 @@
   line-height: 0.8;
 }
 
-// General rules for the menus. These rules affect all menus on the site.
+// General rules for all navigation menus.
 .menu {
   margin: 0;
   padding: 0;
@@ -65,7 +65,7 @@
   }
 }
 
-// Styling rules for the site's main menu. Usually the first level menu but can have the sub menu in it aswell.
+// Styling rules for the site's main menu.
 .menu-main {
   padding: 6px 0;
 
@@ -98,6 +98,7 @@
     }
   }
 
+  // Styling rules for the mobile language menu. On
   .menu-lang {
     display: none;
   }

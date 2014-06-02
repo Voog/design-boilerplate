@@ -1,7 +1,6 @@
-
-// Styling rules for the site's editable content areas.
+// Styling rules for the site's editable content area and its elements.
 // NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-formatted" class.
-// NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
+// NB! Contact forms and image galleries are located in the separate partials: "_forms.scss" and "_gallery.scss".
 .content-formatted {
   @extend %clearfix;
   word-wrap: break-word;
@@ -92,10 +91,7 @@
     }
   }
 
-  /* TABLES */
   // Styling rules for the site's editable content area tables.
-  // NB! Works only if editable content-area - {% content %} -  is wrapped into the element that has the "content-formatted" class.
-
   // Container around editable content-area table.
   .table-container {
     margin-top: 20px;

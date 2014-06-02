@@ -1,5 +1,5 @@
 {% if site.has_language_tags? %}
-  {% include "tags-translations" %}
+  {% include "tags-variables" %}
   <nav class="menu-tags">
     <ul class="menu">
       <li class="menu-item">

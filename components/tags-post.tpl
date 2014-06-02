@@ -1,5 +1,5 @@
 <div class="tags">
-  {% include "tags-translations" %}
+  {% include "tags-variables" %}
   {% if editmode %}
     <div class="tags-editor">{% editable article.tags %}</div>
   {% else %}

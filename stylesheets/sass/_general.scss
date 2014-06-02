@@ -13,29 +13,25 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
- // Layout specific body classes
- .front-page {
 
- }
+// Layout specific body classes.
+.front-page {
+}
 
- .common-page {
+.common-page {
+}
 
- }
+.blog-page,
+.post-page {
+}
 
- .blog-page,
- .post-page {
+.blog-page {
+}
 
- }
+.post-page {
+}
 
- .blog-page {
-
- }
-
- .post-page {
-
- }
-
-// Pseudo classes for declaring commonly used styling rules for different elements.
+// Pseudo classes to declare commonly used styling rules for different elements.
 %clearfix:after {
   content: "";
   display: table;
@@ -53,7 +49,7 @@ body {
   display: inline-block;
 }
 
-// Styling rules for the independent elements that can be located everywhere in the DOM and always have the same styling rules.
+// Styling rules for the independent elements that can be located everywhere in the DOM and always have the same look.
 .bgpicker-btn {
   position: absolute;
   background: none;
@@ -71,7 +67,7 @@ body {
   z-index: -2;
 }
 
-// Styling rules for the main container that affects the entire site's other elements.
+// Styling rules for the main container.
 .container {
   max-width: 960px;
   margin: 0 auto;

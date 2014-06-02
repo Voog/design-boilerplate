@@ -141,9 +141,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-translations.tpl",
+      "file": "components/tags-variables.tpl",
       "layout_name": "",
-      "title": "tags-translations"
+      "title": "tags-variables"
     },
     {
       "content_type": "component",
