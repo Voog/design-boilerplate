@@ -48,7 +48,7 @@
     });
 
     {% unless body_image == nil or body_image == '' %}
-      $.backstretch('{{ body_image }}');{% endunless %}
+      $.backstretch('{{ body_image }}');
     {% endunless %}
 
     site.initBlogPage();
