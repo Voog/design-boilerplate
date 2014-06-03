@@ -391,7 +391,7 @@ body {
 }
 .menu-sub .menu .menu-item {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
   font-size: 14px;
 }
 .menu-sub .menu .menu-item:first-child {
