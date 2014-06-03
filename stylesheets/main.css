@@ -156,13 +156,6 @@ body {
 .content-formatted .edy-partial-view {
   margin-top: 25px;
 }
-.footer .content-formatted {
-  font-size: 14px;
-  line-height: 1.5;
-}
-.footer .content-formatted .edy-texteditor-view {
-  min-height: 18px;
-}
 
 /* MENUS */
 .menu-btn {
@@ -687,7 +680,6 @@ body {
 
 .content-title.content-formatted,
 .content-slogan.content-formatted {
-  line-height: 1;
   color: #1b2124;
 }
 .content-title.content-formatted h1,
@@ -718,6 +710,7 @@ body {
 }
 
 .content-title.content-formatted {
+  line-height: 1;
   font-weight: 700;
   font-size: 100px;
 }
@@ -728,7 +721,8 @@ body {
 }
 
 .content-slogan {
-  padding-bottom: 45px;
+  margin-top: 5px;
+  padding-bottom: 35px;
 }
 .content-slogan.content-formatted {
   font-weight: 400;
@@ -932,6 +926,13 @@ body {
   .footer {
     margin-top: 35px;
   }
+}
+.footer .content-formatted {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.footer .content-formatted .edy-texteditor-view {
+  min-height: 18px;
 }
 .footer .voog-reference {
   margin-top: 30px;
