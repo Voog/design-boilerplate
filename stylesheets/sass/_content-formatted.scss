@@ -131,4 +131,14 @@
   .edy-partial-view {
     margin-top: 25px;
   }
+
+  // Styling rules for the footer's editable content area.
+  .footer & {
+    font-size: 14px;
+    line-height: 1.5;
+
+    .edy-texteditor-view {
+      min-height: 18px;
+    }
+  }
 }

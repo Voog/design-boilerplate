@@ -156,6 +156,13 @@ body {
 .content-formatted .edy-partial-view {
   margin-top: 25px;
 }
+.footer .content-formatted {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.footer .content-formatted .edy-texteditor-view {
+  min-height: 18px;
+}
 
 /* MENUS */
 .menu-btn {
@@ -920,13 +927,6 @@ body {
   .footer {
     margin-top: 35px;
   }
-}
-.footer .content-formatted {
-  font-size: 14px;
-  line-height: 1.5;
-}
-.footer .content-formatted .edy-texteditor-view {
-  min-height: 18px;
 }
 .footer .voog-reference {
   margin-top: 30px;
