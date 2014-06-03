@@ -627,7 +627,7 @@ body {
   display: table-cell;
 }
 .flexbox .header .header-left {
-  width: 580px;
+  width: 575px;
 }
 .header .header-left .header-title {
   display: none;
@@ -648,7 +648,7 @@ body {
   color: rgba(114, 114, 114, 0.8);
 }
 .header .header-right {
-  width: 380px;
+  width: 385px;
   text-align: right;
 }
 @media screen and (max-width: 752px) {
