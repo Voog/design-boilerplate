@@ -15,11 +15,11 @@
 <link rel="apple-touch-icon" href="{{ images_path }}/{{ page.data.touchicon }}"> <!-- TODO: Add image location data tag -->
 
 {% comment %}<!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->{% endcomment %}
-<script src="{{ javascripts_path }}/modernizr.js?21"></script>
+<script src="{{ javascripts_path }}/modernizr.js?22"></script>
 
 {% comment %}<!-- STYLESHEETS -->{% endcomment %}
-{% stylesheet_link "main.css?21" %}
-<!--[if lt IE 9]>{% stylesheet_link "ie8.css?21" %}<![endif]-->
+{% stylesheet_link "main.css?22" %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.css?22" %}<![endif]-->
 <link rel="stylesheet" href="/assets/admin/tools/0.1.1/edicy-tools.css">
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
