@@ -26,7 +26,7 @@ body {
   bottom: 0;
 }
 
-.menu .menu-item, .menu-lang, .search,
+.menu-lang, .search,
 .search-left,
 .search-right {
   display: inline-block;
@@ -230,6 +230,7 @@ body {
   padding: 6px 0;
 }
 .menu-main .menu .menu-item {
+  display: inline-block;
   margin-right: 20px;
   line-height: 1;
 }
@@ -382,6 +383,7 @@ body {
   text-align: center;
 }
 .menu-sub .menu .menu-item {
+  display: inline-block;
   margin-right: 20px;
   font-size: 14px;
 }

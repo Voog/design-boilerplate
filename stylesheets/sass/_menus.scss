@@ -61,7 +61,7 @@
   list-style: none;
 
   .menu-item {
-    @extend %inline-block;
+
   }
 
   .menu-link {
@@ -89,6 +89,7 @@
 
   .menu {
     .menu-item {
+      display: inline-block;
       margin-right: 20px;
       line-height: 1;
 
@@ -281,6 +282,7 @@
     text-align: center;
 
     .menu-item {
+      display: inline-block;
       margin-right: 20px;
       font-size: 14px;
 
