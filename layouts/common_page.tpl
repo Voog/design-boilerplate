@@ -15,7 +15,11 @@
 
 <body class="common-page">
   {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ body_image }}" data-bg-color="{{ body_color }}"></button>{% endif %}
-  <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
+  {% unless editmode %}
+    {% unless body_color == nil or body_color == '' %}<div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>{% endunless %}
+  {% else %}
+    <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
+  {% endunless %}
 
   <div class="container">
     {% include "header" %}

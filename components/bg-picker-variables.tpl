@@ -18,7 +18,7 @@
     <!-- Builds style tag for background color for article pages -->
     {% assign body_color_style = '' %}
     {% unless article.data.body_color == nil %}
-      {% assign body_color_style = ' style="background-color: ' %}
+      {% assign body_color_style = ' style="background: ' %}
       {% if article.data.body_color == '' %}
         {% assign body_color_style = body_color_style | append: 'none' %}
       {% else %}
@@ -51,7 +51,7 @@
     <!-- Builds style tag for background color for content pages -->
     {% assign body_color_style = "" %}
     {% unless page.data.body_color == nil %}
-      {% assign body_color_style = ' style="background-color: ' %}
+      {% assign body_color_style = ' style="background: ' %}
       {% if page.data.body_color == '' %}
         {% assign body_color_style = body_color_style | append: 'none' %}
       {% else %}
@@ -64,6 +64,8 @@
       {% endif %}
       {% assign body_color_style = body_color_style | append: ';"' %}
     {% endunless %}
+
+    {% assign body_color_tag = "<div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>" %}
 
   {% endif %}
 {% endcapture %}

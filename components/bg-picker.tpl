@@ -1,5 +1,5 @@
 {% editorjsblock %}
-  <script src='/assets/admin/tools/0.1.1/edicy-tools.js'></script>
+  <script src='/assets/admin/tools/0.1.1/edicy-tools.js?1'></script>
   <script>
     // Body background image and color data preview and save logic
     {% if bg-picker == "article" %}
@@ -23,7 +23,7 @@
             col = (data.color && data.color !== '') ? data.color : 'none';
 
         // $('.js-bgpicker-body-image').css({'background-image' : img});
-        $('.js-bgpicker-body-color').css({'background-color' : col});
+        $('.js-bgpicker-body-color').css({'background' : col});
 
         if (data.image === null || data.image === '') {
           $('.backstretch').remove();

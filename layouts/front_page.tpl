@@ -16,15 +16,21 @@
 
 <body class="front-page">
   {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ body_image }}" data-bg-color="{{ body_color }}"></button>{% endif %}
-  <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
+  {% unless editmode %}
+    {% unless body_color == nil or body_color == '' %}<div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>{% endunless %}
+  {% else %}
+    <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
+  {% endunless %}
 
   <div class="container">
     {% include "header" %}
     {% include "menu-level-2" %}
 
     <main class="content" role="main">
-      <div class="content-title content-formatted">{% editable site.header %}</div>
-      <header class="content-header content-formatted">{% content name="slogan" %}</header>
+      <header class="content-header">
+        <div class="content-title content-formatted">{% editable site.header %}</div>
+        <div class="content-slogan content-formatted">{% content name="slogan" %}</div>
+      </header>
       <section class="content-body content-formatted">{% content %}</section>
     </main>
 
