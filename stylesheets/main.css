@@ -296,7 +296,6 @@ body {
   }
   .menu-main.expanded .menu-sub {
     display: block;
-    margin-top: 0;
   }
   .menu-main.expanded .menu-sub .menu {
     text-align: left;
@@ -376,9 +375,6 @@ body {
   }
 }
 
-.menu-sub {
-  margin-top: 30px;
-}
 .menu-sub .menu {
   text-align: center;
 }
@@ -595,6 +591,9 @@ body {
 }
 
 /* HEADER */
+.header {
+  padding-bottom: 30px;
+}
 @media screen and (max-width: 900px) {
   .no-flexbox .header, .flexbox .header {
     width: 100%;
@@ -603,6 +602,7 @@ body {
 @media screen and (max-width: 752px) {
   .no-flexbox .header, .flexbox .header {
     display: block;
+    padding-bottom: 0;
   }
 }
 .no-flexbox .header {
@@ -666,10 +666,13 @@ body {
 
 /* CONTENT */
 .content {
-  margin-top: 70px;
+  margin-top: 30px;
+}
+.front-page .content {
+  margin-top: 40px;
 }
 @media screen and (max-width: 752px) {
-  .content {
+  .content, .front-page .content {
     margin-top: 20px;
   }
 }

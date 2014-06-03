@@ -176,7 +176,6 @@
       // Styling rules for the sub menu in the site's main menu. Only visible on smaller screens.
       .menu-sub {
         display: block;
-        margin-top: 0;
 
         .menu {
           text-align: left;
@@ -276,9 +275,7 @@
 
 // Styling rules for the site's sub menu.
 .menu-sub {
-  margin-top: 30px;
-
-  .menu {
+   .menu {
     text-align: center;
 
     .menu-item {

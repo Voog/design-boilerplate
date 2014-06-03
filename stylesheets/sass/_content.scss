@@ -1,10 +1,16 @@
 /* CONTENT */
 // Styling rules for the site's main content area. These rules affect the entire site.
 .content {
-  margin-top: 70px;
+  margin-top: 30px;
+
+  .front-page & {
+    margin-top: 40px;
+  }
 
   @include query($tablet-2) {
-    margin-top: 20px;
+    &, .front-page & {
+      margin-top: 20px;
+    }
   }
 }
 

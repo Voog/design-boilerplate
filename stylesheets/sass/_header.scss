@@ -1,6 +1,8 @@
 /* HEADER */
 // Styling rules for the site's header. These rules affect the entire site.
 .header {
+  padding-bottom: 30px;
+
   .no-flexbox &,
   .flexbox & {
     @include query($tablet-1) {
@@ -9,6 +11,7 @@
 
     @include query($tablet-2) {
       display: block;
+      padding-bottom: 0;
     }
   }
 
