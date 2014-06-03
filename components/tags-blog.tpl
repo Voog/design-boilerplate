@@ -3,7 +3,7 @@
   <nav class="menu-tags">
     <ul class="menu">
       <li class="menu-item">
-        <a class="menu-link js-tags-all" href="{{ site.url }}{{ site.blogs.first.page.path }}">{{ tags_all }}</a>
+        <a class="menu-link js-tags-all" href="{{ site.url }}{{ site.blogs.first.page.path }}">{{ tags_all_blog }}</a>
       </li>
       {% for tag in site.language_tags %}
         {% assign activestr = "" %}

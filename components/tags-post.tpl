@@ -5,7 +5,7 @@
   {% else %}
     <nav class="menu-tags">
       <ul class="menu">
-        <li class="menu-item"><a class="menu-link" href="{{ site.url }}{{ site.blogs.first.page.path }}">{{ tags_all }}</a></li>
+        <li class="menu-item"><a class="menu-link" href="{{ site.url }}{{ site.blogs.first.page.path }}">{{ tags_all_post }}</a></li>
         {% for tag in article.tags %}
           <li class="menu-item"><a class="menu-link" href="{{ site.url }}{{ site.blogs.first.page.path }}/tagged/{{ tag.path }}">{{ tag.name }}</a></li>
         {% endfor %}
