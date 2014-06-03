@@ -53,8 +53,8 @@
     font-weight: 700;
     font-size: 100px;
 
-    @include query($mobile-1) {
-      font-size: 50px;
+    @include query($tablet-2) {
+      display: none;
     }
   }
 }

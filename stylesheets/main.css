@@ -721,9 +721,9 @@ body {
   font-weight: 700;
   font-size: 100px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 752px) {
   .content-title.content-formatted {
-    font-size: 50px;
+    display: none;
   }
 }
 
