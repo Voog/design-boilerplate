@@ -681,34 +681,38 @@ body {
   }
 }
 
+.content-header .edy-partial-view {
+  margin-top: -3px;
+}
+
 .content-title.content-formatted,
-.content-header.content-formatted {
+.content-slogan.content-formatted {
   line-height: 1;
   color: #1b2124;
 }
 .content-title.content-formatted h1,
-.content-header.content-formatted h1 {
+.content-slogan.content-formatted h1 {
   font-size: 100px;
 }
 .content-title.content-formatted h2,
-.content-header.content-formatted h2 {
+.content-slogan.content-formatted h2 {
   font-size: 50px;
 }
 .content-title.content-formatted h3,
-.content-header.content-formatted h3 {
+.content-slogan.content-formatted h3 {
   font-size: 30px;
 }
 @media screen and (max-width: 480px) {
   .content-title.content-formatted h1,
-  .content-header.content-formatted h1 {
+  .content-slogan.content-formatted h1 {
     font-size: 50px;
   }
   .content-title.content-formatted h2,
-  .content-header.content-formatted h2 {
+  .content-slogan.content-formatted h2 {
     font-size: 30px;
   }
   .content-title.content-formatted h3,
-  .content-header.content-formatted h3 {
+  .content-slogan.content-formatted h3 {
     font-size: 20px;
   }
 }
@@ -723,16 +727,16 @@ body {
   }
 }
 
-.content-header.content-formatted {
+.content-slogan {
+  padding-bottom: 45px;
+}
+.content-slogan.content-formatted {
   font-weight: 400;
   font-size: 50px;
 }
-.content-header.content-formatted .edy-texteditor-view {
-  min-height: 18px;
-}
 
 .front-page .content-body {
-  margin-top: 90px;
+  margin-top: 45px;
 }
 @media screen and (max-width: 752px) {
   .front-page .content-body {

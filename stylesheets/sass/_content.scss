@@ -8,8 +8,14 @@
   }
 }
 
-.content-title,
 .content-header {
+  .edy-partial-view {
+    margin-top: -3px;
+  }
+}
+
+.content-title,
+.content-slogan {
   &.content-formatted {
     line-height: 1;
     @include color($secondary-color);
@@ -53,20 +59,18 @@
   }
 }
 
-.content-header {
+.content-slogan {
+  padding-bottom: 45px;
+
   &.content-formatted {
     font-weight: 400;
     font-size: 50px;
-
-    .edy-texteditor-view {
-      min-height: 18px;
-    }
   }
 }
 
 .content-body {
   .front-page & {
-    margin-top: 90px;
+    margin-top: 45px;
 
     @include query($tablet-2) {
       margin-top: 35px;

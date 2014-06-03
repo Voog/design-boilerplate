@@ -28,9 +28,12 @@
 
     <main class="content" role="main">
       <header class="content-header">
-        <div class="content-title content-formatted">{% editable site.header %}</div>
-        <div class="content-slogan content-formatted">{% content name="slogan" %}</div>
+        {% if editmode or site.header.size > 0 %}<div class="content-title content-formatted">{% editable site.header %}</div>{% endif %}
+
+        {% capture content_slogan_html %}{% unless editmode %}{% content name="slogan" %}{% endunless %}{% endcapture %}
+        <div class="content-slogan content-formatted js-content-optional">{% content name="slogan" %}</div>
       </header>
+
       <section class="content-body content-formatted">{% content %}</section>
     </main>
 

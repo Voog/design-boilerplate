@@ -34,6 +34,19 @@
     });
   };
 
+  // Removes optional content elements if element doesn't have any content
+  var removeOptionalContent = function() {
+    optionalContent = $('.js-content-optional');
+    $.each( $(optionalContent), function(){
+      optionalContentLength = $(this).text().trim().length;
+      console.log(optionalContentLength);
+
+      if (!optionalContentLength > 0) {
+        $(this).css('display', 'none');
+      }
+    });
+  };
+
   // Scrolls to the comment-form if comment submit failed (to show the error messages to the user).
   var focusCommentsWithErrors = function() {
     $(document).ready(function() {
@@ -105,6 +118,7 @@
     toggleMainMenu();
     handlePopoverMenuHide();
     handleGalleryHover();
+    removeOptionalContent();
     handleWindowResize();
     wrapTables();
     if ($('.table-container').length > 0) {
