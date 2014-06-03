@@ -301,12 +301,16 @@ body {
     text-align: left;
   }
   .menu-main.expanded .menu-sub .menu .menu-item:first-child {
-    border-top: 1px solid #727272;
-    border-top: 1px solid rgba(114, 114, 114, 0.2);
+    border-top: 1px solid #838586;
+    border-top: 1px solid rgba(131, 133, 134, 0.1);
   }
   .menu-main.expanded .menu-sub .menu .menu-link {
     padding: 10px 40px;
     font-size: 14px;
+  }
+  .menu-main.expanded .menu-sub .menu .menu-link.active {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .menu-main.expanded .menu-lang {
     display: block;

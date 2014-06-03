@@ -182,13 +182,17 @@
 
           .menu-item {
             &:first-child {
-              @include border(top, 1px, solid, $primary-color, 0.2);
+              @include border(top, 1px, solid, $grey-2, 0.1);
             }
           }
 
           .menu-link {
             padding: 10px 40px;
             font-size: 14px;
+
+            &.active {
+              @include bg($black, 0.5);
+            }
           }
         }
       }
