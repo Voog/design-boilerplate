@@ -587,6 +587,7 @@ body {
   margin-bottom: 20px;
 }
 .menu-tags .menu .menu-item {
+  display: inline-block;
   margin-right: 15px;
 }
 .menu-tags .menu .menu-item .menu-link {
