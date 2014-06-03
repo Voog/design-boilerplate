@@ -297,9 +297,6 @@ body {
   .menu-main.expanded .menu-sub {
     display: block;
   }
-  .menu-main.expanded .menu-sub .menu {
-    text-align: left;
-  }
   .menu-main.expanded .menu-sub .menu .menu-item:first-child {
     border-top: 1px solid #838586;
     border-top: 1px solid rgba(131, 133, 134, 0.1);
@@ -375,9 +372,6 @@ body {
   }
 }
 
-.menu-sub .menu {
-  text-align: center;
-}
 .menu-sub .menu .menu-item {
   display: inline-block;
   margin-right: 10px;

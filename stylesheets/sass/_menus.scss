@@ -178,7 +178,6 @@
         display: block;
 
         .menu {
-          text-align: left;
 
           .menu-item {
             &:first-child {
@@ -276,7 +275,6 @@
 // Styling rules for the site's sub menu.
 .menu-sub {
    .menu {
-    text-align: center;
 
     .menu-item {
       display: inline-block;
