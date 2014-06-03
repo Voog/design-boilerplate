@@ -34,8 +34,10 @@
 
   {% include "javascripts" %}
   {% include "bg-picker" %}
-  <script>
-    {% unless page.data.body_image == '' %}$.backstretch('{{ body_image }}');{% endunless %}
-  </script>
+  {% unless body_image == nil or body_image == '' %}
+    <script>
+      $.backstretch('{{ body_image }}');{% endunless %}
+    </script>
+  {% endunless %}
 </body>
 </html>

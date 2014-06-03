@@ -50,9 +50,13 @@
   {% include "bg-picker" with 'article' %}
 
   <script>
-    {% unless article.data.body_image == '' %}$.backstretch('{{ body_image }}');{% endunless %}
+    {% unless body_image == nil or body_image == '' %}
+      $.backstretch('{{ body_image }}');
+    {% endunless %}
 
     site.initBlogPage();
   </script>
+
+
 </body>
 </html>
