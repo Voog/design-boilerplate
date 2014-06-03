@@ -770,14 +770,14 @@ body {
   font-size: 14px;
   color: #1b2124;
 }
+.post .post-author {
+  font-size: 12px;
+}
 .post .post-content {
   margin-top: 20px;
 }
 .post .post-content .post-body {
   margin-top: 20px;
-}
-.post .post-footer .post-author {
-  font-size: 12px;
 }
 .post .post-comments-count a {
   font-size: 14px;

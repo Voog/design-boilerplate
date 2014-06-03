@@ -26,6 +26,10 @@
     @include color($secondary-color);
   }
 
+  .post-author {
+    font-size: 12px;
+  }
+
   .post-content {
     margin-top: 20px;
 
@@ -38,9 +42,6 @@
   }
 
   .post-footer {
-    .post-author {
-      font-size: 12px;
-    }
   }
 
   .post-comments-count {
