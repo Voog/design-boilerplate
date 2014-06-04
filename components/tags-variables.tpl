@@ -3,38 +3,38 @@
 {% case page.language_code %}
   <!-- Danish -->
   {% when 'da' %}
-    {% assign tags_all_blog = 'Alle indlæg' %}
-    {% assign tags_all_post = 'Alle mærker' %}
+    {% assign tags_all = 'Alle indlæg' %}
+    {% assign tags_title = 'Tags' %}
   <!-- German -->
   {% when 'de' %}
-    {% assign tags_all_blog = 'Alle Beiträge' %}
-    {% assign tags_all_post = 'Alle tags' %}
+    {% assign tags_all = 'Alle Beiträge' %}
+    {% assign tags_title = 'Schlagworte' %}
   <!-- Estonian -->
   {% when 'et' %}
-    {% assign tags_all_blog = 'Kõik postitused' %}
-    {% assign tags_all_post = 'Kõik sildid' %}
+    {% assign tags_all = 'Kõik postitused' %}
+    {% assign tags_title = 'Sildid' %}
   <!-- Finnish -->
   {% when 'fi' %}
-    {% assign tags_all_blog = 'Kaikki viestit' %}
-    {% assign tags_all_post = 'Kaikki tagit' %}
+    {% assign tags_all = 'Kaikki viestit' %}
+    {% assign tags_title = 'Tunnisteet' %}
   <!-- Latvian -->
   {% when 'lv' %}
-    {% assign tags_all_blog = 'Visas ziņas' %}
-    {% assign tags_all_post = 'Visi tagi' %}
+    {% assign tags_all = 'Visas ziņas' %}
+    {% assign tags_title = 'Tags' %}
   <!-- Dutch -->
   {% when 'nl' %}
-    {% assign tags_all_blog = 'Alle berichten' %}
-    {% assign tags_all_post = 'Alle tags' %}
+    {% assign tags_all = 'Alle berichten' %}
+    {% assign tags_title = 'Žymos' %}
   <!-- Portuguese -->
   {% when 'pt' %}
-    {% assign tags_all_blog = 'Todos os posts' %}
-    {% assign tags_all_post = 'Todas as tags' %}
+    {% assign tags_all = 'Todos os posts' %}
+    {% assign tags_title = 'Marcações' %}
   <!-- Russian -->
   {% when 'ru' %}
-    {% assign tags_all_blog = 'Все сообщения' %}
-    {% assign tags_all_post = 'Все теги' %}
+    {% assign tags_all = 'Все сообщения' %}
+    {% assign tags_title = 'Метки' %}
   <!-- Every other language -->
   {% else %}
-    {% assign tags_all_blog = 'All posts' %}
-    {% assign tags_all_post = 'All tags' %}
+    {% assign tags_all = 'All posts' %}
+    {% assign tags_title = 'Tags' %}
 {% endcase %}

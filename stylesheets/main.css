@@ -380,6 +380,11 @@ body {
 .menu-sub .menu .menu-item:first-child {
   margin-left: 0;
 }
+@media screen and (max-width: 752px) {
+  .menu-sub {
+    margin-top: 30px;
+  }
+}
 
 .menu-lang .menu {
   vertical-align: middle;
@@ -566,22 +571,13 @@ body {
   background-position: -20px -56px;
 }
 
-.menu-tags {
-  margin-bottom: 20px;
-}
-.menu-tags .menu .menu-item {
-  display: inline-block;
-  margin-right: 15px;
-}
-.menu-tags .menu .menu-item .menu-link {
-  color: #0066bb;
-}
-.menu-tags .menu .menu-item .menu-link:hover {
-  color: #0066bb;
-  color: rgba(0, 102, 187, 0.8);
-}
-.menu-tags .menu .menu-item .menu-link.active {
+.tags-title {
   font-weight: 700;
+  font-size: 14px;
+}
+
+.menu-tags {
+  display: inline-block;
 }
 
 /* HEADER */

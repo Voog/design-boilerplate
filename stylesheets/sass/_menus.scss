@@ -274,7 +274,7 @@
 
 // Styling rules for the site's sub menu.
 .menu-sub {
-   .menu {
+  .menu {
 
     .menu-item {
       display: inline-block;
@@ -299,6 +299,10 @@
         }
       }
     }
+  }
+
+  @include query($tablet-2) {
+    margin-top: 30px;
   }
 }
 
@@ -380,23 +384,27 @@ $flags:
 }
 
 // Styling rules for the site's blog article tags menu. These rules affects both - the blog article listing view and the single blog article view.
-.menu-tags {
-  margin-bottom: 20px;
+// By default the tags menu shares the same style with the sub menu.
+// To add custom styles remove the ".menu-sub" class from the "tags-blog" and "tags-post" components and write the custom style below.
+.tags-title {
+  font-weight: 700;
+  font-size: 14px;
+}
 
+.menu-tags {
+  display: inline-block;
   .menu {
+
     .menu-item {
-      display: inline-block;
-      margin-right: 15px;
 
       .menu-link {
-        @include color($blue-1);
 
         &:hover {
-          @include color($blue-1, 0.8);
+
         }
 
         &.active {
-          font-weight: 700;
+
         }
       }
     }

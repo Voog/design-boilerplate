@@ -25,11 +25,9 @@
 
   <div class="container">
     {% include "header" %}
-    {% include "menu-level-2" %}
+    {% include "tags-blog" %}
 
     <main class="content" role="main">
-      {% include "tags-blog" %}
-
       {% addbutton %}
       {% for article in articles %}
         {% include "post-box" %}
