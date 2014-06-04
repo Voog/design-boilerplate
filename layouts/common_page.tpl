@@ -36,10 +36,12 @@
 
   {% include "javascripts" %}
   {% include "bg-picker" %}
-  {% unless body_image == nil or body_image == '' %}
-    <script>
+  <script>
+    {% unless body_image == nil or body_image == '' %}
       $.backstretch('{{ body_image }}');
-    </script>
-  {% endunless %}
+    {% endunless %}
+
+    site.initCommonPage();
+  </script>
 </body>
 </html>

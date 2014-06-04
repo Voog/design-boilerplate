@@ -34,7 +34,7 @@
     });
   };
 
-  // Removes optional content elements if element doesn't have any content
+  // Removes optional content elements if element doesn't have any content.
   var removeOptionalContent = function() {
     optionalContent = $('.js-content-optional');
     $.each( $(optionalContent), function(){
@@ -94,6 +94,7 @@
   // FUNCTIONS INITIATIONS
   var initFrontPage = function() {
     // Add front page layout specific functions here.
+    removeOptionalContent();
   };
 
   var initCommonPage = function() {
@@ -106,7 +107,7 @@
     // Add blog listing layout specific functions here.
   };
 
-  var initArticlePage = function() {
+  var initPostPage = function() {
     // Add single post layout specific functions here.
     focusCommentsWithErrors();
   };
@@ -117,7 +118,6 @@
     toggleMainMenu();
     handlePopoverMenuHide();
     handleGalleryHover();
-    removeOptionalContent();
     handleWindowResize();
     wrapTables();
     if ($('.table-container').length > 0) {
@@ -130,9 +130,9 @@
   // For example add "<script>site.initBlogPage();</script>" at the end of the "Blog & News" page to initiate blog listing view functions.
   window.site = $.extend(window.site || {}, {
     initFrontPage: initFrontPage,
+    initCommonPage: initCommonPage,
     initBlogPage: initBlogPage,
-    initArticlePage: initArticlePage,
-    initCommonPage: initCommonPage
+    initPostPage: initPostPage
   });
 
   // Initiates site wide functions.

@@ -52,13 +52,12 @@
 
   {% include "javascripts" %}
   {% include "bg-picker" with 'article' %}
-
   <script>
     {% unless body_image == nil or body_image == '' %}
       $.backstretch('{{ body_image }}');
     {% endunless %}
 
-    site.initBlogPage();
+    site.initPostPage();
   </script>
 
 
