@@ -3,7 +3,7 @@
   {% if editmode %}
     <div class="tags-editor">{% editable article.tags %}</div>
   {% else %}
-    {% if article.tags.size > 0 %}
+    {% unless article.tags == empty %}
       <span class="tags-title">{{ tags_title }}:</span>
       <nav class="menu-tags menu-sub">
         <ul class="menu">
@@ -12,6 +12,6 @@
           {% endfor %}
         </ul>
       </nav>
-    {% endif %}
+    {% endunless %}
   {% endif %}
 </div>
