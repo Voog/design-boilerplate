@@ -39,7 +39,6 @@
     optionalContent = $('.js-content-optional');
     $.each( $(optionalContent), function(){
       optionalContentLength = $(this).text().trim().length;
-      console.log(optionalContentLength);
 
       if (!optionalContentLength > 0) {
         $(this).remove();
