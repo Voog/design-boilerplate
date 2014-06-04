@@ -99,7 +99,6 @@
 
   var initCommonPage = function() {
     // Add common page specific functions here.
-    handleFormFieldClick();
     focusCommentsWithErrors();
   };
 
