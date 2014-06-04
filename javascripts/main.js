@@ -42,7 +42,7 @@
       console.log(optionalContentLength);
 
       if (!optionalContentLength > 0) {
-        $(this).css('display', 'none');
+        $(this).remove();
       }
     });
   };
