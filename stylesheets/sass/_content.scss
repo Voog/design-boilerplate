@@ -1,6 +1,7 @@
 /* CONTENT */
 // Styling rules for the site's main content area. These rules affect the entire site.
 .content {
+  display: block;
   margin-top: 30px;
 
   .front-page & {

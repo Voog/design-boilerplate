@@ -671,6 +671,7 @@ body {
 
 /* CONTENT */
 .content {
+  display: block;
   margin-top: 30px;
 }
 .front-page .content {
