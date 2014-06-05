@@ -16,12 +16,12 @@
 {% if site.data.touch_icon %}<link rel="apple-touch-icon" href="{{ site.data.touch_icon }}">{% endif %}
 
 {% comment %}<!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->{% endcomment %}
-<script src="{{ javascripts_path }}/modernizr.js?22"></script>
+<script src="{{ javascripts_path }}/modernizr.js?23"></script>
 
 {% comment %}<!-- STYLESHEETS -->{% endcomment %}
-{% stylesheet_link "main.css?22" %}
-<!--[if lt IE 9]>{% stylesheet_link "ie8.css?22" %}<![endif]-->
-<link rel="stylesheet" href="/assets/admin/tools/0.1.1/edicy-tools.css">
+{% stylesheet_link "main.css?23" %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.css?23" %}<![endif]-->
+<link rel="stylesheet" href="/assets/admin/tools/0.1.1/edicy-tools.css?23">
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
 <title>{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}</title>
