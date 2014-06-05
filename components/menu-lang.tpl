@@ -6,8 +6,8 @@
 </select>
 {% if editmode %}<div class="edit-btn">{% languageadd %}</div>{% endif %}
 
+{% comment %}<!-- Use this code if you want a list type language menu -->{% endcomment %}
 {% comment %}
-<!-- Use this code if you want a list type language menu -->
 <!--
 <ul class="menu">
   {% for language in site.languages %}
