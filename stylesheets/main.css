@@ -91,6 +91,14 @@ body {
   margin-top: 20px;
   font-size: 20px;
 }
+@media screen and (max-width: 480px) {
+  .content-formatted h1 {
+    font-size: 30px;
+  }
+  .content-formatted h2 {
+    font-size: 25px;
+  }
+}
 .content-formatted p {
   margin-top: 20px;
 }
@@ -572,6 +580,7 @@ body {
 }
 
 .tags-title {
+  display: inline-block;
   font-weight: 700;
   font-size: 14px;
 }
@@ -757,6 +766,11 @@ body {
 .post .post-title a:hover {
   color: #1b2124;
   color: rgba(27, 33, 36, 0.8);
+}
+@media screen and (max-width: 480px) {
+  .post .post-title, .post .post-title a {
+    font-size: 30px;
+  }
 }
 .post .post-date {
   font-size: 14px;

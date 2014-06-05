@@ -36,6 +36,16 @@
     font-size: 20px;
   }
 
+    @include query($mobile-1) {
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+    }
+
   // Styling rules for the editable content area paragraphs, lists and links.
   p {
     margin-top: 20px;

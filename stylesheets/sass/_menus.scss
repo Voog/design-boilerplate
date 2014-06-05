@@ -387,6 +387,7 @@ $flags:
 // By default the tags menu shares the same style with the sub menu.
 // To add custom styles remove the ".menu-sub" class from the "tags-blog" and "tags-post" components and write the custom style below.
 .tags-title {
+  display: inline-block;
   font-weight: 700;
   font-size: 14px;
 }
