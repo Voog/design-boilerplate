@@ -19,7 +19,7 @@
   </div>
 
   <div class="header-right">
-    {% include "search" %}
+    {% if site.search.enabled %}{% include "search" %}{% endif %}
 
     {% if editmode or site.has_many_languages? %}
       <nav class="menu-lang">
@@ -28,3 +28,5 @@
     {% endif %}
   </div>
 </header>
+
+{% if site.search.enabled %}<div class="search-mobile">{% include "search" %}</div>{% endif %}

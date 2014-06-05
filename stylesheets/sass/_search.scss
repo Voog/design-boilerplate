@@ -7,10 +7,32 @@
 }
 
 .search {
+  @include query($tablet-2) {
+    margin-right: 40px;
+  }
+
+  @include query($tablet-3) {
+    position: relative;
+    display: block;
+    margin-right: 0;
+
+    .header-right & {
+      display: none;
+    }
+  }
+}
+
+.search-mobile {
+  display: none;
+
+  @include query($tablet-3) {
+    display: block;
+    margin-top: 20px;
+  }
 }
 
 .search-left {
-  .edys-search-input {
+  .search-input {
     width: 128px;
     padding: 7px 10px;
     font-family: inherit;
@@ -18,10 +40,25 @@
     @include border(all, 1px, solid, $grey-1);
     border-radius: 3px;
   }
+
+  @include query($tablet-3) {
+    @include calc(width, "100% - 75px");
+
+    .search-input {
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+  }
 }
 
 .search-right {
   .search-submit {
     vertical-align: middle;
+  }
+
+  @include query($tablet-3) {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }

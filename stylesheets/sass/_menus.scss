@@ -120,7 +120,6 @@
     display: none;
   }
 
-  // Styling rules for the mobile language menu. On
   .menu-lang {
     display: none;
   }
@@ -327,6 +326,10 @@
 
   @include query($tablet-2) {
     display: block;
+
+    .header-right & {
+      display: none;
+    }
   }
 }
 

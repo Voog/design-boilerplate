@@ -3,18 +3,6 @@
 .header {
   padding-bottom: 30px;
 
-  .no-flexbox &,
-  .flexbox & {
-    @include query($tablet-1) {
-      width: 100%;
-    }
-
-    @include query($tablet-2) {
-      display: block;
-      padding-bottom: 0;
-    }
-  }
-
   .no-flexbox & {
     display: table;
     vertical-align: top;
@@ -35,16 +23,11 @@
 
   .header-left {
     .flexbox & {
-      width: 575px;
+      width: 425px;
     }
 
     .header-title {
       display: none;
-
-      @include query($tablet-2) {
-        display: block;
-        margin-right: 40px;
-      }
 
       &, & a {
         font-size: 28px;
@@ -59,18 +42,46 @@
   }
 
   .header-right {
-    width: 385px;
+    width: 535px;
     text-align: right;
 
-    @include query($tablet-2) {
-      .no-flexbox &,
-      .flexbox & {
-        display: none;
-      }
+    @include query($tablet-3) {
+      display: none;
     }
   }
 
   .flexbox & {
     @include flexbox;
+  }
+
+  @include query($tablet-1) {
+    .no-flexbox &,
+    .flexbox & {
+      width: 100%;
+    }
+  }
+
+  @include query($tablet-2) {
+    .header-left {
+      .header-title {
+        display: block;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  @include query($tablet-3) {
+    .no-flexbox &,
+    .flexbox & {
+      display: block;
+      padding-bottom: 0;
+    }
+
+    .header-left {
+      .no-flexbox &,
+      .flexbox & {
+        width: 100%;
+      }
+    }
   }
 }
