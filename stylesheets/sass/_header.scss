@@ -22,7 +22,8 @@
   }
 
   .header-left {
-    width: 550px;
+    width: 640px;
+
 
     .header-title {
       display: none;
@@ -40,12 +41,8 @@
   }
 
   .header-right {
-    width: 410px;
+    width: 320px;
     text-align: right;
-
-    @include query($tablet-3) {
-      display: none;
-    }
   }
 
   .flexbox & {
@@ -56,6 +53,14 @@
     .no-flexbox &,
     .flexbox & {
       width: 100%;
+    }
+
+    .header-left {
+      width: 550px;
+    }
+
+    .header-right {
+      width: 410px;
     }
   }
 
@@ -89,6 +94,10 @@
       .header-title {
         margin-right: 40px;
       }
+    }
+
+    .header-right {
+      display: none;
     }
   }
 }
