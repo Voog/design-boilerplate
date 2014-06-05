@@ -16,7 +16,7 @@
 <body class="post-page">
   {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ body_image }}" data-bg-color="{{ body_color }}"></button>{% endif %}
   {% unless editmode %}
-    {% unless body_color == nil or body_color == '' %}<div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>{% endunless %}
+    {% if body_color != '' or editmode %}<div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>{% endif %}
   {% else %}
     <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
   {% endunless %}
