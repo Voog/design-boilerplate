@@ -81,10 +81,6 @@
     margin-top: 25px;
   }
 
-  blockquote {
-    margin: 20px 40px;
-  }
-
   pre {
     margin-bottom: 0;
     overflow: auto;
@@ -101,6 +97,10 @@
       margin-top: 0;
       padding: 0;
     }
+  }
+
+  blockquote {
+    margin: 20px 40px;
   }
 
   // Styling rules for the site's editable content area tables.
