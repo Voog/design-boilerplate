@@ -16,12 +16,12 @@
   }
 
   .form_field_required {
-    :after {
-      content: ' *';
+    .form_field_label:after {
+      content: '*';
     }
   }
 
-  .form_field label,
+  .form_field_label,
   .edy-fe-label {
     display: block;
     font-weight: 700;

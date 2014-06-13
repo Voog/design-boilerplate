@@ -909,10 +909,10 @@ body {
 .content-formatted .form_field {
   margin-top: 20px;
 }
-.content-formatted .form_field_required :after {
-  content: ' *';
+.content-formatted .form_field_required .form_field_label:after {
+  content: '*';
 }
-.content-formatted .form_field label,
+.content-formatted .form_field_label,
 .content-formatted .edy-fe-label {
   display: block;
   font-weight: 700;
