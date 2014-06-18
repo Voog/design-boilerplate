@@ -6,14 +6,14 @@
   "author": "",
   "layouts": [
     {
-      "content_type": "page",
+      "content_type": "blog",
       "component": false,
       "file": "layouts/blog___news.tpl",
       "layout_name": "page_default",
       "title": "Blog & News"
     },
     {
-      "content_type": "page",
+      "content_type": "blog_article",
       "component": false,
       "file": "layouts/blog_article.tpl",
       "layout_name": "page_default",
@@ -208,12 +208,6 @@
       "file": "javascripts/overthrow.js",
       "kind": "javascripts",
       "filename": "overthrow.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/retina.js",
-      "kind": "javascripts",
-      "filename": "retina.js"
     },
     {
       "content_type": "text/css",
