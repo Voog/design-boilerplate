@@ -1,5 +1,5 @@
 {% editorjsblock %}
-  <script src='/assets/admin/tools/0.1.2/edicy-tools.js?1'></script>
+  <script src='/assets/admin/tools/0.1.3/edicy-tools.js?1'></script>
   <script>
     // Body background image and color data preview and save logic
     {% if bg-picker == "article" %}
@@ -19,6 +19,7 @@
       color: true,
 
       preview: function(data) {
+        console.log('{{ page.data.header_image }}');
         var img = (data.image && data.image !== '') ? 'url("' + data.image + '")' : 'none',
             col = (data.color && data.color !== '') ? data.color : 'none';
 
