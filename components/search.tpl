@@ -9,4 +9,5 @@
         <input class="search-submit js-search-submit" type="submit" value="Search" name="">
       </div>
     </form>
-</div>
+  </div>
+{% endif %}
