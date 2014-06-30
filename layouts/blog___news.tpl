@@ -35,7 +35,6 @@
     </main>
 
     {% include "footer" %}
-
   </div>
 
   {% include "javascripts" %}
