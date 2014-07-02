@@ -25,7 +25,8 @@
 <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/1.0.0/edicy-search.css">
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
-<title>{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}</title>
+{% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}
+<title>{{ page_title }}</title>
 
 {% comment %}<!-- FACEBOOK OPENGRAPH -->{% endcomment %}
 <!-- https://developers.facebook.com/tools/debug - Debug after each modification -->
