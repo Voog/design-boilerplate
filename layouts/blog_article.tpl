@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
-<head>
+<head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
-  <meta property="og:url" content="{{ site.url }}">
-  <meta property="og:title" content="{{ site.name }}">
-  <meta property="og:description" content="{{ article.excerpt | strip_html | truncate: 120 }}">
-  {% comment %}<!-- TODO: Add functionality after the CMS is going to support it -->{% endcomment %}
-  {% if page.data.fb_image %}<meta property="og:image" content="{{ site.url }}{{ photos_path }}/{{ page.data.fb_image }}">{% endif %}
-
   {% include 'bg-picker-variables' with 'article' %}
-
   {{ site.stats_header }}
 </head>
 
