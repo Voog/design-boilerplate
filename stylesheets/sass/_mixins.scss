@@ -38,6 +38,15 @@
   }
 }
 
+@mixin fill($color, $opacity: 1) {
+  @if $opacity == 1 {
+    fill: rgba($color, $opacity);
+  } @else {
+    fill: $color;
+    fill: rgba($color, $opacity);
+  }
+}
+
 // BORDERS
 @mixin border($side, $width, $style, $color, $opacity: 1) {
   @if $side == 'all' {
