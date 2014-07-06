@@ -22,7 +22,7 @@
 {% stylesheet_link "main.css?23" %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.css?23" %}<![endif]-->
 <link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css?23">
-<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/1.0.0/edicy-search.css">
+<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/1.0.0/edicy-search.css?23">
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
 {% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}
