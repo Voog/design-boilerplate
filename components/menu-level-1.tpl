@@ -11,9 +11,10 @@
               <li class="menu-item">
                 <a class="menu-link{% if subitem.selected? %} active{% endif %}{% unless subitem.translated? %} untranslated fci-editor-menuadd{% endunless %}" href="{{ subitem.url }}">{{ subitem.title }}</a>
               </li>
-              {% if item.hidden_children.size > 0 %}<li class="edit-btn">{% menubtn item.hidden_children %}</li>{% endif %}
-              {% if editmode %}<li class="edit-btn">{% menuadd parent="item" %}</li>{% endif %}
             {% endfor %}
+
+            {% if item.hidden_children.size > 0 %}<li class="edit-btn">{% menubtn item.hidden_children %}</li>{% endif %}
+            {% if editmode %}<li class="edit-btn">{% menuadd parent="item" %}</li>{% endif %}
           </ul>
         </div>
       {% endif %}
