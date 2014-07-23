@@ -175,27 +175,15 @@
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/autogrow.js",
+      "file": "javascripts/application.js",
       "kind": "javascripts",
-      "filename": "autogrow.js"
+      "filename": "application.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/backstretch.js",
+      "file": "javascripts/application.min.js",
       "kind": "javascripts",
-      "filename": "backstretch.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/jquery.js",
-      "kind": "javascripts",
-      "filename": "jquery.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/main.js",
-      "kind": "javascripts",
-      "filename": "main.js"
+      "filename": "application.min.js"
     },
     {
       "content_type": "application/javascript",
@@ -205,21 +193,21 @@
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/overthrow.js",
+      "file": "javascripts/modernizr.min.js",
       "kind": "javascripts",
-      "filename": "overthrow.js"
-    },
-    {
-      "content_type": "text/css",
-      "file": "stylesheets/ie8.css",
-      "kind": "stylesheets",
-      "filename": "ie8.css"
+      "filename": "modernizr.min.js"
     },
     {
       "content_type": "text/css",
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
       "filename": "main.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/main.min.css",
+      "kind": "stylesheets",
+      "filename": "main.min.css"
     }
   ]
 }
