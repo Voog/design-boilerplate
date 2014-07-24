@@ -1,6 +1,6 @@
 {
   "name": "voog-design-boilerplate",
-  "description": "The basic developer's template for Voog",
+  "description": "The basic developer's design template for Voog",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-bowercopy": "^1.1.0",
