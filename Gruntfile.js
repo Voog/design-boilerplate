@@ -24,8 +24,8 @@ module.exports = function(grunt) {
           destPrefix: 'javascripts/src/'
         },
         files: {
-          'concat/jquery.js': 'jquery/dist/jquery.js',
           'concat/backstretch.js': 'jquery-backstretch/jquery.backstretch.js',
+          'concat/jquery.js': 'jquery/dist/jquery.js',
           'concat/overthrow.js': 'overthrow/src/overthrow-polyfill.js',
           'modernizr.js': 'modernizr/modernizr.js'
         }
@@ -47,13 +47,10 @@ module.exports = function(grunt) {
         'devFile' : 'javascripts/src/modernizr.js',
         'outputFile' : 'javascripts/modernizr.js',
 
-        'css': {
-          'flexbox': true
-        },
-
-        'misc': {
-          'svg': true
-        },
+        'tests': [
+          'flexbox',
+          'svg'
+        ],
 
         'uglify' : false
       }
