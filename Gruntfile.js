@@ -149,7 +149,10 @@ module.exports = function(grunt) {
     watch: {
       concat: {
         files: 'javascripts/src/concat/*.js',
-        tasks: 'concat'
+        tasks: 'concat',
+        options: {
+          spawn: false
+        }
       },
 
       uglify: {
@@ -166,6 +169,22 @@ module.exports = function(grunt) {
       css: {
         files: 'stylesheets/scss/*.scss',
         tasks: ['sass', 'newer:cssmin'],
+        options: {
+          spawn: false
+        }
+      },
+
+      imagemin:  {
+        files: 'images/src/*.{png,jpg,gif}',
+        tasks: 'newer:imagemin',
+        options: {
+          spawn: false
+        }
+      },
+
+      svgmin: {
+        files: 'assets/src/*.svg',
+        tasks: 'newer:svgmin',
         options: {
           spawn: false
         }
