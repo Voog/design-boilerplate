@@ -10688,7 +10688,7 @@ return jQuery;
   // Switches the site language to the selected value from the language menu.
   var handleLanguageSwitch = function() {
     $('.menu-lang').find('.menu').change(function() {
-      // window.location = $(this).find(':selected').val();
+      window.location = $(this).find(':selected').val();
     });
   };
 
