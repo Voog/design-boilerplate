@@ -1,10 +1,10 @@
 {
   "name": "voog-design-boilerplate",
   "devDependencies": {
-    "bourbon": "~4.0.2",
     "modernizr": "~2.8.3",
-    "jquery-backstretch": "~2.0.4",
+    "jquery": "~1.x",
+    "bourbon": "~4.0.2",
     "overthrow": "~0.7.0",
-    "jquery": "~1.x"
+    "jquery-backstretch": "~2.0.4"
   }
 }
