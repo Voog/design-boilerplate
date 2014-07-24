@@ -78,7 +78,6 @@ module.exports = function(grunt) {
           cwd: 'javascripts/',
           src: [
             '*.js',
-            'modernizr.js',
             '!*.min.js'
           ],
           dest: 'javascripts/',
@@ -192,7 +191,5 @@ module.exports = function(grunt) {
     },
   });
 
-grunt.registerTask('default', ['bowercopy', 'modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
-
-grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('default', ['bowercopy', 'modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 };
