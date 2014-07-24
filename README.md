@@ -1,4 +1,4 @@
-#The Pripyat design (basic boilerplate) template for Voog
+#The Pripyat design template (basic boilerplate) for Voog
 
 To modify this template npm, node.js, grunt and bower must be installed.
 To set up the local developing environment, clone this repository and run the following commands:
