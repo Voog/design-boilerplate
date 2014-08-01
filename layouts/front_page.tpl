@@ -3,7 +3,6 @@
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
   {% include "bg-picker-variables" %}
-  {{ site.stats_header }}
 </head>
 
 <body class="front-page">

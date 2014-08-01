@@ -16,13 +16,13 @@
 {% if site.data.touch_icon %}<link rel="apple-touch-icon" href="{{ site.data.touch_icon }}">{% endif %}
 
 {% comment %}<!-- MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC -->{% endcomment %}
-<script src="{{ javascripts_path }}/modernizr.js?23"></script>
+<script src="{{ javascripts_path }}/modernizr.js"></script>
 
 {% comment %}<!-- STYLESHEETS -->{% endcomment %}
-{% stylesheet_link "main.css?23" %}
-<!--[if lt IE 9]>{% stylesheet_link "ie8.css?23" %}<![endif]-->
-<link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css?23">
-<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/1.0.0/edicy-search.css?23">
+{% stylesheet_link "main.css" %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.css" %}<![endif]-->
+<link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">
+<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/1.0.0/edicy-search.css">
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
 {% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}
@@ -58,3 +58,6 @@
     <meta name="description" content="{{ page.description }}">
   {% endunless %}
 {% endif %}
+
+{% if blog %}{{ blog.rss_link }}{% endif %}
+{{ site.stats_header }}
