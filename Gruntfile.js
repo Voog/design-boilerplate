@@ -109,10 +109,7 @@ module.exports = function(grunt) {
           '!*.min.css'
         ],
         dest: 'stylesheets/',
-        ext: '.min.css',
-        options: {
-          spawn: false
-        }
+        ext: '.min.css'
       }
     },
 
@@ -145,10 +142,7 @@ module.exports = function(grunt) {
     watch: {
       concat: {
         files: 'javascripts/src/concat/*.js',
-        tasks: 'concat',
-        options: {
-          spawn: false
-        }
+        tasks: 'concat'
       },
 
       uglify: {
@@ -164,7 +158,7 @@ module.exports = function(grunt) {
 
       css: {
         files: 'stylesheets/scss/*.scss',
-        tasks: ['sass', 'newer:cssmin'],
+        tasks: ['sass', 'cssmin'],
         options: {
           spawn: false
         }
