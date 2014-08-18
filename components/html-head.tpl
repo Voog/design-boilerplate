@@ -21,7 +21,7 @@
 {% comment %}<!-- STYLESHEETS -->{% endcomment %}
 {% stylesheet_link "main.css" %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.css" %}<![endif]-->
-<link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">
+{% if editmode %}<link rel="stylesheet" href="/assets/admin/tools/0.1.3/edicy-tools.css">{% endif %}
 <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/1.0.0/edicy-search.css">
 
 {% comment %}<!-- SITE TITLE -->{% endcomment %}
