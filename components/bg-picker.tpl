@@ -1,5 +1,5 @@
 {% editorjsblock %}
-  <script src='/assets/admin/tools/0.1.3/edicy-tools.js?1'></script>
+  <script src='{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js'></script>
   <script>
     // Body background image and color data preview and save logic
     {% if bg-picker == "article" %}
