@@ -45,8 +45,8 @@
   {% elsif site.data.fb_image %}
     <meta property="og:image" content="{{ site.data.fb_image }}">
   {% endif %}
-  <meta property="og:description" content="{{ article.excerpt | strip_html | truncate: 200 }}">
-  <meta name="description" content="{{ article.excerpt | strip_html | truncate: 200 }}">
+  <meta property="og:description" content="{{ article.excerpt | strip_html | truncatewords: 200, '...' }}">
+  <meta name="description" content="{{ article.excerpt | strip_html | truncatewords: 200, '...' }}">
 {% else %}
   {% if page.data.fb_image %}
     <meta property="og:image" content="{{ page.data.fb_image }}">
