@@ -1,14 +1,5 @@
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-bowercopy');
-  grunt.loadNpmTasks('grunt-modernizr');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-newer');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  "use strict";
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -56,7 +47,24 @@ module.exports = function(grunt) {
       }
     },
 
-    // Concatenates javascripts into one file.
+    // Copys the standalone (not concatenated) javascript source files to the javascripts folder.
+    copy: {
+      javascripts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'javascripts/src',
+            src: [
+              '*.js',
+              '!modernizr.js'
+            ],
+            dest: 'javascripts/'
+          }
+        ]
+      }
+    },
+
+    // Concatenates the javascript source files to the javascripts folder.
     concat: {
       build: {
         src: [
@@ -87,7 +95,8 @@ module.exports = function(grunt) {
     sass: {
       build: {
         options: {
-          style: 'expanded'
+          style: 'expanded',
+          sourcemap: 'none'
         },
         files: [{
           expand: true,
@@ -96,6 +105,19 @@ module.exports = function(grunt) {
           dest: 'stylesheets',
           ext: '.css'
         }]
+      }
+    },
+
+    exec: {
+      kitmanifest: {
+        cmd: function(file) {
+          return 'kit manifest';
+        }
+      },
+      kit: {
+        cmd: function(file) {
+          return 'kit push -s ' + grunt.option('site') + ' ' + file;
+        }
       }
     },
 
@@ -115,7 +137,7 @@ module.exports = function(grunt) {
 
     // Minifies the image files.
     imagemin: {
-      images: {
+      build: {
         files: [{
           expand: true,
           cwd: 'images/src/',
@@ -140,41 +162,18 @@ module.exports = function(grunt) {
 
     // Watches the project for changes and recompiles the output files.
     watch: {
-      concat: {
+      js: {
         files: 'javascripts/src/concat/*.js',
-        tasks: 'concat'
-      },
-
-      uglify: {
-        files: [
-        'javascripts/*.js',
-        '!javascripts/*.min.js'
-        ],
-        tasks: 'newer:uglify',
-        options: {
-          spawn: false
-        }
+        tasks: ['newer:concat', 'newer:uglify']
       },
 
       css: {
         files: 'stylesheets/scss/*.scss',
-        tasks: ['sass', 'cssmin'],
-        options: {
-          spawn: false
-        }
+        tasks: ['sass:build', 'newer:cssmin:build']
       },
 
-      imagemin:  {
-        files: 'images/src/*.{png,jpg,gif}',
-        tasks: 'newer:imagemin',
-        options: {
-          spawn: false
-        }
-      },
-
-      svgmin: {
-        files: 'assets/src/*.svg',
-        tasks: 'newer:svgmin',
+      voog: {
+        files: ['javascripts/*.js', 'stylesheets/*.css', 'layouts/*.tpl', 'components/*.tpl'],
         options: {
           spawn: false
         }
@@ -182,5 +181,29 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.registerTask('default', ['bowercopy', 'modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.loadNpmTasks('grunt-bowercopy');
+  grunt.loadNpmTasks('grunt-modernizr');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-exec');
+
+  grunt.registerTask('default', ['bowercopy', 'modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+
+  grunt.event.on('watch', function(action, filepath, target) {
+    if (target == 'voog') {
+      if (action == "added" || action == "deleted") {
+        grunt.task.run(['exec:kitmanifest']);
+      }
+      if (action != "deleted") {
+        grunt.task.run(['exec:kit:' + filepath]);
+      }
+    }
+  });
 };
