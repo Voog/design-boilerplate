@@ -1,4 +1,4 @@
-{% comment %}<!-- SITE WIDE JAVASCRIPTS -->{% endcomment %}
+{% comment %}SITE WIDE JAVASCRIPTS{% endcomment %}
 <script src="{{ javascripts_path }}/application.min.js"></script>
 <script src="{{ site.static_asset_host }}/libs/picturefill/latest/picturefill.min.js"></script>
 
@@ -16,5 +16,5 @@
   </script>
 {% endif %}
 
-{% comment %}<!-- GOOGLE ANALYTICS INITIATION -->{% endcomment %}
+{% comment %}GOOGLE ANALYTICS INITIATION{% endcomment %}
 {% unless editmode %}{{ site.analytics }}{% endunless %}
