@@ -116,7 +116,11 @@ module.exports = function(grunt) {
       },
       kit: {
         cmd: function(file) {
-          return 'kit push -s ' + grunt.option('site') + ' ' + file;
+          if (grunt.option('site')) {
+            return 'kit push -s ' + grunt.option('site') + ' ' + file;
+          } else {
+            return 'kit push ' + file;
+          }
         }
       }
     },
