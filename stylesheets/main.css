@@ -119,17 +119,15 @@ body {
   margin-top: 25px;
 }
 .content-formatted pre {
-  margin-bottom: 0;
   overflow: auto;
-  white-space: nowrap;
-}
-.content-formatted pre, .content-formatted pre code {
+  margin-bottom: 0;
   padding: 10px;
   font-size: 14px;
   background-color: #fafafa;
 }
 .content-formatted pre code {
   display: block;
+  white-space: nowrap;
   margin-top: 0;
   padding: 0;
 }
@@ -314,7 +312,7 @@ body {
     font-size: 14px;
   }
   .menu-main.expanded .menu-sub .menu .menu-link.active {
-    background-color: black;
+    background-color: #000000;
     background-color: rgba(0, 0, 0, 0.5);
   }
   .menu-main.expanded .menu-lang {
@@ -1016,12 +1014,12 @@ body {
   color: rgba(27, 33, 36, 0.75);
   line-height: 1;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .footer .voog-reference a:hover {
   color: #1b2124;
   color: rgba(27, 33, 36, 0.75);
-  border: 1px solid black;
+  border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.75);
 }

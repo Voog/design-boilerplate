@@ -113,6 +113,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/open-graph.tpl",
+      "layout_name": "open-graph",
+      "title": "open-graph"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/post-box.tpl",
       "layout_name": "post-box",
       "title": "post-box"
