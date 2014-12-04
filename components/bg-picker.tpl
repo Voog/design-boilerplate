@@ -19,7 +19,6 @@
       color: true,
 
       preview: function(data) {
-        console.log('{{ page.data.header_image }}');
         var img = (data.image && data.image !== '') ? 'url("' + data.image + '")' : 'none',
             col = (data.color && data.color !== '') ? data.color : 'none';
 
