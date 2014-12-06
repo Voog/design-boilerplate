@@ -1,0 +1,48 @@
+/* NAVIGATION MENUS*/
+// Base
+.menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+
+  a {
+    display: block;
+    text-decoration: none;
+    border: nonse;
+  }
+}
+
+// Main menu
+.menu-main {
+
+  li {
+    display: inline-block;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    &.is-active,
+    &:hover {
+
+    }
+
+    &.is-active {
+
+    }
+
+    &.is-untranslated {
+      &:hover {
+
+      }
+    }
+
+    &.edy-menu-menuadd,
+    &.edy-menu-hidden {
+
+    }
+  }
+}

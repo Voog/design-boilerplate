@@ -9,47 +9,23 @@ module.exports = function(grunt) {
       build: {
         'devFile' : 'bower_components/modernizr/modernizr.js',
         'outputFile' : 'javascripts/modernizr.js',
-
         'tests': [
-          'flexbox',
-          'svg'
+        'flexbox',
+        'svg'
         ],
-
         'uglify' : false
       }
     },
-
-    // Copys the standalone (not concatenated) javascript source files to the javascripts folder.
-    /*
-      If there are some javascript files that shouldn't be concatenated:
-        - Add the files to 'javascripts/src' folder.
-        - Uncomment the following task.
-        - Uncomment the task runner on line '166'.
-        - Run 'npm install grunt-contrib-copy' on command-line.
-        - Add 'copy' task next to 'modernizr' task on line '179'.
-    */
-    // copy: {
-    //   javascripts: {
-    //     files: [
-    //       {
-    //         expand: true,
-    //         cwd: 'javascripts/src',
-    //         src: '*.js',
-    //         dest: 'javascripts/'
-    //       }
-    //     ]
-    //   }
-    // },
 
     // Concatenates the javascript source files to the javascripts folder.
     concat: {
       build: {
         src: [
-        'bower_components/jquery/jquery.js',
+        'bower_components/jquery/dist/jquery.js',
         'bower_components/overthrow/src/overthrow-polyfill.js',
         'javascripts/src/concat/*.js'
         ],
-        dest: 'javascripts/application.js'
+        dest: 'javascripts/main.js'
       }
     },
 
@@ -60,8 +36,8 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'javascripts/',
           src: [
-            '*.js',
-            '!*.min.js'
+          '*.js',
+          '!*.min.js'
           ],
           dest: 'javascripts/',
           ext: '.min.js'
@@ -78,28 +54,11 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'stylesheets/scss',
+          cwd: 'stylesheets/scss/',
           src: '*.scss',
-          dest: 'stylesheets',
+          dest: 'stylesheets/',
           ext: '.css'
         }]
-      }
-    },
-
-    exec: {
-      kitmanifest: {
-        cmd: function(file) {
-          return 'kit manifest';
-        }
-      },
-      kit: {
-        cmd: function(file) {
-          if (grunt.option('site')) {
-            return 'kit push -s ' + grunt.option('site') + ' ' + file;
-          } else {
-            return 'kit push ' + file;
-          }
-        }
       }
     },
 
@@ -109,8 +68,8 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'stylesheets/',
         src: [
-          '*.css',
-          '!*.min.css'
+        '*.css',
+        '!*.min.css'
         ],
         dest: 'stylesheets/',
         ext: '.min.css'
@@ -129,7 +88,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Minifies the scalable vector graphics files
+    // Minifies the scalable vector graphics files.
     svgmin: {
       build: {
         files: [{
@@ -139,7 +98,26 @@ module.exports = function(grunt) {
           dest: 'assets/',
           ext: '.svg'
         }]
+      }
+    },
+
+    // Executes the Voog Kit toolkit manifest generation and file upload commands.
+    exec: {
+      kitmanifest: {
+        cmd: function(file) {
+          return 'kit manifest';
+        }
       },
+
+      kit: {
+        cmd: function(file) {
+          if (grunt.option('site')) {
+            return 'kit push -s ' + grunt.option('site') + ' ' + file;
+          } else {
+            return 'kit push ' + file;
+          }
+        }
+      }
     },
 
     // Watches the project for changes and recompiles the output files.
@@ -150,8 +128,25 @@ module.exports = function(grunt) {
       },
 
       css: {
-        files: 'stylesheets/scss/*.scss',
-        tasks: ['sass:build', 'newer:cssmin:build']
+        files: [
+          'stylesheets/scss/*.scss',
+          'stylesheets/scss/*/*.scss'
+        ],
+        tasks: ['newer:sass:build', 'newer:cssmin:build']
+      },
+
+      img: {
+        files: [
+          'images/src/*.jpg',
+          'images/src/*.png',
+          'images/src/*.gif'
+        ],
+        tasks: ['newer:imagemin:build']
+      },
+
+      svg: {
+        files: 'assets/src/*.svg',
+        tasks: ['newer:svgmin:build']
       },
 
       voog: {
@@ -164,8 +159,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  // Uncomment the following task if there are some javascript files that shouldn't be concatenated (see line '22' for further instructions).
-  // grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -183,8 +176,10 @@ module.exports = function(grunt) {
       if (action == "added" || action == "deleted") {
         grunt.task.run(['exec:kitmanifest']);
       }
-      if (action != "deleted") {
-        grunt.task.run(['exec:kit:' + filepath]);
+      if (grunt.file.exists('.voog')) {
+        if (action != "deleted") {
+          grunt.task.run(['exec:kit:' + filepath]);
+        }
       }
     }
   });

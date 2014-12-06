@@ -1,0 +1,15 @@
+.is-visible {
+  @extend %block;
+}
+
+.is-hidden {
+  @extend %hidden;
+}
+
+.is-untranslated {
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}

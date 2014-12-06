@@ -1,0 +1,57 @@
+.content-formatted {
+  @extend %clearfix;
+  @include hyphens(auto);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-positionable-container-center-block {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+
+  }
+
+  a {
+
+    &:hover {
+
+    }
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  $floating-image-margin: 10px;
+
+  .edy-positionable-container-left {
+    margin-right: $floating-image-margin;
+  }
+
+  .edy-positionable-container-right {
+    margin-left: $floating-image-margin;
+  }
+}

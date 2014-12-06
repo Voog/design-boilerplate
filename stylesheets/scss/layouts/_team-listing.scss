@@ -1,0 +1,11 @@
+.team-listing-page {
+  .team-listing {
+    margin-top: 20px;
+  }
+
+  .member-picture {
+    img {
+      @extend %block;
+    }
+  }
+}

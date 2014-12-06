@@ -1,0 +1,169 @@
+// FRAMEWORK
+// Extendable classes for commonly used styling rules for different elements.
+
+// BASIC
+%clearfix:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+%spritesheet {
+  background-image: url(../images/spritesheet.png);
+}
+
+%pseudo-block {
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+%height-100p {
+  height: 100%;
+}
+
+%min-height-100p {
+  min-height: 100%;
+}
+
+// POSITIONING
+%absolute {
+  position: absolute;
+}
+
+%relative {
+  position: relative;
+}
+
+%static {
+  position: static;
+}
+
+%stretch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// FLOAT POSITIONS
+%left {
+  float: left;
+}
+
+%right {
+  float: right;
+}
+
+// DISPLAY METHODS
+%block {
+  display: block;
+}
+
+%inline {
+  display: inline;
+}
+
+%inline-block {
+  display: inline-block;
+}
+
+%hidden {
+  display: none;
+}
+
+// VERTICAL ALIGNMENTS
+%align-top {
+  vertical-align: top;
+}
+
+%align-middle {
+  vertical-align: middle;
+}
+
+%align-bottom {
+  vertical-align: bottom;
+}
+
+// FONT WEIGHTS & STYLES
+%align-text-left {
+  text-align: left;
+}
+
+%align-text-center {
+  text-align: center;
+}
+
+%align-text-right {
+  text-align: right;
+}
+
+%weight-normal {
+  font-weight: 400;
+}
+
+%weight-bold {
+  font-weight: 700;
+}
+
+%weight-italic {
+  font-style: italic;
+}
+
+// REUASBLE ELEMENTS
+%button {
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+}
+
+%remove-button {
+  @extend %spritesheet;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  background-position: -109px -6px;
+  background-color: $white;
+  border: 1px solid rgba($black,.3);
+  border-radius: 50%;
+}
+
+%inherit-base-font {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+%input-ios-reset {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+%site-header-margin {
+  margin-bottom: 50px;
+}
+
+%content-inner-padding {
+  padding: 33px 25px;
+}

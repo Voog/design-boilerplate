@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;;
+  font-size: $base-font-size;
+  font-weight: 400;
+  line-height: $base-line-height;
+  color: rgba($black,1);
+}
+
+a {
+  img {
+    border: none;
+  }
+}
