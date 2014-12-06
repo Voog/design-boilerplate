@@ -21,21 +21,9 @@
 {% endif %}
 
 {% comment %}SITE TITLE{% endcomment %}
-{% capture page_title %}
-  {% if article %}
-    {{ article.title }} — {{ page.site_title }}
-  {% else %}
-    {% if site.root_item.selected? %}
-      {{ page.site_title }}
-    {% else %}
-      {{ page.title }} — {{ page.site_title }}
-    {% endif %}
-  {% endif %}
-{% endcapture %}
+{% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}
 <title>{{ page_title }}</title>
 
 {% comment %}MISC{% endcomment %}
 {% include 'open-graph' %}
-{% if blog %}
-  {{ blog.rss_link }}
-{% endif %}
+{% if blog %}{{ blog.rss_link }}{% endif %}
