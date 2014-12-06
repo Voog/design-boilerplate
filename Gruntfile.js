@@ -132,7 +132,7 @@ module.exports = function(grunt) {
           'stylesheets/scss/*.scss',
           'stylesheets/scss/*/*.scss'
         ],
-        tasks: ['newer:sass:build', 'newer:cssmin:build']
+        tasks: ['sass:build', 'newer:cssmin:build']
       },
 
       img: {

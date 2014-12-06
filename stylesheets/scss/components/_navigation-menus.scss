@@ -6,6 +6,10 @@
   padding-left: 0;
   list-style-type: none;
 
+  li {
+    display: inline-block;
+  }
+
   a {
     display: block;
     text-decoration: none;
@@ -15,23 +19,24 @@
 
 // Main menu
 .menu-main {
+  @extend %left;
 
   li {
-    display: inline-block;
-
     &:last-child {
       margin-right: 0;
     }
-  }
 
-  a {
-    &.is-active,
     &:hover {
-
+      a {
+        color: rgba($black,.8);
+      }
     }
 
     &.is-active {
-
+      a {
+        font-weight: 700;
+        color: rgba($black,.55);
+      }
     }
 
     &.is-untranslated {
@@ -40,9 +45,10 @@
       }
     }
 
-    &.edy-menu-menuadd,
-    &.edy-menu-hidden {
-
-    }
   }
+}
+
+// Language menu
+.menu-language {
+  @extend %right;
 }

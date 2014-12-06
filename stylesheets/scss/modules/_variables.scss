@@ -2,29 +2,24 @@
 // Global variables to use in every .scss files.
 // Comment out the "_variables.scss" partial in the "main.scss" file if not used.
 
-// Basic colors
+// Basic colors.
 $black: #000000;
 $white: #ffffff;
-$blue: #009ad3;
-$grey: #2e2e2e;
-$yellow: #f1be26;
-$orange: #cc4400;
-$red: #CC0000;
-$green: #60a740;
 
-// Paddings
-$primary-vertical-padding: 25px;
-$primary-horizontal-padding: 20px;
+// Specific colors.
+$link-color: #0066bb;
+$error-color: #cc0000;
+$sucess-color: #60a740;
 
-// Font sizes
-$base-font-size: 16px;
+// Font sizes.
+$base-font-size: 18px;
 
-// Line heights
+// Line heights.
 $base-line-height: 1.3em;
 
-// Media query breakpoints
-$tablet-big: 1024px;
-$tablet-middle: 768px;
-$tablet-small: 640px;
-$mobile-big: 480px;
-$mobile-small: 320px;
+// Media query breakpoints.
+$tablet-1: 1024px;
+$tablet-2: 768px;
+$tablet-3: 640px;
+$mobile-1: 480px;
+$mobile-2: 320px;

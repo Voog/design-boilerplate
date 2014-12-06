@@ -1,11 +1,8 @@
 .site-container {
-  .container-inner {
-    @extend %clearfix;
-  }
-
-  .page-content {
-    @include flex(1);
-  }
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba($white,1);
 }
 
 .blog-article {
