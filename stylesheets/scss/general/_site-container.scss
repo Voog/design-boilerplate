@@ -1,70 +1,22 @@
 .site-container {
-  max-width: 940px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 20px;
-  padding-left: 20px;
-
   .container-inner {
-    @include display(flex);
     @extend %clearfix;
-    padding-bottom: 10px;
   }
 
   .page-content {
     @include flex(1);
   }
-
-  .view-archive {
-    display: block;
-    text-align: right;
-    text-decoration: none;
-    font-size: 22px;
-  }
 }
 
 .blog-article {
-  padding: 10px;
-  border-top: 2px solid #CC4400;
-
   .article-title {
     &,
     & a {
-      font-size: 24px;
-      line-height: 1.3em;
+
     }
 
     a {
-      text-decoration: none;
-    }
-  }
-}
 
-.team-member {
-  margin-top: 20px;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  .inner {
-    .flexbox & {
-      @include display(flex);
-      @include align-items(center);
-    }
-  }
-
-  .member-picture {
-    min-width: 105px;
-    margin-right: 20px;
-  }
-
-  .member-about {
-    max-width: 465px;
-
-    p {
-      margin-top: 5px;
-      margin-bottom: 5px;
     }
   }
 }

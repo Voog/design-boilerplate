@@ -18,7 +18,7 @@ a img {
   content: '';
 }
 
-.is-visible, .team-listing-page .member-picture img {
+.is-visible {
   display: block;
 }
 
@@ -133,27 +133,6 @@ a img {
   margin-bottom: 5px;
 }
 
-.front-page .blog-listing {
-  margin-top: 20px;
-}
-
-.team-listing-page .team-listing {
-  margin-top: 20px;
-}
-
-.team-details-page .member-title {
-  color: #cc4400;
-}
-.team-details-page .edy-element-thumb-catcher {
-  width: 105px;
-  min-height: 105px;
-}
-.team-details-page .edy-element-thumb-catcher .edy-element-thumb-empty {
-  padding-top: 42.5px;
-  padding-bottom: 42.5px;
-  font-size: 10px;
-}
-
 /* NAVIGATION MENUS*/
 .menu {
   margin-top: 0;
@@ -172,6 +151,10 @@ a img {
 }
 .menu-main li:last-child {
   margin-right: 0;
+}
+
+.front-page .blog-listing {
+  margin-top: 20px;
 }
 
 .content-formatted {
