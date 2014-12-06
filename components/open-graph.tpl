@@ -1,6 +1,9 @@
 {% comment %}FACEBOOK OPEN GRAPH META TAGS{% endcomment%}
 {% comment %}https://developers.facebook.com/tools/debug - Debug after each modification{% endcomment %}
-{% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">{% endif %}
+{% comment %}Open Graph basics{% endcomment %}
+{% if site.data.fb_admin %}
+  <meta property="fb:admins" content="{{ site.data.fb_admin }}">
+{% endif %}
 <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ site.url }}{% if article %}{{ article.url | remove_first:'/' }}{% else %}{{ page.url | remove_first:'/' }}{% endif %}">
 <meta property="og:title" content="{{ page_title | escape }}">
@@ -21,7 +24,12 @@
   <meta property="og:description" content="{{ description }}">
   <meta name="description" content="{{ description }}">
 {% else %}
-  {% if article %}{% assign description = article.description %}{% else %}{% assign description = page.description %}{% endif %}
+  {% if article %}
+    {% assign description = article.description %}
+  {% else %}
+    {% assign description = page.description %}
+  {% endif %}
+
   {% if description != nil and description != "" %}
     <meta property="og:description" content="{{ description }}">
     <meta name="description" content="{{ description }}">

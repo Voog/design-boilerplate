@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
-    {% include "html-head" %}
+    {% include 'html-head' %}
   </head>
 
   <body class="common-page">
     <div class="site-container">
-      {% include "site_header" %}
+      {% include 'site-header' %}
 
-      {% include "site_sidebar" %}
+      {% include 'site-sidebar' %}
 
       <main class="page-content content-formatted" role="main">{% content %}</main>
 
-      {% include "site_footer" %}
+      {% include 'site-footer' %}
 
-      {% include "site_javascripts" %}
+      {% include 'site-javascripts' %}
       <script>site.initCommonPage();</script>
     </div>
   </body>

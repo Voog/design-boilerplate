@@ -15,13 +15,27 @@
 <script src="{{ javascripts_path }}/modernizr.js"></script>
 
 {% comment %}STYLESHEETS{% endcomment %}
-{% stylesheet_link "main.min.css" %}
-{% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
+{% stylesheet_link 'main.min.css' %}
+{% if editmode %}
+  <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
+{% endif %}
 
 {% comment %}SITE TITLE{% endcomment %}
-{% capture page_title %}{% if article %}{{ article.title }} — {{ page.site_title }}{% else %}{% if site.root_item.selected? %}{{ page.site_title }}{% else %}{{ page.title }} — {{ page.site_title }}{% endif %}{% endif %}{% endcapture %}
+{% capture page_title %}
+  {% if article %}
+    {{ article.title }} — {{ page.site_title }}
+  {% else %}
+    {% if site.root_item.selected? %}
+      {{ page.site_title }}
+    {% else %}
+      {{ page.title }} — {{ page.site_title }}
+    {% endif %}
+  {% endif %}
+{% endcapture %}
 <title>{{ page_title }}</title>
 
 {% comment %}MISC{% endcomment %}
 {% include 'open-graph' %}
-{% if blog %}{{ blog.rss_link }}{% endif %}
+{% if blog %}
+  {{ blog.rss_link }}
+{% endif %}

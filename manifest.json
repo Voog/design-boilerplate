@@ -151,9 +151,46 @@
       "file": "components/site_translations.tpl",
       "layout_name": "site translations",
       "title": "site translations"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/test__component.tpl",
+      "layout_name": "test  component",
+      "title": "test  component"
     }
   ],
   "assets": [
+    {
+      "content_type": "text/unknown",
+      "file": "assets/.DS_Store",
+      "kind": "assets",
+      "filename": ".DS_Store"
+    },
+    {
+      "content_type": "application/x-wais-source",
+      "file": "assets/src",
+      "kind": "assets",
+      "filename": "src"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/.DS_Store",
+      "kind": "assets",
+      "filename": ".DS_Store"
+    },
+    {
+      "content_type": "application/x-wais-source",
+      "file": "assets/src",
+      "kind": "assets",
+      "filename": "src"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/.DS_Store",
+      "kind": "assets",
+      "filename": ".DS_Store"
+    },
     {
       "content_type": "application/javascript",
       "file": "javascripts/main.js",
@@ -179,6 +216,18 @@
       "filename": "modernizr.min.js"
     },
     {
+      "content_type": "application/x-wais-source",
+      "file": "assets/src",
+      "kind": "assets",
+      "filename": "src"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/.DS_Store",
+      "kind": "assets",
+      "filename": ".DS_Store"
+    },
+    {
       "content_type": "text/css",
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
@@ -189,6 +238,12 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "stylesheets/scss",
+      "kind": "stylesheets",
+      "filename": "scss"
     }
   ]
 }

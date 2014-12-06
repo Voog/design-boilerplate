@@ -52,6 +52,25 @@ a img {
   opacity: .4;
 }
 
+.dark-background .edy-empty-bordered {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.dark-background .placeholder {
+  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-background .edy-content-element-hover {
+  border: 1px solid #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark-background .edy-texteditor-active {
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+}
+.dark-background .edy-texteditor-active:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.63);
+}
+
 .site-container .page-content {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;

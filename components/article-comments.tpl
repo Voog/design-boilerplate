@@ -1,5 +1,5 @@
 <section class="article-comments content-formatted">
-  <h2 class="comments-title">{{ 'post_has_replies' | lcc : article.comments_count }}</h2>
+  <h2 class="comments-title">{{ 'post_has_replies' | lcc: article.comments_count }}</h2>
 
   {% if article.comments_count > 0 %}
     {% for comment in article.comments %}
