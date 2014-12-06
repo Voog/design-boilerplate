@@ -1,7 +1,7 @@
 <nav class="menu-language">
   <ul class="menu">
     {% for language in site.languages %}
-      <li class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}">
+      <li{% if item.selected? %} class="is-active"{% endif %}>
         <a href="{{ language.url }}">{{ language.title }}</a>
       </li>
     {% endfor %}

@@ -1,3 +1,14 @@
 .site-header {
-  @extend %clearfix;
+  .header-top {
+    @extend %clearfix;
+
+    .inner-right {
+      @extend %clearfix;
+      @extend %right;
+    }
+  }
+
+  .header-bottom {
+    margin-top: 50px;
+  }
 }

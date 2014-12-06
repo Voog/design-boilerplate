@@ -1,3 +1,21 @@
 .site-search {
+  position: relative;
+  top: -3px;
+  float: right;
+  margin-right: 10px;
 
+  .search-input {
+    @extend %input-ios-reset;
+    @extend %inherit-base-font;
+    width: 128px;
+    padding: 4px 5px 3px;
+    font-size: 14px;
+    border: 1px solid rgba($black,.53);
+    border-radius: 3px;
+  }
+
+  .search-submit {
+    position: relative;
+    top: -1px;
+  }
 }

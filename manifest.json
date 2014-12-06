@@ -99,6 +99,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/menu-sub.tpl",
+      "layout_name": "menu-sub",
+      "title": "menu-sub"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/open-graph.tpl",
       "layout_name": "open-graph",
       "title": "open-graph"
@@ -155,6 +162,36 @@
   ],
   "assets": [
     {
+      "content_type": "text/unknown",
+      "file": "assets/.DS_Store",
+      "kind": "assets",
+      "filename": ".DS_Store"
+    },
+    {
+      "content_type": "application/x-wais-source",
+      "file": "assets/src",
+      "kind": "assets",
+      "filename": "src"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "images/.DS_Store",
+      "kind": "images",
+      "filename": ".DS_Store"
+    },
+    {
+      "content_type": "application/x-wais-source",
+      "file": "images/src",
+      "kind": "images",
+      "filename": "src"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "javascripts/.DS_Store",
+      "kind": "javascripts",
+      "filename": ".DS_Store"
+    },
+    {
       "content_type": "application/javascript",
       "file": "javascripts/main.js",
       "kind": "javascripts",
@@ -179,6 +216,18 @@
       "filename": "modernizr.min.js"
     },
     {
+      "content_type": "application/x-wais-source",
+      "file": "javascripts/src",
+      "kind": "javascripts",
+      "filename": "src"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "stylesheets/.DS_Store",
+      "kind": "stylesheets",
+      "filename": ".DS_Store"
+    },
+    {
       "content_type": "text/css",
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
@@ -189,6 +238,12 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "stylesheets/scss",
+      "kind": "stylesheets",
+      "filename": "scss"
     }
   ]
 }

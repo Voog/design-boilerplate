@@ -8,20 +8,7 @@
 
   li {
     display: inline-block;
-  }
 
-  a {
-    display: block;
-    text-decoration: none;
-    border: nonse;
-  }
-}
-
-// Main menu
-.menu-main {
-  @extend %left;
-
-  li {
     &:last-child {
       margin-right: 0;
     }
@@ -39,16 +26,39 @@
       }
     }
 
-    &.is-untranslated {
-      &:hover {
-
-      }
+    a {
+      display: block;
+      border: none;
     }
+  }
+}
 
+// Main menu
+.menu-main {
+  @extend %left;
+  margin-bottom: 15px;
+
+  li {
+    margin-right: 20px;
+  }
+}
+
+// Sub menu
+.menu-sub {
+  li {
+    margin-right: 10px;
   }
 }
 
 // Language menu
 .menu-language {
   @extend %right;
+
+  li {
+    margin-right: 5px;
+
+    a {
+      font-size: 10px;
+    }
+  }
 }

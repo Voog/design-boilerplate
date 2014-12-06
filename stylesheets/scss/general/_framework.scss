@@ -121,6 +121,12 @@
   }
 }
 
+%input-ios-reset {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
 %inherit-base-font {
   font-family: inherit;
   font-size: inherit;
@@ -130,10 +136,4 @@
   &:focus {
     outline: none;
   }
-}
-
-%input-ios-reset {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
 }

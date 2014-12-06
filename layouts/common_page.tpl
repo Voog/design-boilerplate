@@ -8,9 +8,10 @@
     <div class="site-container">
       {% include 'site-header' %}
 
-      {% include 'site-sidebar' %}
-
-      <main class="page-content content-formatted" role="main">{% content %}</main>
+      <main class="page-content content-formatted" role="main">
+        <header class="content-header">{% contentblock name="content_header" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</header>
+        <div class="content-body">{% content %}</div>
+      </main>
 
       {% include 'site-footer' %}
 

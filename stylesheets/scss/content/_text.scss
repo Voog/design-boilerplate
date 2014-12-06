@@ -30,8 +30,15 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  b,
+  strong {
+    color: rgba($highlight-color,1);
+  }
 
+  h1 {
+    text-align: center;
+    font-size: 30px;
   }
 
   a {
