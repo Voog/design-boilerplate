@@ -14,21 +14,20 @@
 @import 'general/_states';
 @import 'general/_site-container';
 
-// LAYOUTS
-@import 'layouts/_front-page';
-@import 'layouts/_blog-and-news';
-@import 'layouts/_blog-article';
-@import 'layouts/_team-listing';
-@import 'layouts/_team-details';
-@import 'layouts/_common-page';
-
 // COMPONENTS
 @import 'components/_site-header';
-@import 'components/_navigation-menus';
-@import 'components/_site-search';
-@import 'components/_page-content';
-@import 'components/_site-sidebar';
+// @import 'components/_site-sidebar';
 @import 'components/_site-footer';
+@import 'components/_site-search';
+@import 'components/_navigation-menus';
+@import 'components/_article-comments';
+@import 'components/_page-content';
+
+// LAYOUTS
+@import 'layouts/_front-page';
+@import 'layouts/_common-page';
+@import 'layouts/_blog-and-news';
+@import 'layouts/_blog-article';
 
 // CONTENT AREAS
 @import 'content/_text';
