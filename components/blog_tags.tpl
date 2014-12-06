@@ -1,3 +1,3 @@
-<aside class="site-sidebar">
+<nav class="blog-tags">
 
-</aside>
+</nav>

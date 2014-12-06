@@ -23,5 +23,5 @@
 <title>{{ page_title }}</title>
 
 {% comment %}MISC{% endcomment %}
-{% include "open-graph" %}
+{% include 'open-graph' %}
 {% if blog %}{{ blog.rss_link }}{% endif %}

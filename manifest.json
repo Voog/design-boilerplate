@@ -36,161 +36,135 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/bg-picker-variables.tpl",
-      "layout_name": "bg-picker-variables",
-      "title": "bg-picker-variables"
+      "file": "components/article_comments.tpl",
+      "layout_name": "article comments",
+      "title": "article comments"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/blog_article.tpl",
+      "layout_name": "blog_article",
+      "title": "Blog article"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/bg-picker.tpl",
-      "layout_name": "bg-picker",
-      "title": "bg-picker"
+      "file": "components/blog_tags.tpl",
+      "layout_name": "blog tags",
+      "title": "blog tags"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
+      "file": "components/edicy_tools.tpl",
+      "layout_name": "edicy tools",
+      "title": "edicy tools"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/footer.tpl",
-      "layout_name": "footer",
-      "title": "footer"
+      "file": "components/edicy_tools_styles.tpl",
+      "layout_name": "edicy tools styles",
+      "title": "edicy tools styles"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/header.tpl",
-      "layout_name": "header",
-      "title": "header"
+      "file": "components/edicy_tools_variables.tpl",
+      "layout_name": "edicy tools variables",
+      "title": "edicy tools variables"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/html-head.tpl",
-      "layout_name": "html-head",
-      "title": "html-head"
+      "file": "components/html_head.tpl",
+      "layout_name": "html head",
+      "title": "html head"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/javascripts.tpl",
-      "layout_name": "javascripts",
-      "title": "javascripts"
+      "file": "components/menu_language.tpl",
+      "layout_name": "menu language",
+      "title": "menu language"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang-mobile.tpl",
-      "layout_name": "menu-lang-mobile",
-      "title": "menu-lang-mobile"
+      "file": "components/menu_main.tpl",
+      "layout_name": "menu main",
+      "title": "menu main"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang.tpl",
-      "layout_name": "menu-lang",
-      "title": "menu-lang"
+      "file": "components/open_graph.tpl",
+      "layout_name": "open graph",
+      "title": "open graph"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-1.tpl",
-      "layout_name": "menu-level-1",
-      "title": "menu-level-1"
+      "file": "components/site_footer.tpl",
+      "layout_name": "site footer",
+      "title": "site footer"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-2.tpl",
-      "layout_name": "menu-level-2",
-      "title": "menu-level-2"
+      "file": "components/site_header.tpl",
+      "layout_name": "site header",
+      "title": "site header"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/open-graph.tpl",
-      "layout_name": "open-graph",
-      "title": "open-graph"
+      "file": "components/site_javascripts.tpl",
+      "layout_name": "site javascripts",
+      "title": "site javascripts"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/post-box.tpl",
-      "layout_name": "post-box",
-      "title": "post-box"
+      "file": "components/site_search.tpl",
+      "layout_name": "site search",
+      "title": "site search"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/search.tpl",
-      "layout_name": "search",
-      "title": "search"
+      "file": "components/site_sidebar.tpl",
+      "layout_name": "site sidebar",
+      "title": "site sidebar"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/sidebar.tpl",
-      "layout_name": "sidebar",
-      "title": "sidebar"
+      "file": "components/site_topbar.tpl",
+      "layout_name": "site topbar",
+      "title": "site topbar"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-blog.tpl",
-      "layout_name": "tags-blog",
-      "title": "tags-blog"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/tags-post.tpl",
-      "layout_name": "tags-post",
-      "title": "tags-post"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/tags-variables.tpl",
-      "layout_name": "tags-variables",
-      "title": "tags-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/topbar.tpl",
-      "layout_name": "topbar",
-      "title": "topbar"
+      "file": "components/site_translations.tpl",
+      "layout_name": "site translations",
+      "title": "site translations"
     }
   ],
   "assets": [
     {
-      "content_type": "image/svg+xml",
-      "file": "assets/ico-flags.svg",
-      "kind": "assets",
-      "filename": "ico-flags.svg"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/ico-flags.png",
-      "kind": "images",
-      "filename": "ico-flags.png"
+      "content_type": "application/javascript",
+      "file": "javascripts/main.js",
+      "kind": "javascripts",
+      "filename": "main.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/application.js",
+      "file": "javascripts/main.min.js",
       "kind": "javascripts",
-      "filename": "application.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/application.min.js",
-      "kind": "javascripts",
-      "filename": "application.min.js"
+      "filename": "main.min.js"
     },
     {
       "content_type": "application/javascript",

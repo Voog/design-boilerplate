@@ -7,8 +7,8 @@
     {% endunless %}
 
     {% for item in site.visible_menuitems %}
-      <li{% if item.selected? %} class="is-active"{% endif %}>
-        <a{% unless item.translated? %} class="is-untranslated fci-editor-menuadd"{% endunless %} href="{{ item.url }}">{{ item.title }}</a>
+      <li{% if item.selected? %} class="is-active"{% endif %}{% unless item.translated? %} class="is-untranslated fci-editor-menuadd"{% endunless %}>
+        <a href="{{ item.url }}">{{ item.title }}</a>
       </li>
     {% endfor %}
 
