@@ -36,161 +36,124 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/article_comments.tpl",
-      "layout_name": "article comments",
-      "title": "article comments"
-    },
-    {
-      "content_type": "blog_article",
-      "component": false,
-      "file": "layouts/blog_article.tpl",
-      "layout_name": "blog_article",
-      "title": "Blog article"
+      "file": "components/article-comments.tpl",
+      "layout_name": "article-comments",
+      "title": "article-comments"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog_tags.tpl",
-      "layout_name": "blog tags",
-      "title": "blog tags"
+      "file": "components/blog-article.tpl",
+      "layout_name": "blog-article",
+      "title": "blog-article"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/edicy_tools.tpl",
-      "layout_name": "edicy tools",
-      "title": "edicy tools"
+      "file": "components/blog-tags.tpl",
+      "layout_name": "blog-tags",
+      "title": "blog-tags"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/edicy_tools_styles.tpl",
-      "layout_name": "edicy tools styles",
-      "title": "edicy tools styles"
+      "file": "components/edicy-tools-styles.tpl",
+      "layout_name": "edicy-tools-styles",
+      "title": "edicy-tools-styles"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/edicy_tools_variables.tpl",
-      "layout_name": "edicy tools variables",
-      "title": "edicy tools variables"
+      "file": "components/edicy-tools-variables.tpl",
+      "layout_name": "edicy-tools-variables",
+      "title": "edicy-tools-variables"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/html_head.tpl",
-      "layout_name": "html head",
-      "title": "html head"
+      "file": "components/edicy-tools.tpl",
+      "layout_name": "edicy-tools",
+      "title": "edicy-tools"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu_language.tpl",
-      "layout_name": "menu language",
-      "title": "menu language"
+      "file": "components/html-head.tpl",
+      "layout_name": "html-head",
+      "title": "html-head"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu_main.tpl",
-      "layout_name": "menu main",
-      "title": "menu main"
+      "file": "components/menu-language.tpl",
+      "layout_name": "menu-language",
+      "title": "menu-language"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/open_graph.tpl",
-      "layout_name": "open graph",
-      "title": "open graph"
+      "file": "components/menu-main.tpl",
+      "layout_name": "menu-main",
+      "title": "menu-main"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site_footer.tpl",
-      "layout_name": "site footer",
-      "title": "site footer"
+      "file": "components/open-graph.tpl",
+      "layout_name": "open-graph",
+      "title": "open-graph"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site_header.tpl",
-      "layout_name": "site header",
-      "title": "site header"
+      "file": "components/site-footer.tpl",
+      "layout_name": "site-footer",
+      "title": "site-footer"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site_javascripts.tpl",
-      "layout_name": "site javascripts",
-      "title": "site javascripts"
+      "file": "components/site-header.tpl",
+      "layout_name": "site-header",
+      "title": "site-header"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site_search.tpl",
-      "layout_name": "site search",
-      "title": "site search"
+      "file": "components/site-javascripts.tpl",
+      "layout_name": "site-javascripts",
+      "title": "site-javascripts"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site_sidebar.tpl",
-      "layout_name": "site sidebar",
-      "title": "site sidebar"
+      "file": "components/site-search.tpl",
+      "layout_name": "site-search",
+      "title": "site-search"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site_topbar.tpl",
-      "layout_name": "site topbar",
-      "title": "site topbar"
+      "file": "components/site-sidebar.tpl",
+      "layout_name": "site-sidebar",
+      "title": "site-sidebar"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site_translations.tpl",
-      "layout_name": "site translations",
-      "title": "site translations"
+      "file": "components/site-topbar.tpl",
+      "layout_name": "site-topbar",
+      "title": "site-topbar"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/test__component.tpl",
-      "layout_name": "test  component",
-      "title": "test  component"
+      "file": "components/site-translations.tpl",
+      "layout_name": "site-translations",
+      "title": "site-translations"
     }
   ],
   "assets": [
-    {
-      "content_type": "text/unknown",
-      "file": "assets/.DS_Store",
-      "kind": "assets",
-      "filename": ".DS_Store"
-    },
-    {
-      "content_type": "application/x-wais-source",
-      "file": "assets/src",
-      "kind": "assets",
-      "filename": "src"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "assets/.DS_Store",
-      "kind": "assets",
-      "filename": ".DS_Store"
-    },
-    {
-      "content_type": "application/x-wais-source",
-      "file": "assets/src",
-      "kind": "assets",
-      "filename": "src"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "assets/.DS_Store",
-      "kind": "assets",
-      "filename": ".DS_Store"
-    },
     {
       "content_type": "application/javascript",
       "file": "javascripts/main.js",
@@ -216,18 +179,6 @@
       "filename": "modernizr.min.js"
     },
     {
-      "content_type": "application/x-wais-source",
-      "file": "assets/src",
-      "kind": "assets",
-      "filename": "src"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "assets/.DS_Store",
-      "kind": "assets",
-      "filename": ".DS_Store"
-    },
-    {
       "content_type": "text/css",
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
@@ -238,12 +189,6 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "stylesheets/scss",
-      "kind": "stylesheets",
-      "filename": "scss"
     }
   ]
 }
