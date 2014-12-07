@@ -5,18 +5,20 @@
     border-color: rgba($white, .5);
   }
   .placeholder {
-    color: #FFFFFF;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba($white, .5);
   }
   .edy-content-element-hover {
-    border: 1px solid #FFFFFF;
-    border: 1px solid rgba($white, .2);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba($white, .2);
   }
   .edy-texteditor-active {
-    outline: 1px solid rgba($white, .4);
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: rgba($white, .4);
 
     &:hover {
-      outline: 1px solid rgba($white, .63);
+      outline-color: rgba($white, .63);
     }
   }
 }

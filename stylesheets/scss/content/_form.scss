@@ -1,45 +1,80 @@
 .content-formatted {
+  .form_fields {
+    margin-top: 20px;
+  }
+
   .form_field {
+    margin-top: 10px;
 
     &:first-child {
-
+      margin-top: 0;
     }
 
-    label {
+    label,
+    .form_field_label {
       display: block;
+      font-size: 14px;
+    }
+
+    .form_field_label {
+      font-weight: 700;
     }
   }
 
   .form_field_required {
     .form_field_label:after {
-      content: ' * \a';
+      content: '* \a';
     }
   }
 
   .form_field_textfield,
   .form_field_textarea,
   .form_field_select {
+    max-width: 100%;
     box-sizing: border-box;
   }
 
   .form_field_textfield,
   .form_field_textarea {
-    width: 100%;
-    @extend %inherit-base-font;
     @extend %input-ios-reset;
+    @extend %inherit-base-font;
+    padding: 7px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba($black, .53);
+    border-radius: 3px;
+
+    &.form_field_size_small {
+      width: 280px;
+    }
+
+    &.form_field_size_medium {
+      width: 420px;
+    }
+
+    &.form_field_size_large {
+      width: 580px;
+    }
   }
 
-  .form_field_size_medium {
+  .form_field_select {
+    &.form_field_size_small {
+      min-width: auto;
+    }
 
-  }
+    &.form_field_size_medium {
+      min-width: 124px;
+    }
 
-  .form_field_size_large {
+    &.form_field_size_large {
+      min-width: 184px;
+    }
   }
 
   .form_submit {
+    margin-top: 10px;
+
     input {
-      @extend %input-ios-reset;
-      cursor: pointer;
 
       &:hover {
 
@@ -48,19 +83,15 @@
   }
 
   .form_error,
-  .form_notice {
-
-  }
-
-  .form_error {
-
-  }
-
-  .form_notice {
-
+  .form_field_error {
+    color: rgba($error-color, 1);
   }
 
   .form_field_error {
+    font-size: 14px;
+  }
 
+  .form_notice {
+    color: rgba($success-color, 1);
   }
 }

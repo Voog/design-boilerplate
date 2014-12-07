@@ -13,7 +13,7 @@ a {
   color: #0066bb;
 }
 a img {
-  border: none;
+  border-style: none;
 }
 
 .site-container {
@@ -46,7 +46,7 @@ a img {
 }
 
 .site-search .search-input, .content-formatted .form_field_textfield,
-.content-formatted .form_field_textarea, .content-formatted .form_submit input {
+.content-formatted .form_field_textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -57,7 +57,6 @@ a img {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  color: inherit;
 }
 .site-search .search-input:focus, .content-formatted .form_field_textfield:focus,
 .content-formatted .form_field_textarea:focus {
@@ -76,18 +75,20 @@ a img {
   border-color: rgba(255, 255, 255, 0.5);
 }
 .dark-background .placeholder {
-  color: #FFFFFF;
   color: rgba(255, 255, 255, 0.5);
 }
 .dark-background .edy-content-element-hover {
-  border: 1px solid #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .dark-background .edy-texteditor-active {
-  outline: 1px solid rgba(255, 255, 255, 0.4);
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: rgba(255, 255, 255, 0.4);
 }
 .dark-background .edy-texteditor-active:hover {
-  outline: 1px solid rgba(255, 255, 255, 0.63);
+  outline-color: rgba(255, 255, 255, 0.63);
 }
 
 .front-page .content-slogan, .front-page .content-formatted h2 {
@@ -135,7 +136,7 @@ a img {
 }
 .menu li a {
   display: block;
-  border: none;
+  border-style: none;
 }
 
 .menu-main {
@@ -166,7 +167,9 @@ a img {
   width: 128px;
   padding: 4px 5px 3px;
   font-size: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.53);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.53);
   border-radius: 3px;
 }
 .site-search .search-submit {
@@ -250,21 +253,71 @@ a img {
   margin-left: 10px;
 }
 
-.content-formatted .form_field label {
+.content-formatted .form_fields {
+  margin-top: 20px;
+}
+.content-formatted .form_field {
+  margin-top: 10px;
+}
+.content-formatted .form_field:first-child {
+  margin-top: 0;
+}
+.content-formatted .form_field label,
+.content-formatted .form_field .form_field_label {
   display: block;
+  font-size: 14px;
+}
+.content-formatted .form_field .form_field_label {
+  font-weight: 700;
 }
 .content-formatted .form_field_required .form_field_label:after {
-  content: ' * \a';
+  content: '* \a';
 }
 .content-formatted .form_field_textfield,
 .content-formatted .form_field_textarea,
 .content-formatted .form_field_select {
+  max-width: 100%;
   box-sizing: border-box;
 }
 .content-formatted .form_field_textfield,
 .content-formatted .form_field_textarea {
-  width: 100%;
+  padding: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.53);
+  border-radius: 3px;
 }
-.content-formatted .form_submit input {
-  cursor: pointer;
+.content-formatted .form_field_textfield.form_field_size_small,
+.content-formatted .form_field_textarea.form_field_size_small {
+  width: 280px;
+}
+.content-formatted .form_field_textfield.form_field_size_medium,
+.content-formatted .form_field_textarea.form_field_size_medium {
+  width: 420px;
+}
+.content-formatted .form_field_textfield.form_field_size_large,
+.content-formatted .form_field_textarea.form_field_size_large {
+  width: 580px;
+}
+.content-formatted .form_field_select.form_field_size_small {
+  min-width: auto;
+}
+.content-formatted .form_field_select.form_field_size_medium {
+  min-width: 124px;
+}
+.content-formatted .form_field_select.form_field_size_large {
+  min-width: 184px;
+}
+.content-formatted .form_submit {
+  margin-top: 10px;
+}
+.content-formatted .form_error,
+.content-formatted .form_field_error {
+  color: #cc0000;
+}
+.content-formatted .form_field_error {
+  font-size: 14px;
+}
+.content-formatted .form_notice {
+  color: #60a740;
 }

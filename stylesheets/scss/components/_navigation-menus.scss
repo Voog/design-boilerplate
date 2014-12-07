@@ -15,20 +15,20 @@
 
     &:hover {
       a {
-        color: rgba($black,.8);
+        color: rgba($black, .8);
       }
     }
 
     &.is-active {
       a {
         font-weight: 700;
-        color: rgba($black,.55);
+        color: rgba($black, .55);
       }
     }
 
     a {
       display: block;
-      border: none;
+      border-style: none;
     }
   }
 }

@@ -10,7 +10,9 @@
     width: 128px;
     padding: 4px 5px 3px;
     font-size: 14px;
-    border: 1px solid rgba($black,.53);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba($black, .53);
     border-radius: 3px;
   }
 

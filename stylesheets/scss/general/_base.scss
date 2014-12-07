@@ -4,15 +4,15 @@ body {
   font-size: $base-font-size;
   font-weight: 400;
   line-height: $base-line-height;
-  color: rgba($black,.55);
+  color: rgba($black, .55);
 }
 
 a {
   text-decoration: none;
-  color: rgba($link-color,1);
+  color: rgba($link-color, 1);
 
   img {
-    border: none;
+    border-style: none;
   }
 }
 
@@ -20,5 +20,5 @@ a {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: rgba($white,1);
+  background-color: rgba($white, 1);
 }

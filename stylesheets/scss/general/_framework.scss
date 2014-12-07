@@ -108,7 +108,7 @@
   margin: 0;
   padding: 0;
   background-color: none;
-  border: none;
+  border-style: none;
   cursor: pointer;
 
   &:focus {
@@ -117,7 +117,7 @@
 
   &::-moz-focus-inner {
     padding: 0;
-    border: none;
+    border-style: none;
   }
 }
 
@@ -131,7 +131,6 @@
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  color: inherit;
 
   &:focus {
     outline: none;
