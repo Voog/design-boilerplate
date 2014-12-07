@@ -14,7 +14,7 @@
         <section class="blog-articles content-formatted">
           {% addbutton %}
           {% for article in articles %}
-            {% include 'blog-article' %}
+            {% include 'article-template' %}
           {% endfor %}
         </section>
       </main>

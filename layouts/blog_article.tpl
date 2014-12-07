@@ -12,8 +12,10 @@
 
       <main class="page-content" role="main">
         <section class="blog-articles content-formatted">
-          {% include 'blog_article' with 'article_page' %}
+          {% include 'article-template' with 'article_page' %}
         </section>
+
+        {% include 'article-comments' %}
       </main>
 
       {% include 'site-footer' %}

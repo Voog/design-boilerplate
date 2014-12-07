@@ -1,5 +1,31 @@
 .front-page {
-  .blog-listing {
-    margin-top: 20px;
+  .content-header {
+
+  }
+
+  %second-heading {
+    font-size: 50px;
+    line-height: 1em;
+    color: rgba($highlight-color,1);
+  }
+
+  .content-slogan {
+    @extend %second-heading
+  }
+
+  .content-formatted {
+    h1 {
+      text-align: left;
+      font-size: 100px;
+      line-height: 1em;
+    }
+
+    h2 {
+      @extend %second-heading;
+    }
+
+    h3 {
+      font-size: 25px;
+    }
   }
 }

@@ -1,6 +1,7 @@
 .content-formatted {
   @extend %clearfix;
   @include hyphens(auto);
+  line-height: $base-line-height;
 
   h1,
   h2,
@@ -34,6 +35,15 @@
   b,
   strong {
     color: rgba($highlight-color,1);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: $base-line-height;
   }
 
   h1 {

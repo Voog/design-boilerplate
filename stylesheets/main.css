@@ -9,10 +9,18 @@ body {
 }
 
 a {
+  text-decoration: none;
   color: #0066bb;
 }
 a img {
   border: none;
+}
+
+.site-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: white;
 }
 
 .site-header .header-top:after, .site-header .header-top .inner-right:after, .content-formatted:after {
@@ -82,38 +90,27 @@ a img {
   outline: 1px solid rgba(255, 255, 255, 0.63);
 }
 
-.site-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: white;
+.front-page .content-slogan, .front-page .content-formatted h2 {
+  font-size: 50px;
+  line-height: 1em;
+  color: #1b2124;
+}
+.front-page .content-formatted h1 {
+  text-align: left;
+  font-size: 100px;
+  line-height: 1em;
+}
+.front-page .content-formatted h3 {
+  font-size: 25px;
+}
+
+.common-page .content-header {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .site-header .header-bottom {
   margin-top: 50px;
-}
-
-.site-footer {
-  margin-top: 50px;
-  font-size: 14px;
-}
-
-.site-search {
-  position: relative;
-  top: -3px;
-  float: right;
-  margin-right: 10px;
-}
-.site-search .search-input {
-  width: 128px;
-  padding: 4px 5px 3px;
-  font-size: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.53);
-  border-radius: 3px;
-}
-.site-search .search-submit {
-  position: relative;
-  top: -1px;
 }
 
 /* NAVIGATION MENUS*/
@@ -159,13 +156,27 @@ a img {
   font-size: 10px;
 }
 
-.page-content .content-header {
-  margin-top: 25px;
-  margin-bottom: 25px;
+.site-search {
+  position: relative;
+  top: -3px;
+  float: right;
+  margin-right: 10px;
+}
+.site-search .search-input {
+  width: 128px;
+  padding: 4px 5px 3px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.53);
+  border-radius: 3px;
+}
+.site-search .search-submit {
+  position: relative;
+  top: -1px;
 }
 
-.front-page .blog-listing {
-  margin-top: 20px;
+.site-footer {
+  margin-top: 50px;
+  font-size: 14px;
 }
 
 .content-formatted {
@@ -173,6 +184,7 @@ a img {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  line-height: 1.3em;
 }
 .content-formatted h1:first-child,
 .content-formatted h2:first-child,
@@ -215,6 +227,14 @@ a img {
 .content-formatted b,
 .content-formatted strong {
   color: #1b2124;
+}
+.content-formatted h1,
+.content-formatted h2,
+.content-formatted h3,
+.content-formatted h4,
+.content-formatted h5,
+.content-formatted h6 {
+  line-height: 1.3em;
 }
 .content-formatted h1 {
   text-align: center;

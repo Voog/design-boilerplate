@@ -13,22 +13,21 @@
 @import 'general/_framework';
 @import 'general/_states';
 @import 'general/_cms-overrides';
-@import 'general/_site-container';
-
-// COMPONENTS
-@import 'components/_site-header';
-// @import 'components/_site-sidebar';
-@import 'components/_site-footer';
-@import 'components/_site-search';
-@import 'components/_navigation-menus';
-@import 'components/_article-comments';
-@import 'components/_page-content';
 
 // LAYOUTS
 @import 'layouts/_front-page';
 @import 'layouts/_common-page';
 @import 'layouts/_blog-and-news';
 @import 'layouts/_blog-article';
+
+// COMPONENTS
+@import 'components/_blog-article';
+@import 'components/_article-comments';
+@import 'components/_site-header';
+@import 'components/_navigation-menus';
+@import 'components/_site-search';
+// @import 'components/_site-sidebar';
+@import 'components/_site-footer';
 
 // CONTENT AREAS
 @import 'content/_text';
