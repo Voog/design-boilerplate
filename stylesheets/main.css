@@ -134,6 +134,23 @@ body {
 .content-formatted blockquote {
   margin: 20px 40px;
 }
+.content-formatted .edy-positionable-container-left,
+.content-formatted .edy-positionable-container-right {
+  width: 45%;
+}
+.content-formatted .edy-positionable-container-left {
+  margin-right: 20px;
+}
+.content-formatted .edy-positionable-container-right {
+  margin-left: 20px;
+}
+.content-formatted .edy-image-container-with-title:after {
+  display: block;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 1.3em;
+  content: attr(data-title);
+}
 .content-formatted .table-container {
   margin-top: 20px;
 }

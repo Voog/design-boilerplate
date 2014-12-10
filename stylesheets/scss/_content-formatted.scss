@@ -100,6 +100,31 @@
     margin: 20px 40px;
   }
 
+  // Content area floating images
+  .edy-positionable-container-left,
+  .edy-positionable-container-right {
+    width: 45%;
+  }
+
+  .edy-positionable-container-left {
+    margin-right: 20px;
+  }
+
+  .edy-positionable-container-right {
+    margin-left: 20px;
+  }
+
+  // Content area image title
+  .edy-image-container-with-title {
+    &:after {
+      display: block;
+      padding: 4px;
+      font-size: 12px;
+      line-height: 1.3em;
+      content: attr(data-title);
+    }
+  }
+
   // Styling rules for the site's editable content area tables.
   // Container around editable content-area table.
   .table-container {
