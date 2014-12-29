@@ -927,9 +927,11 @@ body {
 .content-formatted .form_field_required .form_field_label:after {
   content: '*';
 }
+.content-formatted label {
+  display: block;
+}
 .content-formatted .form_field_label,
 .content-formatted .edy-fe-label {
-  display: block;
   font-weight: 700;
   font-family: inherit;
   line-height: 1.3;

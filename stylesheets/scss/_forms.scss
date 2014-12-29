@@ -21,9 +21,12 @@
     }
   }
 
+  label {
+    display: block;
+  }
+
   .form_field_label,
   .edy-fe-label {
-    display: block;
     font-weight: 700;
     font-family: inherit;
     line-height: 1.3;
