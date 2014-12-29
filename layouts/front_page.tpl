@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
-  {% include "html-head" %}
   {% include "bg-picker-variables" %}
+  {% include "html-head" %}
+  {% include "bg-picker-styles" %}
 </head>
 
 <body class="front-page">
-  {% if editmode %}<button class="bgpicker-btn js-bgpicker-body-settings" data-bg-image="{{ body_image }}" data-bg-color="{{ body_color }}"></button>{% endif %}
-  {% unless editmode %}
-    {% if body_color != '' or editmode %}<div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>{% endif %}
-  {% else %}
-    <div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>
-  {% endunless %}
+  {% if editmode %}<button class="bgpicker-btn js-body-background-settings" data-bg-image="{{ body_bg_image }}" data-bg-image-sizes="{{ body_bg_image_sizes_str | escape }}" data-bg-color="{{ body_bg_color }}" data-bg-color-data="{{ body_bg_color_data_str | escape }}"></button>{% endif %}
+  {% if body_bg_image != '' or editmode %}<div class="body-background-image js-body-background-image"></div>{% endif %}
+  {% if body_bg_color != '' or editmode %}<div class="body-background-color js-body-background-color"></div>{% endif %}
 
   <div class="container">
     {% include "header" %}
@@ -34,12 +32,6 @@
 
   {% include "javascripts" %}
   {% include "bg-picker" %}
-  <script>
-    {% unless body_image == nil or body_image == '' %}
-      $.backstretch('{{ body_image }}');
-    {% endunless %}
-
-    site.initFrontPage();
-  </script>
+  <script>site.initFrontPage();</script>
 </body>
 </html>

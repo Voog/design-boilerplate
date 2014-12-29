@@ -1,71 +1,39 @@
+{% comment %} TODO: Optimize the logic.{% endcomment %}
 {% capture dont_render %}
-  {% if bg-picker-variables == "article" %}
-
-    <!-- Sets the body background image value for article pages -->
-    {% if article.data.body_image == nil %}
-      {% assign body_image = '' %}
-    {% else %}
-      {% assign body_image = article.data.body_image %}
-    {% endif %}
-
-    <!-- Sets the body background color value for article pages-->
-    {% if article.data.body_color == nil %}
-      {% assign body_color = '' %}
-    {% else %}
-      {% assign body_color = article.data.body_color %}
-    {% endif %}
-
-    <!-- Builds style tag for background color for article pages -->
-    {% assign body_color_style = '' %}
-    {% unless article.data.body_color == nil %}
-      {% assign body_color_style = ' style="background: ' %}
-      {% if article.data.body_color == '' %}
-        {% assign body_color_style = body_color_style | append: 'none' %}
-      {% else %}
-        {% assign body_color_style = body_color_style | append: article.data.body_color %}
-        {% if article.data.body_image == '' %}
-          {% assign body_color_style = body_color_style | append: '; opacity: 1' %}
-        {% else %}
-          {% assign body_color_style = body_color_style | append: '; opacity: 0.5' %}
-        {% endif %}
-      {% endif %}
-      {% assign body_color_style = body_color_style | append: ';"' %}
-    {% endunless %}
-
+  {% comment %}Assign variables based on page type.{% endcomment %}
+  {% if bg-picker-variables == 'article' %}
+    {% assign body_bg = article.data.body_bg %}
   {% else %}
+    {% assign body_bg = page.data.body_bg %}
+  {% endif %}
 
-    <!-- Sets the body background image value for content pages -->
-    {% if page.data.body_image == nil %}
-      {% assign body_image = '' %}
-    {% else %}
-      {% assign body_image = page.data.body_image %}
-    {% endif %}
+  {% assign body_bg_image = body_bg.image %}
+  {% assign body_bg_image_sizes = body_bg.imageSizes %}
+  {% assign body_bg_color = body_bg.color %}
+  {% assign body_bg_color_data = body_bg.colorData %}
 
-    <!-- Sets the body background color value -->
-    {% if page.data.body_color == nil %}
-      {% assign body_color = '' %}
-    {% else %}
-      {% assign body_color = page.data.body_color %}
-    {% endif %}
-
-    <!-- Builds style tag for background color for content pages -->
-    {% assign body_color_style = "" %}
-    {% unless page.data.body_color == nil %}
-      {% assign body_color_style = ' style="background: ' %}
-      {% if page.data.body_color == '' %}
-        {% assign body_color_style = body_color_style | append: 'none' %}
+  {% comment %}Sets the body background color scheme.{% endcomment %}
+  {% if body_bg %}
+    {% if body_bg_color_data.a >= 0.5 %}
+      {% if body_bg_color_data.lightness >= 0.5 %}
+        {% assign body_bg_type = 'light-background' %}
       {% else %}
-        {% assign body_color_style = body_color_style | append: page.data.body_color %}
-        {% if page.data.body_image == '' %}
-          {% assign body_color_style = body_color_style | append: '; opacity: 1' %}
-        {% else %}
-          {% assign body_color_style = body_color_style | append: '; opacity: 0.5' %}
-        {% endif %}
+        {% assign body_bg_type = 'dark-background' %}
       {% endif %}
-      {% assign body_color_style = body_color_style | append: ';"' %}
-    {% endunless %}
+    {% else %}
+      {% assign body_bg_type = 'light-background' %}
+    {% endif %}
+  {% else %}
+    {% assign body_bg_type = 'dark-background' %}
+  {% endif %}
 
-    {% assign body_color_tag = "<div class="background-color js-bgpicker-body-color"{{ body_color_style }}></div>" %}
+  {% unless body_bg_image_sizes == nil %}
+    {% assign body_bg_image_sizes_str = body_bg_image_sizes | json %}
+  {% endunless %}
 
+  {% if body_bg_color_data == nil %}
+    {% assign body_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.2, "lightness": 0}' %}
+  {% else %}
+    {% assign body_bg_color_data_str = body_bg_color_data | json %}
   {% endif %}
 {% endcapture %}

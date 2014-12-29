@@ -19,7 +19,8 @@ body {
   clear: both;
 }
 
-.background-color {
+.body-background-image,
+.body-background-color {
   top: 0;
   left: 0;
   right: 0;
@@ -42,7 +43,8 @@ body {
   outline: none;
 }
 
-.background-color {
+.body-background-image,
+.body-background-color {
   position: fixed;
   z-index: -2;
 }

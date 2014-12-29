@@ -61,7 +61,8 @@ body {
   }
 }
 
-.background-color {
+.body-background-image,
+.body-background-color {
   @extend %stretch;
   position: fixed;
   z-index: -2;
