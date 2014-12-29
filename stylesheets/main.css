@@ -118,18 +118,29 @@ body {
 .content-formatted img, .content-formatted iframe, .content-formatted pre {
   margin-top: 25px;
 }
-.content-formatted pre {
-  overflow: auto;
-  margin-bottom: 0;
-  padding: 10px;
+.content-formatted pre,
+.content-formatted code {
   font-size: 14px;
   background-color: #fafafa;
 }
+.content-formatted pre {
+  overflow: auto;
+  padding: 10px;
+}
 .content-formatted pre code {
-  display: block;
-  white-space: nowrap;
-  margin-top: 0;
+  display: inline;
   padding: 0;
+  white-space: pre;
+  line-height: inherit;
+  background-color: transparent;
+  word-wrap: normal;
+}
+.content-formatted code {
+  display: inline-block;
+  padding: 5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 .content-formatted blockquote {
   margin: 20px 40px;

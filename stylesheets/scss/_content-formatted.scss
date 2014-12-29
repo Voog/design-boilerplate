@@ -81,20 +81,47 @@
     margin-top: 25px;
   }
 
-  pre {
-    overflow: auto;
-    margin-bottom: 0;
-    padding: 10px;
+  // Code blocks and preformatted content.
+  pre,
+  code {
     font-size: 14px;
     @include bg($grey-3);
+  }
+
+  pre {
+    overflow: auto;
+    padding: 10px;
 
     code {
-      display: block;
-      white-space: nowrap;
-      margin-top: 0;
+      display: inline;
       padding: 0;
+      white-space: pre;
+      line-height: inherit;
+      background-color: transparent;
+      @include word-wrap(normal);
     }
   }
+
+  code {
+    display: inline-block;
+    padding: 5px;
+    @include word-wrap(break-word);
+  }
+
+  // pre {
+  //   overflow: auto;
+  //   margin-bottom: 0;
+  //   padding: 10px;
+  //   font-size: 14px;
+  //   @include bg($grey-3);
+
+  //   code {
+  //     display: block;
+  //     white-space: nowrap;
+  //     margin-top: 0;
+  //     padding: 0;
+  //   }
+  // }
 
   blockquote {
     margin: 20px 40px;
