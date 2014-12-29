@@ -17,7 +17,7 @@
     {% include "header" %}
     {% include "menu-level-2" %}
 
-    <main class="content" role="main">
+    <main class="content" role="main" data-search-indexing-allowed="true">
       <header class="content-header">
         {% if editmode or site.header.size > 0 %}<div class="content-title content-formatted">{% editable site.header %}</div>{% endif %}
 

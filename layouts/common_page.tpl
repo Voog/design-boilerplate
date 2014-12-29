@@ -17,7 +17,7 @@
     {% include "header" %}
     {% include "menu-level-2" %}
 
-    <main class="content" role="main">
+    <main class="content" role="main" data-search-indexing-allowed="true">
       <header class="content-header content-formatted">{% content name="slogan" %}</header>
       <section class="content-body content-formatted">{% content %}</section>
     </main>

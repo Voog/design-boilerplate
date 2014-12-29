@@ -17,7 +17,7 @@
     {% include "header" %}
     {% include "tags-blog" %}
 
-    <main class="content" role="main">
+    <main class="content" role="main" data-search-indexing-allowed="true">
       {% addbutton %}
       {% for article in articles %}
         {% include "post-box" %}

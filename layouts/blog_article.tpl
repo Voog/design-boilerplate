@@ -17,10 +17,10 @@
     {% include "header" %}
     {% include "tags-post" %}
 
-    <main class="content" role="main">
+    <main class="content" role="main" data-search-indexing-allowed="true">
       {% include "post-box" with "article" %}
 
-      <section id="comments" class="comments content-formatted">
+      <section id="comments" class="comments content-formatted" data-search-indexing-allowed="false">
         {% if article.comments_count > 0 %}
           <h2 class="comments-title">{{ "comments_for_count" | lc }}: <span class="edy-site-blog-comments-count">{{ article.comments_count }}</span></h2>
 
