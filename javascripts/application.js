@@ -11165,7 +11165,7 @@ MMCQ = (function() {
         return this.get(0).scrollWidth > this.innerWidth();
       }
       return false;
-    }
+    };
   };
 
   // Adds horizontal scroll to tables that don't fit into the content area.
