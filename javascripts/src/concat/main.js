@@ -46,11 +46,13 @@
     });
   };
 
-  // Scrolls to the comment-form if comment submit failed (to show the error messages to the user).
-  var focusCommentsWithErrors = function() {
+  // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)
+  var focusFormWithErrors = function() {
     $(document).ready(function() {
-      if ($('.comment-form').hasClass('form_with_errors') === true) {
+      if ($('.comment-form').hasClass('form_with_errors')) {
         $('html, body').scrollTop($('.comment-form').offset().top);
+      } else if ($('form').find('.form_error, .form_notice').length > 0) {
+        $('html, body').scrollTop($('.form_error, .form_notice').closest('form').offset().top);
       }
     });
   };
@@ -99,7 +101,7 @@
 
   var initCommonPage = function() {
     // Add common page specific functions here.
-    focusCommentsWithErrors();
+    focusFormWithErrors();
   };
 
   var initBlogPage = function() {
@@ -108,7 +110,7 @@
 
   var initPostPage = function() {
     // Add single post layout specific functions here.
-    focusCommentsWithErrors();
+    focusFormWithErrors();
   };
 
   var init = function() {
