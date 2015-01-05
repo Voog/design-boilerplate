@@ -52,6 +52,11 @@
   display: inline-block;
   vertical-align: middle;
   line-height: 0.8;
+  margin-right: 20px;
+
+  @include query($tablet-2) {
+    margin-right: 0;
+  }
 }
 
 // General rules for all navigation menus.
@@ -109,10 +114,6 @@
         font-weight: 700;
         @include color($primary-color, 0.8);
       }
-    }
-
-    .edit-btn {
-      margin-right: 0;
     }
   }
 

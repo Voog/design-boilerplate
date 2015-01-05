@@ -246,6 +246,12 @@ body {
   display: inline-block;
   vertical-align: middle;
   line-height: 0.8;
+  margin-right: 20px;
+}
+@media screen and (max-width: 752px) {
+  .edit-btn {
+    margin-right: 0;
+  }
 }
 
 .menu {
@@ -282,9 +288,6 @@ body {
   font-weight: 700;
   color: #727272;
   color: rgba(114, 114, 114, 0.8);
-}
-.menu-main .menu .edit-btn {
-  margin-right: 0;
 }
 .menu-main .menu-sub {
   display: none;
