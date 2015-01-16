@@ -657,7 +657,7 @@ body {
   display: table-cell;
 }
 .header .header-left {
-  width: 565px;
+  width: 490px;
 }
 .header .header-left .header-title {
   display: none;
@@ -672,7 +672,7 @@ body {
   color: rgba(114, 114, 114, 0.8);
 }
 .header .header-right {
-  width: 395px;
+  width: 470px;
   text-align: right;
 }
 .flexbox .header {
