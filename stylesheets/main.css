@@ -437,7 +437,7 @@ body {
   vertical-align: middle;
 }
 .header-right .menu-lang .edit-btn {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 @media screen and (max-width: 900px) {
   .menu-lang {
