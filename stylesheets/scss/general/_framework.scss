@@ -18,6 +18,14 @@
   content: '';
 }
 
+%hyphens-true {
+  @include hyphens(auto);
+}
+
+%hyphens-false {
+  @include hyphens(none);
+}
+
 // POSITIONING
 %absolute {
   position: absolute;

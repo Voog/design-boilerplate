@@ -1,6 +1,6 @@
-.content-formatted {
+.content-area {
   @extend %clearfix;
-  @include hyphens(auto);
+  @extend %hyphens-true;
   line-height: $base-line-height;
 
   h1,

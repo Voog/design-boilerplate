@@ -11,7 +11,7 @@
       {% include 'site-sidebar' %}
 
       <main class="page-content" role="main">
-        <section class="blog-articles content-formatted">
+        <section class="blog-articles content-area">
           {% addbutton %}
           {% for article in articles %}
             {% include 'article-template' %}

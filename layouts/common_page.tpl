@@ -8,7 +8,7 @@
     <div class="site-container">
       {% include 'site-header' %}
 
-      <main class="page-content content-formatted" role="main">
+      <main class="page-content content-area" role="main">
         <header class="content-header">{% contentblock name="content_header" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</header>
         <div class="content-body">{% content %}</div>
       </main>

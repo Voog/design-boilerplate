@@ -11,7 +11,7 @@
       {% include 'site-sidebar' %}
 
       <main class="page-content" role="main">
-        <section class="blog-articles content-formatted">
+        <section class="blog-news-articles content-area">
           {% include 'article-template' with 'article_page' %}
         </section>
 

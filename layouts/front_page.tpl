@@ -9,9 +9,9 @@
       {% include 'site-header' %}
 
       <main class="page-content" role="main">
-        <header class="content-header content-formatted">{% contentblock name="content_header" %}<h1>{{ page.site_title }}</h1>{% endcontentblock %}</header>
-        <div class="content-slogan content-formatted">{% content name="slogan" %}</div>
-        <div class="content-body content-formatted">{% content %}</div>
+        <header class="content-header content-area">{% contentblock name="content_header" %}<h1>{{ page.site_title }}</h1>{% endcontentblock %}</header>
+        <div class="content-slogan content-area">{% content name="slogan" %}</div>
+        <div class="content-body content-area">{% content %}</div>
       </main>
 
       {% include 'site-footer' %}

@@ -23,10 +23,17 @@ a img {
   background-color: white;
 }
 
-.site-header .header-top:after, .site-header .header-top .inner-right:after, .content-formatted:after {
+.site-header .header-top:after, .site-header .header-top .inner-right:after, .content-area:after {
   display: table;
   clear: both;
   content: '';
+}
+
+.menu, .content-area {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .menu-main {
@@ -45,21 +52,21 @@ a img {
   display: none;
 }
 
-.site-search .search-input, .content-formatted .form_field_textfield,
-.content-formatted .form_field_textarea {
+.site-search .search-input, .content-area .form_field_textfield,
+.content-area .form_field_textarea {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
 
-.site-search .search-input, .content-formatted .form_field_textfield,
-.content-formatted .form_field_textarea {
+.site-search .search-input, .content-area .form_field_textfield,
+.content-area .form_field_textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
-.site-search .search-input:focus, .content-formatted .form_field_textfield:focus,
-.content-formatted .form_field_textarea:focus {
+.site-search .search-input:focus, .content-area .form_field_textfield:focus,
+.content-area .form_field_textarea:focus {
   outline: none;
 }
 
@@ -91,17 +98,17 @@ a img {
   outline-color: rgba(255, 255, 255, 0.63);
 }
 
-.front-page .content-slogan, .front-page .content-formatted h2 {
+.front-page .content-slogan, .front-page .content-area h2 {
   font-size: 50px;
   line-height: 1em;
   color: #1b2124;
 }
-.front-page .content-formatted h1 {
+.front-page .content-area h1 {
   text-align: left;
   font-size: 100px;
   line-height: 1em;
 }
-.front-page .content-formatted h3 {
+.front-page .content-area h3 {
   font-size: 25px;
 }
 
@@ -182,142 +189,138 @@ a img {
   font-size: 14px;
 }
 
-.content-formatted {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+.content-area {
   line-height: 1.3em;
 }
-.content-formatted h1:first-child,
-.content-formatted h2:first-child,
-.content-formatted h3:first-child,
-.content-formatted h4:first-child,
-.content-formatted h5:first-child,
-.content-formatted h6:first-child,
-.content-formatted p:first-child,
-.content-formatted ul:first-child,
-.content-formatted ol:first-child,
-.content-formatted pre:first-child,
-.content-formatted code:first-child,
-.content-formatted .edy-positionable-container-left-block:first-child,
-.content-formatted .edy-positionable-container-right-block:first-child,
-.content-formatted .edy-positionable-container-center-block:first-child {
+.content-area h1:first-child,
+.content-area h2:first-child,
+.content-area h3:first-child,
+.content-area h4:first-child,
+.content-area h5:first-child,
+.content-area h6:first-child,
+.content-area p:first-child,
+.content-area ul:first-child,
+.content-area ol:first-child,
+.content-area pre:first-child,
+.content-area code:first-child,
+.content-area .edy-positionable-container-left-block:first-child,
+.content-area .edy-positionable-container-right-block:first-child,
+.content-area .edy-positionable-container-center-block:first-child {
   margin-top: 0;
 }
-.content-formatted h1:last-child,
-.content-formatted h2:last-child,
-.content-formatted h3:last-child,
-.content-formatted h4:last-child,
-.content-formatted h5:last-child,
-.content-formatted h6:last-child,
-.content-formatted p:last-child,
-.content-formatted ul:last-child,
-.content-formatted ol:last-child,
-.content-formatted pre:last-child,
-.content-formatted code:last-child,
-.content-formatted .edy-positionable-container-left-block:last-child,
-.content-formatted .edy-positionable-container-right-block:last-child,
-.content-formatted .edy-positionable-container-center-block:last-child {
+.content-area h1:last-child,
+.content-area h2:last-child,
+.content-area h3:last-child,
+.content-area h4:last-child,
+.content-area h5:last-child,
+.content-area h6:last-child,
+.content-area p:last-child,
+.content-area ul:last-child,
+.content-area ol:last-child,
+.content-area pre:last-child,
+.content-area code:last-child,
+.content-area .edy-positionable-container-left-block:last-child,
+.content-area .edy-positionable-container-right-block:last-child,
+.content-area .edy-positionable-container-center-block:last-child {
   margin-bottom: 0;
 }
-.content-formatted h1,
-.content-formatted h2,
-.content-formatted h3,
-.content-formatted h4,
-.content-formatted h5,
-.content-formatted h6,
-.content-formatted b,
-.content-formatted strong {
+.content-area h1,
+.content-area h2,
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6,
+.content-area b,
+.content-area strong {
   color: #1b2124;
 }
-.content-formatted h1,
-.content-formatted h2,
-.content-formatted h3,
-.content-formatted h4,
-.content-formatted h5,
-.content-formatted h6 {
+.content-area h1,
+.content-area h2,
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
   line-height: 1.3em;
 }
-.content-formatted h1 {
+.content-area h1 {
   text-align: center;
   font-size: 30px;
 }
-.content-formatted iframe {
+.content-area iframe {
   max-width: 100%;
 }
-.content-formatted .edy-positionable-container-left {
+.content-area .edy-positionable-container-left {
   margin-right: 10px;
 }
-.content-formatted .edy-positionable-container-right {
+.content-area .edy-positionable-container-right {
   margin-left: 10px;
 }
 
-.content-formatted .form_fields {
+.content-area .form_fields {
   margin-top: 20px;
 }
-.content-formatted .form_field {
+.content-area .form_field {
   margin-top: 10px;
 }
-.content-formatted .form_field:first-child {
+.content-area .form_field:first-child {
   margin-top: 0;
 }
-.content-formatted .form_field label,
-.content-formatted .form_field .form_field_label {
+.content-area .form_field label,
+.content-area .form_field .form_field_label {
   display: block;
   font-size: 14px;
 }
-.content-formatted .form_field .form_field_label {
+.content-area .form_field .form_field_label {
   font-weight: 700;
 }
-.content-formatted .form_field_required .form_field_label:after {
+.content-area .form_field_required .form_field_label:after {
   content: '* \a';
 }
-.content-formatted .form_field_textfield,
-.content-formatted .form_field_textarea,
-.content-formatted .form_field_select {
+.content-area .form_field_textfield,
+.content-area .form_field_textarea,
+.content-area .form_field_select {
   max-width: 100%;
   box-sizing: border-box;
 }
-.content-formatted .form_field_textfield,
-.content-formatted .form_field_textarea {
+.content-area .form_field_textfield,
+.content-area .form_field_textarea {
   padding: 7px;
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.53);
   border-radius: 3px;
 }
-.content-formatted .form_field_textfield.form_field_size_small,
-.content-formatted .form_field_textarea.form_field_size_small {
+.content-area .form_field_textfield.form_field_size_small,
+.content-area .form_field_textarea.form_field_size_small {
   width: 280px;
 }
-.content-formatted .form_field_textfield.form_field_size_medium,
-.content-formatted .form_field_textarea.form_field_size_medium {
+.content-area .form_field_textfield.form_field_size_medium,
+.content-area .form_field_textarea.form_field_size_medium {
   width: 420px;
 }
-.content-formatted .form_field_textfield.form_field_size_large,
-.content-formatted .form_field_textarea.form_field_size_large {
+.content-area .form_field_textfield.form_field_size_large,
+.content-area .form_field_textarea.form_field_size_large {
   width: 580px;
 }
-.content-formatted .form_field_select.form_field_size_small {
+.content-area .form_field_select.form_field_size_small {
   min-width: auto;
 }
-.content-formatted .form_field_select.form_field_size_medium {
+.content-area .form_field_select.form_field_size_medium {
   min-width: 124px;
 }
-.content-formatted .form_field_select.form_field_size_large {
+.content-area .form_field_select.form_field_size_large {
   min-width: 184px;
 }
-.content-formatted .form_submit {
+.content-area .form_submit {
   margin-top: 10px;
 }
-.content-formatted .form_error,
-.content-formatted .form_field_error {
+.content-area .form_error,
+.content-area .form_field_error {
   color: #cc0000;
 }
-.content-formatted .form_field_error {
+.content-area .form_field_error {
   font-size: 14px;
 }
-.content-formatted .form_notice {
+.content-area .form_notice {
   color: #60a740;
 }

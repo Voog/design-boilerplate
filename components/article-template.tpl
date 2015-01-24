@@ -6,8 +6,8 @@
   </header>
 
   <div class="article-content">
-    <div class="article-excerpt content-formatted">{% if article-template == 'article_page' %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
-    {% if article-template == 'article_page' %}<div class="article-body content-formatted">{% editable article.body %}</div>{% endif %}
+    <div class="article-excerpt content-area">{% if article-template == 'article_page' %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
+    {% if article-template == 'article_page' %}<div class="article-body content-area">{% editable article.body %}</div>{% endif %}
   </div>
 
   {% unless article-template == 'article_page' %}
