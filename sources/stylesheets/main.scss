@@ -3,7 +3,8 @@
 // that you don't need.
 
 // MODULES
-@import '../../bower_components/bourbon/dist/bourbon';
+
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import 'modules/_mixins';
 @import 'modules/_variables';
 
@@ -22,7 +23,7 @@
 
 // COMPONENTS
 @import 'components/_blog-article';
-@import 'components/_article-comments';
+@import 'components/_blog-article-comments';
 @import 'components/_site-header';
 @import 'components/_navigation-menus';
 @import 'components/_site-search';

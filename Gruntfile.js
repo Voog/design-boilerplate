@@ -10,8 +10,8 @@ module.exports = function(grunt) {
         'devFile' : 'bower_components/modernizr/modernizr.js',
         'outputFile' : 'javascripts/modernizr.js',
         'tests': [
-        'flexbox',
-        'svg'
+          'flexbox',
+          'svg'
         ],
         'uglify' : false
       }
@@ -21,9 +21,8 @@ module.exports = function(grunt) {
     concat: {
       build: {
         src: [
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/overthrow/src/overthrow-polyfill.js',
-        'javascripts/src/concat/*.js'
+          'bower_components/jquery/dist/jquery.js',
+          'sources/javascripts/*.js'
         ],
         dest: 'javascripts/main.js'
       }
@@ -36,8 +35,8 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'javascripts/',
           src: [
-          '*.js',
-          '!*.min.js'
+            '*.js',
+            '!*.min.js'
           ],
           dest: 'javascripts/',
           ext: '.min.js'
@@ -54,8 +53,8 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'stylesheets/scss/',
-          src: '*.scss',
+          cwd: 'sources/stylesheets',
+          src: 'main.scss',
           dest: 'stylesheets/',
           ext: '.css'
         }]
@@ -68,8 +67,8 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'stylesheets/',
         src: [
-        '*.css',
-        '!*.min.css'
+          '*.css',
+          '!*.min.css'
         ],
         dest: 'stylesheets/',
         ext: '.min.css'
@@ -81,7 +80,7 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          cwd: 'images/src/',
+          cwd: 'sources/images',
           src: '*.{png,jpg,gif}',
           dest: 'images/'
         }]
@@ -93,7 +92,7 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          cwd: 'assets/src/',
+          cwd: 'sources/assets',
           src: '*.svg',
           dest: 'assets/',
           ext: '.svg'
@@ -123,30 +122,30 @@ module.exports = function(grunt) {
     // Watches the project for changes and recompiles the output files.
     watch: {
       js: {
-        files: 'javascripts/src/concat/*.js',
-        tasks: ['newer:concat', 'newer:uglify']
+        files: 'sources/javascripts/*.js',
+        tasks: ['concat:build', 'uglify:build']
       },
 
       css: {
         files: [
-          'stylesheets/scss/*.scss',
-          'stylesheets/scss/*/*.scss'
+          'sources/stylesheets/*.scss',
+          'sources/stylesheets/*/*.scss'
         ],
-        tasks: ['sass:build', 'newer:cssmin:build']
+        tasks: ['sass:build', 'cssmin:build']
       },
 
       img: {
         files: [
-          'images/src/*.jpg',
-          'images/src/*.png',
-          'images/src/*.gif'
+          'sources/images/*.jpg',
+          'sources/images/*.png',
+          'sources/images/*.gif'
         ],
-        tasks: ['newer:imagemin:build']
+        tasks: ['imagemin:build']
       },
 
       svg: {
-        files: 'assets/src/*.svg',
-        tasks: ['newer:svgmin:build']
+        files: 'sources/assets/*.svg',
+        tasks: ['svgmin:build']
       },
 
       voog: {
@@ -166,18 +165,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-modernizr');
-  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-svgmin');
 
   grunt.registerTask('default', ['modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
-      if (action == "added" || action == "deleted") {
+      if (action == 'added' || action == 'deleted') {
         grunt.task.run(['exec:kitmanifest']);
       }
       if (grunt.file.exists('.voog')) {
-        if (action != "deleted") {
+        if (action != 'deleted') {
           grunt.task.run(['exec:kit:' + filepath]);
         }
       }

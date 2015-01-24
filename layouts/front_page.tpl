@@ -7,15 +7,17 @@
   <body class="front-page">
     <div class="site-container">
       {% include 'site-header' %}
+      {% comment %}{% include 'site-sidebar' %}{% endcomment %}
 
       <main class="page-content" role="main">
-        <header class="content-header content-area">{% contentblock name="content_header" %}<h1>{{ page.site_title }}</h1>{% endcontentblock %}</header>
-        <div class="content-slogan content-area">{% content name="slogan" %}</div>
-        <div class="content-body content-area">{% content %}</div>
+        <section class="content-area">
+          <header class="content-header">{% contentblock name="content_header" %}<h1>{{ page.site_title }}</h1>{% endcontentblock %}</header>
+          <div class="content-slogan">{% content name="slogan" %}</div>
+          <div class="content-body">{% content %}</div>
+        </section>
       </main>
 
       {% include 'site-footer' %}
-
       {% include 'site-javascripts' %}
       <script>site.initFrontPage();</script>
     </div>

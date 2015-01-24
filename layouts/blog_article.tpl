@@ -4,18 +4,17 @@
     {% include 'html-head' %}
   </head>
 
-  <body class="article-page">
+  <body class="blog-article-page">
     <div class="site-container">
       {% include 'site-header' %}
-
-      {% include 'site-sidebar' %}
+      {% comment %}{% include 'site-sidebar' %}{% endcomment %}
 
       <main class="page-content" role="main">
-        <section class="blog-news-articles content-area">
-          {% include 'article-template' with 'article_page' %}
+        <section class="blog-article content-area">
+          {% include 'blog-article-template' with 'article_page' %}
         </section>
 
-        {% include 'article-comments' %}
+        {% include 'blog-article-comments' %}
       </main>
 
       {% include 'site-footer' %}

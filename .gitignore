@@ -1,11 +1,10 @@
-bower_components/
-
-node_modules/
-
+# Hidden files
 .DS_Store
-
+.sass-cache
 .voog
 
-.sass-cache
+#Visible files
 
-sftp-config.json
+# Folders
+bower_components/
+node_modules/

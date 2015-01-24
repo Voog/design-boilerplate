@@ -7,8 +7,7 @@
   <body class="blog-page">
     <div class="site-container">
       {% include 'site-header' %}
-
-      {% include 'site-sidebar' %}
+      {% comment %}{% include 'site-sidebar' %}{% endcomment %}
 
       <main class="page-content" role="main">
         <section class="blog-articles content-area">
@@ -20,7 +19,6 @@
       </main>
 
       {% include 'site-footer' %}
-
       {% include 'site-javascripts' %}
       <script>site.initBlogPage();</script>
     </div>

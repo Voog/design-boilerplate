@@ -1,8 +1,8 @@
 {% if site.search.enabled %}
   <div class="site-search">
     <form class="search-form" method="get" action="#">
-      <input id="onpage_search" class="search-input js-search-input" type="text" name="" placeholder="{{ 'search' | lc }}...">
-      <input class="search-submit" type="submit">
+      <input class="search-input" placeholder="{{ 'search' | lc }}...">
+      <input class="search-submit" type="submit" value="{{ 'search' | lc }}">
     </form>
 
     <div class="voog-search-modal">
