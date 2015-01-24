@@ -4,7 +4,7 @@ body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.3em;
+  line-height: 1.5em;
   color: rgba(0, 0, 0, 0.55);
 }
 
@@ -23,7 +23,7 @@ a img {
   background-color: white;
 }
 
-.site-header .header-top:after, .site-header .header-top .inner-right:after, .content-area:after {
+.content-area:after {
   display: table;
   clear: both;
   content: '';
@@ -36,20 +36,20 @@ a img {
   hyphens: auto;
 }
 
-.menu-main {
-  float: left;
-}
-
-.site-header .header-top .inner-right, .menu-language {
-  float: right;
-}
-
 .is-visible {
   display: block;
 }
 
+.menu li, .menu-language {
+  display: inline-block;
+}
+
 .is-hidden {
   display: none;
+}
+
+.menu-language {
+  vertical-align: middle;
 }
 
 .site-search .search-input, .content-area .form_field_textfield,
@@ -98,18 +98,40 @@ a img {
   outline-color: rgba(255, 255, 255, 0.63);
 }
 
-.front-page .content-slogan, .front-page .content-area h2 {
+.front-page .page-content h1, .front-page .page-content .content-header {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+
+.front-page .page-content h2, .front-page .page-content .content-slogan {
   font-size: 50px;
-  line-height: 1em;
+  font-weight: 400;
+  line-height: 1.3em;
+}
+
+.front-page .page-content p, .front-page .page-content .content-area {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.front-page .site-header {
+  margin-bottom: 70px;
+}
+.front-page .page-content {
+  margin-bottom: 50px;
+}
+.front-page .page-content h3 {
+  font-size: 30px;
+}
+.front-page .page-content .content-header {
+  margin-bottom: 10px;
   color: #1b2124;
 }
-.front-page .content-area h1 {
-  text-align: left;
-  font-size: 100px;
-  line-height: 1em;
-}
-.front-page .content-area h3 {
-  font-size: 25px;
+.front-page .page-content .content-slogan {
+  margin-bottom: 80px;
+  color: #1b2124;
 }
 
 .common-page .content-header {
@@ -117,6 +139,43 @@ a img {
   margin-bottom: 25px;
 }
 
+.site-header .header-top {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-align: baseline;
+  -moz-box-align: baseline;
+  box-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -ms-flex-align: baseline;
+}
+.site-header .header-top .site-options {
+  margin-bottom: 20px;
+}
 .site-header .header-bottom {
   margin-top: 50px;
 }
@@ -127,9 +186,6 @@ a img {
   margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
-}
-.menu li {
-  display: inline-block;
 }
 .menu li:last-child {
   margin-right: 0;
@@ -147,7 +203,7 @@ a img {
 }
 
 .menu-main {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .menu-main li {
   margin-right: 20px;
@@ -165,9 +221,8 @@ a img {
 }
 
 .site-search {
-  position: relative;
-  top: -3px;
-  float: right;
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 10px;
 }
 .site-search .search-input {
@@ -185,12 +240,18 @@ a img {
 }
 
 .site-footer {
-  margin-top: 50px;
   font-size: 14px;
+}
+.site-footer .voog-reference {
+  color: black;
+  opacity: .55;
+}
+.site-footer .voog-reference:hover {
+  opacity: .8;
 }
 
 .content-area {
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 .content-area h1:first-child,
 .content-area h2:first-child,
@@ -240,11 +301,13 @@ a img {
 .content-area h4,
 .content-area h5,
 .content-area h6 {
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 .content-area h1 {
-  text-align: center;
   font-size: 30px;
+}
+.content-area a:hover {
+  opacity: .8;
 }
 .content-area iframe {
   max-width: 100%;

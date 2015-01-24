@@ -1,4 +1,12 @@
 .site-footer {
-  margin-top: 50px;
   font-size: 14px;
+
+  .voog-reference {
+    color: rgba($black,1);
+    opacity: .55;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
 }

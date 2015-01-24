@@ -2,9 +2,9 @@
   <div class="header-top">
     {% include 'menu-main' %}
 
-    <div class="inner-right">
-      {% include 'menu-language' %}
+    <div class="site-options">
       {% include 'site-search' %}
+      {% include 'menu-language' %}
     </div>
   </div>
 

@@ -1,10 +1,12 @@
 .site-header {
   .header-top {
-    @extend %clearfix;
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(baseline);
 
-    .inner-right {
-      @extend %clearfix;
-      @extend %right;
+    .site-options {
+      margin-bottom: 20px;
     }
   }
 

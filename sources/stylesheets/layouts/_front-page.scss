@@ -1,31 +1,59 @@
+%large-text {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+
+%medium-text {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.3em;
+}
+
+%normal-text {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
 .front-page {
-  .content-header {
-
+  .site-header {
+    margin-bottom: 70px;
   }
 
-  %second-heading {
-    font-size: 50px;
-    line-height: 1em;
-    color: rgba($highlight-color, 1);
-  }
+  .page-content {
+    margin-bottom: 50px;
 
-  .content-slogan {
-    @extend %second-heading
-  }
-
-  .content-area {
     h1 {
-      text-align: left;
-      font-size: 100px;
-      line-height: 1em;
+      @extend %large-text;
     }
 
     h2 {
-      @extend %second-heading;
+      @extend %medium-text;
     }
 
     h3 {
-      font-size: 25px;
+      font-size: 30px;
+    }
+
+    p {
+      @extend %normal-text;
+    }
+
+    .content-header {
+      @extend %large-text;
+      margin-bottom: 10px;
+      color: rgba($highlight-color, 1);
+    }
+
+    .content-slogan {
+      @extend %medium-text;
+      margin-bottom: 80px;
+      color: rgba($highlight-color, 1);
+    }
+
+    .content-area {
+      @extend %normal-text;
     }
   }
 }

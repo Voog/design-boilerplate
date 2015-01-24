@@ -1,7 +1,6 @@
 .site-search {
-  position: relative;
-  top: -3px;
-  float: right;
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 10px;
 
   .search-input {

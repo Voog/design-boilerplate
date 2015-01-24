@@ -47,14 +47,13 @@
   }
 
   h1 {
-    text-align: center;
     font-size: 30px;
   }
 
   a {
 
     &:hover {
-
+      opacity: .8;
     }
   }
 
