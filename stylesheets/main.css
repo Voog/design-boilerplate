@@ -23,6 +23,10 @@ a img {
   background-color: white;
 }
 
+.page-content {
+  margin-bottom: 50px;
+}
+
 .content-area:after {
   display: table;
   clear: both;
@@ -118,9 +122,6 @@ a img {
 
 .front-page .site-header {
   margin-bottom: 70px;
-}
-.front-page .page-content {
-  margin-bottom: 50px;
 }
 .front-page .page-content h3 {
   font-size: 30px;
@@ -304,7 +305,14 @@ a img {
   line-height: 1.5em;
 }
 .content-area h1 {
-  font-size: 30px;
+  font-size: 36px;
+}
+.content-area h2 {
+  font-size: 24px;
+}
+.content-area h3 {
+  font-size: 18px;
+  font-style: italic;
 }
 .content-area a:hover {
   opacity: .8;
