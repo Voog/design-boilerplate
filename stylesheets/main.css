@@ -309,6 +309,31 @@ a img {
 .content-area a:hover {
   opacity: .8;
 }
+.content-area pre,
+.content-area code {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.3em;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.content-area pre {
+  overflow: auto;
+}
+.content-area pre code {
+  display: inline;
+  padding: 0;
+  white-space: pre;
+  line-height: inherit;
+  background-color: transparent;
+}
+.content-area code {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: auto;
+  box-sizing: border-box;
+  max-width: 100%;
+}
 .content-area iframe {
   max-width: 100%;
 }
