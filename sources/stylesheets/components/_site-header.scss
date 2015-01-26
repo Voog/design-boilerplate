@@ -1,4 +1,6 @@
 .site-header {
+  margin-bottom: 70px;
+
   .header-top {
     @include display(flex);
     @include flex-wrap(wrap);

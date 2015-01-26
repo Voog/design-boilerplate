@@ -1,3 +1,5 @@
-.article-page {
-
+.blog-article-page {
+  .article-title {
+    @extend %article-title;
+  }
 }

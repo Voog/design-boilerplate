@@ -1,3 +1,8 @@
-.blog-page {
-
+.blog-news-page {
+  .article-title {
+    a {
+      @extend %article-title;
+    }
+  }
 }
+

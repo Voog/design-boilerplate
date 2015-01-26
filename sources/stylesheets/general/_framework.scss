@@ -12,20 +12,6 @@
   background-image: url(../images/spritesheet.png);
 }
 
-%pseudo-block {
-  position: absolute;
-  display: block;
-  content: '';
-}
-
-%hyphens-true {
-  @include hyphens(auto);
-}
-
-%hyphens-false {
-  @include hyphens(none);
-}
-
 // POSITIONING
 %absolute {
   position: absolute;
@@ -112,6 +98,20 @@
 }
 
 // REUASBLE ELEMENTS
+%pseudo-block {
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+%hyphens-true {
+  @include hyphens(auto);
+}
+
+%hyphens-false {
+  @include hyphens(none);
+}
+
 %button {
   margin: 0;
   padding: 0;
@@ -139,8 +139,10 @@
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
 
-  &:focus {
-    outline: none;
-  }
+%article-title {
+  font-size: $article-title-size;
+  line-height: 1.2em;
+  color: $highlight-color;
 }

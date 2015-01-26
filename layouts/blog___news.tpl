@@ -4,7 +4,7 @@
     {% include 'html-head' %}
   </head>
 
-  <body class="blog-page">
+  <body class="blog-news-page">
     <div class="site-container">
       {% include 'site-header' %}
       {% comment %}{% include 'site-sidebar' %}{% endcomment %}
@@ -13,7 +13,7 @@
         <section class="blog-articles content-area">
           {% addbutton %}
           {% for article in articles %}
-            {% include 'article-template' %}
+            {% include 'blog-article-template' %}
           {% endfor %}
         </section>
       </main>

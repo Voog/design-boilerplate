@@ -8,11 +8,13 @@
     </div>
   </div>
 
-  {% for item in site.visible_menuitems %}
-    {% if item.selected? and item.children? or editmode %}
-    <div class="header-bottom">
-      {% include 'menu-sub' %}
-    </div>
-  {% endif %}
-{% endfor %}
+  {% unless blog %}
+    {% for item in site.visible_menuitems %}
+      {% if item.selected? and item.children? or editmode %}
+        <div class="header-bottom">
+          {% include 'menu-sub' %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endunless %}
 </header>

@@ -1,13 +1,13 @@
 %large-text {
   font-size: 100px;
   font-weight: 700;
-  line-height: 1.3em;
+  line-height: $secondary-line-height;
 }
 
 %medium-text {
   font-size: 50px;
   font-weight: 400;
-  line-height: 1.3em;
+  line-height: $secondary-line-height;
 }
 
 %normal-text {
@@ -17,10 +17,6 @@
 }
 
 .front-page {
-  .site-header {
-    margin-bottom: 70px;
-  }
-
   .page-content {
     h1 {
       @extend %large-text;
