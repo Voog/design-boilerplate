@@ -101,7 +101,7 @@
 
   var initCommonPage = function() {
     // Add common page specific functions here.
-    focusFormWithErrors();
+
   };
 
   var initBlogPage = function() {
@@ -110,13 +110,13 @@
 
   var initPostPage = function() {
     // Add single post layout specific functions here.
-    focusFormWithErrors();
   };
 
   var init = function() {
     // Add site wide functions here.
     handleLanguageSwitch();
     toggleMainMenu();
+    focusFormWithErrors();
     handlePopoverMenuHide();
     handleGalleryHover();
     handleWindowResize();
