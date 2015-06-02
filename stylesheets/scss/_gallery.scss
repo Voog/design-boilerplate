@@ -1,26 +1,30 @@
-/* GALLERY */
-// Styling rules for the built-in image gallery thumbnails.  These rules affect the entire site's image galleries.
-// NB! It is not recommended to set the width and height of the thumbail image (.edys-gallery-image) larger than 100px because the generated thumbnail's original size is 100x100px.
-.edys-gallery-area {
-  margin-top: 25px;
+.content-formatted {
+  .edys-gallery-area,
+  .edy-gallery-area {
+    margin-left: -6px;
+    font-size: 0;
+    line-height: 1em;
 
-  &:first-child {
-    margin-top: 0;
-  }
-}
+    .edys-gallery-item {
+      @include transition(opacity 0.3s ease-in);
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
 
-.edys-gallery {
-  .edys-gallery-item {
-    display: inline-block;
-
-    .edys-gallery-image {
       &.inactive {
-        opacity: 0.6;
+        opacity: .6;
+      }
+
+      &:hover {
+        opacity: 1;
       }
     }
 
-    &:hover {
-      opacity: 1;
+    .edys-gallery-item,
+    .edy-gallery-item,
+    .edy-gallery-sortable-placeholder {
+      display: inline-block;
+      float: none;
+      margin: 3px 0 3px 6px
     }
   }
 }

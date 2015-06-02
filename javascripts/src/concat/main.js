@@ -25,12 +25,12 @@
 
   // Reduces opacity of the gallery images that are not under the cursor.
   var handleGalleryHover = function() {
-    $('.edys-gallery-item').mouseover(function() {
-      $(this).siblings('.edys-gallery-item').find('.edys-gallery-image').addClass('inactive');
+    $('.edys-gallery').mouseover(function() {
+      $(this).find('.edys-gallery-item').addClass('inactive');
     });
 
-    $('.edys-gallery-item').mouseout(function() {
-      $(this).siblings('.edys-gallery-item').find('.edys-gallery-image').removeClass('inactive');
+    $('.edys-gallery').mouseout(function() {
+      $(this).find('.edys-gallery-item').removeClass('inactive');
     });
   };
 
