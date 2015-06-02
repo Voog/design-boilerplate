@@ -1,4 +1,21 @@
 ;(function($) {
+  // Remove comments if debouncing is used.
+  // Function to limit the rate at which a function can fire.
+  // var debounce = function(func, wait, immediate) {
+  //   var timeout;
+  //   return function() {
+  //     var context = this, args = arguments;
+  //     var later = function() {
+  //       timeout = null;
+  //       if (!immediate) func.apply(context, args);
+  //     };
+  //     var callNow = immediate && !timeout;
+  //     clearTimeout(timeout);
+  //     timeout = setTimeout(later, wait);
+  //     if (callNow) func.apply(context, args);
+  //   };
+  // };
+
   // Switches the site language to the selected value from the language menu.
   var handleLanguageSwitch = function() {
     $('.menu-lang').find('.menu').change(function() {
@@ -63,34 +80,11 @@
     $('.content-formatted table').wrap('<div class="table-container overthrow"></div>');
   };
 
-  // Checks the presence of the table scrollbar.
-  var checkScrollBar = function() {
-    jQuery.fn.hasScrollBar = function(direction) {
-      if (direction == 'vertical') {
-        return this.get(0).scrollHeight > this.innerHeight();
-      } else if (direction == 'horizontal') {
-        return this.get(0).scrollWidth > this.innerWidth();
-      }
-      return false;
-    };
-  };
-
-  // Adds horizontal scroll to tables that don't fit into the content area.
-  var handleTableHorizontalScrolling = function() {
-    $.each($('.table-container'), function() {
-      if ($(this).hasScrollBar('horizontal') === true) {
-        $(this).addClass('horizontal-scroll');
-      } else {
-        $(this).removeClass('horizontal-scroll');
-      }
-    });
-  };
-
   // Initiates the table horisontal scroll function when window is resized.
   var handleWindowResize = function() {
-    $(window).resize(function() {
-      handleTableHorizontalScrolling();
-    });
+    // Add functions that should be triggered while resizing the window here.
+    // Example:
+    // $(window).resize(debounce(yourFunctionName, 3000));
   };
 
   // FUNCTIONS INITIATIONS
@@ -121,10 +115,6 @@
     handleGalleryHover();
     handleWindowResize();
     wrapTables();
-    if ($('.table-container').length > 0) {
-      checkScrollBar();
-      handleTableHorizontalScrolling();
-    }
   };
 
   // Enables the usage of the initiations outside this file.
