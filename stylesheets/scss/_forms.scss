@@ -53,7 +53,7 @@
     padding: 7px;
     @include border(all, 1px, solid, $grey-1);
     border-radius: 3px;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 
     @include query($mobile-2) {
       width: 100%;

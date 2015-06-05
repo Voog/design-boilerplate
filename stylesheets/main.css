@@ -143,13 +143,15 @@ body {
   white-space: pre;
   line-height: inherit;
   background-color: transparent;
+  overflow-wrap: normal;
   word-wrap: normal;
+  word-break: normal;
 }
 .content-formatted code {
   display: inline-block;
   padding: 5px;
-  word-wrap: break-word;
   overflow-wrap: break-word;
+  word-wrap: break-word;
   word-break: break-all;
 }
 .content-formatted blockquote {
@@ -939,8 +941,6 @@ body {
   }
   .search-left .search-input {
     width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 }
@@ -1001,8 +1001,6 @@ body {
   padding: 7px;
   border: 1px solid #787878;
   border-radius: 3px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media screen and (max-width: 420px) {

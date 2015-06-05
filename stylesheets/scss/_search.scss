@@ -51,7 +51,7 @@
 
     .search-input {
       width: 100%;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
     }
   }
 }

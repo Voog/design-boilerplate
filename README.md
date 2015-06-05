@@ -6,12 +6,6 @@ To modify this template [Node Package Manager](https://www.npmjs.org/) (or [Node
 To set up the local developing environment, clone this repository and run the following commands:
 
 * Install Grunt dependencies: ```npm install```
-* Replace the line :21 in ```node_modules/grunt_contrib_sass/node_modules/dargs/dargs.js``` with the following example example:
-
-```
-args.push('--' + flag + '=' + val);
-```
-
 * Install Bower dependencies: ```bower install```
 * Run Grunt tasks: ```grunt```
 

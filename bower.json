@@ -1,12 +1,11 @@
 {
   "name": "voog-design-boilerplate",
   "devDependencies": {
-    "bourbon": "~4.0.2"
+    "bourbon": "~4.2.3"
   },
   "dependencies": {
-    "jquery": "~1.x",
+    "jquery": "~1.11.0",
     "modernizr": "~2.8.3",
     "overthrow": "~0.7.0"
   }
 }
-

@@ -19,35 +19,13 @@ module.exports = function(grunt) {
       }
     },
 
-    // Copys the standalone (not concatenated) javascript source files to the javascripts folder.
-    /*
-      If there are some javascript files that shouldn't be concatenated:
-        - Add the files to 'javascripts/src' folder.
-        - Uncomment the following task.
-        - Uncomment the task runner on line '166'.
-        - Run 'npm install grunt-contrib-copy' on command-line.
-        - Add 'copy' task next to 'modernizr' task on line '179'.
-    */
-    // copy: {
-    //   javascripts: {
-    //     files: [
-    //       {
-    //         expand: true,
-    //         cwd: 'javascripts/src',
-    //         src: '*.js',
-    //         dest: 'javascripts/'
-    //       }
-    //     ]
-    //   }
-    // },
-
-    // Concatenates the javascript source files to the javascripts folder.
+    // Concatenates the javascript source files into the one file in "javascripts" folder.
     concat: {
       build: {
         src: [
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/overthrow/src/overthrow-polyfill.js',
-        'javascripts/src/concat/*.js'
+          'bower_components/jquery/dist/jquery.js',
+          'bower_components/overthrow/src/overthrow-polyfill.js',
+          'javascripts/src/concat/*.js'
         ],
         dest: 'javascripts/application.js'
       }
@@ -164,8 +142,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  // Uncomment the following task if there are some javascript files that shouldn't be concatenated (see line '22' for further instructions).
-  // grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
