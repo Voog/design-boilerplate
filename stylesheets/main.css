@@ -157,6 +157,31 @@ body {
 .content-formatted blockquote {
   margin: 20px 40px;
 }
+.content-formatted .edy-positionable-container-center,
+.content-formatted .edy-positionable-container-left-block,
+.content-formatted .edy-positionable-container-right-block,
+.content-formatted .edy-texteditor-container-wrapper-center,
+.content-formatted .edy-texteditor-container-wrapper-left-block,
+.content-formatted .edy-texteditor-container-wrapper-right-block {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.content-formatted .edy-positionable-container-center:first-child,
+.content-formatted .edy-positionable-container-left-block:first-child,
+.content-formatted .edy-positionable-container-right-block:first-child,
+.content-formatted .edy-texteditor-container-wrapper-center:first-child,
+.content-formatted .edy-texteditor-container-wrapper-left-block:first-child,
+.content-formatted .edy-texteditor-container-wrapper-right-block:first-child {
+  margin-top: 0;
+}
+.content-formatted .edy-positionable-container-center:last-child,
+.content-formatted .edy-positionable-container-left-block:last-child,
+.content-formatted .edy-positionable-container-right-block:last-child,
+.content-formatted .edy-texteditor-container-wrapper-center:last-child,
+.content-formatted .edy-texteditor-container-wrapper-left-block:last-child,
+.content-formatted .edy-texteditor-container-wrapper-right-block:last-child {
+  margin-bottom: 0;
+}
 .content-formatted .edy-positionable-container-left,
 .content-formatted .edy-positionable-container-right {
   width: 45%;
