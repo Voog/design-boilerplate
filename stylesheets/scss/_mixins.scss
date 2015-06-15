@@ -1,6 +1,23 @@
 // CUSTOM MIXINS
 // Comment out the "_mixins.scss" partial in the "main.scss" file if not used.
 
+// HYPHENATE
+@mixin hyphenate($boolean) {
+  @if $boolean == true {
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  } @else {
+    word-break: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+}
+
 // GENERAL
 @mixin calc($property, $expression) {
   #{$property}: -webkit-calc(#{$expression});

@@ -286,6 +286,13 @@ body {
   padding: 0;
   list-style: none;
 }
+.menu .menu-item {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 .menu .menu-link {
   display: block;
   color: #0066bb;
