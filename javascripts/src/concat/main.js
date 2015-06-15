@@ -16,6 +16,15 @@
   //   };
   // };
 
+  var bindSideClicks = function() {
+    $(document).on('mousedown', function(event) {
+      if (!$(event.target).closest('.js-prevent-sideclick, .edy-popover, .edy-bar-container').length) {
+        $('.js-popover').removeClass('expanded');
+        $('.js-search-close-btn').trigger('click');
+      };
+    });
+  };
+
   // Switches the site language to the selected value from the language menu.
   var handleLanguageSwitch = function() {
     $('.menu-lang').find('.menu').change(function() {
@@ -28,15 +37,6 @@
     $('.js-menu-btn').click(function() {
       $(this).toggleClass('open');
       $('.js-menu-main').toggleClass('expanded');
-    });
-  };
-
-  // Hides the popover main menu if cicked anywhere else than the menu itself (visible on smalles screens).
-  var handlePopoverMenuHide = function() {
-    $('html').click(function() {
-      if ($('.js-lang-menu-popover').hasClass('expanded')) {
-        $('.js-lang-menu-popover').removeClass('expanded');
-      }
     });
   };
 
@@ -97,10 +97,10 @@
 
   var init = function() {
     // Add site wide functions here.
+    bindSideClicks();
     handleLanguageSwitch();
     toggleMainMenu();
     focusFormWithErrors();
-    handlePopoverMenuHide();
     handleWindowResize();
     wrapTables();
   };

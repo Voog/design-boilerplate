@@ -2,13 +2,13 @@
   <div class="header-left">
     <div class="header-title content-formatted">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{{ site.header }}{% unless editmode %}</a>{% endunless %}</div>
 
-    <button class="menu-btn js-menu-btn">
+    <button class="menu-btn js-menu-btn js-prevent-sideclick">
       <span class="menu-stripe"></span>
       <span class="menu-stripe"></span>
       <span class="menu-stripe"></span>
     </button>
 
-    <nav class="menu-main js-menu-main">
+    <nav class="menu-main js-menu-main js-popover js-prevent-sideclick">
       {% include "menu-level-1" %}
       {% if editmode or site.has_many_languages? %}
       <div class="menu-lang">
