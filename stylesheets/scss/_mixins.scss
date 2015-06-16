@@ -4,17 +4,17 @@
 // HYPHENATE
 @mixin hyphenate($boolean) {
   @if $boolean == true {
-    word-break: break-word;
-    -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
+    -webkit-hyphens: auto;
     hyphens: auto;
+    word-break: break-word;
   } @else {
-    word-break: normal;
-    -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
+    -webkit-hyphens: none;
     hyphens: none;
+    word-break: normal;
   }
 }
 
