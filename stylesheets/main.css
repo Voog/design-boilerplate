@@ -894,23 +894,6 @@ body {
   border-bottom: 1px solid rgba(114, 114, 114, 0.3);
 }
 
-.content-formatted .edys-gallery-area,
-.content-formatted .edy-gallery-area {
-  margin-left: -6px;
-  font-size: 0;
-  line-height: 1em;
-}
-.content-formatted .edys-gallery-area .edys-gallery-item,
-.content-formatted .edys-gallery-area .edy-gallery-item,
-.content-formatted .edys-gallery-area .edy-gallery-sortable-placeholder,
-.content-formatted .edy-gallery-area .edys-gallery-item,
-.content-formatted .edy-gallery-area .edy-gallery-item,
-.content-formatted .edy-gallery-area .edy-gallery-sortable-placeholder {
-  display: inline-block;
-  float: none;
-  margin: 3px 0 3px 6px;
-}
-
 /* SEARCH */
 @media screen and (max-width: 752px) {
   .search {
