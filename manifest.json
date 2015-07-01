@@ -6,6 +6,20 @@
   "author": "Tõnu Runnel",
   "layouts": [
     {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
+    },
+    {
       "content_type": "blog",
       "component": false,
       "file": "layouts/blog___news.tpl",
@@ -20,25 +34,11 @@
       "title": "Blog article"
     },
     {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/bg-picker-styles.tpl",
-      "layout_name": "bg-picker-styles",
-      "title": "bg-picker-styles"
+      "file": "components/menu-lang-mobile.tpl",
+      "layout_name": "menu-lang-mobile",
+      "title": "menu-lang-mobile"
     },
     {
       "content_type": "component",
@@ -92,9 +92,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang-mobile.tpl",
-      "layout_name": "menu-lang-mobile",
-      "title": "menu-lang-mobile"
+      "file": "components/bg-picker-styles.tpl",
+      "layout_name": "bg-picker-styles",
+      "title": "bg-picker-styles"
     },
     {
       "content_type": "component",
