@@ -6,6 +6,20 @@
   "author": "",
   "layouts": [
     {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
+    },
+    {
       "content_type": "blog",
       "component": false,
       "file": "layouts/blog___news.tpl",
@@ -18,20 +32,6 @@
       "file": "layouts/blog_article.tpl",
       "layout_name": "blog_article",
       "title": "Blog article"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
     },
     {
       "content_type": "component",
@@ -169,24 +169,6 @@
   ],
   "assets": [
     {
-      "content_type": "text/unknown",
-      "file": "assets/.DS_Store",
-      "kind": "assets",
-      "filename": ".DS_Store"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "images/.DS_Store",
-      "kind": "images",
-      "filename": ".DS_Store"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "javascripts/.DS_Store",
-      "kind": "javascripts",
-      "filename": ".DS_Store"
-    },
-    {
       "content_type": "application/javascript",
       "file": "javascripts/main.js",
       "kind": "javascripts",
@@ -209,12 +191,6 @@
       "file": "javascripts/modernizr.min.js",
       "kind": "javascripts",
       "filename": "modernizr.min.js"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "stylesheets/.DS_Store",
-      "kind": "stylesheets",
-      "filename": ".DS_Store"
     },
     {
       "content_type": "text/css",
