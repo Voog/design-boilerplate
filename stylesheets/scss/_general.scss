@@ -12,7 +12,37 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+
+  &.dark-background {
+    @include color($white);
+  }
 }
+
+// CMS DEFAULT STYLES OVERRIDES
+.dark-background {
+  .edy-empty-bordered {
+    color: rgba($white, .33);
+    border-color: rgba($white, .33);
+  }
+
+  .placeholder {
+    color: rgba($white, 5);
+  }
+
+  .edy-content-element-hover {
+    border-color: rgba($white, .1);
+  }
+
+  .edy-texteditor-active {
+    outline-color: rgba($white, .2);
+
+    &,
+    &:hover {
+      outline-color: rgba($white, .63);
+    }
+  }
+}
+
 
 // Layout specific body classes.
 .front-page {
@@ -49,9 +79,9 @@ body {
   display: inline-block;
 }
 
-// Styling rules for the independent elements that can be located everywhere in the DOM and always have the same look.
-.bgpicker-btn {
-  position: absolute;
+%button {
+  margin: 0;
+  padding: 0;
   background: none;
   border: none;
   cursor: pointer;
@@ -59,15 +89,26 @@ body {
   &:focus {
     outline: none;
   }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
 }
 
-.body-background-image,
-.body-background-color {
+// Styling rules for the independent elements that can be located everywhere in the DOM and always have the same look.
+.voog-bg-picker-btn {
+  @extend %button;
+  position: absolute;
+}
+
+.background-image,
+.background-color {
   position: fixed;
   z-index: -2;
 }
 
-.body-background-image {
+.background-image {
   top: 0;
   left: 0;
   width: 100%;
@@ -76,7 +117,7 @@ body {
   background-position: center center;
 }
 
-.body-background-color {
+.background-color {
   @extend %stretch;
 }
 
@@ -85,7 +126,6 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 20px;
-  @include bg($white);
 
   @include query($tablet-2) {
     padding: 20px

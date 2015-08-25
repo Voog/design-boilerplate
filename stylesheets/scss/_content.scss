@@ -26,6 +26,10 @@
   &.content-formatted {
     @include color($secondary-color);
 
+    .dark-background & {
+      @include color($white);
+    } 
+
     h1 {
       font-size: 100px;
     }

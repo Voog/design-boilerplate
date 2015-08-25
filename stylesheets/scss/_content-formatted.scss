@@ -5,6 +5,10 @@
   @extend %clearfix;
   word-wrap: break-word;
 
+  .dark-background & {
+    @include color($white);
+  }
+
   // Resets the bottom margin for all elements and top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
   h1, h2, h3, h4, h5, h6, p, ul, ol, pre, code, img, iframe, table form {
     margin-bottom: 0;
@@ -18,6 +22,10 @@
   h1, h2, h3, h4, h5, h6 {
     @include color($secondary-color);
     word-wrap: break-word;
+
+    .dark-background & {
+      @include color($white);
+    }
   }
 
   h1 {
@@ -63,6 +71,7 @@
 
   a {
     @include color($blue-1);
+
     &:hover {
       @include color($blue-1, 0.8);
     }
@@ -107,21 +116,6 @@
     padding: 5px;
     @include word-wrap(break-word);
   }
-
-  // pre {
-  //   overflow: auto;
-  //   margin-bottom: 0;
-  //   padding: 10px;
-  //   font-size: 14px;
-  //   @include bg($grey-3);
-
-  //   code {
-  //     display: block;
-  //     white-space: nowrap;
-  //     margin-top: 0;
-  //     padding: 0;
-  //   }
-  // }
 
   blockquote {
     margin: 20px 40px;

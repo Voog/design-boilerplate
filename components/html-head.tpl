@@ -17,8 +17,8 @@
 <script src="{{ javascripts_path }}/modernizr.js"></script>
 
 {% comment %}STYLESHEETS{% endcomment %}
-{% stylesheet_link "main.css" %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.css" %}<![endif]-->
+{% stylesheet_link "main.css" %}
 {% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
 <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.css">
 

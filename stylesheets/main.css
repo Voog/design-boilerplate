@@ -12,6 +12,26 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+body.dark-background {
+  color: white;
+}
+
+.dark-background .edy-empty-bordered {
+  color: rgba(255, 255, 255, 0.33);
+  border-color: rgba(255, 255, 255, 0.33);
+}
+.dark-background .placeholder {
+  color: white;
+}
+.dark-background .edy-content-element-hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.dark-background .edy-texteditor-active {
+  outline-color: rgba(255, 255, 255, 0.2);
+}
+.dark-background .edy-texteditor-active, .dark-background .edy-texteditor-active:hover {
+  outline-color: rgba(255, 255, 255, 0.63);
+}
 
 .content-formatted:after {
   content: "";
@@ -19,7 +39,7 @@ body {
   clear: both;
 }
 
-.body-background-color {
+.background-color {
   top: 0;
   left: 0;
   right: 0;
@@ -32,23 +52,32 @@ body {
   display: inline-block;
 }
 
-.bgpicker-btn {
-  position: absolute;
+.voog-bg-picker-btn {
+  margin: 0;
+  padding: 0;
   background: none;
   border: none;
   cursor: pointer;
 }
-.bgpicker-btn:focus {
+.voog-bg-picker-btn:focus {
   outline: none;
 }
+.voog-bg-picker-btn::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
 
-.body-background-image,
-.body-background-color {
+.voog-bg-picker-btn {
+  position: absolute;
+}
+
+.background-image,
+.background-color {
   position: fixed;
   z-index: -2;
 }
 
-.body-background-image {
+.background-image {
   top: 0;
   left: 0;
   width: 100%;
@@ -61,7 +90,6 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: white;
 }
 @media screen and (max-width: 752px) {
   .container {
@@ -78,6 +106,9 @@ body {
 .content-formatted {
   word-wrap: break-word;
 }
+.dark-background .content-formatted {
+  color: white;
+}
 .content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6, .content-formatted p, .content-formatted ul, .content-formatted ol, .content-formatted pre, .content-formatted code, .content-formatted img, .content-formatted iframe, .content-formatted table form {
   margin-bottom: 0;
 }
@@ -87,6 +118,9 @@ body {
 .content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   color: #1b2124;
   word-wrap: break-word;
+}
+.dark-background .content-formatted h1, .dark-background .content-formatted h2, .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6 {
+  color: white;
 }
 .content-formatted h1 {
   margin-top: 40px;
@@ -777,6 +811,10 @@ body {
 .content-slogan.content-formatted {
   color: #1b2124;
 }
+.dark-background .content-title.content-formatted, .dark-background
+.content-slogan.content-formatted {
+  color: white;
+}
 .content-title.content-formatted h1,
 .content-slogan.content-formatted h1 {
   font-size: 100px;
@@ -856,9 +894,16 @@ body {
   font-size: 50px;
   color: #1b2124;
 }
+.dark-background .post .post-title, .dark-background .post .post-title a {
+  color: white;
+}
 .post .post-title a:hover {
   color: #1b2124;
   color: rgba(27, 33, 36, 0.8);
+}
+.dark-background .post .post-title a:hover {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 @media screen and (max-width: 480px) {
   .post .post-title, .post .post-title a {
@@ -869,8 +914,15 @@ body {
   font-size: 14px;
   color: #1b2124;
 }
+.dark-background .post .post-date {
+  color: white;
+}
 .post .post-author {
   font-size: 12px;
+}
+.dark-background .post .post-author {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 .post .post-content {
   margin-top: 20px;
