@@ -151,9 +151,16 @@ body.dark-background {
 .content-formatted a {
   color: #0066bb;
 }
+.dark-background .content-formatted a {
+  color: white;
+}
 .content-formatted a:hover {
   color: #0066bb;
   color: rgba(0, 102, 187, 0.8);
+}
+.dark-background .content-formatted a:hover {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 .content-formatted img, .content-formatted iframe {
   max-width: 100%;
@@ -334,6 +341,9 @@ body.dark-background {
   display: block;
   color: #0066bb;
 }
+.dark-background .menu .menu-link {
+  color: white;
+}
 .menu .menu-link.untranslated {
   color: #cc0000;
   color: rgba(204, 0, 0, 0.5);
@@ -343,8 +353,15 @@ body.dark-background {
   color: #727272;
   color: rgba(114, 114, 114, 0.8);
 }
+.dark-background .menu .menu-link.active {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
+}
 .menu .menu-link:hover {
   color: #727272;
+}
+.dark-background .menu .menu-link:hover {
+  color: white;
 }
 
 .menu-main {
@@ -359,6 +376,10 @@ body.dark-background {
   font-weight: 700;
   color: #727272;
   color: rgba(114, 114, 114, 0.8);
+}
+.dark-background .menu-main .menu .menu-link.active {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 .menu-main .menu-sub {
   display: none;
@@ -944,9 +965,16 @@ body.dark-background {
   font-size: 14px;
   color: #0066bb;
 }
+.dark-background .post .post-comments-count a {
+  color: white;
+}
 .post .post-comments-count a:hover {
   color: #0066bb;
   color: rgba(0, 102, 187, 0.8);
+}
+.dark-background .post .post-comments-count a:hover {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .blog-page .post {

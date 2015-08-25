@@ -73,6 +73,10 @@
     display: block;
     @include color($blue-1);
 
+    .dark-background & {
+      @include color($white);          
+    }
+
     &.untranslated {
       @include color($red, 0.5);
     }
@@ -80,10 +84,18 @@
     &.active {
       font-weight: 700;
       @include color($primary-color, 0.8);
+
+      .dark-background & {
+        @include color($white, 0.8);          
+      }
     }
 
     &:hover {
       @include color($primary-color);
+
+      .dark-background & {
+        @include color($white);          
+      }
     }
   }
 }
@@ -113,6 +125,10 @@
       &.active {
         font-weight: 700;
         @include color($primary-color, 0.8);
+
+        .dark-background & {
+          @include color($white, 0.8);          
+        }
       }
     }
   }

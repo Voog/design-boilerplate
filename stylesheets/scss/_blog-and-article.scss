@@ -2,7 +2,7 @@
 // Styling rules for both - the blog listing view and the blog single article view
 .post {
   @include hyphenate(true);
-  
+
   .post-header {
   }
 
@@ -73,8 +73,16 @@
       font-size: 14px;
       @include color($blue-1);
 
+      .dark-background & {
+        @include color($white);
+      }
+
       &:hover {
         @include color($blue-1, 0.8);
+
+        .dark-background & {
+          @include color($white, 0.8);          
+        }
       }
     }
   }
