@@ -3,7 +3,6 @@
 // NB! Contact forms and image galleries are located in the separate partials: "_forms.scss" and "_gallery.scss".
 .content-formatted {
   @extend %clearfix;
-  word-wrap: break-word;
 
   .dark-background & {
     @include color($white);
@@ -21,7 +20,7 @@
   // Styling rules for the editable content area headings.
   h1, h2, h3, h4, h5, h6 {
     @include color($secondary-color);
-    word-wrap: break-word;
+    @include hyphenate(true);
 
     .dark-background & {
       @include color($white);
