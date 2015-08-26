@@ -26,6 +26,7 @@
 
   {% else %}
 
+    {% comment %}
     /* ADD THE IMAGES YOU WOULD LIKE TO USE AS DEFAULT BACKGROUND */
     /*
       {% if front_page %}
@@ -52,6 +53,7 @@
         }
       }
     */
+    {% endcomment %}
   {% endif %}
 
   {% comment %}/* Body background color style */{% endcomment %}
