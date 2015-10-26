@@ -200,6 +200,22 @@ body.dark-background {
 .content-formatted blockquote {
   margin: 20px 40px;
 }
+.content-formatted .custom-btn {
+  display: inline-block;
+  padding: 7px 9px;
+  font-size: 14px;
+  color: #1b2124;
+  color: rgba(27, 33, 36, 0.75);
+  background-color: white;
+  border: 1px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.content-formatted .custom-btn:hover {
+  color: #1b2124;
+  color: rgba(27, 33, 36, 0.75);
+  border: 1px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+}
 .content-formatted .edy-positionable-container-center,
 .content-formatted .edy-positionable-container-left-block,
 .content-formatted .edy-positionable-container-right-block,

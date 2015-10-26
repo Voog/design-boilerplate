@@ -11116,6 +11116,10 @@ MMCQ = (function() {
   //   };
   // };
 
+  var editmode = function () {
+    return $('html').hasClass('editmode');
+  };
+
   var bindSideClicks = function() {
     $('.container').on('mousedown', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
@@ -11301,6 +11305,11 @@ MMCQ = (function() {
     }
   };
 
+  var bindCustomTexteditorStyles = function() {
+    window.edy = window.edy || [];
+    edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+  };
+
   // Initiates the table horisontal scroll function when window is resized.
   var handleWindowResize = function() {
     // Add functions that should be triggered while resizing the window here.
@@ -11335,6 +11344,10 @@ MMCQ = (function() {
     focusFormWithErrors();
     handleWindowResize();
     wrapTables();
+
+    if (editmode()) {
+      bindCustomTexteditorStyles();
+    }
   };
 
   // Enables the usage of the initiations outside this file.

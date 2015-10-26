@@ -79,7 +79,7 @@
       @include color($blue-1, 0.8);
 
       .dark-background & {
-        @include color($white, 0.8);          
+        @include color($white, 0.8);
       }
     }
   }
@@ -126,6 +126,20 @@
 
   blockquote {
     margin: 20px 40px;
+  }
+
+  .custom-btn {
+    display: inline-block;
+    padding: 7px 9px;
+    font-size: 14px;
+    @include color($secondary-color, 0.75);
+    @include bg($white);
+    @include border(all,1px,solid,$black, 0.1);
+
+    &:hover {
+      @include color($secondary-color, 0.75);
+      @include border(all, 1px, solid, $black, 0.75);
+    }
   }
 
   .edy-positionable-container-center,
