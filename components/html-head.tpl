@@ -15,14 +15,14 @@
 {% comment %}TODO: Add functionality after the CMS is going to support it{% endcomment %}
 {% if site.data.touch_icon %}<link rel="apple-touch-icon" href="{{ site.data.touch_icon }}">{% endif %}
 
-{% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
-<script src="{{ javascripts_path }}/modernizr.js"></script>
-
 {% comment %}STYLESHEETS{% endcomment %}
 <!--[if lt IE 9]>{% stylesheet_link "ie8.css" %}<![endif]-->
 {% stylesheet_link "main.css" %}
 {% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
 <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.css">
+
+{% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
+<script src="{{ javascripts_path }}/modernizr.js"></script>
 
 {% comment %}SITE TITLE{% endcomment %}
 {% capture page_title %}{% if article %}{{ article.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% else %}{% if site.root_item.selected? and page.site_title != "" %}{{ page.site_title }}{% else %}{{ page.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% endif %}{% endif %}{% endcapture %}
