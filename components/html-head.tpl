@@ -7,9 +7,11 @@
 <meta name="format-detection" content="telephone=no">
 
 {% comment %}FAV ICON{% endcomment %}
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="/favicon.ico" type="image/ico">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+{% if site.has_favicon? %}
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/ico">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+{% endif %}
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr.js"></script>
