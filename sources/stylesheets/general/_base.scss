@@ -26,3 +26,12 @@ a {
 .page-content {
   margin-bottom: 50px;
 }
+
+.content-header {
+  .common-page & {
+    $content-header-margin: 25px;
+
+    margin-top: $content-header-margin;
+    margin-bottom: $content-header-margin;
+  }
+}

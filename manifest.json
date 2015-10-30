@@ -144,6 +144,13 @@
       "file": "components/template-translations.tpl",
       "layout_name": "template-translations",
       "title": "template-translations"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-variables.tpl",
+      "layout_name": "template-variables",
+      "title": "template-variables"
     }
   ],
   "assets": [

@@ -14,12 +14,6 @@
 @import 'general/menus';
 @import 'general/cms-overrides';
 
-// LAYOUTS
-@import 'layouts/front-page';
-@import 'layouts/common-page';
-@import 'layouts/blog-and-news';
-@import 'layouts/blog-article';
-
 // COMPONENTS
 @import 'components/site-header';
 @import 'components/site-search';
@@ -32,3 +26,4 @@
 // CONTENT AREAS
 // @import 'content/_blog-article';
 @import 'content/text';
+@import 'content/form';

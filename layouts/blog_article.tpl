@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
+{% include "template-variables" %}
+<html class="blog-page blog-article-page {{ view_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
   </head>
 
-  <body class="blog-article-page">
+  <body>
     <div class="site-container">
       {% include "site-header" %}
       {% comment %}{% include "site-sidebar" %}{% endcomment %}
