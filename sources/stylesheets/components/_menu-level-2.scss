@@ -1,9 +1,13 @@
-// LEVEL 1 MENU STYLES
+// LEVEL 2 MENU STYLES
 // Gerneral menu styles are located in "general/_menus.scss" partial.
-.menu-level-1 {
+.menu-level-2 {
   li {
     @media screen and (min-width: $mobile + 1) {
-      margin-right: 20px;
+      margin-right: 10px;
+    }
+
+    a {
+      font-size: 14px;
     }
   }
 }

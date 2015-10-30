@@ -5,9 +5,9 @@
     @include display(flex);
     @include flex-wrap(wrap);
     @include justify-content(space-between);
-    @include align-items(baseline);
 
     .site-options {
+      margin-top: 20px;
       margin-bottom: 20px;
     }
   }

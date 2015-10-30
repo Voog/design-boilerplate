@@ -1,13 +1,17 @@
 <nav class="menu-language">
-  <ul class="menu">
+  <ul class="menu menu-horizontal menu-public">
     {% for language in site.languages %}
-      <li{% if item.selected? %} class="is-active"{% endif %}>
+      <li{% if language.selected? %} class="selected current" %}{% endif %}>
         <a href="{{ language.url }}">{{ language.title }}</a>
       </li>
     {% endfor %}
-
-    {% if editmode %}
-      <li>{% languageadd %}</li>
-    {% endif %}
   </ul>
+
+  {% if editmode %}
+    <ul class="menu menu-horizontal menu-cms">
+      {% if editmode %}
+        <li>{% languageadd %}</li>
+      {% endif %}
+    </ul>
+  {% endif %}
 </nav>

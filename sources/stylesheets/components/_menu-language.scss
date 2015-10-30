@@ -1,0 +1,19 @@
+// LANGUAGE MENU STYLES
+// Gerneral menu styles are located in "general/_menus.scss" partial.
+.menu-language {
+  @media screen and (min-width: $mobile + 1) {
+    display: inline-block;
+  }
+
+  li {
+    @media screen and (min-width: $mobile + 1) {
+      margin-right: 5px;
+    }
+
+    a {
+      @media screen and (min-width: $mobile + 1) {
+        font-size: 10px;
+      }
+    }
+  }
+}

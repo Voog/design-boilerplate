@@ -1,0 +1,50 @@
+// GENERAL SETTINGS FOR MENUS
+.menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.menu-horizontal {
+  &.menu-cms {
+    li {
+      @media screen and (min-width: $mobile + 1) {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  li {
+    @media screen and (min-width: $mobile + 1) {
+      display: inline-block;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      a {
+        color: rgba($color-black, .8);
+      }
+    }
+
+    &.current {
+      a {
+        font-weight: 700;
+        color: rgba($color-black, .55);
+      }
+    }
+  }
+}
+
+.menu-vertical {
+  li {
+    display: block;
+  }
+}
+
+.menu-main {
+  margin-top: 20px;
+}

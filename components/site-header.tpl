@@ -9,12 +9,8 @@
   </div>
 
   {% unless blog %}
-    {% for item in site.visible_menuitems %}
-      {% if item.selected? and item.children? or editmode %}
-        <div class="header-bottom">
-          {% include "menu-level-2" %}
-        </div>
-      {% endif %}
-    {% endfor %}
+    <div class="header-bottom">
+      {% include "menu-level-2" %}
+    </div>
   {% endunless %}
 </header>
