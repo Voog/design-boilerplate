@@ -5,35 +5,27 @@
 // MODULES
 
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import 'modules/_mixins';
-@import 'modules/_variables';
+@import 'modules/variables';
+@import 'modules/mixins';
 
 // GENERAL
-@import 'general/_fonts';
-@import 'general/_base';
-@import 'general/_framework';
-@import 'general/_states';
-@import 'general/_cms-overrides';
+@import 'general/fonts';
+@import 'general/base';
+@import 'general/cms-overrides';
 
 // LAYOUTS
-@import 'layouts/_front-page';
-@import 'layouts/_common-page';
-@import 'layouts/_blog-and-news';
-@import 'layouts/_blog-article';
+@import 'layouts/front-page';
+@import 'layouts/common-page';
+@import 'layouts/blog-and-news';
+@import 'layouts/blog-article';
 
 // COMPONENTS
-@import 'components/_blog-article';
-@import 'components/_blog-article-comments';
-@import 'components/_site-header';
-@import 'components/_navigation-menus';
-@import 'components/_site-search';
-// @import 'components/_site-sidebar';
-@import 'components/_site-footer';
+@import 'components/site-header';
+@import 'components/site-search';
+// @import 'components/site-sidebar';
+@import 'components/menu-level-1';
+@import 'components/site-footer';
 
 // CONTENT AREAS
-@import 'content/_text';
-@import 'content/_gallery';
-@import 'content/_form';
-// @import 'content/_video';
-// @import 'content/_map';
-// @import 'content/_custom';
+// @import 'content/_blog-article';
+@import 'content/text';

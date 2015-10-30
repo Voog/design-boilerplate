@@ -1,5 +1,5 @@
 <footer class="site-footer">
-  <div class="footer-body content-area">{% xcontent name='footer' %}</div>
+  <div class="footer-body content-area">{% xcontent name="footer" %}</div>
   <div class="voog-reference">
     {% loginblock %}
       <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="8px" viewbox="0 0 35 8" class="ico-voog">

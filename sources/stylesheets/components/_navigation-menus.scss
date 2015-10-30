@@ -1,66 +1,66 @@
-/* NAVIGATION MENUS*/
-// Base
-.menu {
-  @extend %hyphens-true;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
+// /* NAVIGATION MENUS*/
+// // Base
+// .menu {
+//   @extend %hyphens-true;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   padding-left: 0;
+//   list-style-type: none;
 
-  li {
-    @extend %inline-block;
+//   li {
+//     @extend %inline-block;
 
-    &:last-child {
-      margin-right: 0;
-    }
+//     &:last-child {
+//       margin-right: 0;
+//     }
 
-    &:hover {
-      a {
-        color: rgba($black, .8);
-      }
-    }
+//     &:hover {
+//       a {
+//         color: rgba($color-black, .8);
+//       }
+//     }
 
-    &.is-active {
-      a {
-        font-weight: 700;
-        color: rgba($black, .55);
-      }
-    }
+//     &.is-active {
+//       a {
+//         font-weight: 700;
+//         color: rgba($color-black, .55);
+//       }
+//     }
 
-    a {
-      display: block;
-      border-style: none;
-    }
-  }
-}
+//     a {
+//       display: block;
+//       border-style: none;
+//     }
+//   }
+// }
 
-// Main menu
-.menu-main {
-  margin-right: 20px;
-  margin-bottom: 20px;
+// // Main menu
+// .menu-level-1 {
+//   margin-right: 20px;
+//   margin-bottom: 20px;
 
-  li {
-    margin-right: 20px;
-  }
-}
+//   li {
+//     margin-right: 20px;
+//   }
+// }
 
-// Sub menu
-.menu-sub {
-  li {
-    margin-right: 10px;
-  }
-}
+// // Sub menu
+// .menu-level-2 {
+//   li {
+//     margin-right: 10px;
+//   }
+// }
 
-// Language menu
-.menu-language {
-  @extend %inline-block;
-  @extend %align-middle;
+// // Language menu
+// .menu-language {
+//   @extend %inline-block;
+//   @extend %align-middle;
 
-  li {
-    margin-right: 5px;
+//   li {
+//     margin-right: 5px;
 
-    a {
-      font-size: 10px;
-    }
-  }
-}
+//     a {
+//       font-size: 10px;
+//     }
+//   }
+// }

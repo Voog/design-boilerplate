@@ -1,0 +1,44 @@
+// FRAMEWOR
+
+@mixin stretch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin button {
+  margin: 0;
+  padding: 0;
+  background-color: none;
+  border-style: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+  }
+}
+
+@mixin input-ios-reset {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+@mixin inherit-base-font {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+%article-title {
+  font-size: 50px;
+  line-height: 1.2;
+  color: rgba($color-highlight, 1);
+}

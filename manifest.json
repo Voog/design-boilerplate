@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-sub.tpl",
-      "layout_name": "menu-sub",
-      "title": "menu-sub"
+      "file": "components/menu-level-2.tpl",
+      "layout_name": "menu-level-2",
+      "title": "menu-level-2"
     },
     {
       "content_type": "component",
@@ -64,13 +64,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/html-head.tpl",
-      "layout_name": "html-head",
-      "title": "html-head"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/menu-language.tpl",
       "layout_name": "menu-language",
       "title": "menu-language"
@@ -78,9 +71,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-main.tpl",
-      "layout_name": "menu-main",
-      "title": "menu-main"
+      "file": "components/menu-level-1.tpl",
+      "layout_name": "menu-level-1",
+      "title": "menu-level-1"
     },
     {
       "content_type": "component",
@@ -88,13 +81,6 @@
       "file": "components/blog-article-comments.tpl",
       "layout_name": "blog-article-comments",
       "title": "blog-article-comments"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/open-graph.tpl",
-      "layout_name": "open-graph",
-      "title": "open-graph"
     },
     {
       "content_type": "component",
@@ -141,30 +127,23 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-translations.tpl",
-      "layout_name": "site-translations",
-      "title": "site-translations"
+      "file": "components/template-head.tpl",
+      "layout_name": "template-head",
+      "title": "template-head"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/voog-tools-styles.tpl",
-      "layout_name": "voog-tools-styles",
-      "title": "voog-tools-styles"
+      "file": "components/template-meta.tpl",
+      "layout_name": "template-meta",
+      "title": "template-meta"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/voog-tools-variables.tpl",
-      "layout_name": "voog-tools-variables",
-      "title": "voog-tools-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/voog-tools.tpl",
-      "layout_name": "voog-tools",
-      "title": "voog-tools"
+      "file": "components/template-translations.tpl",
+      "layout_name": "template-translations",
+      "title": "template-translations"
     }
   ],
   "assets": [

@@ -1,3 +1,2 @@
-<nav class="blog-tags">
-
+<nav class="blog-tags blog-news-tags">
 </nav>

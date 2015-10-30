@@ -1,15 +1,15 @@
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;;
-  font-size: $base-font-size;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 18px;
   font-weight: 400;
-  line-height: $base-line-height;
-  color: rgba($black, .55);
+  line-height: 1.5;
+  color: rgba($color-black, .55);
 }
 
 a {
   text-decoration: none;
-  color: rgba($link-color, 1);
+  color: rgba($color-link, 1);
 
   img {
     border-style: none;
@@ -20,9 +20,14 @@ a {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 20px;
-  background-color: rgba($white, 1);
+  background-color: rgba($color-white, 1);
 }
 
 .page-content {
   margin-bottom: 50px;
+}
+
+// GENERAL SETTINGS FOR MENUS
+.menu {
+
 }

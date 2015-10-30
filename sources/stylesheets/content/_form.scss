@@ -36,12 +36,12 @@
 
   .form_field_textfield,
   .form_field_textarea {
-    @extend %input-ios-reset;
-    @extend %inherit-base-font;
+    @include input-ios-reset;
+    @include inherit-base-font;
     padding: 7px;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba($black, .53);
+    border-color: rgba($color-black, .53);
     border-radius: 3px;
 
     &.form_field_size_small {
@@ -84,7 +84,7 @@
 
   .form_error,
   .form_field_error {
-    color: rgba($error-color, 1);
+    color: rgba($color-error, 1);
   }
 
   .form_field_error {
@@ -92,6 +92,6 @@
   }
 
   .form_notice {
-    color: rgba($success-color, 1);
+    color: rgba($color-success, 1);
   }
 }

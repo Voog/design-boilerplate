@@ -3,22 +3,14 @@
 // Comment out the "_variables.scss" partial in the "main.scss" file if not used.
 
 // Basic colors.
-$black: #000000;
-$white: #ffffff;
+$color-black: #000000;
+$color-white: #ffffff;
 
 // Specific colors.
-$highlight-color: #1b2124;
-$link-color: #0066bb;
-$error-color: #cc0000;
-$success-color: #60a740;
-
-// Font sizes.
-$base-font-size: 18px;
-$article-title-size: 50px;
-
-// Line heights.
-$base-line-height: 1.5em;
-$secondary-line-height: 1.3em;
+$color-highlight: #1b2124;
+$color-link: #0066bb;
+$color-error: #cc0000;
+$color-success: #60a740;
 
 // Media query breakpoints.
 $tablet-1: 1024px;

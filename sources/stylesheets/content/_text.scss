@@ -1,6 +1,5 @@
 .content-area {
-  @extend %clearfix;
-  @extend %hyphens-true;
+  @include clearfix;
 
   h1,
   h2,
@@ -33,7 +32,7 @@
   h6,
   b,
   strong {
-    color: rgba($highlight-color, 1);
+    color: rgba($color-highlight, 1);
   }
 
   h1,
@@ -42,7 +41,7 @@
   h4,
   h5,
   h6 {
-    line-height: $base-line-height;
+    line-height: 1.5;
   }
 
   h1 {
@@ -76,9 +75,9 @@
   code {
     padding: 10px;
     font-size: 14px;
-    line-height: $secondary-line-height;
+    line-height: 1.3;
     font-weight: 400;
-    background-color: rgba($black, .02);
+    background-color: rgba($color-black, .02);
   }
 
   pre {
@@ -120,7 +119,7 @@
       display: block;
       padding: 2px;
       font-size: 12px;
-      line-height: $secondary-line-height;
+      line-height: 1.3;
       content: attr(data-title);
     }
   }

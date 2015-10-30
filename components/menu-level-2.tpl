@@ -1,4 +1,4 @@
-<nav class="menu-sub">
+<nav class="menu-level-2">
   <ul class="menu">
     {% for subitem in item.visible_children %}
       <li{% if subitem.selected? %} class="is-active"{% endif %}{% unless subitem.translated? %} class="is-untranslated fci-editor-menuadd"{% endunless %}>
