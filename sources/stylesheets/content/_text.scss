@@ -1,5 +1,8 @@
 .content-area {
   @include clearfix;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
 
   h1,
   h2,
@@ -10,11 +13,19 @@
   p,
   ul,
   ol,
+  dl,
+  table,
   pre,
   code,
+  iframe,
+  table,
+  form,
   .edy-positionable-container-left-block,
+  .edy-positionable-container-center-block,
   .edy-positionable-container-right-block,
-  .edy-positionable-container-center-block {
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-right-block {
     &:first-child {
       margin-top: 0;
     }
@@ -104,23 +115,44 @@
     max-width: 100%;
   }
 
-  $floating-image-margin: 10px;
+  .edy-positionable-container-center,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-right-block {
+    $block-image-margin: 45px;
 
-  .edy-positionable-container-left {
+    margin-top: $block-image-margin;
+    margin-bottom: $block-image-margin;
+  }
+
+  // Styles for images that are as large as the content area.
+  // .edy-positionable-container-maxwidth {
+  //   width: auto !important;
+  //   max-width: none !important;
+  //   margin-right: -200px !important;
+  //   margin-left: -200px !important;
+  // }
+
+  $floating-image-margin: 20px;
+
+  .edy-positionable-container-left,
+  .edy-texteditor-container-wrapper-left {
     margin-right: $floating-image-margin;
   }
 
-  .edy-positionable-container-right {
+  .edy-positionable-container-right,
+  .edy-texteditor-container-wrapper-right {
     margin-left: $floating-image-margin;
   }
 
-  .edy-image-container-with-title {
-    &:after {
-      display: block;
-      padding: 2px;
-      font-size: 12px;
-      line-height: 1.3;
-      content: attr(data-title);
-    }
+  // Image title styles.
+  .edy-image-container-with-title:after {
+    display: block;
+    padding: 4px;
+    font-size: 12px;
+    line-height: 1.3;
+    content: attr(data-title);
   }
 }

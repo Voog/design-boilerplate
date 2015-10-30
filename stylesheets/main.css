@@ -3,9 +3,6 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
   color: rgba(0, 0, 0, 0.55);
 }
 
@@ -19,7 +16,8 @@ a img {
 
 .site-container {
   max-width: 960px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   padding: 40px 20px;
   background-color: white;
 }
@@ -189,6 +187,11 @@ a img {
   opacity: .8;
 }
 
+.content-area {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+}
 .content-area::after {
   clear: both;
   content: "";
@@ -203,11 +206,19 @@ a img {
 .content-area p:first-child,
 .content-area ul:first-child,
 .content-area ol:first-child,
+.content-area dl:first-child,
+.content-area table:first-child,
 .content-area pre:first-child,
 .content-area code:first-child,
+.content-area iframe:first-child,
+.content-area table:first-child,
+.content-area form:first-child,
 .content-area .edy-positionable-container-left-block:first-child,
+.content-area .edy-positionable-container-center-block:first-child,
 .content-area .edy-positionable-container-right-block:first-child,
-.content-area .edy-positionable-container-center-block:first-child {
+.content-area .edy-texteditor-container-wrapper-left-block:first-child,
+.content-area .edy-texteditor-container-wrapper-center:first-child,
+.content-area .edy-texteditor-container-wrapper-right-block:first-child {
   margin-top: 0;
 }
 .content-area h1:last-child,
@@ -219,11 +230,19 @@ a img {
 .content-area p:last-child,
 .content-area ul:last-child,
 .content-area ol:last-child,
+.content-area dl:last-child,
+.content-area table:last-child,
 .content-area pre:last-child,
 .content-area code:last-child,
+.content-area iframe:last-child,
+.content-area table:last-child,
+.content-area form:last-child,
 .content-area .edy-positionable-container-left-block:last-child,
+.content-area .edy-positionable-container-center-block:last-child,
 .content-area .edy-positionable-container-right-block:last-child,
-.content-area .edy-positionable-container-center-block:last-child {
+.content-area .edy-texteditor-container-wrapper-left-block:last-child,
+.content-area .edy-texteditor-container-wrapper-center:last-child,
+.content-area .edy-texteditor-container-wrapper-right-block:last-child {
   margin-bottom: 0;
 }
 .content-area h1,
@@ -285,15 +304,26 @@ a img {
 .content-area iframe {
   max-width: 100%;
 }
-.content-area .edy-positionable-container-left {
-  margin-right: 10px;
+.content-area .edy-positionable-container-center,
+.content-area .edy-positionable-container-left-block,
+.content-area .edy-positionable-container-right-block,
+.content-area .edy-texteditor-container-wrapper-center,
+.content-area .edy-texteditor-container-wrapper-left-block,
+.content-area .edy-texteditor-container-wrapper-right-block {
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
-.content-area .edy-positionable-container-right {
-  margin-left: 10px;
+.content-area .edy-positionable-container-left,
+.content-area .edy-texteditor-container-wrapper-left {
+  margin-right: 20px;
+}
+.content-area .edy-positionable-container-right,
+.content-area .edy-texteditor-container-wrapper-right {
+  margin-left: 20px;
 }
 .content-area .edy-image-container-with-title:after {
   display: block;
-  padding: 2px;
+  padding: 4px;
   font-size: 12px;
   line-height: 1.3;
   content: attr(data-title);
