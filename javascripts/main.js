@@ -9231,7 +9231,32 @@ return jQuery;
     };
   };
 
+  var bindSiteSearch = function(searchForm, languageCode) {
+    if (searchForm) {
+      var search = new VoogSearch(searchForm, {
+        // Results are lazy-loaded on scroll.
+        // This defines the number of results per query.
+        per_page: 10,
 
+        // Language code for restricting the search to page language
+        lang: languageCode,
+
+        // If given an DOM element results are rendered inside that element
+        // instead of modal (with scroll lazy load support).
+        // Example: resultsContainer: $('.test').get(0),
+        resultsContainer: null,
+
+        // Defines if modal should close on sideclick
+        sideclick: true,
+
+        // Mobile checkpoint (adds class "voog-search-mobile-mode" if <= nr)
+        mobileModeWidth: 640,
+
+        // Updates results on every keypress
+        updateOnKeypress: false
+      });
+    }
+  };
 
   // Initiations
   var initWindowResize = function() {
@@ -9262,10 +9287,13 @@ return jQuery;
 
   // Enables the usage of the initiations outside this file.
   window.site = $.extend(window.site || {}, {
+    // Initiations for layouts.
     initBlogPage: initBlogPage,
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
-    initFrontPage: initFrontPage
+    initFrontPage: initFrontPage,
+    // Initiations for specific functions
+    bindSiteSearch: bindSiteSearch
   });
 
   init();

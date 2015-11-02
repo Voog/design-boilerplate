@@ -6,6 +6,7 @@
   </head>
 
   <body>
+    <div class="test"></div>
     <div class="site-container">
       {% include "site-header" %}
       {% comment %}{% include "site-sidebar" %}{% endcomment %}
