@@ -1,6 +1,8 @@
 ;(function($) {
-  // Global variable to detect if page is in editmode.
-  var editmode = $('html').hasClass('editmode');
+  // Function to detect if page viewer is in editmode.
+  var editmode = function () {
+    return $('html').hasClass('editmode');
+  };
 
   // Function to limit the rate at which a function can fire.
   var debounce = function(func, wait, immediate) {
@@ -17,6 +19,8 @@
       if (callNow) func.apply(context, args);
     };
   };
+
+
 
   // Initiations
   var initWindowResize = function() {
