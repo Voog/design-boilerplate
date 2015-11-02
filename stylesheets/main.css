@@ -23,7 +23,7 @@ a img {
 }
 
 .page-content {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .common-page .content-header {
@@ -177,6 +177,10 @@ a img {
 }
 
 .site-footer {
+  padding-top: 30px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.53);
   font-size: 14px;
 }
 .site-footer .voog-reference {
