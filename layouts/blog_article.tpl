@@ -19,8 +19,6 @@
       </main>
 
       {% include "site-footer" %}
-
-      {% include "site-javascripts" %}
       <script>site.initArticlePage();</script>
     </div>
   </body>

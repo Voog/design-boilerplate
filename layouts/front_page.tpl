@@ -19,7 +19,6 @@
       </main>
 
       {% include "site-footer" %}
-      {% include "site-javascripts" %}
       <script>site.initFrontPage();</script>
     </div>
   </body>

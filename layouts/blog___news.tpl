@@ -20,7 +20,6 @@
       </main>
 
       {% include "site-footer" %}
-      {% include "site-javascripts" %}
       <script>site.initBlogPage();</script>
     </div>
   </body>

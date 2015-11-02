@@ -99,13 +99,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-javascripts.tpl",
-      "layout_name": "site-javascripts",
-      "title": "site-javascripts"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/site-search.tpl",
       "layout_name": "site-search",
       "title": "site-search"
@@ -130,6 +123,13 @@
       "file": "components/template-head.tpl",
       "layout_name": "template-head",
       "title": "template-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-javascripts.tpl",
+      "layout_name": "template-javascripts",
+      "title": "template-javascripts"
     },
     {
       "content_type": "component",

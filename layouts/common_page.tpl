@@ -18,7 +18,6 @@
       </main>
 
       {% include "site-footer" %}
-      {% include "site-javascripts" %}
       <script>site.initCommonPage();</script>
     </div>
   </body>

@@ -8,3 +8,5 @@
     {% endloginblock %}
   </div>
 </footer>
+
+{% include "template-javascripts" %}
