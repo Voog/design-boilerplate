@@ -33,7 +33,7 @@
         // If given an DOM element results are rendered inside that element
         // instead of modal (with scroll lazy load support).
         // Example: resultsContainer: $('.custom-search-container').get(0),
-        // Uncomment the <div class="custom-search-container"></div> element in the "site-search" component or add your
+        // Uncomment the <div class="custom-search-container"></div> element in the "components/site-search.tpl" or add your
         // own container to proper place in the code if custom container is used.
         resultsContainer: null,
 
@@ -83,7 +83,7 @@
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
-    // Initiations for specific functions
+    // Initiations for specific functions.
     bindSiteSearch: bindSiteSearch
   });
 

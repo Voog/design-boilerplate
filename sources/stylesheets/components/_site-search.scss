@@ -21,7 +21,60 @@
   }
 }
 
-
+// Site search results modal custom styles.
 .voog-search-modal {
   margin-top: 20px;
+
+  // Search modal has the following state classes:
+  &.loading {
+    // Search is processing the search input.
+  }
+
+  &.no-content {
+    // Search has zero results and the message "No results found!" is displayed in the modal.
+  }
+
+  &.search-results-active {
+    // Search has been triggered and the output is rendered into the modal (Both – with and without the results).
+  }
+
+  &.voog-search-aligned-below {
+    // Search modal is aligned below the search input. (Best position is calculated automatically for the default
+    // container.)
+  }
+
+  &.voog-search-aligned-above {
+    // Search modal is aligned above the search input. (Best position is calculated automatically for the default
+    // container.)
+  }
+
+  &.voog-search-mobile-mode {
+    // Class form mobile mode. Class toggle breakpont is set in the "bindSiteSearch" function in the
+    // "sources/javascript/base.js" file.
+  }
+
+  .voog-search-modal-inner {
+    // Inner container inside the search modal.
+  }
+
+  .voog-search-modal-results {
+    // Inner container inside the .search-modal-inner.
+  }
+
+  .voog-search-modal-result {
+    // Single entity of the search result.
+
+    h3 {
+      // Search result's heading.
+    }
+
+    p {
+      // Search result's excerpt.
+    }
+  }
+
+  .voog-search-loader {
+    // Loader div at the end of the .voog-search-modal-inner div. By default it is shows a dot loader which is visible
+    // while search modal has class "loading".
+  }
 }
