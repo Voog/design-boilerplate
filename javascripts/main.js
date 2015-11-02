@@ -9243,7 +9243,9 @@ return jQuery;
 
         // If given an DOM element results are rendered inside that element
         // instead of modal (with scroll lazy load support).
-        // Example: resultsContainer: $('.test').get(0),
+        // Example: resultsContainer: $('.custom-search-container').get(0),
+        // Uncomment the <div class="custom-search-container"></div> element in the "site-search" component or add your
+        // own container to proper place in the code if custom container is used.
         resultsContainer: null,
 
         // Defines if modal should close on sideclick
