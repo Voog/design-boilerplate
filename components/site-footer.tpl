@@ -9,7 +9,7 @@
   </div>
 </footer>
 
-{% comment %}Follow the instrcutions in "components/site-header.tpl" to enamble language menu popover with flags.{% endcomment %}
+{% comment %}Follow the instrcutions in "components/site-header.tpl" to enable language menu popover with flags.{% endcomment %}
 {% comment %}{% include "menu-language-popover" %}{% endcomment %}
 
 {% include "template-javascripts" %}

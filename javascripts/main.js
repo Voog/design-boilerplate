@@ -9241,7 +9241,7 @@ return jQuery;
       }
     });
 
-
+    /* Follow the instructions in "components/site-header.tpl" to enable language menu popover with flags. */
     // $('.js-toggle-menu-language').click(function() {
     //   if (!$('html').hasClass('menu-language-popover-open')) {
     //     bindMenuLanguagePositioning();
@@ -9251,7 +9251,8 @@ return jQuery;
     // });
   };
 
-  // Positions language menu popover.
+  /* Follow the instructions in "components/site-header.tpl" to enable language menu popover with flags. */
+  /* Positions language menu popover. */
   // var bindMenuLanguagePositioning = function(button) {
   //   var $menuWrapper = $('.js-menu-language-popover'),
   //       $offsetItem = $('.js-toggle-menu-language');
@@ -9319,7 +9320,7 @@ return jQuery;
   var init = function() {
     // Add site wide functions here.
     // TODO: Replace with click.
-    bindButtonClicks();r
+    bindButtonClicks();
   };
 
   // Enables the usage of the initiations outside this file.
