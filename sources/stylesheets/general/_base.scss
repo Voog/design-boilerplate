@@ -4,21 +4,25 @@ body {
   color: rgba($color-black, .55);
 }
 
-a {
-  text-decoration: none;
-  color: rgba($color-link, 1);
+.site-container {
+  a {
+    text-decoration: none;
+    color: rgba($color-link, 1);
 
-  img {
-    border-style: none;
+    img {
+      border-style: none;
+    }
   }
 }
 
-.site-container {
-  max-width: 960px;
+.wrap {
   margin-right: auto;
   margin-left: auto;
-  padding: 40px 20px;
-  background-color: rgba($color-white, 1);
+
+  .site-container & {
+    max-width: 960px;
+    padding: 40px 20px;
+  }
 }
 
 .page-content {

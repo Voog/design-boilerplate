@@ -7,19 +7,21 @@
 
   <body>
     <div class="site-container">
-      {% include "site-header" %}
-      {% comment %}{% include "site-sidebar" %}{% endcomment %}
+      <div class="wrap">
+        {% include "site-header" %}
+        {% comment %}{% include "site-sidebar" %}{% endcomment %}
 
-      <main class="page-content" role="main">
-        <section class="blog-articles content-area">
-          {% addbutton %}
-          {% for article in articles %}
-            {% include "blog-article-template" %}
-          {% endfor %}
-        </section>
-      </main>
+        <main class="page-content" role="main">
+          <section class="blog-articles content-area">
+            {% addbutton %}
+            {% for article in articles %}
+              {% include "blog-article-template" %}
+            {% endfor %}
+          </section>
+        </main>
 
-      {% include "site-footer" %}
+        {% include "site-footer" %}
+      </div>
       <script>site.initBlogPage();</script>
     </div>
   </body>

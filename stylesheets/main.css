@@ -6,20 +6,21 @@ body {
   color: rgba(0, 0, 0, 0.55);
 }
 
-a {
+.site-container a {
   text-decoration: none;
   color: #0066bb;
 }
-a img {
+.site-container a img {
   border-style: none;
 }
 
-.site-container {
-  max-width: 960px;
+.wrap {
   margin-right: auto;
   margin-left: auto;
+}
+.site-container .wrap {
+  max-width: 960px;
   padding: 40px 20px;
-  background-color: white;
 }
 
 .page-content {
@@ -37,6 +38,13 @@ a img {
   padding-left: 0;
   list-style-type: none;
 }
+.menu  li:hover a {
+  color: rgba(0, 0, 0, 0.8);
+}
+.menu  li.current a {
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.55);
+}
 
 @media screen and (min-width: 641px) {
   .menu-horizontal.menu-cms li {
@@ -51,16 +59,16 @@ a img {
 .menu-horizontal li:last-child {
   margin-right: 0;
 }
-.menu-horizontal li:hover a {
-  color: rgba(0, 0, 0, 0.8);
-}
-.menu-horizontal li.current a {
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.55);
-}
 
 .menu-vertical li {
   display: block;
+}
+
+.menu-popover {
+  position: absolute;
+  display: none;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .menu-main {

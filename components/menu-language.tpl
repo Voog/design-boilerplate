@@ -1,3 +1,4 @@
+{% comment %}SIMPLE LANGUAGE NAVIGATION MENU WITH LANGUAGE TITLES{% endcomment %}
 <nav class="menu-language">
   <ul class="menu menu-horizontal menu-public">
     {% for language in site.languages %}
@@ -15,3 +16,4 @@
     </ul>
   {% endif %}
 </nav>
+

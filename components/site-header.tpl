@@ -4,7 +4,22 @@
 
     <div class="site-options">
       {% include "site-search" %}
+      {% comment %}Simple language menu with titles only.{% endcomment %}
       {% include "menu-language" %}
+      {% comment %}
+        Language popover menu with flags.
+        Follow the steps below to switch to popover menu with flag icons.
+        * Comment out the {% include "menu-language" %} component above these instructions.
+        * Comment out the first ".menu-language" styles in "sourdes/stylesheets/_menu-language.scss".
+        * Uncomment the <button> element under these instructions.
+        * Uncomment everything under the title "Language menu with flags" in the "sourdes/stylesheets/_menu-language.scss".
+        * Uncomment language menu popover component at the end of "components/site-footer.tpl".
+        * Uncomment the following in the "sources/javascripts/base.js":
+          * $('.js-toggle-menu-language') button click event in bindButtonClicks function.
+          * bindMenuLanguagePositioning() function.
+          * bindMenuLanguagePositioning function initiation in init() function.
+      {% endcomment %}
+      {% comment %}<button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-prevent-sideclick"></button>{% endcomment %}
     </div>
   </div>
 

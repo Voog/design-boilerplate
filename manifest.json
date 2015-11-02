@@ -64,6 +64,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/menu-language-popover.tpl",
+      "layout_name": "menu-language-popover",
+      "title": "menu-language-popover"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/menu-language.tpl",
       "layout_name": "menu-language",
       "title": "menu-language"
@@ -154,6 +161,12 @@
     }
   ],
   "assets": [
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-flags.svg",
+      "kind": "assets",
+      "filename": "ico-flags.svg"
+    },
     {
       "content_type": "application/javascript",
       "file": "javascripts/main.js",

@@ -9231,6 +9231,39 @@ return jQuery;
     };
   };
 
+  // Bind site buttons functionality.
+  var bindButtonClicks = function() {
+    $(document).on('click', function(event) {
+      console.log(event);
+      if (!$(event.target).closest('.js-prevent-sideclick').length) {
+        console.log('fdsa');
+        $('html').removeClass('menu-language-popover-open');
+      }
+    });
+
+
+    // $('.js-toggle-menu-language').click(function() {
+    //   if (!$('html').hasClass('menu-language-popover-open')) {
+    //     bindMenuLanguagePositioning();
+    //   } else {
+    //     $('html').removeClass('menu-language-popover-open');
+    //   }
+    // });
+  };
+
+  // Positions language menu popover.
+  // var bindMenuLanguagePositioning = function(button) {
+  //   var $menuWrapper = $('.js-menu-language-popover'),
+  //       $offsetItem = $('.js-toggle-menu-language');
+
+  //   $('html').addClass('menu-language-popover-open');
+
+  //   $menuWrapper.css({
+  //     top: $offsetItem.offset().top + $offsetItem.outerHeight(),
+  //     right: $(window).width() - $offsetItem.offset().left - $offsetItem.outerWidth()
+  //   });
+  // };
+
   var bindSiteSearch = function(searchForm, languageCode) {
     if (searchForm) {
       var search = new VoogSearch(searchForm, {
@@ -9285,6 +9318,8 @@ return jQuery;
 
   var init = function() {
     // Add site wide functions here.
+    // TODO: Replace with click.
+    bindButtonClicks();r
   };
 
   // Enables the usage of the initiations outside this file.

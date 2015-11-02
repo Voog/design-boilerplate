@@ -4,6 +4,21 @@
   margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
+
+  li {
+    &:hover {
+      a {
+        color: rgba($color-black, .8);
+      }
+    }
+
+    &.current {
+      a {
+        font-weight: 700;
+        color: rgba($color-black, .55);
+      }
+    }
+  }
 }
 
 .menu-horizontal {
@@ -23,19 +38,6 @@
     &:last-child {
       margin-right: 0;
     }
-
-    &:hover {
-      a {
-        color: rgba($color-black, .8);
-      }
-    }
-
-    &.current {
-      a {
-        font-weight: 700;
-        color: rgba($color-black, .55);
-      }
-    }
   }
 }
 
@@ -43,6 +45,13 @@
   li {
     display: block;
   }
+}
+
+.menu-popover {
+  position: absolute;
+  display: none;
+  background-color: rgba($color-white, 1);
+  box-shadow: 0 0 5px rgba($color-black, .3);
 }
 
 .menu-main {
