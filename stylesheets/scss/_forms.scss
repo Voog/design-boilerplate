@@ -80,6 +80,9 @@
     margin-top: 10px;
 
     input {
+      .dark-background & {
+        color: rgba($white, 1);
+      }
     }
   }
 

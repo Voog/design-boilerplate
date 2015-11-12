@@ -1153,6 +1153,9 @@ body.dark-background {
 .content-formatted .form_submit {
   margin-top: 10px;
 }
+.dark-background .content-formatted .form_submit input {
+  color: white;
+}
 .content-formatted .form_error,
 .content-formatted .form_field_error {
   color: #cc0000;
