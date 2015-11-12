@@ -365,8 +365,10 @@ body.dark-background {
   display: block;
   color: #0066bb;
 }
-.dark-background .menu .menu-link {
-  color: white;
+@media screen and (min-width: 752px) {
+  .dark-background .menu .menu-link {
+    color: white;
+  }
 }
 .menu .menu-link.untranslated {
   color: #cc0000;
