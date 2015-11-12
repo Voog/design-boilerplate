@@ -3,6 +3,7 @@
 // NB! Contact forms and image galleries are located in the separate partials: "_forms.scss" and "_gallery.scss".
 .content-formatted {
   @extend %clearfix;
+  @include hyphenate(true);
 
   .dark-background & {
     @include color($white);
