@@ -9,7 +9,7 @@
 
 @mixin button {
   margin: 0;
-  background-color: none;
+  background-color: transparent;
   border-style: none;
   cursor: pointer;
 
@@ -29,7 +29,7 @@
   border-radius: 0;
 }
 
-@mixin inherit-base-font {
+@mixin inherit-font {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;

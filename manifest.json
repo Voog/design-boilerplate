@@ -148,6 +148,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-tools.tpl",
+      "layout_name": "template-tools",
+      "title": "template-tools"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-translations.tpl",
       "layout_name": "template-translations",
       "title": "template-translations"

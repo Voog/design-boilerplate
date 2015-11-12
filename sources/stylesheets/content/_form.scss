@@ -37,7 +37,7 @@
   .form_field_textfield,
   .form_field_textarea {
     @include input-ios-reset;
-    @include inherit-base-font;
+    @include inherit-font;
     padding: 7px;
     border-width: 1px;
     border-style: solid;

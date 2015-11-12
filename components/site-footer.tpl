@@ -10,6 +10,6 @@
 </footer>
 
 {% comment %}Follow the instrcutions in "components/site-header.tpl" to enable language menu popover with flags.{% endcomment %}
-{% comment %}{% include "menu-language-popover" %}{% endcomment %}
+{% include "menu-language-popover" %}
 
 {% include "template-javascripts" %}

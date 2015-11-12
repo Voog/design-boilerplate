@@ -2,150 +2,248 @@
 // Gerneral menu styles are located in "general/_menus.scss" partial.
 
 // Simple listing with language titles.
-.menu-language {
-  @media screen and (min-width: $mobile + 1) {
-    display: inline-block;
+// .menu-language {
+//   @media screen and (min-width: $mobile + 1) {
+//     display: inline-block;
+//   }
+
+//   li {
+//     @media screen and (min-width: $mobile + 1) {
+//       margin-right: 5px;
+//     }
+
+//     a {
+//       @media screen and (min-width: $mobile + 1) {
+//         font-size: 10px;
+//       }
+//     }
+//   }
+// }
+
+// Language menu with flags.
+.menu-language-btn {
+  @include button;
+
+  .language-flags-enabled & {
+    padding: 12px 16px 13px 15px;
+    font-size: 0;
   }
 
-  li {
-    @media screen and (min-width: $mobile + 1) {
-      margin-right: 5px;
+  .language-flags-disabled & {
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 14px;
+
+    &:hover {
+      opacity: .8;
     }
 
-    a {
-      @media screen and (min-width: $mobile + 1) {
-        font-size: 10px;
-      }
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top: -3px;
+      content: "";
+      border-style: solid;
+      border-width: 6px 3px 0;
+      border-color: rgba($color-black, 1) transparent transparent;
+    }
+  }
+
+  .menu-language-popover-open & {
+    &:after {
+      border-width: 0 3px 6px 3px;
+      border-color: transparent transparent rgba($color-black, 1) transparent;
+    }
+  }
+
+  &:before,
+  &:after {
+    $ico-offset: 5px;
+
+    top: $ico-offset;
+
+    .language-flags-enabled & {
+      left: $ico-offset;
+    }
+  }
+
+  &:hover {
+    &:after {
+      opacity: .8;
     }
   }
 }
 
-// Language menu with flags.
-// .menu-language-btn {
-//   @include button;
-//   padding: 12px 16px 13px 15px;
+.menu-language {
+  text-align: right;
 
-//   &:before,
-//   &:after {
-//     $ico-offset: 5px;
+  &.menu-popover {
+    .language-flags-disabled & {
+      margin-right: 4px;
+    }
+  }
 
-//     top: $ico-offset;
-//     left: $ico-offset;
-//   }
+  .menu-language-popover-open & {
+    display: block;
+    z-index: 10;
+  }
 
-//   &:hover {
-//     &:after {
-//       opacity: .8;
-//     }
-//   }
-// }
+  li {
+    a {
+      font-size: 14px;
 
-// .menu-language {
-//   text-align: right;
+      &:before,
+      &:after {
+        top: 7px;
+        right: 6px;
+      }
 
-//   .menu-language-popover-open & {
-//     display: block;
-//   }
+      .language-flags-enabled & {
+        padding: 6px 33px 6px 6px;
+      }
 
-//   li {
-//     a {
-//       display: block;
-//       padding: 6px 33px 6px 6px;
-//       font-size: 14px;
+      .language-flags-disabled & {
+        padding: 6px;
+      }
+    }
+  }
 
-//       &:before,
-//       &:after {
-//         top: 7px;
-//         right: 6px;
-//       }
-//     }
+  .menu-cms {
+    li {
+      padding: 1px 13px 11px 6px;
+    }
+  }
+}
 
-//   }
-// }
+.menu-options {
+  button {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    text-align: right;
+    font-family: inherit;
+    font-size: 14px;
+    color: rgba($color-link, 1);
+    background-color: rgba($color-black, .1);
 
-// .ico-flags {
-//   position: relative;
-//   background-color: transparent;
+    &:hover {
+      background-color: rgba($color-black, .2);
+    }
 
-//   &:before,
-//   &:after {
-//     position: absolute;
-//     display: block;
-//     height: 15px;
-//     width: 21px;
-//     content: '';
-//   }
+    span {
+      display: block;
+    }
+  }
 
-//   &:before {
-//     background-color: rgba($color-black, 1);
-//   }
+  .language-flags-enable {
+    .language-flags-enabled & {
+      display: none;
+    }
+  }
 
-//   &:after {
-//     opacity: .95;
-//     background-image: url('../assets/ico-flags.svg');
-//   }
-// }
+  .language-flags-disable {
+    .language-flags-disabled & {
+      display: none;
+    }
+  }
+}
 
-// // Language flag icons positioning in the spritemap.
-// $flags:
-//   (sq, 0 0), // Albanian (Albania)
-//   (hy, -21px 0), // Armenian (Armenia)
-//   (bn, -42px 0), // Bengali (Bangladesh)
-//   // (xx, -63px 0), // Brazilian Portuguese (Brazil)
-//   (bg, -84px 0), // Bulgarian (Bulgaria)
-//   (zh, -105px 0), // Chinese (China)
-//   (hr, -126px 0), // Croatian (Croatia)
-//   (da, -147px 0), // Danish (Denmark)
-//   (cs, -168px 0), // Czech (Czech Republic)
-//   (et, -189px 0), // Estonian (Estonia)
+.ico-flags {
+  position: relative;
+  background-color: transparent;
 
-//   (fi, 0 -15px), // Finnish (Finland)
-//   (fr, -21px -15px), // French (France)
-//   (ka, -42px -15px), // Georgian (Georgia)
-//   (de, -63px -15px), // German (Germany)
-//   (el, -84px -15px), // Greek (Greece)
-//   (hu, -105px -15px), // Hungarian (Hungary)
-//   (is, -126px -15px), // Icelandic (Iceland)
-//   (hi, -147px -15px), // Hindi (India)
-//   (id, -168px -15px), // Indonesian (Indonesia)
-//   (fa, -189px -15px), // Iranian (Iran)
+  &:before,
+  &:after {
+    .language-flags-enabled & {
+      position: absolute;
+      display: block;
+      height: 15px;
+      width: 21px;
+      content: '';
+    }
+  }
 
-//   (he, 0 -30px), // Hebrew (Israel)
-//   (it, -21px -30px), // Italian (Italy)
-//   (ja, -42px -30px), // Japanese (Japan)
-//   (ko, -63px -30px), // Korean (Korea, South)
-//   (lv, -84px -30px), // Latvian (Latvia)
-//   (lt, -105px -30px), // Lithuanian (Lithuania)
-//   (ms, -126px -30px), // Malaysian (Malaysia)
-//   (nl, -147px -30px), // Dutch (Netherlands)
-//   (no, -168px -30px), // Norwegian (Norway)
-//   (ur, -189px -30px), // Urdu (Pakistan)
+  &:before {
+    background-color: rgba($color-black, 1);
 
-//   (fil, 0 -45px), // Filipino (Philippines)
-//   (pl, -21px -45px), // Polish (Poland)
-//   (ro, -42px -45px), // Romanian (Romania)
-//   (ru, -63px -45px), // Russian (Russia)
-//   (ar, -84px -45px), // Arabic (Saudi Arabia)
-//   (sk, -105px -45px), // Slovakian (Slovakia)
-//   (sl, -126px -45px), // Slovenian (Slovenia)
-//   (es, -147px -45px), // Spanish (Spain)
-//   (sv, -168px -45px), // Swedish (Sweden)
-//   (tr, -189px -45px), // Turkish (Turkey)
+    .language-flags-disabled & {
+      display: none;
+    }
+  }
 
-//   (uk, 0 -60px), // Ukrainian (Ukraine)
-//   (en, -21px -60px), // American English (United States of America)
-//   // (xx, -42px -60px), // French (Ivory Coast)
-//   (en-gb, -63px -60px), // British English (Great Britian)
-//   (pt, -84px -60px), // Portuguese (Portuguese Republic)
-//   // (xx, -105px, -60px), // Canadian English (Canada)
-//   (sr, -126px, -60px), // Serbian (Republic of Serbia)
-//   // (xx, -147px, -60px), // Dutch, French, German (Kingdom of Belgium)
-//   // (xx, -168px, -60px), // Australian English (Commonwealth of Australia)
-// ;
+  &:after {
+    opacity: .95;
 
-// // Loop for generationg flag classes for each flag in the $flags variable.
-// @each $language_code, $position in $flags {
-//   .ico-flag-#{$language_code}:after {
-//     background-position: $position;
-//   }
-// }
+    .language-flags-enabled & {
+      background-image: url('../assets/ico-flags.svg');
+    }
+  }
+}
+
+// Language flag icons positioning in the spritemap.
+$flags:
+  (sq, 0 0), // Albanian (Albania)
+  (hy, -21px 0), // Armenian (Armenia)
+  (bn, -42px 0), // Bengali (Bangladesh)
+  // (xx, -63px 0), // Brazilian Portuguese (Brazil)
+  (bg, -84px 0), // Bulgarian (Bulgaria)
+  (zh, -105px 0), // Chinese (China)
+  (hr, -126px 0), // Croatian (Croatia)
+  (da, -147px 0), // Danish (Denmark)
+  (cs, -168px 0), // Czech (Czech Republic)
+  (et, -189px 0), // Estonian (Estonia)
+
+  (fi, 0 -15px), // Finnish (Finland)
+  (fr, -21px -15px), // French (France)
+  (ka, -42px -15px), // Georgian (Georgia)
+  (de, -63px -15px), // German (Germany)
+  (el, -84px -15px), // Greek (Greece)
+  (hu, -105px -15px), // Hungarian (Hungary)
+  (is, -126px -15px), // Icelandic (Iceland)
+  (hi, -147px -15px), // Hindi (India)
+  (id, -168px -15px), // Indonesian (Indonesia)
+  (fa, -189px -15px), // Iranian (Iran)
+
+  (he, 0 -30px), // Hebrew (Israel)
+  (it, -21px -30px), // Italian (Italy)
+  (ja, -42px -30px), // Japanese (Japan)
+  (ko, -63px -30px), // Korean (Korea, South)
+  (lv, -84px -30px), // Latvian (Latvia)
+  (lt, -105px -30px), // Lithuanian (Lithuania)
+  (ms, -126px -30px), // Malaysian (Malaysia)
+  (nl, -147px -30px), // Dutch (Netherlands)
+  (no, -168px -30px), // Norwegian (Norway)
+  (ur, -189px -30px), // Urdu (Pakistan)
+
+  (fil, 0 -45px), // Filipino (Philippines)
+  (pl, -21px -45px), // Polish (Poland)
+  (ro, -42px -45px), // Romanian (Romania)
+  (ru, -63px -45px), // Russian (Russia)
+  (ar, -84px -45px), // Arabic (Saudi Arabia)
+  (sk, -105px -45px), // Slovakian (Slovakia)
+  (sl, -126px -45px), // Slovenian (Slovenia)
+  (es, -147px -45px), // Spanish (Spain)
+  (sv, -168px -45px), // Swedish (Sweden)
+  (tr, -189px -45px), // Turkish (Turkey)
+
+  (uk, 0 -60px), // Ukrainian (Ukraine)
+  (en, -21px -60px), // American English (United States of America)
+  // (xx, -42px -60px), // French (Ivory Coast)
+  (en-gb, -63px -60px), // British English (Great Britian)
+  (pt, -84px -60px), // Portuguese (Portuguese Republic)
+  // (xx, -105px, -60px), // Canadian English (Canada)
+  (sr, -126px, -60px), // Serbian (Republic of Serbia)
+  // (xx, -147px, -60px), // Dutch, French, German (Kingdom of Belgium)
+  // (xx, -168px, -60px), // Australian English (Commonwealth of Australia)
+;
+
+// Loop for generationg flag classes for each flag in the $flags variable.
+@each $language_code, $position in $flags {
+  .ico-flag-#{$language_code}:after {
+    background-position: $position;
+  }
+}

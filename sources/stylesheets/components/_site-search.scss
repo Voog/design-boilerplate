@@ -5,7 +5,7 @@
 
   .search-input {
     @include input-ios-reset;
-    @include inherit-base-font;
+    @include inherit-font;
     width: 128px;
     padding: 4px 5px 3px;
     font-size: 14px;

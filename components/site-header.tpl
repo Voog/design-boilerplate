@@ -5,7 +5,8 @@
     <div class="site-options">
       {% include "site-search" %}
       {% comment %}Simple language menu with titles only.{% endcomment %}
-      {% include "menu-language" %}
+      {% comment %}{% include "menu-language" %}{% endcomment %}
+
       {% comment %}
         Language popover menu with flags.
         Follow the steps below to switch to popover menu with flag icons.
@@ -18,7 +19,8 @@
           * $('.js-toggle-menu-language') button click event in bindButtonClicks function.
           * bindMenuLanguagePositioning() function.
       {% endcomment %}
-      {% comment %}<button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-prevent-sideclick"></button>{% endcomment %}
+
+      <button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-prevent-sideclick">{{ current_language_title }}</button>
     </div>
   </div>
 

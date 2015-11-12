@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
-<html class="front-page {{ view_mode }}" lang="{{ page.language_code }}">
+<html class="front-page {{ view_mode }} {{ language_flags_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
   </head>
@@ -22,6 +22,7 @@
         {% include "site-footer" %}
       </div>
 
+      {% include "template-tools" %}
       <script>site.initFrontPage();</script>
     </div>
   </body>

@@ -43,7 +43,10 @@
 
 .menu-vertical {
   li {
-    display: block;
+    &,
+    a {
+      display: block;
+    }
   }
 }
 
@@ -52,6 +55,12 @@
   display: none;
   background-color: rgba($color-white, 1);
   box-shadow: 0 0 5px rgba($color-black, .3);
+}
+
+.menu-options {
+  button {
+    @include button;
+  }
 }
 
 .menu-main {
