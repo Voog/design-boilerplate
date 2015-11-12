@@ -9248,62 +9248,76 @@ return jQuery;
       }
     });
 
-    // Follow the instructions in "components/site-header.tpl" to enable
     // language menu popover with flags.
-    $('.js-toggle-menu-language').click(function() {
-      if (!$('html').hasClass('menu-language-popover-open')) {
-        handleMenuLanguagePopoverPositioning();
-      } else {
-        $('html').removeClass('menu-language-popover-open');
-      }
-    });
+    // By default this template uses the simple text listing version of the
+    // language menu and popover menu with flags is disabled. Follow the
+    // instructions in "components/site-header.tpl" to enable language menu
+    // popover with flags.
+    /*
+      $('.js-toggle-menu-language').click(function() {
+        if (!$('html').hasClass('menu-language-popover-open')) {
+          handleMenuLanguagePopoverPositioning();
+        } else {
+          $('html').removeClass('menu-language-popover-open');
+        }
+      });
+    */
   };
-
 
   //============================================================================
   // Positions language menu popover under the toggleing button.
   //
   // By default this template uses the simple text listing version of the
-  // language menu and popovel menu is disabled. Follow the instructions in
-  // "components/site-header.tpl" to enable language menu popover with flags.
+  // language menu and popover menu with flags is disabled. Follow the
+  // instructions in "components/site-header.tpl" to enable language menu
+  // popover with flags.
   //============================================================================
-  var handleMenuLanguagePopoverPositioning = function(button) {
-    var $menuWrapper = $('.js-menu-language-popover'),
-        $offsetItem = $('.js-toggle-menu-language'),
-        offsetItemOffsetTop = $offsetItem.offset().top,
-        offsetItemOffsetLeft = $offsetItem.offset().left,
-        offsetItemOuterWidth = $offsetItem.outerWidth(),
-        offsetItemOuterHeight = $offsetItem.outerHeight(),
-        windowWidth = $(window).width();
+  /*
+    var handleMenuLanguagePopoverPositioning = function(button) {
+      var $menuWrapper = $('.js-menu-language-popover'),
+          $offsetItem = $('.js-toggle-menu-language'),
+          offsetItemOffsetTop = $offsetItem.offset().top,
+          offsetItemOffsetLeft = $offsetItem.offset().left,
+          offsetItemOuterWidth = $offsetItem.outerWidth(),
+          offsetItemOuterHeight = $offsetItem.outerHeight(),
+          windowWidth = $(window).width();
 
-    $('html').addClass('menu-language-popover-open');
+      $('html').addClass('menu-language-popover-open');
 
-    $menuWrapper.css({
-      top: offsetItemOffsetTop + offsetItemOuterHeight,
-      right: windowWidth - offsetItemOffsetLeft - offsetItemOuterWidth
-    });
-  };
+      $menuWrapper.css({
+        top: offsetItemOffsetTop + offsetItemOuterHeight,
+        right: windowWidth - offsetItemOffsetLeft - offsetItemOuterWidth
+      });
+    };
+  */
 
   //============================================================================
   // Toggles language flags state.
+  //
+  // By default this template uses the simple text listing version of the
+  // language menu and popover menu with flags is disabled. Follow the
+  // instructions in "components/site-header.tpl" to enable language menu
+  // popover with flags.
   //============================================================================
-  var bindLanguageFlagsToggle = function() {
-    $('.js-toggle-language-flags').click(function() {
-      if ($('html').hasClass('language-flags-disabled')) {
-        $('html')
-          .removeClass('language-flags-disabled')
-          .addClass('language-flags-enabled');
+  /*
+    var bindLanguageFlagsToggle = function() {
+      $('.js-toggle-language-flags').click(function() {
+        if ($('html').hasClass('language-flags-disabled')) {
+          $('html')
+            .removeClass('language-flags-disabled')
+            .addClass('language-flags-enabled');
 
-        siteData.set("language_flags_enabled", true);
-      } else {
-        $('html')
-          .removeClass('language-flags-enabled')
-          .addClass('language-flags-disabled');
+          siteData.set("language_flags_enabled", true);
+        } else {
+          $('html')
+            .removeClass('language-flags-enabled')
+            .addClass('language-flags-disabled');
 
-        siteData.set("language_flags_enabled", false);
-      }
-    });
-  };
+          siteData.set("language_flags_enabled", false);
+        }
+      });
+    };
+  */
 
   //============================================================================
   // Binds site search functionality.
@@ -9375,8 +9389,17 @@ return jQuery;
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
     // Initiations for specific functions.
-    bindSiteSearch: bindSiteSearch,
-    bindLanguageFlagsToggle: bindLanguageFlagsToggle
+    bindSiteSearch: bindSiteSearch/*,*/
+    // Initiation for the language flags visibility state saving.
+    // By default this template uses the simple text listing version of the
+    // language menu and popover menu with flags is disabled. Follow the
+    // instructions in "components/site-header.tpl" to enable language menu
+    // popover with flags.
+    // NB! Don't forget to uncomment the comma after "bindSiteSearch" if
+    // enabling the "bindLanguageFlagsToggle"
+    /*
+      bindLanguageFlagsToggle: bindLanguageFlagsToggle
+    */
   });
 
   init();

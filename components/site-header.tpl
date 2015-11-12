@@ -5,7 +5,7 @@
     <div class="site-options">
       {% include "site-search" %}
       {% comment %}Simple language menu with titles only.{% endcomment %}
-      {% comment %}{% include "menu-language" %}{% endcomment %}
+      {% include "menu-language" %}
 
       {% comment %}
         Language popover menu with flags.
@@ -17,10 +17,12 @@
         * Uncomment language menu popover component at the end of "components/site-footer.tpl".
         * Uncomment the following in the "sources/javascripts/base.js":
           * $('.js-toggle-menu-language') button click event in bindButtonClicks function.
-          * bindMenuLanguagePositioning() function.
+          * "handleMenuLanguagePopoverPositioning" function.
+          * "bindLanguageFlagsToggle" function.
+          * "bindLanguageFlagsToggle: bindLanguageFlagsToggle" line in "window.site" variable.
       {% endcomment %}
 
-      <button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-prevent-sideclick">{{ current_language_title }}</button>
+      {% comment %}<button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-prevent-sideclick">{{ current_language_title }}</button>{% endcomment %}
     </div>
   </div>
 
