@@ -74,7 +74,7 @@
     @include color($blue-1);
 
     .dark-background & {
-      @include color($white);          
+      @include color($white);
     }
 
     &.untranslated {
@@ -86,7 +86,7 @@
       @include color($primary-color, 0.8);
 
       .dark-background & {
-        @include color($white, 0.8);          
+        @include color($white, 0.8);
       }
     }
 
@@ -94,7 +94,7 @@
       @include color($primary-color);
 
       .dark-background & {
-        @include color($white);          
+        @include color($white);
       }
     }
   }
@@ -127,7 +127,7 @@
         @include color($primary-color, 0.8);
 
         .dark-background & {
-          @include color($white, 0.8);          
+          @include color($white, 0.8);
         }
       }
     }
@@ -221,7 +221,7 @@
         .menu-item {
           .menu-link {
             position: relative;
-            padding: 14px 20px 14px 50px;
+            padding: 15px 20px 14px 50px;
             font-size: 12px;
             @include color($secondary-color);
 
@@ -239,11 +239,11 @@
             &.lang-flag:before,
             &.lang-flag:after {
               position: absolute;
-              top: 14px;
+              top: 13px;
               left: 20px;
               display: block;
-              width: 20px;
-              height: 13px;
+              width: 21px;
+              height: 15px;
               content: '';
             }
 
@@ -253,7 +253,6 @@
 
             &.lang-flag:after {
               opacity: 0.95;
-              background-size: 200px;
               background-repeat: no-repeat;
 
               .no-svg & {
@@ -352,94 +351,108 @@
 
 // Language flag icons positioning in the spritemap.
 $flags:
-  // Albanian (Albania)
-  (sq,   0        0),
-  // Armenian (Armenia)
-  (hy,  -20px     0),
-  // Bengali (Bangladesh)
-  (bn,  -40px     0),
-  // Brazilian Portuguese (Brazil)
-  (pt,  -60px     0),
-  // Bulgarian (Bulgaria)
-  (bg,  -80px     0),
-  // Chinese (China)
-  (zh, -100px     0),
-  // Croatian (Croatia)
-  (hr, -120px     0),
-  // Danish (Denmark)
-  (da, -140px     0),
-  // Czech (Czech Republic)
-  (cs, -160px     0),
-  // Estonian (Estonia)
-  (et, -180px     0),
+// Albanian (Albania)
+(sq, 0 0),
+// Armenian (Armenia)
+(hy, -21px 0),
+// Bengali (Bangladesh)
+(bn, -42px 0),
+// Brazilian Portuguese (Brazil)
+// (xx, -63px 0),
+// Bulgarian (Bulgaria)
+(bg, -84px 0),
+// Chinese (China)
+(zh, -105px 0),
+// Croatian (Croatia)
+(hr, -126px 0),
+// Danish (Denmark)
+(da, -147px 0),
+// Czech (Czech Republic)
+(cs, -168px 0),
+// Estonian (Estonia)
+(et, -189px 0),
 
-  // Finnish (Finland)
-  (fi,    0px -14px),
-  // French (France)
-  (fr,  -20px -14px),
-  // Georgian (Georgia)
-  (ka,  -40px -14px),
-  // German (Germany)
-  (de,  -60px -14px),
-  // Greek (Greece)
-  (el,  -80px -14px),
-  // Hungarian (Hungary)
-  (hu, -100px -14px),
-  // Icelandic (Iceland)
-  (is, -120px -14px),
-  // Hindi (India)
-  (hi, -140px -14px),
-  // Indonesian (Indonesia)
-  (id, -160px -14px),
-  // Iranian (Iran)
-  (fa, -180px -14px),
+// Finnish (Finland)
+(fi, 0 -15px),
+// French (France)
+(fr, -21px -15px),
+// Georgian (Georgia)
+(ka, -42px -15px),
+// German (Germany)
+(de, -63px -15px),
+// Greek (Greece)
+(el, -84px -15px),
+// Hungarian (Hungary)
+(hu, -105px -15px),
+// Icelandic (Iceland)
+(is, -126px -15px),
+// Hindi (India)
+(hi, -147px -15px),
+// Indonesian (Indonesia)
+(id, -168px -15px),
+// Iranian (Iran)
+(fa, -189px -15px),
 
-  // Hebrew (Israel)
-  (he,    0px -28px),
-  // Italian (Italy)
-  (it,  -20px -28px),
-  // Japanese (Japan)
-  (ja,  -40px -28px),
-  // Korean (Korea, South)
-  (ko,  -60px -28px),
-  // Latvian (Latvia)
-  (lv,  -80px -28px),
-  // Lithuanian (Lithuania)
-  (lt, -100px -28px),
-  // Malaysian (Malaysia)
-  (ms, -120px -28px),
-  // Dutch (Netherlands)
-  (nl, -140px -28px),
-  // Norwegian (Norway)
-  (no, -160px -28px),
-  // Urdu (Pakistan)
-  (ur, -180px -28px),
+// Hebrew (Israel)
+(he, 0 -30px),
+// Italian (Italy)
+(it, -21px -30px),
+// Japanese (Japan)
+(ja, -42px -30px),
+// Korean (Korea, South)
+(ko, -63px -30px),
+// Latvian (Latvia)
+(lv, -84px -30px),
+// Lithuanian (Lithuania)
+(lt, -105px -30px),
+// Malaysian (Malaysia)
+(ms, -126px -30px),
+// Dutch (Netherlands)
+(nl, -147px -30px),
+// Norwegian (Norway)
+(no, -168px -30px),
+// Urdu (Pakistan)
+(ur, -189px -30px),
 
-  // Filipino (Philippines)
-  (fil,   0px -42px),
-  // Polish (Poland)
-  (pl,  -20px -42px),
-  // Romanian (Romania)
-  (ro,  -40px -42px),
-  // Russian (Russia)
-  (ru,  -60px -42px),
-  // Arabic (Saudi Arabia)
-  (ar,  -80px -42px),
-  // Slovakian (Slovakia)
-  (sk, -100px -42px),
-  // Slovenian (Slovenia)
-  (sl, -120px -42px),
-  // Spanish (Spain)
-  (es, -140px -42px),
-  // Swedish (Sweden)
-  (sv, -160px -42px),
-  // Turkish (Turkey)
-  (tr, -180px -42px),
+// Filipino (Philippines)
+(fil, 0 -45px),
+// Polish (Poland)
+(pl, -21px -45px),
+// Romanian (Romania)
+(ro, -42px -45px),
+// Russian (Russia)
+(ru, -63px -45px),
+// Arabic (Saudi Arabia)
+(ar, -84px -45px),
+// Slovakian (Slovakia)
+(sk, -105px -45px),
+// Slovenian (Slovenia)
+(sl, -126px -45px),
+// Spanish (Spain)
+(es, -147px -45px),
+// Swedish (Sweden)
+(sv, -168px -45px),
+// Turkish (Turkey)
+(tr, -189px -45px),
 
-  // Ukrainian (Ukraine)
-  (uk,    0px -56px),
-  // American English (United States of Ameria)
-  (en,  -20px -56px)
+// Ukrainian (Ukraine)
+(uk, 0 -60px),
+// American English (United States of America)
+(en, -21px -60px),
+// French (Ivory Coast)
+// (xx, -42px -60px),
+// British English (Great Britian)
+(en-gb, -63px -60px),
+// Portuguese (Portuguese Republic)
+(pt, -84px -60px),
+// Canadian English (Canada)
+// (xx, -105px, -60px),
+// Serbian (Republic of Serbia)
+(sr, -126px, -60px),
+// Dutch, French, German (Kingdom of Belgium)
+// (xx, -147px, -60px),
+// Australian English (Commonwealth of Australia)
+// (xx, -168px, -60px),
 ;
 
 @each $flag, $pos in $flags {
