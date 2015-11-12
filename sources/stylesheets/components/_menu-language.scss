@@ -23,6 +23,7 @@
 // Language menu with flags.
 .menu-language-btn {
   @include button;
+  vertical-align: top;
 
   .language-flags-enabled & {
     padding: 12px 16px 13px 15px;

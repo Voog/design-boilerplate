@@ -192,6 +192,7 @@ body {
   background-color: transparent;
   border-style: none;
   cursor: pointer;
+  vertical-align: top;
 }
 .menu-language-btn:focus {
   outline: none;
