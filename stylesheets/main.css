@@ -184,6 +184,10 @@ body.dark-background {
   font-size: 14px;
   background-color: #fafafa;
 }
+.dark-background .content-formatted pre, .dark-background
+.content-formatted code {
+  color: black;
+}
 .content-formatted pre {
   overflow: auto;
   padding: 10px;

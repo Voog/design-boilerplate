@@ -103,6 +103,10 @@
   code {
     font-size: 14px;
     @include bg($grey-3);
+
+    .dark-background & {
+      color: rgba($black, 1);
+    }
   }
 
   pre {
