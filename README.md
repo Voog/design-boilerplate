@@ -130,7 +130,9 @@ Folder to store template's files. For example **webfonts** or **svg**.
 **Tip: Create layouts in Voog design editor and pull them with "kit pull layouts" to bypass manual configuration of the "manifest.json"**
 
 #### Standard design required layouts
-Each standard design requires 4 main **layouts**:
+Each standard design layout should respect the naming conventions for file names to preserve the unity of the templates.
+
+Standard design requires 4 main **layouts**:
 
 ##### "Blog & News"
 Layout for blog articles listing pages.
@@ -202,6 +204,8 @@ Layout for landing pages.
 ```
 
 ### Components
+Each standard design component should respect the naming conventions for file names to preserve the unity of the templates.
+
 #### Generating components
 ##### Local environment
 * Each **component** must be a file with type **.tpl**
@@ -229,8 +233,6 @@ Layout for landing pages.
 * Click on the **+** button next to the **Components** heading.
 * Add **name** for the component.
 * No need to specify anything in the **manifest.json**.
-
-Each standard design should respect the naming conventions for file names to preserve the unity of the templates.
 
 #### Standard design required components
 ##### template-head
