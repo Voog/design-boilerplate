@@ -116,7 +116,7 @@ Folder to store template's files. For example **webfonts** or **svg**.
 }
 ```
 
-**Tip: Running ```Kit manifest``` command from the root directory automatically generates the JSON for the layout parts. "content_type" and "layout_name" values are always set as "page" and "page_default" and must be edited manually.**
+**Tip: Running ```Kit manifest``` command from the root directory automatically generates the JSON for the layout parts. "content_type" and "layout_name" values are always set as "page" and "page_default" and must be edited manually if the generated values are not correct.**
 
 **Tip: Create the structure of the template using Voog design editor view and use "kit pull" command to download it to the local environment. This way the manifest is generated with the correct values automattically.**
 
