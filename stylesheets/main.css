@@ -336,6 +336,10 @@ body.dark-background {
   .menu-btn .menu-stripe:first-child, .menu-btn .menu-stripe:last-child {
     margin: 0;
   }
+  .dark-background .menu-btn .menu-stripe {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.47);
+  }
 }
 
 .edit-btn {

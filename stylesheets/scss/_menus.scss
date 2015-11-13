@@ -43,6 +43,10 @@
       &:last-child {
         margin: 0;
       }
+
+      .dark-background & {
+        @include bg($white, 0.47);
+      }
     }
   }
 }
