@@ -112,7 +112,7 @@ Folder to store template's files. For example **webfonts** or **svg**.
 	* title – name that is rendered in the design editor.
 * Example configuration:
 
-```json
+```javascript
 {
   "content_type": "page", // Other possible values: "blog", "blog_article", "elements", "element", "component"
   "component": false, // Must be false for layout files.
@@ -219,7 +219,7 @@ Layout for landing pages.
 	* title – name that is rendered in the design editor.
 * Example configuration:
 
-```json
+```javascript
 {
   "content_type": "component", // Must be "component" for components.
   "component": true, // Must be true for layout files.
