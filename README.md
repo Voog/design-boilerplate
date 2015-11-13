@@ -7,12 +7,6 @@ To modify this template [Node Package Manager](https://www.npmjs.org/) (or [Node
 To set up the local developing environment, clone this repository and run the following commands:
 
 * Install Grunt dependencies: ```npm install```
-* Replace the line :21 in ```node_modules/grunt_contrib_sass/node_modules/dargs/dargs.js``` with the following example example:
-
-```
-args.push('--' + flag + '=' + val);
-```
-
 * Install Bower dependencies: ```bower install```
 * Run Grunt tasks: ```grunt```
 
@@ -34,7 +28,7 @@ To sync the template with your **Voog** sites, set up the [Voog Developer Toolki
 
 ## Required parts
 
-### FOLDERS
+### Folders
 Voog templates uses folders with predefined names to store different parts of the template.
 
 #### layouts/
@@ -49,7 +43,7 @@ Folder to store template's (reusable) components.
 * Each **component** can be **included** in **layouts**:
 * Usage example:
 
-```
+```liquid
 <!DOCTYPE html>
 <html>
   <head>
@@ -66,7 +60,7 @@ Folder to store template's stylesheets.
 	* .css
 * Files be accessed in **templates** and **components** using {{ stylesheets_path }} variable:
 
-```
+```liquid
 <script src="{{ stylesheets_path }}/main.js">
 ```
 
@@ -77,7 +71,7 @@ Folder to store template's images.
 	* .js
 * Files be accessed in **templates** and **components** using {{ javascripts_path }} variable:
 
-```
+```liquid
 <script src="{{ javascripts_path }}/main.js">
 ```
 
@@ -90,7 +84,7 @@ Folder to store template's images.
 	* TODO: *something else?*
 * Files be accessed in **templates** and **components** using {{ images_path }} variable:
 
-```
+```liquid
 <img src="{{ images_path }}/image.jpg">
 ```
 
@@ -100,7 +94,7 @@ Folder to store template's files. For example **webfonts** or **svg**.
 * Supported file types:
 	* TODO: *anything?*
 
-### LAYOUTS
+### Layouts
 #### Generating layouts
 ##### Local environment
 * Each **layout** must be a file with type **.tpl**
@@ -145,7 +139,7 @@ Layout for blog articles listing pages.
 * File name: **blog___news.tpl** (use **title** as name if creating in Voog design editor).
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "blog",
   "component": false,
@@ -163,7 +157,7 @@ Layout for blog single articles.
 * **Parent layout** must be set as "Blog & News" if created with Voog design editor.
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "blog_article",
   "component": false,
@@ -180,7 +174,7 @@ Layout for simple content pages.
 * File name: **common_page.tpl** (use **title** as name if creating in Voog design editor).
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "page",
   "component": false,
@@ -197,7 +191,7 @@ Layout for landing pages.
 * File name: **front_page.tpl** (use **title** as name if creating in Voog design editor).
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "page",
   "component": false,
@@ -207,7 +201,7 @@ Layout for landing pages.
 }
 ```
 
-### COMPONENTS
+### Components
 #### Generating components
 ##### Local environment
 * Each **component** must be a file with type **.tpl**
@@ -245,7 +239,7 @@ Component to store the global part of the ```<head></head>``` tag.
 * Shouldn't be confused with the **"site-header"** component.
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "component",
   "component": true,
@@ -263,7 +257,7 @@ Component to store the code for main menu if main menu renders more than first l
 
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "component",
   "component": true,
@@ -280,7 +274,7 @@ Component(s) to store the code for the specific level menu in site structure.
 
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "component",
   "component": true,
@@ -296,7 +290,7 @@ Component to store the code for the the template's header (visible part containi
 * Shouldn't be confused with the **"template-head"** component.
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "component",
   "component": true,
@@ -311,7 +305,7 @@ Component to store the code for the the template's footer (visible part containi
 
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "component",
   "component": true,
@@ -327,7 +321,7 @@ Component to store the code for the template's global javascripts.
 
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "component",
   "component": true,
@@ -363,7 +357,7 @@ Component to store the code for the template's global JS that must be used with 
 
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "component",
   "component": true,
@@ -378,7 +372,7 @@ Component to store the code for the template's global liquid variables.
 
 * Configuration in **manifest.json**:
 
-```
+```json
 {
   "content_type": "component",
   "component": true,
@@ -388,11 +382,11 @@ Component to store the code for the template's global liquid variables.
 }
 ```
 
-### STYLESHEETS
+### Stylesheets
 #### main.css
 Global CSS file that contains all the CSS code that's needed for styling the template's main parts.
 
-### JAVASCRIPTS
+### Javascripts
 #### main.js
 Global JS file that contains all the JS code that's needed for the template's main functionality.
 
@@ -402,7 +396,7 @@ Minified version of the **"main.js"**.
 ## Naming conventions
 To preserve unity of the template's code any added file should use the following naming rules:
 
-### LAYOUTS
+### Layouts
 * Name the layout so it represents the purpose of the layout.
 	* For example **"Blog & News"** will render blog or news listing.
 * Capitalize the **title**.
@@ -410,7 +404,7 @@ To preserve unity of the template's code any added file should use the following
 * Separate words with **spaces** in the **title**.
 * Separate words with **underscores** in the **title**.
 
-### COMPONENTS
+### Components
 * Name the component so it represents the purpose of the component.
 	* For example **"template-head"** will hold the code for the template's ```<head>``` tag.
 * Use lowercase in **title** and **file name**.
@@ -423,22 +417,21 @@ To preserve unity of the template's code any added file should use the following
 			* **"blog-and-news-article"** to store the code for the blog listing page article.
 			* **"site-sidebar-content"** to store the code for the sidebar's content area.
 
-### JAVASCRIPTS
+### Javascripts
 * Name the component so it represents the purpose of the component.
+
+### Images
+* Name the images so it represents the purpose of the image.
+
+### Images
+* Name the assets so it represents the purpose of the asset.
 
 ## Liquid markup conventions
 * Prefer **double quotes** – Voog custom liquid tags work only with double quotes and to preserve the unity of the code, double quotes should be used. Use single quotes only if they conflict with other quotation marks.
 	* Example: ```placeholder="{{ 'search' | lc }}...">```
 
-## Site search
-Site search consist of 4 parts:
-* Search form for search input.
-* Stylesheet with default design for the search output.
-* Javascript plugin for search functionality.
-* Javascript code snippet to bind search functionality with the form and set it's options.
-
 ## Template parts
-### NAVIGATION MENUS
+### Navigation menus
 Voog standard designs must have at least 2 level deep navigation.
 
 * Each menu must be a separate component named **"menu-level-*N*"**.
@@ -451,7 +444,7 @@ Voog standard designs must have at least 2 level deep navigation.
 * Menu items that are not visible, should be hidden.
 * Example of the menu code:
 
-```
+```liquid
 <nav class="menu-main">
   <ul class="menu menu-horizontal menu-public menu-level-1">
     {% unless site.root_item.hidden? %}
@@ -476,16 +469,23 @@ Voog standard designs must have at least 2 level deep navigation.
 
 ```
 
-### LANGUAGE MENU
+### Language menu
 Voog standard designs must have a navigation menu.
 
 * If language menu has langugae flags, then there must be an option to toggle them.
 
 
-### SEARCH FORM
+### Site search
+Site search consist of 4 parts:
+* Search form for search input.
+* Stylesheet with default design for the search output.
+* Javascript plugin for search functionality.
+* Javascript code snippet to bind search functionality with the form and set it's options.
+
+#### Search form
 Search form should be in a component named **"site-search"**. Example:
 
-```
+```liquid
 {% if site.search.enabled %}
   <div class="site-search">
     <form class="search-form js-search-form" method="get">
@@ -500,26 +500,26 @@ Search form should be in a component named **"site-search"**. Example:
 * Search input must have the **"type="search""** or **"type="input""** attribute.
 * To use default styles for the search results modal, the following stylesheet must be added int he **"template-head"** component:'
 
-```
+```liquid
 {% if site.search.enabled %}
   <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.css">
 {% endif %}
 ```
 
-**There's no need for the stylesheet if search has custom design that doesn't use any part of the default style. Custom styles for the search modal must be added into the "sources/stylesheets/components/_site-search.scss".**
+**There's no need for the stylesheet if search has custom design that doesn't use any part of the default style. Custom style or default styles overrides for the search form and modal must be added into the "sources/stylesheets/components/_site-search.scss".**
 
 * Search plugin must be included in **"template-javascripts"** component:
 
-```
+```liquid
 {% if site.search.enabled %}
   <script src="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.js"></script>
   <script>site.bindSiteSearch($('.js-search-form').get(0), '{{ page.language_code }}');</script>
 {% endif %}
 ```
 
-* Search initiation function must be added in the **""base.js"**:
+* Search initiation function must be added in the **"sources/javascripts/base.js"**:
 
-```
+```javascript
 var bindSiteSearch = function(searchForm, languageCode) {
     if (searchForm) {
       var search = new VoogSearch(searchForm, {
@@ -548,11 +548,11 @@ var bindSiteSearch = function(searchForm, languageCode) {
   };
 ```
 
-* To enable the **"bindSiteSearch"** function outside the **"base.js"** file, it must be added into **window.site** variable at the end of the **"base.js"** file:
+* To enable the **"bindSiteSearch"** function outside the **"sources/javascripts/base.js"** file, it must be added into **window.site** variable at the end of the **"sources/javascripts/base.js"** file:
 
-```
+```javascript
 window.site = $.extend(window.site || {}, {
-  ...
+  // ...other "key: value" pairs...
   bindSiteSearch: bindSiteSearch
 });
 ```
