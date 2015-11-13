@@ -546,6 +546,9 @@ body.dark-background {
 .menu-sub .menu .menu-item:first-child {
   margin-left: 0;
 }
+.dark-background .menu-sub .menu .menu-item .menu-link {
+  color: white;
+}
 @media screen and (max-width: 752px) {
   .menu-sub {
     margin-top: 30px;
