@@ -432,18 +432,19 @@ To preserve unity of the template's code any added file should use the following
 * Prefer **double quotes** – Voog custom liquid tags work only with double quotes and to preserve the unity of the code, double quotes should be used. Use single quotes only if they conflict with other quotation marks.
 	* Example: ```placeholder="{{ 'search' | lc }}...">```
 
-## Template parts
+## Standard template required parts
 ### Navigation menus
 Voog standard designs must have at least 2 level deep navigation.
 
-* Each menu must be a separate component named **"menu-level-*N*"**.
+* Each menu must be a separate component named **"menu-level-*N*"** if it is used to render only one level of the menu structure.
 * If more than one level is rendered in the same menu, then the name of the component should be different: 
 	* **"menu-main.tpl"** – if the menu renders **level-1 + level-2 ( + level-*N*)**.
 	* **"menu-sub.tpl"** – if the menu renders **(level-2 + ) level-3 ( + level-*N*)**.
 
 * Each menu must have **page adding button** and **hidden items list button**  under the menu items listing.
 * Menu items that are not translated should have distinctive style.
-* Menu items that are not visible, should be hidden.
+* Menu items that are not visible, should be hidden (and visible under the **hidden items list button**).
+* Editmode buttons shouldn't be on the same line with the menu links because the length of the menu can produce major difference between editmode and live.
 * Example of the menu code:
 
 ```liquid
@@ -474,7 +475,7 @@ Voog standard designs must have at least 2 level deep navigation.
 ### Language menu
 Voog standard designs must have a navigation menu.
 
-* If language menu has langugae flags, then there must be an option to toggle them.
+* If language menu has language flags, then there must be an option to toggle them.
 
 
 ### Site search
