@@ -58,7 +58,7 @@ Folder to store template's stylesheets.
 
 * Supported file types:
 	* .css
-* Files be accessed in **templates** and **components** using {{ stylesheets_path }} variable:
+* Files can be accessed in **templates** and **components** using {{ stylesheets_path }} variable:
 
 ```liquid
 <script src="{{ stylesheets_path }}/main.js">
@@ -69,7 +69,7 @@ Folder to store template's images.
 
 * Supported file types:
 	* .js
-* Files be accessed in **templates** and **components** using {{ javascripts_path }} variable:
+* Files can be accessed in **templates** and **components** using {{ javascripts_path }} variable:
 
 ```liquid
 <script src="{{ javascripts_path }}/main.js">
@@ -82,7 +82,7 @@ Folder to store template's images.
 	* .jpg
 	* .png
 	* TODO: *something else?*
-* Files be accessed in **templates** and **components** using {{ images_path }} variable:
+* Files can be accessed in **templates** and **components** using {{ images_path }} variable:
 
 ```liquid
 <img src="{{ images_path }}/image.jpg">
@@ -350,7 +350,7 @@ Component to store the code for the template's global JS that must be used with 
     var siteData = new Edicy.CustomData({
       type: 'site'
     });
-    
+
     // Sets the variable for saving global custom data.
     site.initSomething('{{ page.data.some_value }}');
   </script>
@@ -437,7 +437,7 @@ To preserve unity of the template's code any added file should use the following
 Voog standard designs must have at least 2 level deep navigation.
 
 * Each menu must be a separate component named **"menu-level-*N*"** if it is used to render only one level of the menu structure.
-* If more than one level is rendered in the same menu, then the name of the component should be different: 
+* If more than one level is rendered in the same menu, then the name of the component should be different:
 	* **"menu-main.tpl"** – if the menu renders **level-1 + level-2 ( + level-*N*)**.
 	* **"menu-sub.tpl"** – if the menu renders **(level-2 + ) level-3 ( + level-*N*)**.
 
