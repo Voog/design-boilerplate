@@ -28,7 +28,7 @@
 
     .dark-background & {
       @include color($white);
-    } 
+    }
 
     h1 {
       font-size: 100px;
@@ -60,7 +60,7 @@
 
 .content-title {
   &.content-formatted {
-    line-height: 1;
+    line-height: 1.2;
     font-weight: 700;
     font-size: 100px;
 
