@@ -135,11 +135,25 @@
     font-size: 14px;
     @include color($secondary-color, 0.75);
     @include bg($white);
-    @include border(all,1px,solid,$black, 0.1);
+    @include border(all, 1px, solid, $black, 0.75);
 
     &:hover {
       @include color($secondary-color, 0.75);
-      @include border(all, 1px, solid, $black, 0.75);
+      @include border(all,1px,solid,$black, 0.1);
+    }
+
+    .public & {
+      cursor: pointer;
+    }
+
+    .dark-background & {
+      @include bg($black);
+      @include border(all, 1px, solid, $white, 0.75);
+
+      &:hover {
+        @include color($white, 0.75);
+        @include border(all,1px,solid,$white, 0.1);
+      }
     }
   }
 

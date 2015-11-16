@@ -217,13 +217,27 @@ body.dark-background {
   color: rgba(27, 33, 36, 0.75);
   background-color: white;
   border: 1px solid #000000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.75);
 }
 .content-formatted .custom-btn:hover {
   color: #1b2124;
   color: rgba(27, 33, 36, 0.75);
   border: 1px solid #000000;
-  border: 1px solid rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.public .content-formatted .custom-btn {
+  cursor: pointer;
+}
+.dark-background .content-formatted .custom-btn {
+  background-color: black;
+  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+.dark-background .content-formatted .custom-btn:hover {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.75);
+  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .content-formatted .edy-positionable-container-center,
 .content-formatted .edy-positionable-container-left-block,
