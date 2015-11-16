@@ -81,7 +81,9 @@
 
     input {
       .dark-background & {
-        color: rgba($white, 1);
+        .editmode & {
+          color: rgba($white, 1);
+        }
       }
     }
   }
