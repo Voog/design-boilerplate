@@ -350,8 +350,7 @@ body.dark-background {
     margin: 0;
   }
   .dark-background .menu-btn .menu-stripe {
-    background-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.47);
+    background-color: white;
   }
 }
 

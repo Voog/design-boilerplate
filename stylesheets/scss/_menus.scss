@@ -45,7 +45,7 @@
       }
 
       .dark-background & {
-        @include bg($white, 0.47);
+        @include bg($white, 1);
       }
     }
   }
