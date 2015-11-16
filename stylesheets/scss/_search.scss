@@ -11,15 +11,15 @@
     margin-right: 40px;
   }
 
-  @include query($tablet-3) {
-    position: relative;
-    display: block;
-    margin-right: 0;
+  // @include query($tablet-3) {
+  //   position: relative;
+  //   display: block;
+  //   margin-right: 0;
 
-    .header-right & {
-      display: none;
-    }
-  }
+  //   .header-right & {
+  //     display: none;
+  //   }
+  // }
 }
 
 .search-inner {
@@ -30,10 +30,10 @@
 .search-mobile {
   display: none;
 
-  @include query($tablet-3) {
-    display: block;
-    margin-top: 20px;
-  }
+  // @include query($tablet-3) {
+  //   display: block;
+  //   margin-top: 20px;
+  // }
 }
 
 .search-left {
@@ -46,14 +46,14 @@
     border-radius: 3px;
   }
 
-  @include query($tablet-3) {
-    @include calc(width, "100% - 75px");
+  // @include query($tablet-3) {
+  //   @include calc(width, "100% - 75px");
 
-    .search-input {
-      width: 100%;
-      box-sizing: border-box;
-    }
-  }
+  //   .search-input {
+  //     width: 100%;
+  //     box-sizing: border-box;
+  //   }
+  // }
 }
 
 .search-right {
@@ -61,9 +61,9 @@
     vertical-align: middle;
   }
 
-  @include query($tablet-3) {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+  // @include query($tablet-3) {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  // }
 }
