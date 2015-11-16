@@ -87,20 +87,13 @@
       @include color($red, 0.5);
     }
 
-    &.active {
-      font-weight: 700;
-      @include color($primary-color, 0.8);
-
-      .dark-background & {
-        @include color($white, 0.8);
-      }
-    }
-
     &:hover {
       @include color($primary-color);
 
       .dark-background & {
-        @include color($white);
+        @include query($tablet-2, 'min-width') {
+          @include color($white);
+        }
       }
     }
   }
@@ -133,7 +126,9 @@
         @include color($primary-color, 0.8);
 
         .dark-background & {
-          @include color($white, 0.8);
+          @include query($tablet-2, 'min-width') {
+            @include color($white, 0.5);
+          }
         }
       }
     }
@@ -316,7 +311,14 @@
         }
 
         &.active {
+          font-weight: 700;
+          @include color($primary-color, 0.8);
 
+          .dark-background & {
+            @include query($tablet-2, 'min-width') {
+              @include color($white, 0.5);
+            }
+          }
         }
 
         &:hover {

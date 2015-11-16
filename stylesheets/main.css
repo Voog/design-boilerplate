@@ -392,20 +392,13 @@ body.dark-background {
   color: #cc0000;
   color: rgba(204, 0, 0, 0.5);
 }
-.menu .menu-link.active {
-  font-weight: 700;
-  color: #727272;
-  color: rgba(114, 114, 114, 0.8);
-}
-.dark-background .menu .menu-link.active {
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.8);
-}
 .menu .menu-link:hover {
   color: #727272;
 }
-.dark-background .menu .menu-link:hover {
-  color: white;
+@media screen and (min-width: 752px) {
+  .dark-background .menu .menu-link:hover {
+    color: white;
+  }
 }
 
 .menu-main {
@@ -421,9 +414,11 @@ body.dark-background {
   color: #727272;
   color: rgba(114, 114, 114, 0.8);
 }
-.dark-background .menu-main .menu .menu-link.active {
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.8);
+@media screen and (min-width: 752px) {
+  .dark-background .menu-main .menu .menu-link.active {
+    color: #ffffff;
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 .menu-main .menu-sub {
   display: none;
@@ -564,6 +559,17 @@ body.dark-background {
 }
 .dark-background .menu-sub .menu .menu-item .menu-link {
   color: white;
+}
+.menu-sub .menu .menu-item .menu-link.active {
+  font-weight: 700;
+  color: #727272;
+  color: rgba(114, 114, 114, 0.8);
+}
+@media screen and (min-width: 752px) {
+  .dark-background .menu-sub .menu .menu-item .menu-link.active {
+    color: #ffffff;
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 @media screen and (max-width: 752px) {
   .menu-sub {
