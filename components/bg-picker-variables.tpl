@@ -35,7 +35,7 @@
       {% endif %}
     {% endif %}
   {% else %}
-    {% assign body_bg_type = "dark-background" %}
+    {% assign body_bg_type = "light-background" %}
   {% endif %}
 
   {% if body_bg_image == nil %}
