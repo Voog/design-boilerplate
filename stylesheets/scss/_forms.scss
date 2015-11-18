@@ -80,7 +80,7 @@
   .form_submit {
     margin-top: 10px;
 
-    input {
+    input[disabled="disabled"]{
       .dark-background & {
         .editmode & {
           color: rgba($white, 1);

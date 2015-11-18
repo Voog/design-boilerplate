@@ -1145,7 +1145,7 @@ body.dark-background {
 .content-formatted .form_submit {
   margin-top: 10px;
 }
-.editmode .dark-background .content-formatted .form_submit input {
+.editmode .dark-background .content-formatted .form_submit input[disabled="disabled"] {
   color: white;
 }
 .content-formatted .form_error,
