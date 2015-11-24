@@ -100,12 +100,23 @@ body {
 .voog-bg-picker-btn {
   @extend %button;
   position: absolute;
+
+  .container & {
+    top: 68px;
+    right: 15px;
+  }
 }
 
 .background-image,
 .background-color {
   position: fixed;
   z-index: -2;
+
+  .container & {
+    position: static;
+    padding: 40px 20px;
+    @include bg($white, 1);
+  }
 }
 
 .background-image {
@@ -123,9 +134,9 @@ body {
 
 // Styling rules for the main container.
 .container {
+  position: relative;
   max-width: 960px;
   margin: 0 auto;
-  padding: 40px 20px;
 
   @include query($tablet-2) {
     padding: 20px

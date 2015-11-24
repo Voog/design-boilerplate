@@ -70,11 +70,21 @@ body.dark-background {
 .voog-bg-picker-btn {
   position: absolute;
 }
+.container .voog-bg-picker-btn {
+  top: 68px;
+  right: 15px;
+}
 
 .background-image,
 .background-color {
   position: fixed;
   z-index: -2;
+}
+.container .background-image, .container
+.background-color {
+  position: static;
+  padding: 40px 20px;
+  background-color: white;
 }
 
 .background-image {
@@ -87,9 +97,9 @@ body.dark-background {
 }
 
 .container {
+  position: relative;
   max-width: 960px;
   margin: 0 auto;
-  padding: 40px 20px;
 }
 @media screen and (max-width: 752px) {
   .container {
@@ -358,10 +368,12 @@ body.dark-background {
   display: inline-block;
   vertical-align: middle;
   line-height: 0.8;
+}
+.menu-main .edit-btn {
   margin-right: 20px;
 }
 @media screen and (max-width: 752px) {
-  .edit-btn {
+  .menu-main .edit-btn {
     margin-right: 0;
   }
 }
@@ -891,14 +903,6 @@ body.dark-background {
   margin-top: -3px;
 }
 
-.content-title.content-formatted,
-.content-slogan.content-formatted {
-  color: #1b2124;
-}
-.dark-background .content-title.content-formatted, .dark-background
-.content-slogan.content-formatted {
-  color: white;
-}
 .content-title.content-formatted h1,
 .content-slogan.content-formatted h1 {
   font-size: 100px;

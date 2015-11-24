@@ -57,7 +57,12 @@
   {% endif %}
 
   {% comment %}/* Body background color style */{% endcomment %}
-  .background-color {
+  body > .background-color {
     background-color: {{ body_bg_color }};
+  }
+
+  {% comment %}/* Container background color style */{% endcomment %}
+  .container .background-color {
+    background-color: {{ container_bg_color }};
   }
 </style>

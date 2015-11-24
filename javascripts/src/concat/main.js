@@ -99,9 +99,9 @@
   // Checks the lightness sum of header background image and color and sets the lightness class depending on it's value.
   var bgPickerContentLightnessClass = function(bgPickerArea, combinedLightness) {
     if (combinedLightness >= 0.5) {
-      $(bgPickerArea).find('.js-background-type').addClass('light-background').removeClass('dark-background');
+      $(bgPickerArea).find('> .js-background-type').addClass('light-background').removeClass('dark-background');
     } else {
-      $(bgPickerArea).find('.js-background-type').addClass('dark-background').removeClass('light-background');
+      $(bgPickerArea).find('> .js-background-type').addClass('dark-background').removeClass('light-background');
     }
   };
 
@@ -126,7 +126,7 @@
         bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
 
       } else {
-        colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/photos/g,'/photos'));
+        colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/(photos|voogstock)/g,'/photos'));
         colorExtractImage.load(function() {
           ColorExtract.extract(colorExtractImage[0], colorExtractCanvas[0], function(data) {
             bgPicker.imageColor = data.bgColor ? data.bgColor : 'rgba(255,255,255,1)';
@@ -143,8 +143,8 @@
     };
 
     // Updates the bgPickerContent background image and background color.
-    $(bgPickerArea).find('.js-background-image').css({'background-image' : bgPickerImage});
-    $(bgPickerArea).find('.js-background-color').css({'background-color' : bgPickerColor});
+    $(bgPickerArea).find('.js-background-image').first().css({'background-image' : bgPickerImage});
+    $(bgPickerArea).find('.js-background-color').first().css({'background-color' : bgPickerColor});
   };
 
   // Header background image and color save logic function.
