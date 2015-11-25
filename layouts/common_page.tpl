@@ -19,9 +19,12 @@
         </main>
 
         {% include "site-footer" %}
-      <div>
-
-      <script>site.initCommonPage();</script>
+      </div>
     </div>
+
+    {% include "menu-language-popover" %}
+
+    {% include "template-javascripts" %}
+    <script>site.initCommonPage();</script>
   </body>
 </html>

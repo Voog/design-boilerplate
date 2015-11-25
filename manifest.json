@@ -175,6 +175,24 @@
       "filename": "ico-flags.svg"
     },
     {
+      "content_type": "image/jpeg",
+      "file": "images/20150621_163046 copy 2.jpg",
+      "kind": "images",
+      "filename": "20150621_163046 copy 2.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/20150621_163046 copy.jpg",
+      "kind": "images",
+      "filename": "20150621_163046 copy.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/20150621_163046.jpg",
+      "kind": "images",
+      "filename": "20150621_163046.jpg"
+    },
+    {
       "content_type": "application/javascript",
       "file": "javascripts/main.js",
       "kind": "javascripts",
@@ -185,12 +203,6 @@
       "file": "javascripts/main.min.js",
       "kind": "javascripts",
       "filename": "main.min.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/modernizr.js",
-      "kind": "javascripts",
-      "filename": "modernizr.js"
     },
     {
       "content_type": "application/javascript",

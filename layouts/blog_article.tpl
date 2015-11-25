@@ -22,6 +22,8 @@
         {% include "site-footer" %}
       </div>
 
+      {% include "menu-language-popover" %}
+
       <script>site.initArticlePage();</script>
     </div>
   </body>

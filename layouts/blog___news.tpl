@@ -22,6 +22,9 @@
 
         {% include "site-footer" %}
       </div>
+
+      {% include "menu-language-popover" %}
+
       <script>site.initBlogPage();</script>
     </div>
   </body>
