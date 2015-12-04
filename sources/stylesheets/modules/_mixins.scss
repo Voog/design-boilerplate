@@ -1,4 +1,27 @@
-// CUSTOM MIXINS
+//==============================================================================
+// TEMPLATE MIXINS
+//==============================================================================
+
+//==============================================================================
+// Cross-browser solution for hyphenating text with the word breaking fallback
+// for non-supported browsers.
+//==============================================================================
+@mixin hyphenate($boolean: true) {
+  @if ($boolean == true) {
+    @include hyphens(auto);
+    word-break: break-word;
+    word-wrap: break-word;
+  } @else if ($boolean == false) {
+    @include hyphens(none);
+    word-break: normal;
+    word-wrap: normal;
+  }
+}
+
+//==============================================================================
+// Strech element within the parent element (which must have position: relative)
+// for this to work.
+//==============================================================================
 @mixin stretch {
   position: absolute;
   top: 0;
@@ -7,6 +30,9 @@
   bottom: 0;
 }
 
+//==============================================================================
+// Basic cross-browser reset for <button> element.
+//==============================================================================
 @mixin button {
   margin: 0;
   background-color: transparent;
@@ -23,12 +49,19 @@
   }
 }
 
+//==============================================================================
+// iOS <input> element default styles reset.
+//==============================================================================
 @mixin input-ios-reset {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
 
+//==============================================================================
+// Inherit parent font styles. Useful for elements that have custom font styling
+// by default (<input>, <button> etc).
+//==============================================================================
 @mixin inherit-font {
   font-family: inherit;
   font-size: inherit;
