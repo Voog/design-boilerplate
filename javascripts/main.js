@@ -10355,7 +10355,7 @@ return jQuery;
   // Helper function to detect if page viewer is in editmode.
   //============================================================================
   var editmode = function () {
-    return $('html').hasClass('editmode');
+    return $('body').hasClass('editmode');
   };
 
   //============================================================================
@@ -10385,7 +10385,7 @@ return jQuery;
     // that shouldn't trigger the sideclick events.
     $(document).on('click', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
-        $('html').removeClass('menu-language-popover-open');
+        $('body').removeClass('menu-language-popover-open');
       }
     });
 
@@ -10396,10 +10396,10 @@ return jQuery;
     // popover with flags.
     /*
       $('.js-toggle-menu-language').click(function() {
-        if (!$('html').hasClass('menu-language-popover-open')) {
+        if (!$('body').hasClass('menu-language-popover-open')) {
           handleMenuLanguagePopoverPositioning();
         } else {
-          $('html').removeClass('menu-language-popover-open');
+          $('body').removeClass('menu-language-popover-open');
         }
       });
     */
@@ -10423,7 +10423,7 @@ return jQuery;
           offsetItemOuterHeight = $offsetItem.outerHeight(),
           windowWidth = $(window).width();
 
-      $('html').addClass('menu-language-popover-open');
+      $('body').addClass('menu-language-popover-open');
 
       $menuWrapper.css({
         top: offsetItemOffsetTop + offsetItemOuterHeight,
@@ -10443,14 +10443,14 @@ return jQuery;
   /*
     var bindLanguageFlagsToggle = function() {
       $('.js-toggle-language-flags').click(function() {
-        if ($('html').hasClass('language-flags-disabled')) {
-          $('html')
+        if ($('body').hasClass('language-flags-disabled')) {
+          $('body')
             .removeClass('language-flags-disabled')
             .addClass('language-flags-enabled');
 
           siteData.set("language_flags_enabled", true);
         } else {
-          $('html')
+          $('body')
             .removeClass('language-flags-enabled')
             .addClass('language-flags-disabled');
 

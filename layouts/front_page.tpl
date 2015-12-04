@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
-<html class="front-page {{ view_mode }} {{ language_flags_mode }}" lang="{{ page.language_code }}">
+<html class="{{ view_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "template-head" %}
   </head>
 
-  <body>
+  <body class="front-page {{ language_flags_mode }}">
     <div class="site-container">
       <div class="wrap">
         {% include "site-header" %}
@@ -13,8 +13,7 @@
 
         <main class="page-content" role="main">
           <section class="content-area">
-            <header class="content-header">{% contentblock name="content_header" %}<h1>{{ page.site_title }}</h1>{% endcontentblock %}</header>
-            <div class="content-slogan">{% content name="slogan" %}</div>
+            <header class="content-header">{% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.site_title }}</h1>{% endcontentblock %}</header>
             <div class="content-body">{% content %}</div>
           </section>
         </main>
