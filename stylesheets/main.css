@@ -339,6 +339,9 @@ body {
 .content-area iframe {
   max-width: 100%;
 }
+.content-area form {
+  clear: both;
+}
 .content-area .edy-positionable-container-center,
 .content-area .edy-positionable-container-left-block,
 .content-area .edy-positionable-container-right-block,
