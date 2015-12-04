@@ -46,6 +46,9 @@ body {
   color: rgba(0, 0, 0, 0.55);
 }
 
+.menu-horizontal.menu-cms {
+  margin-top: 5px;
+}
 @media screen and (min-width: 641px) {
   .menu-horizontal.menu-cms li {
     margin-right: 15px;
@@ -88,6 +91,7 @@ body {
 
 .menu-main {
   margin-top: 20px;
+  margin-right: 10px;
 }
 
 .scheme-light .edy-empty-bordered {

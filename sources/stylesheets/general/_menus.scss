@@ -23,6 +23,8 @@
 
 .menu-horizontal {
   &.menu-cms {
+    margin-top: 5px;
+
     li {
       @media screen and (min-width: $mobile + 1) {
         margin-right: 15px;
@@ -65,4 +67,5 @@
 
 .menu-main {
   margin-top: 20px;
+  margin-right: 10px;
 }
