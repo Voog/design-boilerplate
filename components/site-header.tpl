@@ -12,7 +12,7 @@
         Follow the steps below to switch to popover menu with flag icons.
         * Comment out the {% include "menu-language" %} component above these instructions.
         * Comment out the first ".menu-language" style in "sourdes/stylesheets/_menu-language.scss".
-        * Uncomment everything under the title "Language menu with flags" in the "sourdes/stylesheets/_menu-language.scss".
+        * Uncomment everything under the title "Language menu with flags" in the "sources/stylesheets/_menu-language.scss".
         * Uncomment the <button> element under these instructions.
         * Uncomment language menu popover component at the end of "components/site-footer.tpl".
         * Uncomment the following in the "sources/javascripts/base.js":
