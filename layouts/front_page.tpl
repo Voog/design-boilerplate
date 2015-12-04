@@ -22,6 +22,12 @@
       </div>
 
       {% include "template-tools" %}
+
+      {% include "template-javascripts" %}
+
+      {% comment %}Follow the instructions in "components/site-header.tpl" to enable language menu popover with flags.{% endcomment %}
+      {% comment %}{% include "menu-language-popover" %}{% endcomment %}
+
       <script>site.initFrontPage();</script>
     </div>
   </body>

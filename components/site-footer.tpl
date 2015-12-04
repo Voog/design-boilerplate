@@ -8,8 +8,3 @@
     {% endloginblock %}
   </div>
 </footer>
-
-{% comment %}Follow the instructions in "components/site-header.tpl" to enable language menu popover with flags.{% endcomment %}
-{% comment %}{% include "menu-language-popover" %}{% endcomment %}
-
-{% include "template-javascripts" %}
