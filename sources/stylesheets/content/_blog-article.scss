@@ -1,4 +1,20 @@
+//==============================================================================
+// BLOG ARTICLE
+//==============================================================================
+
+//==============================================================================
+// Editmode section.
+//==============================================================================
+.cms-blog-article-add {
+  // Article add button container. Visible only in editmode.
+  margin-bottom: 25px;
+}
+
+//==============================================================================
+// Blog article section.
+//==============================================================================
 .blog-article {
+  // Single entity of an article. 
   margin-bottom: 50px;
   padding-bottom: 50px;
   border-bottom-width: 1px;
@@ -9,13 +25,104 @@
     padding-bottom: 0;
     border-bottom-style: none;
   }
+
+  .blog-listing-page & {
+    // Blog listing page specific styles. Use the same pattern for other
+    // elements if necessary.
+  }
+
+  .blog-article-page & {
+    // Blog article page specific styles. Use the same pattern for other
+    // elements if necessary.
+  }
 }
 
 .article-title {
+  // Title of the article.
+  margin-top: 0;
+  margin-bottom: .2em;
+  font-size: 50px;
+  line-height: 1;
+  
   &,
-  & a {  
-    font-size: 50px;
-    line-height: 1.2;
+  & a {
+    // Sets the color for the article title with and without link (article
+    // listing page titles have link while single article title doesn't).
     color: rgba($color-highlight, 1);
   }
+
+  a {
+    &:hover {
+      // Hover effect only for the clickable article title (listing view).
+      color: rgba($color-highlight, .8);
+    }
+  }
+}
+
+.article-date {
+  // Article publishing date.
+  font-size: 14px;
+  color: rgba($color-highlight, 1);
+}
+
+.article-author {
+  // Article's publisher name (user who is logged in when creating the article).
+  font-size: 12px;
+}
+
+.article-content {
+  // Article excerpt and body container.
+  margin-top: 20px;
+}
+
+.article-excerpt {
+  // Article excerpt container. Visible in both: blog listing and single article
+  // view.
+}
+
+.article-body {
+  // Article body container. Visible only in single article view.
+  margin-top: 20px;
+}
+
+//==============================================================================
+// Article comments section.
+//==============================================================================
+.article-comments {
+  // Comments listing and form container.
+}
+
+.comments-listing {
+  // List of all comments for the article.
+}
+
+.comments-title {
+  // Title before the list of the comments.
+}
+
+.comment {
+  // Single entity of a comment.
+  margin-top: 25px;
+}
+
+.comment-body {
+  // Content of the comment.
+  color: rgba($color-highlight, .8);
+}
+
+.comment-meta {
+  // Comment author and date container.
+  display: inline-block;
+}
+
+.comment-author {
+  // Comment author's name.
+}
+
+.comment-date {
+  // Comment publishing date.
+}
+
+.comment-delete {
+  // Visible only when hovering on the comment in editmode.
 }

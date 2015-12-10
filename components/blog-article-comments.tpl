@@ -2,14 +2,22 @@
   <h2 class="comments-title">{{ "post_has_replies" | lcc: article.comments_count }}</h2>
 
   {% if article.comments_count > 0 %}
-    {% for comment in article.comments %}
-      <article class="comment edy-site-blog-comment">
-        <span class="comment-body">{{ comment.body_html }}</span>
-        <span class="comment-author">({{ comment.author }}</span>
-        <span class="comment-date">{{ comment.created_at | format_date: "long" }})</span>
-        <span class="comment-delete">{% removebutton %}</span>
-      </article>
-    {% endfor %}
+    <div class="comments-listing">
+      {% for comment in article.comments %}
+        <div class="comment edy-site-blog-comment">
+          <span class="comment-body">{{ comment.body_html }}</span>
+
+          <div class="comment-meta">
+            <span class="comment-author">({{ comment.author }},</span>
+            <span class="comment-date">{{ comment.created_at | format_date: "long" }})</span>
+          </div>
+          
+          {% if editmode %}
+            <span class="comment-delete">{% removebutton %}</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
   {% endif %}
 
   <div class="comment-form{% unless comment.valid? %} form_with_errors{% endunless %}">

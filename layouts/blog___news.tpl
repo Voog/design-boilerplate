@@ -12,10 +12,29 @@
         {% comment %}{% include "site-sidebar" %}{% endcomment %}
 
         <main class="page-content" role="main">
-          <section class="blog-articles content-area">
-            {% addbutton %}
+          {% if editmode %}
+            <div class="cms-blog-article-add">{% addbutton %}</div>
+          {% endif %}
+
+          <section class="blog-articles">
             {% for article in articles %}
-              {% include "blog-article-template" %}
+              <article class="blog-article">
+                <header class="article-header">
+                  <h1 class="article-title">
+                    <a href="{{ article.url }}">{{ article.title }}</a>
+                  </h1>
+                  <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}</time>
+                  <div class="article-author">{{ article.author.name }}</div>
+                </header>
+
+                <div class="article-content">
+                  <div class="article-excerpt content-area">{{ article.excerpt }}</div>
+                </div>
+
+                <footer class="article-footer">
+                  <a href="{{ article.url }}#article-comments">{{ "post_has_replies" | lcc: article.comments_count }}</a>
+                </footer>
+              </article>
             {% endfor %}
           </section>
         </main>

@@ -12,9 +12,18 @@
         {% comment %}{% include "site-sidebar" %}{% endcomment %}
 
         <main class="page-content" role="main">
-          <section class="blog-article content-area">
-            {% include "blog-article-template" with "article_page" %}
-          </section>
+          <article class="blog-article">
+            <header class="article-header">
+              <h1 class="article-title">{% editable article.title %}</h1>
+              <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}</time>
+              <div class="article-author">{{ article.author.name }}</div>
+            </header>
+
+            <div class="article-content">
+              <div class="article-excerpt content-area">{% editable article.excerpt %}</div>
+              <div class="article-body content-area">{% editable article.body %}</div>
+            </div>
+          </article>
 
           {% include "blog-article-comments" %}
         </main>
