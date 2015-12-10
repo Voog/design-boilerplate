@@ -30,10 +30,25 @@ body {
 }
 
 .content-header {
-  .common-page & {
-    $content-header-margin: 25px;
+  .front-page & {
+    margin-bottom: 50px;
+    font-size: 100px;
+    line-height: 1.3;  
+    color: rgba($color-highlight, 1);
+  }
 
-    margin-top: $content-header-margin;
-    margin-bottom: $content-header-margin;
+  .common-page & {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.content-slogan {
+  .front-page & {
+      margin-bottom: 80px;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: rgba($color-highlight, 1);
   }
 }
