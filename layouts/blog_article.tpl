@@ -5,7 +5,7 @@
     {% include "template-head" %}
   </head>
 
-  <body class="blog-page blog-article-page {{ language_flags_mode }}">
+  <body class="blog-news-page blog-article-page {{ language_flags_mode }}">
     <div class="site-container">
       <div class="wrap">
         {% include "site-header" %}
