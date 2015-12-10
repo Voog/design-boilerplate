@@ -223,6 +223,12 @@ body {
 }
 
 .content-area {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+  word-wrap: break-word;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
@@ -312,12 +318,22 @@ body {
   opacity: .8;
 }
 .content-area pre,
+.content-area code,
+.content-area iframe,
+.content-area table,
+.content-area form {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: normal;
+  word-wrap: normal;
+}
+.content-area pre,
 .content-area code {
   padding: 10px;
   font-size: 14px;
-  line-height: 1.3;
   font-weight: 400;
-  background-color: rgba(0, 0, 0, 0.02);
 }
 .content-area pre {
   overflow: auto;
