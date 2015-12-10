@@ -225,7 +225,7 @@ body {
   padding-top: 30px;
   border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: rgba(0, 0, 0, 0.53);
+  border-top-color: rgba(0, 0, 0, 0.3);
   font-size: 14px;
 }
 .site-footer .voog-reference {
@@ -234,6 +234,24 @@ body {
 }
 .site-footer .voog-reference:hover {
   opacity: .8;
+}
+
+.blog-article {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+.blog-article:last-child {
+  padding-bottom: 0;
+  border-bottom-style: none;
+}
+
+.article-title, .article-title a {
+  font-size: 50px;
+  line-height: 1.2;
+  color: #1b2124;
 }
 
 .content-area {

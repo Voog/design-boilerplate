@@ -1,0 +1,21 @@
+.blog-article {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba($color-black, .3);
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom-style: none;
+  }
+}
+
+.article-title {
+  &,
+  & a {  
+    font-size: 50px;
+    line-height: 1.2;
+    color: rgba($color-highlight, 1);
+  }
+}
