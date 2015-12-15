@@ -2,9 +2,9 @@
   margin-bottom: 70px;
 
   .header-top {
-    @include display(flex);
-    @include flex-wrap(wrap);
-    @include justify-content(space-between);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
     .site-options {
       margin-top: 20px;

@@ -102,6 +102,20 @@ module.exports = function(grunt) {
       }
     },
 
+    postcss: {
+      options: {
+        processors: [
+          require('autoprefixer')({browsers: 'last 4 versions'})
+        ]
+      },
+      dist: {
+        src: [
+          'stylesheets/*.css',
+          'stylesheets/!*.min.css'
+        ]
+      }
+    },
+
     // Minifies the stylesheet files.
     cssmin: {
       build: {
@@ -178,7 +192,7 @@ module.exports = function(grunt) {
           'sources/stylesheets/*.scss',
           'sources/stylesheets/*/*.scss'
         ],
-        tasks: ['sass:build', 'cssmin:build', 'exec:kitmanifest']
+        tasks: ['sass:build', 'postcss', 'cssmin:build', 'exec:kitmanifest']
       },
 
       img_copy: {
@@ -214,6 +228,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-modernizr-builder');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -221,7 +236,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin']);
+  grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {
