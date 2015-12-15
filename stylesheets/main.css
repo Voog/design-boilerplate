@@ -195,6 +195,9 @@ body {
     margin-right: 20px;
   }
 }
+.menu-level-1 a {
+  font-size: 18px;
+}
 
 @media screen and (min-width: 641px) {
   .menu-level-2 li {
