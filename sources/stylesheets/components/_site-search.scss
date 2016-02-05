@@ -1,18 +1,18 @@
 .site-search {
   display: inline-block;
-  vertical-align: top;
   margin-right: 10px;
+  vertical-align: top;
 
   .search-input {
     @include input-ios-reset;
     @include inherit-font;
     width: 128px;
     padding: 4px 5px 3px;
-    font-size: 14px;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba($color-black, .53);
     border-radius: 3px;
+    border-color: rgba($color-black, .53);
+    font-size: 14px;
   }
 
   .search-submit {

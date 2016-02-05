@@ -3,9 +3,13 @@
 // Gerneral menu styles are located in "general/_menus.scss" partial.
 //==============================================================================
 
-
+//==============================================================================
 // Main menu container.
+//==============================================================================
 .menu-level-1 {
+  background-color: rgba($color-picton-blue, 1);
+  text-align: center;
+
   li {
     @media screen and (min-width: $mobile + 1) {
       margin-right: 20px;
@@ -13,6 +17,7 @@
   }
 
   a {
-    font-size: 18px;
+    color: rgba($color-white, 1);
+    font-size: 24px;
   }
 }

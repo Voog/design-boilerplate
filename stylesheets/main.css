@@ -149,8 +149,8 @@ body {
 
 .site-search {
   display: inline-block;
-  vertical-align: top;
   margin-right: 10px;
+  vertical-align: top;
 }
 .site-search .search-input {
   -webkit-appearance: none;
@@ -160,11 +160,11 @@ body {
   line-height: inherit;
   width: 128px;
   padding: 4px 5px 3px;
-  font-size: 14px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.53);
   border-radius: 3px;
+  border-color: rgba(0, 0, 0, 0.53);
+  font-size: 14px;
 }
 .site-search .search-submit {
   position: relative;
@@ -193,20 +193,305 @@ body {
   font-size: 14px;
 }
 
-@media screen and (min-width: 641px) {
-  .menu-language {
-    display: inline-block;
-  }
+.menu-language-btn {
+  margin: 0;
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+  vertical-align: top;
 }
-@media screen and (min-width: 641px) {
-  .menu-language li {
-    margin-right: 5px;
-  }
+.menu-language-btn:focus {
+  outline: none;
 }
-@media screen and (min-width: 641px) {
-  .menu-language li a {
-    font-size: 10px;
-  }
+.menu-language-btn::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+.language-flags-enabled .menu-language-btn {
+  padding: 12px 16px 13px 15px;
+  font-size: 0;
+}
+.language-flags-enabled .menu-language-btn:before, .language-flags-enabled .menu-language-btn:after {
+  top: 5px;
+  left: 5px;
+}
+.language-flags-disabled .menu-language-btn {
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 14px;
+}
+.language-flags-disabled .menu-language-btn:hover {
+  opacity: .8;
+}
+.language-flags-disabled .menu-language-btn:after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -3px;
+  content: "";
+  border-style: solid;
+  border-width: 6px 3px 0;
+  border-color: black transparent transparent;
+}
+.menu-language-popover-open .menu-language-btn:after {
+  border-width: 0 3px 6px;
+  border-color: transparent transparent black;
+}
+.menu-language-btn:hover:after {
+  opacity: .8;
+}
+
+.menu-language {
+  text-align: right;
+}
+.language-flags-disabled .menu-language {
+  margin-right: 4px;
+}
+.menu-language-popover-open .menu-language {
+  display: block;
+  z-index: 10;
+}
+.menu-language li a {
+  font-size: 14px;
+}
+.menu-language li a:before, .menu-language li a:after {
+  top: 7px;
+  right: 6px;
+}
+.language-flags-enabled .menu-language li a {
+  padding: 6px 33px 6px 6px;
+}
+.language-flags-disabled .menu-language li a {
+  padding: 6px;
+}
+.menu-language .menu-cms li {
+  padding: 1px 13px 11px 6px;
+}
+
+.menu-options button {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  text-align: right;
+  font-family: inherit;
+  font-size: 14px;
+  color: #0066bb;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.menu-options button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.menu-options button span {
+  display: block;
+}
+.language-flags-enabled .menu-options .language-flags-enable {
+  display: none;
+}
+.language-flags-disabled .menu-options .language-flags-disable {
+  display: none;
+}
+
+.ico-flags {
+  position: relative;
+  background-color: transparent;
+}
+.language-flags-enabled .ico-flags:before, .language-flags-enabled .ico-flags:after {
+  position: absolute;
+  display: block;
+  height: 15px;
+  width: 21px;
+  content: '';
+}
+.ico-flags:before {
+  background-color: black;
+}
+.language-flags-disabled .ico-flags:before {
+  display: none;
+}
+.ico-flags:after {
+  opacity: .95;
+}
+.language-flags-enabled .ico-flags:after {
+  background-image: url("../assets/ico-flags.svg");
+}
+
+.ico-flag-sq:after {
+  background-position: 0 0;
+}
+
+.ico-flag-hy:after {
+  background-position: -21px 0;
+}
+
+.ico-flag-bn:after {
+  background-position: -42px 0;
+}
+
+.ico-flag-bg:after {
+  background-position: -84px 0;
+}
+
+.ico-flag-zh:after {
+  background-position: -105px 0;
+}
+
+.ico-flag-hr:after {
+  background-position: -126px 0;
+}
+
+.ico-flag-da:after {
+  background-position: -147px 0;
+}
+
+.ico-flag-cs:after {
+  background-position: -168px 0;
+}
+
+.ico-flag-et:after {
+  background-position: -189px 0;
+}
+
+.ico-flag-fi:after {
+  background-position: 0 -15px;
+}
+
+.ico-flag-fr:after {
+  background-position: -21px -15px;
+}
+
+.ico-flag-ka:after {
+  background-position: -42px -15px;
+}
+
+.ico-flag-de:after {
+  background-position: -63px -15px;
+}
+
+.ico-flag-el:after {
+  background-position: -84px -15px;
+}
+
+.ico-flag-hu:after {
+  background-position: -105px -15px;
+}
+
+.ico-flag-is:after {
+  background-position: -126px -15px;
+}
+
+.ico-flag-hi:after {
+  background-position: -147px -15px;
+}
+
+.ico-flag-id:after {
+  background-position: -168px -15px;
+}
+
+.ico-flag-fa:after {
+  background-position: -189px -15px;
+}
+
+.ico-flag-he:after {
+  background-position: 0 -30px;
+}
+
+.ico-flag-it:after {
+  background-position: -21px -30px;
+}
+
+.ico-flag-ja:after {
+  background-position: -42px -30px;
+}
+
+.ico-flag-ko:after {
+  background-position: -63px -30px;
+}
+
+.ico-flag-lv:after {
+  background-position: -84px -30px;
+}
+
+.ico-flag-lt:after {
+  background-position: -105px -30px;
+}
+
+.ico-flag-ms:after {
+  background-position: -126px -30px;
+}
+
+.ico-flag-nl:after {
+  background-position: -147px -30px;
+}
+
+.ico-flag-no:after {
+  background-position: -168px -30px;
+}
+
+.ico-flag-ur:after {
+  background-position: -189px -30px;
+}
+
+.ico-flag-fil:after {
+  background-position: 0 -45px;
+}
+
+.ico-flag-pl:after {
+  background-position: -21px -45px;
+}
+
+.ico-flag-ro:after {
+  background-position: -42px -45px;
+}
+
+.ico-flag-ru:after {
+  background-position: -63px -45px;
+}
+
+.ico-flag-ar:after {
+  background-position: -84px -45px;
+}
+
+.ico-flag-sk:after {
+  background-position: -105px -45px;
+}
+
+.ico-flag-sl:after {
+  background-position: -126px -45px;
+}
+
+.ico-flag-es:after {
+  background-position: -147px -45px;
+}
+
+.ico-flag-sv:after {
+  background-position: -168px -45px;
+}
+
+.ico-flag-tr:after {
+  background-position: -189px -45px;
+}
+
+.ico-flag-uk:after {
+  background-position: 0 -60px;
+}
+
+.ico-flag-en:after {
+  background-position: -21px -60px;
+}
+
+.ico-flag-en-gb:after {
+  background-position: -63px -60px;
+}
+
+.ico-flag-pt:after {
+  background-position: -84px -60px;
+}
+
+.ico-flag-sr:after {
+  background-position: -126px;
 }
 
 .site-footer {

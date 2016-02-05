@@ -25,8 +25,8 @@ Adds template specific JS tools. For example:
     // instructions in "components/site-header.tpl" to enable language menu
     // popover with flags.
     //==========================================================================
-    /*
+
       site.bindLanguageFlagsToggle();
-    */
+
   </script>
 {% endeditorjsblock %}

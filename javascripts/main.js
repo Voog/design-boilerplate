@@ -10394,7 +10394,7 @@ return jQuery;
     // language menu and popover menu with flags is disabled. Follow the
     // instructions in "components/site-header.tpl" to enable language menu
     // popover with flags.
-    /*
+
       $('.js-toggle-menu-language').click(function() {
         if (!$('body').hasClass('menu-language-popover-open')) {
           handleMenuLanguagePopoverPositioning();
@@ -10402,7 +10402,7 @@ return jQuery;
           $('body').removeClass('menu-language-popover-open');
         }
       });
-    */
+
   };
 
   //============================================================================
@@ -10413,7 +10413,7 @@ return jQuery;
   // instructions in "components/site-header.tpl" to enable language menu
   // popover with flags.
   //============================================================================
-  /*
+
     var handleMenuLanguagePopoverPositioning = function(button) {
       var $menuWrapper = $('.js-menu-language-popover'),
           $offsetItem = $('.js-toggle-menu-language'),
@@ -10430,7 +10430,7 @@ return jQuery;
         right: windowWidth - offsetItemOffsetLeft - offsetItemOuterWidth
       });
     };
-  */
+
 
   //============================================================================
   // Toggles language flags state.
@@ -10440,9 +10440,10 @@ return jQuery;
   // instructions in "components/site-header.tpl" to enable language menu
   // popover with flags.
   //============================================================================
-  /*
+
     var bindLanguageFlagsToggle = function() {
       $('.js-toggle-language-flags').click(function() {
+        console.log('juhu');
         if ($('body').hasClass('language-flags-disabled')) {
           $('body')
             .removeClass('language-flags-disabled')
@@ -10458,7 +10459,7 @@ return jQuery;
         }
       });
     };
-  */
+
 
   //============================================================================
   // Binds site search functionality.
@@ -10530,7 +10531,7 @@ return jQuery;
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
     // Initiations for specific functions.
-    bindSiteSearch: bindSiteSearch/*,*/
+    bindSiteSearch: bindSiteSearch,
     // Initiation for the language flags visibility state saving.
     // By default this template uses the simple text listing version of the
     // language menu and popover menu with flags is disabled. Follow the
@@ -10538,9 +10539,9 @@ return jQuery;
     // popover with flags.
     // NB! Don't forget to uncomment the comma after "bindSiteSearch" if
     // enabling the "bindLanguageFlagsToggle"
-    /*
+
       bindLanguageFlagsToggle: bindLanguageFlagsToggle
-    */
+
   });
 
   init();

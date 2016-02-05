@@ -5,7 +5,7 @@
     <div class="site-options">
       {% include "site-search" %}
       {% comment %}Simple language menu with titles only.{% endcomment %}
-      {% include "menu-language" %}
+      {% comment %}{% include "menu-language" %}{% endcomment %}
 
       {% comment %}
         Language popover menu with flags.
@@ -24,7 +24,7 @@
           * "bindLanguageFlagsToggle: bindLanguageFlagsToggle" line in "window.site" variable.
       {% endcomment %}
 
-      {% comment %}<button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-prevent-sideclick">{{ current_language_title }}</button>{% endcomment %}
+      <button class="menu-language-btn ico-flags ico-flag-{{ page.language_code }} js-toggle-menu-language js-prevent-sideclick">{{ current_language_title }}</button>
     </div>
   </div>
 
