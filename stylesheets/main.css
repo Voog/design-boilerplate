@@ -453,8 +453,6 @@ body.dark-background {
     padding: 0;
     text-align: left;
     background-color: white;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
-    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
   }
   .menu-main.expanded .menu .menu-item {
@@ -555,8 +553,6 @@ body.dark-background {
     border-top: 1px solid rgba(114, 114, 114, 0.2);
     border-bottom: 1px solid #727272;
     border-bottom: 1px solid rgba(114, 114, 114, 0.2);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
   }
 }
@@ -805,12 +801,10 @@ body.dark-background {
   width: 100%;
 }
 .flexbox .header {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
   -ms-flex-align: start;
   -webkit-align-items: flex-start;
   -moz-align-items: flex-start;
@@ -840,7 +834,6 @@ body.dark-background {
   text-align: right;
 }
 .flexbox .header {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;

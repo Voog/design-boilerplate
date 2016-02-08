@@ -1,0 +1,12 @@
+{
+  "classPrefix": "",
+  "options": [
+    "html5shiv",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "css/backgroundsize",
+    "css/flexbox",
+    "svg"
+  ]
+}
