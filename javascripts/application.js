@@ -11140,10 +11140,11 @@ MMCQ = (function() {
     toggleMainMenu();
     focusFormWithErrors();
     handleWindowResize();
-    wrapTables();
 
     if (editmode()) {
       bindCustomTexteditorStyles();
+    } else {
+      wrapTables();
     }
   };
 
