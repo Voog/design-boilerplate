@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       assets: ['assets'],
       images: ['images'],
       javascripts: ['javascripts'],
-      stylesheets: ['stylesheet']
+      stylesheets: ['stylesheets']
     },
 
     modernizr_builder: {
