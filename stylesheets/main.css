@@ -126,25 +126,8 @@ body {
 }
 
 .site-header {
-  margin-bottom: 70px;
-}
-.site-header .header-top {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.site-header .header-top .site-options {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.site-header .header-bottom {
-  margin-top: 50px;
+  height: 10px;
+  background-color: blue;
 }
 
 .site-search {
@@ -175,13 +158,17 @@ body {
   margin-top: 20px;
 }
 
+.menu-level-1 {
+  text-align: center;
+}
 @media screen and (min-width: 641px) {
   .menu-level-1 li {
     margin-right: 20px;
   }
 }
 .menu-level-1 a {
-  font-size: 18px;
+  color: white;
+  font-size: 24px;
 }
 
 @media screen and (min-width: 641px) {
@@ -569,7 +556,6 @@ body {
 
 .content-area {
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
   word-break: break-word;
@@ -696,7 +682,6 @@ body {
 .content-area table,
 .content-area form {
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
   word-break: normal;
