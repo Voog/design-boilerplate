@@ -17,8 +17,8 @@
     <ul class="menu menu-vertical menu-options">
       <li>
         <button class="js-toggle-language-flags">
-          <span class="language-flags-enable">{{ "enable_lang_flags" | lc }}</span>
-          <span class="language-flags-disable">{{ "disable_lang_flags" | lc }}</span>
+          <span class="language-flags-enable">{{ "enable_lang_flags" | lc: editor_locale }}</span>
+          <span class="language-flags-disable">{{ "disable_lang_flags" | lc: editor_locale }}</span>
         </button>
       </li>
     </ul>
