@@ -204,10 +204,6 @@
   // Container around editable content-area table.
   .table-container {
     margin-top: 20px;
-  }
-
-  // Overthrow plugin to support horizontal scrolling on older devices that have touch-screens. For example Android 2.3 devices.
-  .overthrow {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }

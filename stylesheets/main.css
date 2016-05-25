@@ -117,7 +117,6 @@ body.dark-background {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
@@ -135,7 +134,6 @@ body.dark-background {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
@@ -293,8 +291,6 @@ body.dark-background {
 }
 .content-formatted .table-container {
   margin-top: 20px;
-}
-.content-formatted .overthrow {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -387,7 +383,6 @@ body.dark-background {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
@@ -524,13 +519,20 @@ body.dark-background {
     display: block;
     width: 21px;
     height: 15px;
-    content: '';
   }
   .menu-main.expanded .menu-lang .menu-item .menu-link.lang-flag:before {
     background-color: black;
+    content: '';
   }
   .menu-main.expanded .menu-lang .menu-item .menu-link.lang-flag:after {
     opacity: 0.95;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 9px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
     background-repeat: no-repeat;
   }
   .no-svg .menu-main.expanded .menu-lang .menu-item .menu-link.lang-flag:after {
@@ -605,180 +607,234 @@ body.dark-background {
   }
 }
 
+.lang-flag::after {
+  background-position: 0 -75px;
+  content: attr(data-lang-code);
+}
+
 .lang-flag-sq:after {
   background-position: 0 0;
+  content: '';
 }
 
 .lang-flag-hy:after {
   background-position: -21px 0;
+  content: '';
 }
 
 .lang-flag-bn:after {
   background-position: -42px 0;
+  content: '';
 }
 
 .lang-flag-bg:after {
   background-position: -84px 0;
+  content: '';
 }
 
 .lang-flag-zh:after {
   background-position: -105px 0;
+  content: '';
 }
 
 .lang-flag-hr:after {
   background-position: -126px 0;
+  content: '';
 }
 
 .lang-flag-da:after {
   background-position: -147px 0;
+  content: '';
 }
 
 .lang-flag-cs:after {
   background-position: -168px 0;
+  content: '';
 }
 
 .lang-flag-et:after {
   background-position: -189px 0;
+  content: '';
 }
 
 .lang-flag-fi:after {
   background-position: 0 -15px;
+  content: '';
 }
 
 .lang-flag-fr:after {
   background-position: -21px -15px;
+  content: '';
 }
 
 .lang-flag-ka:after {
   background-position: -42px -15px;
+  content: '';
 }
 
 .lang-flag-de:after {
   background-position: -63px -15px;
+  content: '';
 }
 
 .lang-flag-el:after {
   background-position: -84px -15px;
+  content: '';
 }
 
 .lang-flag-hu:after {
   background-position: -105px -15px;
+  content: '';
 }
 
 .lang-flag-is:after {
   background-position: -126px -15px;
+  content: '';
 }
 
 .lang-flag-hi:after {
   background-position: -147px -15px;
+  content: '';
 }
 
 .lang-flag-id:after {
   background-position: -168px -15px;
+  content: '';
 }
 
 .lang-flag-fa:after {
   background-position: -189px -15px;
+  content: '';
 }
 
 .lang-flag-he:after {
   background-position: 0 -30px;
+  content: '';
 }
 
 .lang-flag-it:after {
   background-position: -21px -30px;
+  content: '';
 }
 
 .lang-flag-ja:after {
   background-position: -42px -30px;
+  content: '';
 }
 
 .lang-flag-ko:after {
   background-position: -63px -30px;
+  content: '';
 }
 
 .lang-flag-lv:after {
   background-position: -84px -30px;
+  content: '';
 }
 
 .lang-flag-lt:after {
   background-position: -105px -30px;
+  content: '';
 }
 
 .lang-flag-ms:after {
   background-position: -126px -30px;
+  content: '';
 }
 
 .lang-flag-nl:after {
   background-position: -147px -30px;
+  content: '';
 }
 
 .lang-flag-no:after {
   background-position: -168px -30px;
+  content: '';
 }
 
 .lang-flag-ur:after {
   background-position: -189px -30px;
+  content: '';
 }
 
 .lang-flag-fil:after {
   background-position: 0 -45px;
+  content: '';
 }
 
 .lang-flag-pl:after {
   background-position: -21px -45px;
+  content: '';
 }
 
 .lang-flag-ro:after {
   background-position: -42px -45px;
+  content: '';
 }
 
 .lang-flag-ru:after {
   background-position: -63px -45px;
+  content: '';
 }
 
 .lang-flag-ar:after {
   background-position: -84px -45px;
+  content: '';
 }
 
 .lang-flag-sk:after {
   background-position: -105px -45px;
+  content: '';
 }
 
 .lang-flag-sl:after {
   background-position: -126px -45px;
+  content: '';
 }
 
 .lang-flag-es:after {
   background-position: -147px -45px;
+  content: '';
 }
 
 .lang-flag-sv:after {
   background-position: -168px -45px;
+  content: '';
 }
 
 .lang-flag-tr:after {
   background-position: -189px -45px;
+  content: '';
 }
 
 .lang-flag-uk:after {
   background-position: 0 -60px;
+  content: '';
 }
 
 .lang-flag-en:after {
   background-position: -21px -60px;
-}
-
-.lang-flag-en-gb:after {
-  background-position: -63px -60px;
+  content: '';
 }
 
 .lang-flag-pt:after {
   background-position: -84px -60px;
+  content: '';
 }
 
 .lang-flag-sr:after {
-  background-position: -126px;
+  background-position: -126px -60px;
+  content: '';
+}
+
+.lang-flag-bn:after {
+  background-position: -147px -60px;
+  content: '';
+}
+
+.lang-flag-th:after {
+  background-position: -189px -60px;
+  content: '';
 }
 
 .tags-title {
@@ -970,7 +1026,6 @@ body.dark-background {
   word-break: break-word;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
