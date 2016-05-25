@@ -201,15 +201,9 @@
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/modernizr.js",
+      "file": "javascripts/modernizr-custom.min.js",
       "kind": "javascripts",
-      "filename": "modernizr.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/modernizr.min.js",
-      "kind": "javascripts",
-      "filename": "modernizr.min.js"
+      "filename": "modernizr-custom.min.js"
     },
     {
       "content_type": "text/css",
