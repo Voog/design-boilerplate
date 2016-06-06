@@ -419,7 +419,7 @@ body.dark-background {
 .menu-main .menu .menu-link.active {
   font-weight: 700;
   color: #727272;
-  color: rgba(114, 114, 114, 0.8);
+  opacity: .8;
 }
 @media screen and (min-width: 752px) {
   .dark-background .menu-main .menu .menu-link.active {
@@ -573,7 +573,7 @@ body.dark-background {
 .menu-sub .menu .menu-item .menu-link.active {
   font-weight: 700;
   color: #727272;
-  color: rgba(114, 114, 114, 0.8);
+  opacity: .8;
 }
 @media screen and (min-width: 752px) {
   .dark-background .menu-sub .menu .menu-item .menu-link.active {
@@ -882,8 +882,7 @@ body.dark-background {
   color: #727272;
 }
 .header .header-left .header-title:hover, .header .header-left .header-title a:hover {
-  color: #727272;
-  color: rgba(114, 114, 114, 0.8);
+  opacity: .8;
 }
 .header .header-right {
   width: 470px;

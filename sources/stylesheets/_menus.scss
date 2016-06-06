@@ -126,7 +126,8 @@
 
       &.active {
         font-weight: 700;
-        @include color($primary-color, 0.8);
+        @include color($primary-color, 1);
+        opacity: .8;
 
         .dark-background & {
           @include query($tablet-2, 'min-width') {
@@ -322,7 +323,8 @@
 
         &.active {
           font-weight: 700;
-          @include color($primary-color, 0.8);
+          @include color($primary-color, 1);
+          opacity: .8;
 
           .dark-background & {
             @include query($tablet-2, 'min-width') {

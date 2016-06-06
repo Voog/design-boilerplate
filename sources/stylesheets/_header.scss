@@ -33,7 +33,7 @@
         @include color($primary-color);
 
         &:hover {
-          @include color($primary-color, 0.8);
+          opacity: .8;
         }
       }
     }
