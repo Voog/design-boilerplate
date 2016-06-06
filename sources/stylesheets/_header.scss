@@ -30,7 +30,7 @@
       &, & a {
         font-size: 28px;
         font-weight: 700;
-        @include color($primary-color);
+        @include color($primary-color, 1);
 
         &:hover {
           opacity: .8;

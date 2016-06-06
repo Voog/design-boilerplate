@@ -6,7 +6,7 @@
   @include hyphenate(true);
 
   .dark-background & {
-    @include color($white);
+    @include color($white, 1);
   }
 
   // Resets the bottom margin for all elements and top margin for all first elements in the editable content-area (to prevent unwanted white-space at the beginning of a content-area).
@@ -20,11 +20,11 @@
 
   // Styling rules for the editable content area headings.
   h1, h2, h3, h4, h5, h6 {
-    @include color($secondary-color);
+    @include color($secondary-color, 1);
     @include hyphenate(true);
 
     .dark-background & {
-      @include color($white);
+      @include color($white, 1);
     }
   }
 
@@ -72,14 +72,15 @@
     @include color($blue-1);
 
       .dark-background & {
-        @include color($white);
+        @include color($white, 1);
       }
 
     &:hover {
       @include color($blue-1, 0.8);
 
       .dark-background & {
-        @include color($white, 0.8);
+        @include color($white, 1);
+        opacity: .8;
       }
     }
   }
@@ -151,8 +152,9 @@
       @include border(all, 1px, solid, $white, 0.75);
 
       &:hover {
-        @include color($white, 0.75);
+        @include color($white, 1);
         @include border(all,1px,solid,$white, 0.1);
+        opacity: .8;
       }
     }
   }

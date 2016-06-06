@@ -82,7 +82,7 @@
 
     .dark-background & {
       @include query($tablet-2, 'min-width') {
-        @include color($white);
+        @include color($white, 1);
       }
     }
 
@@ -91,11 +91,11 @@
     }
 
     &:hover {
-      @include color($primary-color);
+      @include color($primary-color, 1);
 
       .dark-background & {
         @include query($tablet-2, 'min-width') {
-          @include color($white);
+          @include color($white, 1);
         }
       }
     }
@@ -131,7 +131,8 @@
 
         .dark-background & {
           @include query($tablet-2, 'min-width') {
-            @include color($white, 0.5);
+            @include color($white, 1);
+            opacity: .5;
           }
         }
       }
@@ -228,7 +229,7 @@
             position: relative;
             padding: 15px 20px 14px 50px;
             font-size: 12px;
-            @include color($secondary-color);
+            @include color($secondary-color, 1);
 
             &, &.active {
               &:hover {
@@ -237,7 +238,7 @@
             }
 
             &.active {
-              @include color($grey-2);
+              @include color($primary-color, 1);
               background: none;
             }
 
@@ -314,7 +315,7 @@
 
       .menu-link {
         .dark-background & {
-          @include color($white);
+          @include color($white, 1);
         }
 
         &.untranslated {
@@ -328,7 +329,8 @@
 
           .dark-background & {
             @include query($tablet-2, 'min-width') {
-              @include color($white, 0.5);
+              @include color($white, 1);
+              opacity: .5;
             }
           }
         }

@@ -174,8 +174,8 @@ body.dark-background {
   color: rgba(0, 102, 187, 0.8);
 }
 .dark-background .content-formatted a:hover {
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
+  opacity: .8;
 }
 .content-formatted iframe {
   max-width: 100%;
@@ -242,10 +242,10 @@ body.dark-background {
   border: 1px solid rgba(255, 255, 255, 0.75);
 }
 .dark-background .content-formatted .custom-btn:hover {
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.75);
+  color: white;
   border: 1px solid #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: .8;
 }
 .content-formatted .edy-positionable-container-center,
 .content-formatted .edy-positionable-container-left-block,
@@ -423,8 +423,8 @@ body.dark-background {
 }
 @media screen and (min-width: 752px) {
   .dark-background .menu-main .menu .menu-link.active {
-    color: #ffffff;
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
+    opacity: .5;
   }
 }
 .menu-main .menu-sub {
@@ -509,7 +509,7 @@ body.dark-background {
     background-color: rgba(131, 133, 134, 0.1);
   }
   .menu-main.expanded .menu-lang .menu-item .menu-link.active {
-    color: #838586;
+    color: #727272;
     background: none;
   }
   .menu-main.expanded .menu-lang .menu-item .menu-link.lang-flag:before, .menu-main.expanded .menu-lang .menu-item .menu-link.lang-flag:after {
@@ -577,8 +577,8 @@ body.dark-background {
 }
 @media screen and (min-width: 752px) {
   .dark-background .menu-sub .menu .menu-item .menu-link.active {
-    color: #ffffff;
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
+    opacity: .5;
   }
 }
 @media screen and (max-width: 752px) {
@@ -1042,11 +1042,10 @@ body.dark-background {
 }
 .post .post-title a:hover {
   color: #1b2124;
-  color: rgba(27, 33, 36, 0.8);
+  opacity: .8;
 }
 .dark-background .post .post-title a:hover {
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
 }
 @media screen and (max-width: 480px) {
   .post .post-title, .post .post-title a {
@@ -1064,8 +1063,8 @@ body.dark-background {
   font-size: 12px;
 }
 .dark-background .post .post-author {
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
+  opacity: .8;
 }
 .post .post-content {
   margin-top: 20px;
@@ -1085,8 +1084,8 @@ body.dark-background {
   color: rgba(0, 102, 187, 0.8);
 }
 .dark-background .post .post-comments-count a:hover {
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
+  opacity: .8;
 }
 
 .blog-page .post {
@@ -1244,16 +1243,14 @@ body.dark-background {
   display: inline-block;
   padding: 7px 9px;
   font-size: 10px;
-  color: #1b2124;
-  color: rgba(27, 33, 36, 0.75);
+  color: #727272;
+  opacity: .75;
   line-height: 1;
   background-color: white;
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .footer .voog-reference a:hover {
-  color: #1b2124;
-  color: rgba(27, 33, 36, 0.75);
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.75);
 }
