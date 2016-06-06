@@ -1,0 +1,256 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../stylesheets/variables';
+@import '../../stylesheets/mixins';
+
+// =============================================================================
+// Default stylesheet override styles.
+//
+// BASICS
+// =============================================================================
+/* GENERAL */
+// Styling rules for the basic parts of the page. These rules affect the entire site.
+body {
+  font-family: var(--main-font-family);
+  color: var(--primary-color);
+
+  &.dark-background {
+    color: var(--fourth-color);
+  }
+}
+
+.container {
+  max-width: var(--container-max-width);
+}
+
+
+// =============================================================================
+// HEADER
+// =============================================================================
+.header {
+  .header-left {
+    .header-title {
+      &, & a {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+
+// =============================================================================
+// BLOG & ARTICLE LAYOUTS
+// =============================================================================
+.post {
+  .post-title {
+    &, a {
+      color: var(--secondary-color);
+
+      .dark-background & {
+        color: var(--fourth-color);
+      }
+    }
+
+    a {
+      &:hover {
+        color: var(--secondary-color);
+
+        .dark-background & {
+          color: var(--fourth-color);
+        }
+      }
+    }
+  }
+
+  .post-date {
+    color: var(--secondary-color);
+
+    .dark-background & {
+      color: var(--fourth-color);
+    }
+  }
+
+  .post-author {
+    .dark-background & {
+      color: var(--fourth-color);
+    }
+  }
+
+  .post-comments-count {
+    a {
+      color: var(--third-color);
+
+      .dark-background & {
+        color: var(--fourth-color);
+      }
+
+      &:hover {
+        color: var(--third-color);
+
+        .dark-background & {
+          color: var(--fourth-color);
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// BLOG ARTICLE COMMENTS
+// =============================================================================
+
+
+// =============================================================================
+// NAVIGATION MENUS
+// =============================================================================
+// Menu button. Only visible on smaller screens.
+.menu-btn {
+  @include query($tablet-2) {
+    .menu-stripe {
+      background-color: var(--secondary-color);
+
+      .dark-background & {
+        background-color: var(--fourth-color);
+      }
+    }
+  }
+}
+
+// General rules for all navigation menus.
+.menu {
+  .menu-link {
+    color: var(--third-color);
+
+    .dark-background & {
+      @include query($tablet-2, 'min-width') {
+        color: var(--fourth-color);
+      }
+    }
+
+    &:hover {
+      color: var(--primary-color);
+
+      .dark-background & {
+        @include query($tablet-2, 'min-width') {
+          color: var(--fourth-color);
+        }
+      }
+    }
+  }
+}
+
+// Styling rules for the site's main menu.
+.menu-main {
+  .menu {
+    .menu-link {
+      &.active {
+        color: var(--primary-color);
+
+        .dark-background & {
+          @include query($tablet-2, 'min-width') {
+            color: var(--fourth-color);
+          }
+        }
+      }
+    }
+  }
+
+  @include query($tablet-2) {
+    &.expanded {
+      // Styling rules for the language menu in the site's main menu. Only visible on smaller screens.
+      .menu-lang {
+        .menu-item {
+          .menu-link {
+            color: var(--secondary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Styling rules for the site's sub menu.
+.menu-sub {
+  .menu {
+    .menu-item {
+      .menu-link {
+        .dark-background & {
+          color: var(--fourth-color);
+        }
+
+        &.active {
+          color: var(--primary-color);
+
+          .dark-background & {
+            @include query($tablet-2, 'min-width') {
+              color: var(--fourth-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// SITE FOOTER
+// =============================================================================
+.footer {
+  .voog-reference {
+    a {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// =============================================================================
+// TEXT TYPE CONTENT AREA
+// =============================================================================
+.content-formatted {
+  .dark-background & {
+    color: var(--fourth-color);
+  }
+
+  // Styling rules for the editable content area headings.
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--secondary-color);
+
+    .dark-background & {
+      color: var(--fourth-color);
+    }
+  }
+
+  a {
+    color: var(--third-color);
+
+    .dark-background & {
+      color: var(--fourth-color);
+    }
+  }
+
+  .custom-btn {
+    color: var(--secondary-color);
+
+    .dark-background & {
+      &:hover {
+        color: var(--fourth-color)
+      }
+    }
+  }
+}
+
+//==============================================================================
+// "FORM" TYPE CONTENT AREA
+//==============================================================================

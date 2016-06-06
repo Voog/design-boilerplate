@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang-mobile.tpl",
-      "layout_name": "menu-lang-mobile",
-      "title": "menu-lang-mobile"
+      "file": "components/menu-lang.tpl",
+      "layout_name": "menu-lang",
+      "title": "menu-lang"
     },
     {
       "content_type": "component",
@@ -92,16 +92,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/bg-picker-styles.tpl",
-      "layout_name": "bg-picker-styles",
-      "title": "bg-picker-styles"
+      "file": "components/menu-lang-mobile.tpl",
+      "layout_name": "menu-lang-mobile",
+      "title": "menu-lang-mobile"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang.tpl",
-      "layout_name": "menu-lang",
-      "title": "menu-lang"
+      "file": "components/bg-picker-styles.tpl",
+      "layout_name": "bg-picker-styles",
+      "title": "bg-picker-styles"
     },
     {
       "content_type": "component",
@@ -165,6 +165,20 @@
       "file": "components/tags-variables.tpl",
       "layout_name": "tags-variables",
       "title": "tags-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-main-styles.tpl",
+      "layout_name": "template-cs-main-styles",
+      "title": "template-cs-main-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-style-rules.tpl",
+      "layout_name": "template-cs-style-rules",
+      "title": "template-cs-style-rules"
     },
     {
       "content_type": "component",

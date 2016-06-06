@@ -1,0 +1,91 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/variables';
+
+// =============================================================================
+// Design editor configuration.
+// =============================================================================
+:root {
+  // scss-lint:disable Comment, Indentation
+
+  /* VoogStyle
+    "pathI18n": ["main_styles"],
+    "titleI18n": "maximum_width",
+    "editor": "rangePicker",
+    "min": 600,
+    "max": 2000,
+    "step": 1,
+    "unit": "px",
+    "scope": "global"
+  */
+  --container-max-width: 960px;
+
+  /* VoogStyle
+    "pathI18n": ["main_styles"],
+    "titleI18n": "font",
+    "editor": "listPicker",
+    "list": {{ base_font_set }},
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+    ]
+  */
+  --main-font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+  /* VoogStyle
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "primary_color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+    ]
+  */
+  --primary-color: rgba($primary-color, 1);
+
+  /* VoogStyle
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "secondary_color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+    ]
+  */
+  --secondary-color: rgba($secondary-color, 1);
+
+  /* VoogStyle
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "third_color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+    ]
+  */
+  --third-color: rgba($blue-1, 1);
+
+  /* VoogStyle
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "fourth_color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+    ]
+  */
+  --fourth-color: rgba($white, 1);
+
+  // scss-lint:enable Comment, Indentation
+}

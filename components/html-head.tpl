@@ -21,6 +21,25 @@
 {% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
 <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.css">
 
+{% customstyle %}
+  {% include "template-cs-main-styles" %}
+
+{% comment %}
+  {% include "template-cs-header" %}
+  {% if sidebar %}
+    {% include "template-cs-sidebar" %}
+  {% endif %}
+  {% include "template-cs-headings" %}
+  {% include "template-cs-content" %}
+  {% include "template-cs-button" %}
+  {% include "template-cs-table" %}
+  {% include "template-cs-form" %}
+  {% include "template-cs-footer" %}
+{% endcomment %}
+
+  {% include "template-cs-style-rules" %}
+{% endcustomstyle %}
+
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr-custom.min.js"></script>
 
