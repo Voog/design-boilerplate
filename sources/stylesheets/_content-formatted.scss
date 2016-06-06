@@ -69,19 +69,14 @@
   }
 
   a {
-    @include color($blue-1);
+    @include color($blue-1, 1);
 
       .dark-background & {
         @include color($white, 1);
       }
 
     &:hover {
-      @include color($blue-1, 0.8);
-
-      .dark-background & {
-        @include color($white, 1);
-        opacity: .8;
-      }
+      opacity: .8;
     }
   }
 
@@ -134,12 +129,12 @@
     display: inline-block;
     padding: 7px 9px;
     font-size: 14px;
-    @include color($secondary-color, 0.75);
+    @include color($secondary-color, 1);
     @include bg($white);
     @include border(all, 1px, solid, $black, 0.75);
+    opacity: .75;
 
     &:hover {
-      @include color($secondary-color, 0.75);
       @include border(all,1px,solid,$black, 0.1);
     }
 

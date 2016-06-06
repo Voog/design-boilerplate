@@ -170,11 +170,6 @@ body.dark-background {
   color: white;
 }
 .content-formatted a:hover {
-  color: #0066bb;
-  color: rgba(0, 102, 187, 0.8);
-}
-.dark-background .content-formatted a:hover {
-  color: white;
   opacity: .8;
 }
 .content-formatted iframe {
@@ -222,14 +217,12 @@ body.dark-background {
   padding: 7px 9px;
   font-size: 14px;
   color: #1b2124;
-  color: rgba(27, 33, 36, 0.75);
   background-color: white;
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.75);
+  opacity: .75;
 }
 .content-formatted .custom-btn:hover {
-  color: #1b2124;
-  color: rgba(27, 33, 36, 0.75);
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -1081,11 +1074,10 @@ body.dark-background {
 }
 .post .post-comments-count a:hover {
   color: #0066bb;
-  color: rgba(0, 102, 187, 0.8);
+  opacity: .8;
 }
 .dark-background .post .post-comments-count a:hover {
   color: white;
-  opacity: .8;
 }
 
 .blog-page .post {
