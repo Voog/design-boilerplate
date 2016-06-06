@@ -18,7 +18,7 @@
 
     &.open {
       .menu-stripe {
-        @include bg($secondary-color, 0.47);
+        opacity: .47;
       }
     }
 
@@ -36,7 +36,8 @@
       width: 23px;
       height: 4px;
       margin: 4px 0;
-      @include bg($secondary-color, 0.67);
+      @include bg($secondary-color, 1);
+      opacity: .67;
       border-radius: 5px;
 
       &:first-child,

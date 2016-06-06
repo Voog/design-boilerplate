@@ -326,8 +326,7 @@ body.dark-background {
     cursor: pointer;
   }
   .menu-btn.open .menu-stripe {
-    background-color: #1b2124;
-    background-color: rgba(27, 33, 36, 0.47);
+    opacity: .47;
   }
   .menu-btn:focus {
     outline: none;
@@ -342,7 +341,7 @@ body.dark-background {
     height: 4px;
     margin: 4px 0;
     background-color: #1b2124;
-    background-color: rgba(27, 33, 36, 0.67);
+    opacity: .67;
     border-radius: 5px;
   }
   .menu-btn .menu-stripe:first-child, .menu-btn .menu-stripe:last-child {
