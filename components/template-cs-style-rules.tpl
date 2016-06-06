@@ -1,4 +1,3 @@
-/* GENERAL */
 body {
   font-family: var(--main-font-family);
   color: var(--primary-color);

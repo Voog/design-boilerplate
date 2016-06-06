@@ -20,7 +20,6 @@
 //
 // BASICS
 // =============================================================================
-/* GENERAL */
 // Styling rules for the basic parts of the page. These rules affect the entire site.
 body {
   font-family: var(--main-font-family);
@@ -39,6 +38,7 @@ body {
 // =============================================================================
 // HEADER
 // =============================================================================
+// Styling rules for the site's header. These rules affect the entire site.
 .header {
   .header-left {
     .header-title {
@@ -53,6 +53,7 @@ body {
 // =============================================================================
 // BLOG & ARTICLE LAYOUTS
 // =============================================================================
+// Styling rules for both - the blog listing view and the blog single article view
 .post {
   .post-title {
     &, a {
@@ -207,6 +208,7 @@ body {
 // =============================================================================
 // SITE FOOTER
 // =============================================================================
+// Styling rules for the site's footer. These rules affect the entire site.
 .footer {
   .voog-reference {
     a {
@@ -218,6 +220,7 @@ body {
 // =============================================================================
 // TEXT TYPE CONTENT AREA
 // =============================================================================
+// Styling rules for the site's editable content area and its elements.
 .content-formatted {
   .dark-background & {
     color: var(--fourth-color);
