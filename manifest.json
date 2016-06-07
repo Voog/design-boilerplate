@@ -36,30 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang.tpl",
-      "layout_name": "menu-lang",
-      "title": "menu-lang"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/bg-picker-variables.tpl",
-      "layout_name": "bg-picker-variables",
-      "title": "bg-picker-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/bg-picker.tpl",
-      "layout_name": "bg-picker",
-      "title": "bg-picker"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
+      "file": "components/open-graph.tpl",
+      "layout_name": "open-graph",
+      "title": "open-graph"
     },
     {
       "content_type": "component",
@@ -99,9 +78,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/bg-picker-styles.tpl",
-      "layout_name": "bg-picker-styles",
-      "title": "bg-picker-styles"
+      "file": "components/menu-lang.tpl",
+      "layout_name": "menu-lang",
+      "title": "menu-lang"
     },
     {
       "content_type": "component",
@@ -120,9 +99,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/open-graph.tpl",
-      "layout_name": "open-graph",
-      "title": "open-graph"
+      "file": "components/comment-form.tpl",
+      "layout_name": "comment-form",
+      "title": "comment-form"
     },
     {
       "content_type": "component",
@@ -179,6 +158,27 @@
       "file": "components/template-cs-style-rules.tpl",
       "layout_name": "template-cs-style-rules",
       "title": "template-cs-style-rules"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-styles.tpl",
+      "layout_name": "template-styles",
+      "title": "template-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-tools.tpl",
+      "layout_name": "template-tools",
+      "title": "template-tools"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-variables.tpl",
+      "layout_name": "template-variables",
+      "title": "template-variables"
     },
     {
       "content_type": "component",
