@@ -29,17 +29,6 @@
   {% include "template-cs-headings" %}
   {% include "template-cs-content" %}
 
-{% comment %}
-  {% include "template-cs-header" %}
-  {% if sidebar %}
-    {% include "template-cs-sidebar" %}
-  {% endif %}
-  {% include "template-cs-button" %}
-  {% include "template-cs-table" %}
-  {% include "template-cs-form" %}
-  {% include "template-cs-footer" %}
-{% endcomment %}
-
   {% include "template-cs-style-rules" %}
 {% endcustomstyle %}
 

@@ -159,11 +159,11 @@ body.dark-background {
   color: var(--fourth-color);
 }
 .content-formatted a:hover {
-  font-weight: var(--content-link-hover-font-weight);
   font-style: var(--content-link-hover-font-style);
+  font-weight: var(--content-link-hover-font-weight);
+  color: var(--content-link-hover-color);
   text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
-  color: var(--content-link-hover-color);
 }
 .dark-background .content-formatted a:hover {
   color: var(--fourth-color);
