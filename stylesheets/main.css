@@ -170,7 +170,12 @@ body.dark-background {
   color: white;
 }
 .content-formatted a:hover {
-  opacity: .8;
+  color: #0066bb;
+  color: rgba(0, 102, 187, 0.8);
+}
+.dark-background .content-formatted a:hover {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 .content-formatted iframe {
   max-width: 100%;

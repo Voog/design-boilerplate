@@ -71,12 +71,16 @@
   a {
     @include color($blue-1, 1);
 
-      .dark-background & {
-        @include color($white, 1);
-      }
+    .dark-background & {
+      @include color($white, 1);
+    }
 
     &:hover {
-      opacity: .8;
+      @include color($blue-1, .8);
+
+      .dark-background & {
+        @include color($white, .8);
+      }
     }
   }
 
