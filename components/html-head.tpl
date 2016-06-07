@@ -26,14 +26,14 @@
 
 {% customstyle %}
   {% include "template-cs-main-styles" %}
+  {% include "template-cs-headings" %}
+  {% include "template-cs-content" %}
 
 {% comment %}
   {% include "template-cs-header" %}
   {% if sidebar %}
     {% include "template-cs-sidebar" %}
   {% endif %}
-  {% include "template-cs-headings" %}
-  {% include "template-cs-content" %}
   {% include "template-cs-button" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}

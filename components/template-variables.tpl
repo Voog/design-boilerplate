@@ -187,4 +187,21 @@
       }
     ]
   {% endcapture %}
+
+  {% capture base_alignment_set %}
+    [
+      {
+        "titleI18n": "left",
+        "value": "left"
+      },
+      {
+        "titleI18n": "center",
+        "value": "center"
+      },
+      {
+        "titleI18n": "right",
+        "value": "right"
+      }
+    ]
+  {% endcapture %}
 {% endcapture %}

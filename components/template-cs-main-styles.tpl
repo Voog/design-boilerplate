@@ -28,6 +28,7 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--content-body-color"
     ]
   */
   --primary-color: #727272;
@@ -38,6 +39,9 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--headings-title-color",
+      "--headings-heading-color",
+      "--headings-subheading-color"
     ]
   */
   --secondary-color: #1b2124;
@@ -48,6 +52,7 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--content-link-color"
     ]
   */
   --third-color: #0066bb;

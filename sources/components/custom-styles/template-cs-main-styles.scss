@@ -50,6 +50,7 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--content-body-color"
     ]
   */
   --primary-color: rgba($primary-color, 1);
@@ -61,6 +62,9 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--headings-title-color",
+      "--headings-heading-color",
+      "--headings-subheading-color"
     ]
   */
   --secondary-color: rgba($secondary-color, 1);
@@ -72,6 +76,7 @@
     "featured": true,
     "scope": "global",
     "boundVariables": [
+      "--content-link-color"
     ]
   */
   --third-color: rgba($blue-1, 1);
