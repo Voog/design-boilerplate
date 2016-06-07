@@ -2,9 +2,9 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% assign blog_article_page = true %}
-  {% include "bg-picker-variables" with "article" %}
+  {% include "template-variables" with "article" %}
   {% include "html-head" %}
-  {% include "bg-picker-styles" %}
+  {% include "template-styles" %}
 </head>
 
 <body class="post-page js-bg-picker-area">
@@ -54,7 +54,7 @@
   </div>
 
   {% include "javascripts" %}
-  {% include "bg-picker" with 'article' %}
+  {% include "template-tools" with 'article' %}
   <script>site.initPostPage();</script>
 </body>
 </html>

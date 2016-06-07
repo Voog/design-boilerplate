@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
-  {% include "bg-picker-variables" %}
+  {% include "template-variables" %}
   {% include "html-head" %}
-  {% include "bg-picker-styles" %}
+  {% include "template-styles" %}
 </head>
 
 <body class="common-page js-bg-picker-area">
@@ -36,7 +36,7 @@
   </div>
 
   {% include "javascripts" %}
-  {% include "bg-picker" %}
+  {% include "template-tools" %}
   <script>site.initCommonPage();</script>
 </body>
 </html>
