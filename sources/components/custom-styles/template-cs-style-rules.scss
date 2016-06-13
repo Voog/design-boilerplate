@@ -255,7 +255,7 @@ body {
 
   // Styling rules for the editable content area headings.
   // scss-lint:disable SingleLinePerSelector
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2:not(.comment-title), h3, h4, h5, h6 {
     color: var(--secondary-color);
 
     .dark-background & {

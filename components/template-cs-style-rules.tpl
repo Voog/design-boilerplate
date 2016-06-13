@@ -112,10 +112,10 @@ body.dark-background {
 .dark-background .content-formatted {
   color: var(--fourth-color);
 }
-.content-formatted h1, .content-formatted h2, .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
+.content-formatted h1, .content-formatted h2:not(.comment-title), .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
   color: var(--secondary-color);
 }
-.dark-background .content-formatted h1, .dark-background .content-formatted h2, .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6 {
+.dark-background .content-formatted h1, .dark-background .content-formatted h2:not(.comment-title), .dark-background .content-formatted h3, .dark-background .content-formatted h4, .dark-background .content-formatted h5, .dark-background .content-formatted h6 {
   color: var(--fourth-color);
 }
 .content-formatted h1 {
