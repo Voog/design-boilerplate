@@ -116,6 +116,10 @@ body {
     position: static;
     padding: 40px 20px;
     @include bg($white, 1);
+
+    @include query($tablet-2) {
+      padding-top: 1px;
+    }
   }
 }
 
