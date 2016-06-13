@@ -11,7 +11,7 @@
 
   .flexbox & {
     @include flexbox;
-    @include align-items(flex-start);
+    justify-content: space-between;
   }
 
   .header-left,

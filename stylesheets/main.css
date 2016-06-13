@@ -858,10 +858,9 @@ body.dark-background {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: start;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  align-items: flex-start;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .no-flexbox .header .header-left, .no-flexbox
 .header .header-right {
