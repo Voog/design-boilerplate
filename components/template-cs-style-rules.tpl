@@ -128,7 +128,7 @@ body.dark-background {
   text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
-.content-formatted h2 {
+.content-formatted h2:not(.comment-title) {
   font-size: var(--headings-heading-font-size);
   font-style: var(--headings-heading-font-style);
   font-weight: var(--headings-heading-font-weight);

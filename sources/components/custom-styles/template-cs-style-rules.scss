@@ -275,7 +275,7 @@ body {
     text-transform: var(--headings-title-text-transform);
   }
 
-  h2 {
+  h2:not(.comment-title) {
     font-size: var(--headings-heading-font-size);
     font-style: var(--headings-heading-font-style);
     font-weight: var(--headings-heading-font-weight);
