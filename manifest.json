@@ -36,30 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang-mobile.tpl",
-      "layout_name": "menu-lang-mobile",
-      "title": "menu-lang-mobile"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/bg-picker-variables.tpl",
-      "layout_name": "bg-picker-variables",
-      "title": "bg-picker-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/bg-picker.tpl",
-      "layout_name": "bg-picker",
-      "title": "bg-picker"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
+      "file": "components/post-box.tpl",
+      "layout_name": "post-box",
+      "title": "post-box"
     },
     {
       "content_type": "component",
@@ -92,9 +71,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/bg-picker-styles.tpl",
-      "layout_name": "bg-picker-styles",
-      "title": "bg-picker-styles"
+      "file": "components/menu-lang-mobile.tpl",
+      "layout_name": "menu-lang-mobile",
+      "title": "menu-lang-mobile"
     },
     {
       "content_type": "component",
@@ -127,9 +106,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/post-box.tpl",
-      "layout_name": "post-box",
-      "title": "post-box"
+      "file": "components/comment-form.tpl",
+      "layout_name": "comment-form",
+      "title": "comment-form"
     },
     {
       "content_type": "component",
@@ -165,6 +144,55 @@
       "file": "components/tags-variables.tpl",
       "layout_name": "tags-variables",
       "title": "tags-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-content.tpl",
+      "layout_name": "template-cs-content",
+      "title": "template-cs-content"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-headings.tpl",
+      "layout_name": "template-cs-headings",
+      "title": "template-cs-headings"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-main-styles.tpl",
+      "layout_name": "template-cs-main-styles",
+      "title": "template-cs-main-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-style-rules.tpl",
+      "layout_name": "template-cs-style-rules",
+      "title": "template-cs-style-rules"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-styles.tpl",
+      "layout_name": "template-styles",
+      "title": "template-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-tools.tpl",
+      "layout_name": "template-tools",
+      "title": "template-tools"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-variables.tpl",
+      "layout_name": "template-variables",
+      "title": "template-variables"
     },
     {
       "content_type": "component",

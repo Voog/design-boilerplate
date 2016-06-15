@@ -1,0 +1,339 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../stylesheets/variables';
+@import '../../stylesheets/mixins';
+
+// =============================================================================
+// Default stylesheet override styles.
+//
+// BASICS
+// =============================================================================
+// Styling rules for the basic parts of the page. These rules affect the entire site.
+body {
+  font-family: var(--main-font-family);
+  color: var(--primary-color);
+
+  &.dark-background {
+    color: var(--fourth-color);
+  }
+}
+
+.container {
+  max-width: var(--container-max-width);
+}
+
+// =============================================================================
+// HEADER
+// =============================================================================
+// Styling rules for the site's header. These rules affect the entire site.
+.header {
+  .header-left {
+    .header-title {
+      // scss-lint:disable NestingDepth, SelectorDepth, SingleLinePerSelector
+      &, a {
+        color: var(--primary-color);
+      }
+      // scss-lint:enable NestingDepth, SelectorDepth, SingleLinePerSelector
+    }
+  }
+}
+
+// =============================================================================
+// BLOG & ARTICLE LAYOUTS
+// =============================================================================
+// Styling rules for both - the blog listing view and the blog single article view
+.post {
+  .post-title {
+    // scss-lint:disable SingleLinePerSelector
+    &, a {
+      color: var(--secondary-color);
+
+      // scss-lint:disable NestingDepth, SelectorDepth
+      .dark-background & {
+        color: var(--fourth-color);
+      }
+      // scss-lint:enable NestingDepth, SelectorDepth
+    }
+    // scss-lint:enable SingleLinePerSelector
+
+    a {
+      // scss-lint:disable NestingDepth
+      &:hover {
+        color: var(--secondary-color);
+
+        // scss-lint:disable SelectorDepth
+        .dark-background & {
+          color: var(--fourth-color);
+        }
+        // scss-lint:enable SelectorDepth
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+
+  .post-date {
+    color: var(--secondary-color);
+
+    .dark-background & {
+      color: var(--fourth-color);
+    }
+  }
+
+  .post-author {
+    .dark-background & {
+      color: var(--fourth-color);
+    }
+  }
+
+  .post-comments-count {
+    a {
+      color: var(--third-color);
+
+      // scss-lint:disable NestingDepth, SelectorDepth
+      .dark-background & {
+        color: var(--fourth-color);
+      }
+      // scss-lint:enable NestingDepth, SelectorDepth
+
+      // scss-lint:disable NestingDepth
+      &:hover {
+        color: var(--third-color);
+
+        // scss-lint:disable SelectorDepth
+        .dark-background & {
+          color: var(--fourth-color);
+        }
+        // scss-lint:enable SelectorDepth
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+}
+
+// =============================================================================
+// NAVIGATION MENUS
+// =============================================================================
+// Menu button. Only visible on smaller screens.
+.menu-btn {
+  @include query($tablet-2) {
+    .menu-stripe {
+      background-color: var(--secondary-color);
+
+      .dark-background & {
+        background-color: var(--fourth-color);
+      }
+    }
+  }
+}
+
+// General rules for all navigation menus.
+.menu {
+  .menu-link {
+    color: var(--third-color);
+
+    .dark-background & {
+      @include query($tablet-2, 'min-width') {
+        color: var(--fourth-color);
+      }
+    }
+
+    &:hover {
+      color: var(--primary-color);
+
+      // scss-lint:disable NestingDepth
+      .dark-background & {
+        @include query($tablet-2, 'min-width') {
+          color: var(--fourth-color);
+        }
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+}
+
+// Styling rules for the site's main menu.
+.menu-main {
+  .menu {
+    .menu-link {
+      // scss-lint:disable NestingDepth
+      &.active {
+        color: var(--primary-color);
+
+        // scss-lint:disable SelectorDepth
+        .dark-background & {
+          @include query($tablet-2, 'min-width') {
+            color: var(--fourth-color);
+          }
+        }
+        // scss-lint:enable SelectorDepth
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+
+  // scss-lint:disable DeclarationOrder
+  @include query($tablet-2) {
+    &.expanded {
+      // Styling rules for the language menu in the site's main menu. Only visible on smaller screens.
+      .menu-lang {
+        // scss-lint:disable NestingDepth
+        .menu-item {
+          // scss-lint:disable SelectorDepth
+          .menu-link {
+            color: var(--secondary-color);
+          }
+          // scss-lint:enable SelectorDepth
+        }
+        // scss-lint:enable NestingDepth
+      }
+    }
+  }
+  // scss-lint:enable DeclarationOrder
+}
+
+// Styling rules for the site's sub menu.
+.menu-sub {
+  .menu {
+    .menu-item {
+      // scss-lint:disable NestingDepth, SelectorDepth
+      .menu-link {
+        .dark-background & {
+          color: var(--fourth-color);
+        }
+
+        &.active {
+          color: var(--primary-color);
+
+          .dark-background & {
+            @include query($tablet-2, 'min-width') {
+              color: var(--fourth-color);
+            }
+          }
+        }
+      }
+      // scss-lint:enable NestingDepth, SelectorDepth
+    }
+  }
+}
+
+// =============================================================================
+// SITE FOOTER
+// =============================================================================
+// Styling rules for the site's footer. These rules affect the entire site.
+.footer {
+  .voog-reference {
+    a {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// =============================================================================
+// TEXT TYPE CONTENT AREA
+// =============================================================================
+// Styling rules for the site's editable content area and its elements.
+.content-formatted {
+  font-size: var(--content-body-font-size);
+  line-height: var(--content-body-line-height);
+  color: var(--content-body-color);
+
+  .dark-background & {
+    color: var(--fourth-color);
+  }
+
+  // Styling rules for the editable content area headings.
+  // scss-lint:disable SingleLinePerSelector
+  h1, h2:not(.comment-title), h3, h4, h5, h6 {
+    color: var(--secondary-color);
+
+    .dark-background & {
+      color: var(--fourth-color);
+    }
+  }
+  // scss-lint:enable SingleLinePerSelector
+
+  h1 {
+    font-size: var(--headings-title-font-size);
+    font-style: var(--headings-title-font-style);
+    font-weight: var(--headings-title-font-weight);
+    line-height: var(--headings-title-line-height);
+    color: var(--headings-title-color);
+    text-align: var(--headings-title-text-alignment);
+    text-decoration: var(--headings-title-text-decoration);
+    text-transform: var(--headings-title-text-transform);
+  }
+
+  h2:not(.comment-title) {
+    font-size: var(--headings-heading-font-size);
+    font-style: var(--headings-heading-font-style);
+    font-weight: var(--headings-heading-font-weight);
+    line-height: var(--headings-heading-line-height);
+    color: var(--headings-heading-color);
+    text-align: var(--headings-heading-text-alignment);
+    text-decoration: var(--headings-heading-text-decoration);
+    text-transform: var(--headings-heading-text-transform);
+  }
+
+  // scss-lint:disable SingleLinePerSelector
+  h3, h4, h5, h6 {
+    font-size: var(--headings-subheading-font-size);
+    font-style: var(--headings-subheading-font-style);
+    font-weight: var(--headings-subheading-font-weight);
+    line-height: var(--headings-subheading-line-height);
+    color: var(--headings-subheading-color);
+    text-align: var(--headings-subheading-text-alignment);
+    text-decoration: var(--headings-subheading-text-decoration);
+    text-transform: var(--headings-subheading-text-transform);
+  }
+  // scss-lint:enable SingleLinePerSelector
+
+  a {
+    font-style: var(--content-link-font-style);
+    font-weight: var(--content-link-font-weight);
+    color: var(--content-link-color);
+    text-decoration: var(--content-link-text-decoration);
+    text-transform: var(--content-link-text-transform);
+
+    .dark-background & {
+      color: var(--fourth-color);
+    }
+
+    &:hover {
+      font-style: var(--content-link-hover-font-style);
+      font-weight: var(--content-link-hover-font-weight);
+      color: var(--content-link-hover-color);
+      text-decoration: var(--content-link-hover-text-decoration);
+      text-transform: var(--content-link-hover-text-transform);
+
+      // scss-lint:disable NestingDepth
+      .dark-background & {
+        color: var(--fourth-color);
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+
+  .custom-btn {
+    color: var(--secondary-color);
+
+    .dark-background & {
+      // scss-lint:disable NestingDepth
+      &:hover {
+        color: var(--fourth-color);
+      }
+      // scss-lint:disable NestingDepth
+    }
+  }
+}

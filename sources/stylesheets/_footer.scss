@@ -24,13 +24,13 @@
       display: inline-block;
       padding: 7px 9px;
       font-size: 10px;
-      @include color($secondary-color, 0.75);
+      @include color($primary-color, 1);
+      opacity: .75;
       line-height: 1;
       @include bg($white);
       @include border(all,1px,solid,$black, 0.1);
 
       &:hover {
-        @include color($secondary-color, 0.75);
         @include border(all, 1px, solid, $black, 0.75);
       }
     }

@@ -18,7 +18,7 @@
 
     &.open {
       .menu-stripe {
-        @include bg($secondary-color, 0.47);
+        opacity: .47;
       }
     }
 
@@ -36,7 +36,8 @@
       width: 23px;
       height: 4px;
       margin: 4px 0;
-      @include bg($secondary-color, 0.67);
+      @include bg($secondary-color, 1);
+      opacity: .67;
       border-radius: 5px;
 
       &:first-child,
@@ -82,7 +83,7 @@
 
     .dark-background & {
       @include query($tablet-2, 'min-width') {
-        @include color($white);
+        @include color($white, 1);
       }
     }
 
@@ -91,11 +92,11 @@
     }
 
     &:hover {
-      @include color($primary-color);
+      @include color($primary-color, 1);
 
       .dark-background & {
         @include query($tablet-2, 'min-width') {
-          @include color($white);
+          @include color($white, 1);
         }
       }
     }
@@ -126,11 +127,13 @@
 
       &.active {
         font-weight: 700;
-        @include color($primary-color, 0.8);
+        @include color($primary-color, 1);
+        opacity: .8;
 
         .dark-background & {
           @include query($tablet-2, 'min-width') {
-            @include color($white, 0.5);
+            @include color($white, 1);
+            opacity: .5;
           }
         }
       }
@@ -227,7 +230,7 @@
             position: relative;
             padding: 15px 20px 14px 50px;
             font-size: 12px;
-            @include color($secondary-color);
+            @include color($secondary-color, 1);
 
             &, &.active {
               &:hover {
@@ -236,7 +239,7 @@
             }
 
             &.active {
-              @include color($grey-2);
+              @include color($primary-color, 1);
               background: none;
             }
 
@@ -313,7 +316,7 @@
 
       .menu-link {
         .dark-background & {
-          @include color($white);
+          @include color($white, 1);
         }
 
         &.untranslated {
@@ -322,11 +325,13 @@
 
         &.active {
           font-weight: 700;
-          @include color($primary-color, 0.8);
+          @include color($primary-color, 1);
+          opacity: .8;
 
           .dark-background & {
             @include query($tablet-2, 'min-width') {
-              @include color($white, 0.5);
+              @include color($white, 1);
+              opacity: .5;
             }
           }
         }

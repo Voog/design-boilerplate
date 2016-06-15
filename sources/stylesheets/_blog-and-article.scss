@@ -13,7 +13,7 @@
 
     &, a {
       font-size: 50px;
-      @include color($secondary-color);
+      @include color($secondary-color, 1);
 
       .dark-background & {
         @include color($white, 1);
@@ -22,10 +22,11 @@
 
     a {
       &:hover {
-        @include color($secondary-color, 0.8);
+        @include color($secondary-color, 1);
+        opacity: .8;
 
         .dark-background & {
-          @include color($white, 0.8);
+          @include color($white, 1);
         }
       }
     }
@@ -39,7 +40,7 @@
 
   .post-date {
     font-size: 14px;
-    @include color($secondary-color);
+    @include color($secondary-color, 1);
 
     .dark-background & {
       @include color($white, 1);
@@ -50,7 +51,8 @@
     font-size: 12px;
 
     .dark-background & {
-      @include color($white, 0.8);
+      @include color($white, 1);
+      opacity: .8;
     }
   }
 
@@ -71,17 +73,18 @@
   .post-comments-count {
     a {
       font-size: 14px;
-      @include color($blue-1);
+      @include color($blue-1, 1);
 
       .dark-background & {
-        @include color($white);
+        @include color($white, 1);
       }
 
       &:hover {
-        @include color($blue-1, 0.8);
+        @include color($blue-1, 1);
+        opacity: .8;
 
         .dark-background & {
-          @include color($white, 0.8);          
+          @include color($white, 1);
         }
       }
     }

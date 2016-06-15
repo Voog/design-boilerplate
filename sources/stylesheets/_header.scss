@@ -11,7 +11,7 @@
 
   .flexbox & {
     @include flexbox;
-    @include align-items(flex-start);
+    justify-content: space-between;
   }
 
   .header-left,
@@ -30,10 +30,10 @@
       &, & a {
         font-size: 28px;
         font-weight: 700;
-        @include color($primary-color);
+        @include color($primary-color, 1);
 
         &:hover {
-          @include color($primary-color, 0.8);
+          opacity: .8;
         }
       }
     }
