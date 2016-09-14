@@ -22,7 +22,7 @@
     {% if site.search.enabled %}{% include "search" %}{% endif %}
 
     {% if editmode or site.has_many_languages? %}
-      <nav class="menu-lang">
+      <nav class="menu-lang" {{ edy_intro_add_lang }}>
         {% include "menu-lang" %}
       </nav>
     {% endif %}

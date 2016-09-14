@@ -26,7 +26,7 @@
 
         <main class="content" role="main" data-search-indexing-allowed="true">
           <header class="content-header content-formatted">{% content name="slogan" %}</header>
-          <section class="content-body content-formatted">{% content %}</section>
+          <section class="content-body content-formatted" {{ edy_intro_edit_text }}>{% content %}</section>
         </main>
 
         {% include "footer" %}

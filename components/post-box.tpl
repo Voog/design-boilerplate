@@ -6,7 +6,7 @@
   </header>
 
   <div class="post-content">
-    <div class="post-excerpt content-formatted">{% if post-box == "article" %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
+    <div class="post-excerpt content-formatted"{% if post-box == "article" %}{{ edy_intro_edit_text }}{% endif %}>{% if post-box == "article" %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
     {% if post-box == "article" %}<div class="post-body content-formatted">{% editable article.body %}</div>{% endif %}
   </div>
 

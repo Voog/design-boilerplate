@@ -32,7 +32,7 @@
             <div class="content-slogan content-formatted js-content-optional">{% content name="slogan" %}</div>
           </header>
 
-          <section class="content-body content-formatted">{% content %}</section>
+          <section class="content-body content-formatted" {{ edy_intro_edit_text }}>{% content %}</section>
         </main>
 
         {% include "footer" %}
