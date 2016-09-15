@@ -25,7 +25,7 @@
         {% include "menu-level-2" %}
 
         <main class="content" role="main" data-search-indexing-allowed="true">
-          <header class="content-header content-formatted">{% content name="slogan" %}</header>
+          <header class="content-header content-formatted" {{ edy_intro_edit_text }}>{% content name="slogan" %}</header>
           <section class="content-body content-formatted">{% content %}</section>
         </main>
 
