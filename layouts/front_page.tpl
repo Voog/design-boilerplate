@@ -26,13 +26,13 @@
 
         <main class="content" role="main" data-search-indexing-allowed="true">
           <header class="content-header">
-            {% if editmode or site.header.size > 0 %}<div class="content-title content-formatted">{% editable site.header %}</div>{% endif %}
+            {% if editmode or site.header.size > 0 %}<div class="content-title content-formatted" {{ edy_intro_edit_text }}>{% editable site.header %}</div>{% endif %}
 
             {% capture content_slogan_html %}{% unless editmode %}{% content name="slogan" %}{% endunless %}{% endcapture %}
             <div class="content-slogan content-formatted js-content-optional">{% content name="slogan" %}</div>
           </header>
 
-          <section class="content-body content-formatted" {{ edy_intro_edit_text }}>{% content %}</section>
+          <section class="content-body content-formatted">{% content %}</section>
         </main>
 
         {% include "footer" %}
