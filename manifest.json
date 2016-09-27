@@ -6,244 +6,272 @@
   "author": "Tõnu Runnel",
   "layouts": [
     {
+      "title": "Common page",
+      "layout_name": "common_page",
       "content_type": "page",
       "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
+      "file": "layouts/common_page.tpl"
     },
     {
+      "title": "Front page",
+      "layout_name": "front_page",
       "content_type": "page",
       "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
+      "file": "layouts/front_page.tpl"
     },
     {
+      "title": "Blog & News",
+      "layout_name": "blog___news",
       "content_type": "blog",
       "component": false,
-      "file": "layouts/blog___news.tpl",
-      "layout_name": "blog",
-      "title": "Blog & News"
+      "file": "layouts/blog___news.tpl"
     },
     {
+      "title": "Blog article",
+      "layout_name": "blog_article",
       "content_type": "blog_article",
       "component": false,
-      "file": "layouts/blog_article.tpl",
-      "layout_name": "blog_article",
-      "title": "Blog article"
+      "file": "layouts/blog_article.tpl"
     },
     {
-      "content_type": "component",
-      "component": true,
-      "file": "components/post-box.tpl",
-      "layout_name": "post-box",
-      "title": "post-box"
+      "title": "Elements listing",
+      "layout_name": "elements_listing",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/elements_listing.tpl"
     },
     {
-      "content_type": "component",
-      "component": true,
-      "file": "components/footer.tpl",
-      "layout_name": "footer",
-      "title": "footer"
+      "title": "Elements listing (with editable)",
+      "layout_name": "elements_listing__with_editable_",
+      "content_type": "elements",
+      "component": false,
+      "file": "layouts/elements_listing__with_editable_.tpl"
     },
     {
-      "content_type": "component",
-      "component": true,
-      "file": "components/header.tpl",
-      "layout_name": "header",
-      "title": "header"
+      "title": "Element details (with editable listing)",
+      "layout_name": "element_details__with_editable_listing_",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/element_details__with_editable_listing_.tpl"
     },
     {
-      "content_type": "component",
-      "component": true,
-      "file": "components/html-head.tpl",
+      "title": "Element details",
+      "layout_name": "element_details",
+      "content_type": "element",
+      "component": false,
+      "file": "layouts/element_details.tpl"
+    },
+    {
+      "title": "html-head",
       "layout_name": "html-head",
-      "title": "html-head"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/javascripts.tpl",
-      "layout_name": "javascripts",
-      "title": "javascripts"
+      "file": "components/html-head.tpl"
     },
     {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-lang-mobile.tpl",
+      "title": "menu-lang-mobile",
       "layout_name": "menu-lang-mobile",
-      "title": "menu-lang-mobile"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang.tpl",
+      "file": "components/menu-lang-mobile.tpl"
+    },
+    {
+      "title": "menu-lang",
       "layout_name": "menu-lang",
-      "title": "menu-lang"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-1.tpl",
+      "file": "components/menu-lang.tpl"
+    },
+    {
+      "title": "menu-level-1",
       "layout_name": "menu-level-1",
-      "title": "menu-level-1"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-2.tpl",
+      "file": "components/menu-level-1.tpl"
+    },
+    {
+      "title": "menu-level-2",
       "layout_name": "menu-level-2",
-      "title": "menu-level-2"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/open-graph.tpl",
+      "file": "components/menu-level-2.tpl"
+    },
+    {
+      "title": "open-graph",
       "layout_name": "open-graph",
-      "title": "open-graph"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
+      "file": "components/open-graph.tpl"
     },
     {
+      "title": "post-box",
+      "layout_name": "post-box",
       "content_type": "component",
       "component": true,
-      "file": "components/search.tpl",
+      "file": "components/post-box.tpl"
+    },
+    {
+      "title": "search",
       "layout_name": "search",
-      "title": "search"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/sidebar.tpl",
+      "file": "components/search.tpl"
+    },
+    {
+      "title": "sidebar",
       "layout_name": "sidebar",
-      "title": "sidebar"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-blog.tpl",
+      "file": "components/sidebar.tpl"
+    },
+    {
+      "title": "tags-blog",
       "layout_name": "tags-blog",
-      "title": "tags-blog"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-post.tpl",
+      "file": "components/tags-blog.tpl"
+    },
+    {
+      "title": "tags-post",
       "layout_name": "tags-post",
-      "title": "tags-post"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/tags-variables.tpl",
+      "file": "components/tags-post.tpl"
+    },
+    {
+      "title": "tags-variables",
       "layout_name": "tags-variables",
-      "title": "tags-variables"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-content.tpl",
+      "file": "components/tags-variables.tpl"
+    },
+    {
+      "title": "template-cs-content",
       "layout_name": "template-cs-content",
-      "title": "template-cs-content"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-headings.tpl",
+      "file": "components/template-cs-content.tpl"
+    },
+    {
+      "title": "template-cs-headings",
       "layout_name": "template-cs-headings",
-      "title": "template-cs-headings"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-main-styles.tpl",
+      "file": "components/template-cs-headings.tpl"
+    },
+    {
+      "title": "template-cs-main-styles",
       "layout_name": "template-cs-main-styles",
-      "title": "template-cs-main-styles"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-style-rules.tpl",
+      "file": "components/template-cs-main-styles.tpl"
+    },
+    {
+      "title": "template-cs-style-rules",
       "layout_name": "template-cs-style-rules",
-      "title": "template-cs-style-rules"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/template-styles.tpl",
+      "file": "components/template-cs-style-rules.tpl"
+    },
+    {
+      "title": "template-styles",
       "layout_name": "template-styles",
-      "title": "template-styles"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/template-tools.tpl",
+      "file": "components/template-styles.tpl"
+    },
+    {
+      "title": "template-tools",
       "layout_name": "template-tools",
-      "title": "template-tools"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/template-variables.tpl",
+      "file": "components/template-tools.tpl"
+    },
+    {
+      "title": "template-variables",
       "layout_name": "template-variables",
-      "title": "template-variables"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/topbar.tpl",
+      "file": "components/template-variables.tpl"
+    },
+    {
+      "title": "topbar",
       "layout_name": "topbar",
-      "title": "topbar"
+      "content_type": "component",
+      "component": true,
+      "file": "components/topbar.tpl"
+    },
+    {
+      "title": "header",
+      "layout_name": "header",
+      "content_type": "component",
+      "component": true,
+      "file": "components/header.tpl"
+    },
+    {
+      "title": "comment-form",
+      "layout_name": "comment-form",
+      "content_type": "component",
+      "component": true,
+      "file": "components/comment-form.tpl"
+    },
+    {
+      "title": "footer",
+      "layout_name": "footer",
+      "content_type": "component",
+      "component": true,
+      "file": "components/footer.tpl"
+    },
+    {
+      "title": "javascripts",
+      "layout_name": "javascripts",
+      "content_type": "component",
+      "component": true,
+      "file": "components/javascripts.tpl"
     }
   ],
   "assets": [
     {
-      "content_type": "image/svg+xml",
-      "file": "assets/ico-flags.svg",
-      "kind": "assets",
-      "filename": "ico-flags.svg"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/ico-flags.png",
-      "kind": "images",
-      "filename": "ico-flags.png"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/application.js",
-      "kind": "javascripts",
-      "filename": "application.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/application.min.js",
-      "kind": "javascripts",
-      "filename": "application.min.js"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/modernizr-custom.min.js",
-      "kind": "javascripts",
-      "filename": "modernizr-custom.min.js"
-    },
-    {
-      "content_type": "text/css",
+      "kind": "stylesheet",
+      "filename": "main.css",
       "file": "stylesheets/main.css",
-      "kind": "stylesheets",
-      "filename": "main.css"
+      "content_type": "text/css"
     },
     {
-      "content_type": "text/css",
+      "kind": "stylesheet",
+      "filename": "main.min.css",
       "file": "stylesheets/main.min.css",
-      "kind": "stylesheets",
-      "filename": "main.min.css"
+      "content_type": "text/css"
+    },
+    {
+      "kind": "javascript",
+      "filename": "application.js",
+      "file": "javascripts/application.js",
+      "content_type": "text/javascript"
+    },
+    {
+      "kind": "javascript",
+      "filename": "application.min.js",
+      "file": "javascripts/application.min.js",
+      "content_type": "text/javascript"
+    },
+    {
+      "kind": "javascript",
+      "filename": "modernizr-custom.min.js",
+      "file": "javascripts/modernizr-custom.min.js",
+      "content_type": "text/javascript"
+    },
+    {
+      "kind": "image",
+      "filename": "ico-flags.png",
+      "file": "images/ico-flags.png",
+      "content_type": "image/png"
+    },
+    {
+      "kind": "asset",
+      "filename": "ico-flags.svg",
+      "file": "assets/ico-flags.svg",
+      "content_type": "unknown/unknown"
     }
   ]
 }
