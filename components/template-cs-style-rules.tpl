@@ -174,3 +174,7 @@ body.dark-background {
 .dark-background .content-formatted .custom-btn:hover {
   color: var(--fourth-color);
 }
+
+.public .edy-ecommerce-shopping-cart-button {
+  color: var(--secondary-color);
+}
