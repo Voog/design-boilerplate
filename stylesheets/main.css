@@ -169,17 +169,17 @@ body.dark-background {
 .content-formatted p {
   margin-top: 20px;
 }
-.content-formatted a {
+.content-formatted a:not(.custom-btn) {
   color: #0066bb;
 }
-.dark-background .content-formatted a {
+.dark-background .content-formatted a:not(.custom-btn) {
   color: white;
 }
-.content-formatted a:hover {
+.content-formatted a:not(.custom-btn):hover {
   color: #0066bb;
   color: rgba(0, 102, 187, 0.8);
 }
-.dark-background .content-formatted a:hover {
+.dark-background .content-formatted a:not(.custom-btn):hover {
   color: #ffffff;
   color: rgba(255, 255, 255, 0.8);
 }
