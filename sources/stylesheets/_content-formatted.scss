@@ -138,6 +138,11 @@
     @include border(all, 1px, solid, $black, 0.75);
     opacity: .75;
 
+    &::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
     &:hover {
       @include border(all,1px,solid,$black, 0.1);
     }

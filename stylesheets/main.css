@@ -233,6 +233,10 @@ body.dark-background {
   border: 1px solid rgba(0, 0, 0, 0.75);
   opacity: .75;
 }
+.content-formatted .custom-btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
 .content-formatted .custom-btn:hover {
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
