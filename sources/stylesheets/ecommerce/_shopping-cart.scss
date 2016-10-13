@@ -1,0 +1,39 @@
+.public {
+  .edy-ecommerce-shopping-cart-button {
+    @include color($secondary-color, 1);
+    @include bg($white);
+    @include border(all, 1px, solid, $black, .75);
+    display: inline-block;
+    padding: 7px 9px;
+    font-size: 14px;
+    line-height: 1.2;
+    opacity: .75;
+
+    @include query($tablet-2) {
+      top: 22px;
+      right: 63px;
+    }
+
+    @include query($tablet-2 + 1, 'min-width') {
+      top: 80px;
+      right: 20px;
+    }
+
+    &::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+
+    &:hover {
+      @include border(all, 1px, solid, $black, .1);
+    }
+
+    .public & {
+      cursor: pointer;
+    }
+
+    .edy-ecommerce-shopping-cart-button-flash {
+      //line-height: 2.5;
+    }
+  }
+}

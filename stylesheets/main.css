@@ -1252,3 +1252,38 @@ body.dark-background {
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.75);
 }
+
+.public .edy-ecommerce-shopping-cart-button {
+  color: #1b2124;
+  background-color: white;
+  border: 1px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.75);
+  display: inline-block;
+  padding: 7px 9px;
+  font-size: 14px;
+  line-height: 1.2;
+  opacity: .75;
+}
+@media screen and (max-width: 752px) {
+  .public .edy-ecommerce-shopping-cart-button {
+    top: 22px;
+    right: 63px;
+  }
+}
+@media screen and (min-width: 753px) {
+  .public .edy-ecommerce-shopping-cart-button {
+    top: 80px;
+    right: 20px;
+  }
+}
+.public .edy-ecommerce-shopping-cart-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.public .edy-ecommerce-shopping-cart-button:hover {
+  border: 1px solid #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.public .public .edy-ecommerce-shopping-cart-button {
+  cursor: pointer;
+}
