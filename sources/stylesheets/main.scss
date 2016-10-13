@@ -1,19 +1,19 @@
 // MAIN STYLESHEET
 // Uncomment the partials you want to use in your template and comment out those that you don't need.
 @import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '_mixins';
-@import '_mixins-flexbox';
-@import '_variables';
-// @import '_fonts';
-@import '_general';
-@import '_content-formatted';
-@import '_menus';
-@import '_header';
-// @import '_topbar';
-// @import '_sidebar';
-@import '_content';;
-@import '_blog-and-article';
-@import '_search';
-@import '_forms';
-@import '_comments';
-@import '_footer';
+@import 'mixins';
+@import 'mixins-flexbox';
+@import 'variables';
+// @import 'fonts';
+@import 'general';
+@import 'content-formatted';
+@import 'menus';
+@import 'header';
+// @import 'topbar';
+// @import 'sidebar';
+@import 'content';
+@import 'blog-and-article';
+@import 'search';
+@import 'forms';
+@import 'comments';
+@import 'footer';
