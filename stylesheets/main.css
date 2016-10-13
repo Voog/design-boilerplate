@@ -320,9 +320,6 @@ body.dark-background {
 .content-formatted .edy-texteditor-view {
   min-height: 32px;
 }
-.content-formatted .edy-partial-view {
-  margin-top: 25px;
-}
 
 /* MENUS */
 .menu-btn {
@@ -951,10 +948,6 @@ body.dark-background {
   .content, .front-page .content {
     margin-top: 20px;
   }
-}
-
-.content-header .edy-partial-view {
-  margin-top: -3px;
 }
 
 .content-title.content-formatted h1,
