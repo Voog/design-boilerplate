@@ -597,11 +597,6 @@ body.dark-background {
 .header-right .menu-lang .edit-btn {
   margin-left: 10px;
 }
-@media screen and (max-width: 900px) {
-  .menu-lang {
-    margin-top: 5px;
-  }
-}
 @media screen and (max-width: 752px) {
   .menu-lang {
     display: block;

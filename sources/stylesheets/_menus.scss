@@ -364,11 +364,6 @@
     }
   }
 
-
-  @include query($tablet-1) {
-    margin-top: 5px;
-  }
-
   @include query($tablet-2) {
     display: block;
 
