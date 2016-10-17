@@ -28,6 +28,30 @@
         <main class="content" role="main" data-search-indexing-allowed="true">
           {% include "post-box" with "article" %}
 
+          {% if article.older or article.newer %}
+            <div class="post-nav">
+              <div class="post-nav-inner">
+                {% if article.older %}
+                  <a class="post-nav-link post-nav-link-older" href="{{ article.older.url }}">
+                    <div class="post-nav-link-inner">
+                      <div class="post-nav-direction">{{ "previous" | lc }}</div>
+                      <div class="post-nav-title">{{ article.older.title }}</div>
+                    </div>
+                  </a>
+                {% endif %}
+
+                {% if article.newer %}
+                  <a class="post-nav-link post-nav-link-newer" href="{{ article.newer.url }}">
+                    <div class="post-nav-link-inner">
+                      <div class="post-nav-direction">{{ "next" | lc }}</div>
+                      <div class="post-nav-title">{{ article.newer.title }}</div>
+                    </div>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+
           <section id="comments" class="comments content-formatted" data-search-indexing-allowed="false">
             {% if article.comments_count > 0 %}
               <h2 class="comments-title">{{ "comments_for_count" | lc }}: <span class="edy-site-blog-comments-count">{{ article.comments_count }}</span></h2>
