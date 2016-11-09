@@ -16,23 +16,6 @@ body.dark-background {
   color: white;
 }
 
-.dark-background .edy-empty-bordered {
-  color: rgba(255, 255, 255, 0.33);
-  border-color: rgba(255, 255, 255, 0.33);
-}
-.dark-background .placeholder {
-  color: white;
-}
-.dark-background .edy-content-element-hover {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-.dark-background .edy-texteditor-active {
-  outline-color: rgba(255, 255, 255, 0.2);
-}
-.dark-background .edy-texteditor-active, .dark-background .edy-texteditor-active:hover {
-  outline-color: rgba(255, 255, 255, 0.63);
-}
-
 .content-formatted:after {
   content: "";
   display: table;

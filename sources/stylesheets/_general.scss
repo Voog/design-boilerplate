@@ -18,32 +18,6 @@ body {
   }
 }
 
-// CMS DEFAULT STYLES OVERRIDES
-.dark-background {
-  .edy-empty-bordered {
-    color: rgba($white, .33);
-    border-color: rgba($white, .33);
-  }
-
-  .placeholder {
-    color: rgba($white, 5);
-  }
-
-  .edy-content-element-hover {
-    border-color: rgba($white, .1);
-  }
-
-  .edy-texteditor-active {
-    outline-color: rgba($white, .2);
-
-    &,
-    &:hover {
-      outline-color: rgba($white, .63);
-    }
-  }
-}
-
-
 // Layout specific body classes.
 .front-page {
 }
