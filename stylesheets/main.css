@@ -109,6 +109,9 @@ body.dark-background {
   -ms-hyphens: auto;
   hyphens: auto;
 }
+.content-formatted:empty {
+  display: none;
+}
 .dark-background .content-formatted {
   color: white;
 }

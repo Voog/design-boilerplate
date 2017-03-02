@@ -2,6 +2,10 @@
 // NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-formatted" class.
 // NB! Contact forms and image galleries are located in the separate partials: "_forms.scss" and "_gallery.scss".
 .content-formatted {
+  &:empty {
+    display: none;
+  }
+
   @extend %clearfix;
   @include hyphenate(true);
 
