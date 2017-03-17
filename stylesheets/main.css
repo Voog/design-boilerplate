@@ -1203,6 +1203,15 @@ body.dark-background {
   border-bottom: 1px solid #727272;
   border-bottom: 1px solid rgba(114, 114, 114, 0.3);
 }
+.blog-page .post .post-excerpt {
+  margin-bottom: 10px;
+}
+.blog-page .post-read-more-btn {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #06b;
+  text-decoration: underline;
+}
 
 /* SEARCH */
 @media screen and (max-width: 752px) {

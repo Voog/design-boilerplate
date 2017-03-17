@@ -174,3 +174,11 @@ body.dark-background {
 .dark-background .content-formatted .custom-btn:hover {
   color: var(--fourth-color);
 }
+
+.blog-page .post-read-more-btn {
+  font-style: var(--content-link-font-style);
+  font-weight: var(--content-link-font-weight);
+  color: var(--content-link-color);
+  text-decoration: var(--content-link-text-decoration);
+  text-transform: var(--content-link-text-transform);
+}
