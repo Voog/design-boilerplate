@@ -175,6 +175,21 @@
     margin-bottom: 50px;
     padding-bottom: 50px;
     @include border(bottom, 1px, solid, $primary-color, 0.3);
+
+    .post-excerpt {
+      margin-bottom: 10px;
+    }
+  }
+
+  .post-read-more-btn {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #06b;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: .8;
+    }
   }
 }
 
