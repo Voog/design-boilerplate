@@ -186,6 +186,10 @@
     margin-bottom: 5px;
     color: #06b;
     text-decoration: underline;
+
+    &:hover {
+      opacity: .8;
+    }
   }
 }
 

@@ -1212,6 +1212,9 @@ body.dark-background {
   color: #06b;
   text-decoration: underline;
 }
+.blog-page .post-read-more-btn:hover {
+  opacity: .8;
+}
 
 /* SEARCH */
 @media screen and (max-width: 752px) {
