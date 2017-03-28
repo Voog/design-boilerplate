@@ -299,7 +299,7 @@ body {
   }
   // scss-lint:enable SingleLinePerSelector
 
-  a {
+  a:not(.custom-btn) {
     font-style: var(--content-link-font-style);
     font-weight: var(--content-link-font-weight);
     color: var(--content-link-color);

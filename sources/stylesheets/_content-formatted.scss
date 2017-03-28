@@ -97,7 +97,7 @@
     }
   }
 
-  a {
+  a:not(.custom-btn) {
     @include color($blue-1, 1);
 
     .dark-background & {
@@ -184,6 +184,21 @@
         @include border(all,1px,solid,$white, 0.1);
         opacity: .8;
       }
+    }
+
+    &-disabled {
+      // scss-lint:disable NestingDepth
+      .public & {
+        cursor: default;
+
+        &,
+        &:hover {
+          color: rgba($grey-2, 1);
+          background-color: rgba($disabled, 1);
+          border-color: rgba($disabled, 1);
+        }
+      }
+      // scss-lint:enable NestingDepth
     }
   }
 

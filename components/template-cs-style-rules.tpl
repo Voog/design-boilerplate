@@ -148,24 +148,24 @@ body.dark-background {
   text-decoration: var(--headings-subheading-text-decoration);
   text-transform: var(--headings-subheading-text-transform);
 }
-.content-formatted a {
+.content-formatted a:not(.custom-btn) {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
   color: var(--content-link-color);
   text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
 }
-.dark-background .content-formatted a {
+.dark-background .content-formatted a:not(.custom-btn) {
   color: var(--fourth-color);
 }
-.content-formatted a:hover {
+.content-formatted a:not(.custom-btn):hover {
   font-style: var(--content-link-hover-font-style);
   font-weight: var(--content-link-hover-font-weight);
   color: var(--content-link-hover-color);
   text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
 }
-.dark-background .content-formatted a:hover {
+.dark-background .content-formatted a:not(.custom-btn):hover {
   color: var(--fourth-color);
 }
 .content-formatted .custom-btn {
