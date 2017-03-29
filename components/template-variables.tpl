@@ -112,6 +112,10 @@
             "value": "\"Open Sans\", sans-serif"
           },
           {
+            "title": "PT Sans",
+            "value": "\"PT Sans\", sans-serif"
+          },
+          {
             "title": "Raleway",
             "value": "\"Raleway\", sans-serif"
           },
