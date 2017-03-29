@@ -82,6 +82,9 @@
     {% assign container_bg_color_data_str = container_bg_color_data | json %}
   {% endif %}
 
+  {% comment %}=================================================================
+  | Design editor variables.
+  ============================================================= {% endcomment %}
   {% capture base_font_set %}
     [
       {
@@ -102,7 +105,7 @@
           },
           {
             "title": "Montserrat",
-            "value": "Montserrat, Helvetica, Arial, sans-serif"
+            "value": "Montserrat, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
           },
           {
             "title": "Open Sans",
