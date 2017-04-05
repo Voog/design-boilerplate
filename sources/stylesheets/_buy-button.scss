@@ -1,0 +1,17 @@
+// =============================================================================
+// Content area buy button
+// =============================================================================
+.content-formatted {
+  .edy-buy-button-variants {
+    // sass-lint:disable class-name-format
+    .form_field {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .form_field_select {
+      width: initial;
+    }
+    // sass-lint:enable class-name-format
+  }
+}
