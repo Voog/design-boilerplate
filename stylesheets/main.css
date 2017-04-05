@@ -360,6 +360,9 @@ body.dark-background {
   margin-top: 25px;
 }
 
+.content-formatted .edy-buy-button-container .form_field {
+  padding-top: 15px;
+}
 .content-formatted .edy-buy-button-variants .form_field {
   padding-top: 5px;
   padding-bottom: 5px;
