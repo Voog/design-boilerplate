@@ -1,6 +1,6 @@
-#The Pripyat (basic boilerplate) design template for [Voog](https://www.voog.com)
+# The Pripyat (basic boilerplate) design template for [Voog](https://www.voog.com)
 
-##Set up the developing environment
+## Set up the developing environment
 To modify this template [Node Package Manager](https://www.npmjs.org/) (or [Node.js](http://www.nodejs.org/)), [Bower](http://www.bower.io/) and [Grunt](http://www.gruntjs.com/) must be installed.
 
 To set up the local developing environment, clone this repository and run the following commands:
@@ -11,7 +11,7 @@ To set up the local developing environment, clone this repository and run the fo
 
 To sync the template with your **Voog** sites, set up the [Voog Developer Toolkit](http://www.voog.com/developers/kit)
 
-##Watch and update modifications
+## Watch and update modifications
 * To watch (and synchronize) modified files in real time (**on the default site**) start the Grunt watcher task:
   * **Example:** ```grunt watch```
   * **Notes:**
