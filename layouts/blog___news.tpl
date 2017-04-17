@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% include "blog-article-variables" %}
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "template-variables" %}

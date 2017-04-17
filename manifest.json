@@ -200,6 +200,13 @@
       "file": "components/topbar.tpl",
       "layout_name": "topbar",
       "title": "topbar"
+    },
+    {
+      "title": "blog-article-variables",
+      "layout_name": "blog-article-variables",
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-variables.tpl"
     }
   ],
   "assets": [
