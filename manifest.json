@@ -36,6 +36,27 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/post-box.tpl",
+      "layout_name": "post-box",
+      "title": "post-box"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/footer.tpl",
+      "layout_name": "footer",
+      "title": "footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/header.tpl",
+      "layout_name": "header",
+      "title": "header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/html-head.tpl",
       "layout_name": "html-head",
       "title": "html-head"
@@ -85,9 +106,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/post-box.tpl",
-      "layout_name": "post-box",
-      "title": "post-box"
+      "file": "components/comment-form.tpl",
+      "layout_name": "comment-form",
+      "title": "comment-form"
     },
     {
       "content_type": "component",
@@ -181,25 +202,11 @@
       "title": "topbar"
     },
     {
+      "title": "blog-article-variables",
+      "layout_name": "blog-article-variables",
       "content_type": "component",
       "component": true,
-      "file": "components/comment-form.tpl",
-      "layout_name": "comment-form",
-      "title": "comment-form"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/footer.tpl",
-      "layout_name": "footer",
-      "title": "footer"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/header.tpl",
-      "layout_name": "header",
-      "title": "header"
+      "file": "components/blog-article-variables.tpl"
     }
   ],
   "assets": [
