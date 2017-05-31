@@ -502,6 +502,7 @@ body.dark-background {
     padding: 0;
     text-align: left;
     background-color: white;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
   }
   .menu-main.expanded .menu .menu-item {
@@ -586,7 +587,8 @@ body.dark-background {
     line-height: 1;
     text-align: center;
     text-transform: uppercase;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     background-repeat: no-repeat;
   }
   .no-svg .menu-main.expanded .menu-lang .menu-item .menu-link.lang-flag:after {
@@ -609,6 +611,7 @@ body.dark-background {
     border-top: 1px solid rgba(114, 114, 114, 0.2);
     border-bottom: 1px solid #727272;
     border-bottom: 1px solid rgba(114, 114, 114, 0.2);
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
 }
@@ -911,11 +914,11 @@ body.dark-background {
   width: 100%;
 }
 .flexbox .header {
-  display: -webkit-flex;
+  display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-between;
+  -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -942,7 +945,7 @@ body.dark-background {
   text-align: right;
 }
 .flexbox .header {
-  display: -webkit-flex;
+  display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1146,7 +1149,7 @@ body.dark-background {
 
 @media screen and (min-width: 481px) {
   .post-nav-inner {
-    display: -webkit-flex;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
@@ -1155,7 +1158,7 @@ body.dark-background {
 .post-nav-link {
   position: relative;
   display: block;
-  -webkit-flex: 1;
+  -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding-top: 20px;
@@ -1317,7 +1320,8 @@ body.dark-background {
   padding: 7px;
   border: 1px solid #787878;
   border-radius: 3px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 @media screen and (max-width: 420px) {
   .content-formatted .form_field_textfield,
