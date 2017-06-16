@@ -24,7 +24,7 @@
       "component": false,
       "file": "layouts/blog___news.tpl",
       "layout_name": "blog",
-      "title": "Blog & News"
+      "title": "Blog & news"
     },
     {
       "content_type": "blog_article",
