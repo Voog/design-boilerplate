@@ -58,20 +58,19 @@ body.dark-background {
   right: 15px;
 }
 
-.background-image,
-.background-color {
+.background-image, .background-color {
   position: fixed;
   z-index: -2;
 }
-.container .background-image, .container
-.background-color {
+.container .background-image,
+.container .background-color {
   position: static;
   padding: 40px 20px;
   background-color: white;
 }
 @media screen and (max-width: 752px) {
-  .container .background-image, .container
-  .background-color {
+  .container .background-image,
+  .container .background-color {
     padding-top: 1px;
   }
 }
@@ -222,13 +221,12 @@ body.dark-background {
 .content-formatted pre {
   margin-top: 25px;
 }
-.content-formatted pre,
-.content-formatted code {
+.content-formatted pre, .content-formatted code {
   font-size: 14px;
   background-color: #fafafa;
 }
-.dark-background .content-formatted pre, .dark-background
-.content-formatted code {
+.dark-background .content-formatted pre,
+.dark-background .content-formatted code {
   color: black;
 }
 .content-formatted pre {
@@ -922,8 +920,8 @@ body.dark-background {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.no-flexbox .header .header-left, .no-flexbox
-.header .header-right {
+.no-flexbox .header .header-left,
+.no-flexbox .header .header-right {
   display: table-cell;
 }
 .header .header-left {

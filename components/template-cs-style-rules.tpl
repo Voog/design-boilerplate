@@ -125,7 +125,8 @@ body.dark-background {
   line-height: var(--headings-title-line-height);
   color: var(--headings-title-color);
   text-align: var(--headings-title-text-alignment);
-  text-decoration: var(--headings-title-text-decoration);
+  -webkit-text-decoration: var(--headings-title-text-decoration);
+          text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
 .content-formatted h2:not(.comment-title) {
@@ -135,7 +136,8 @@ body.dark-background {
   line-height: var(--headings-heading-line-height);
   color: var(--headings-heading-color);
   text-align: var(--headings-heading-text-alignment);
-  text-decoration: var(--headings-heading-text-decoration);
+  -webkit-text-decoration: var(--headings-heading-text-decoration);
+          text-decoration: var(--headings-heading-text-decoration);
   text-transform: var(--headings-heading-text-transform);
 }
 .content-formatted h3, .content-formatted h4, .content-formatted h5, .content-formatted h6 {
@@ -145,14 +147,16 @@ body.dark-background {
   line-height: var(--headings-subheading-line-height);
   color: var(--headings-subheading-color);
   text-align: var(--headings-subheading-text-alignment);
-  text-decoration: var(--headings-subheading-text-decoration);
+  -webkit-text-decoration: var(--headings-subheading-text-decoration);
+          text-decoration: var(--headings-subheading-text-decoration);
   text-transform: var(--headings-subheading-text-transform);
 }
 .content-formatted a:not(.custom-btn) {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
   color: var(--content-link-color);
-  text-decoration: var(--content-link-text-decoration);
+  -webkit-text-decoration: var(--content-link-text-decoration);
+          text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
 }
 .dark-background .content-formatted a:not(.custom-btn) {
@@ -162,7 +166,8 @@ body.dark-background {
   font-style: var(--content-link-hover-font-style);
   font-weight: var(--content-link-hover-font-weight);
   color: var(--content-link-hover-color);
-  text-decoration: var(--content-link-hover-text-decoration);
+  -webkit-text-decoration: var(--content-link-hover-text-decoration);
+          text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
 }
 .dark-background .content-formatted a:not(.custom-btn):hover {
@@ -179,6 +184,7 @@ body.dark-background {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
   color: var(--content-link-color);
-  text-decoration: var(--content-link-text-decoration);
+  -webkit-text-decoration: var(--content-link-text-decoration);
+          text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
 }
