@@ -29,7 +29,7 @@
     "unit": "px",
     "scope": "global"
   */
-  #{--container-max}-width: 960px;
+  #{--container-max-width}: 960px;
 
   /* VoogStyle
     "pathI18n": ["main_styles"],
@@ -41,7 +41,7 @@
     "boundVariables": [
     ]
   */
-  #{--main-font}-family: $primary-font;
+  #{--main-font-family}: $primary-font;
 
   /* VoogStyle
     "pathI18n": ["main_styles", "colors"],
