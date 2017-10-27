@@ -1,4 +1,4 @@
-{% comment %}FACEBOOK OPEN GRAPH META TAGS{% endcomment%}
+{% comment %}TEMPLATE META DATA{% endcomment %}
 {% comment %}https://developers.facebook.com/tools/debug - Debug after each modification{% endcomment %}
 {% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">{% endif %}
 <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
