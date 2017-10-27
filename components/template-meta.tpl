@@ -33,3 +33,14 @@
   <meta property="og:description" content="{{ description | escape }}">
   <meta name="description" content="{{ description | escape }}">
 {% endif %}
+
+{% comment %}SEO pagination for blog articles.{% endcomment %}
+{% if article %}
+  {% if article.older %}
+    <link rel="prev" href="{{ article.older.url }}">
+  {% endif %}
+
+  {% if article.newer %}
+    <link rel="next" href="{{ article.newer.url }}">
+  {% endif %}
+{% endif %}
