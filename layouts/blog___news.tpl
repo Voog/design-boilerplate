@@ -26,8 +26,10 @@
         {% include "tags-blog" %}
 
         <main class="content" role="main" data-search-indexing-allowed="true">
-          <div style="padding-bottom: 20px" class="content-formatted" {{ edy_intro_edit_text }}>{% content %}</div>
+          <section class="content-body content-formatted post-intro-content" {{ edy_intro_edit_text }}>{% content %}</section>
+
           {% addbutton %}
+          
           {% for article in articles %}
             {% include "post-box" %}
           {% endfor %}

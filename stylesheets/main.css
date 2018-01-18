@@ -1075,6 +1075,10 @@ body.dark-background {
 }
 
 /* BLOG & BLOG ARTICLE */
+.post-intro-content {
+  padding-bottom: 25px;
+}
+
 .post {
   word-break: break-word;
   word-wrap: break-word;

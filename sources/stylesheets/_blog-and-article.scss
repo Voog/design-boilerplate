@@ -1,5 +1,8 @@
 /* BLOG & BLOG ARTICLE */
 // Styling rules for both - the blog listing view and the blog single article view
+.post-intro-content {
+  padding-bottom: 25px;
+}
 .post {
   @include hyphenate(true);
 
