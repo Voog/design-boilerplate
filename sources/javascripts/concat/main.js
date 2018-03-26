@@ -13,7 +13,7 @@
         resultsContainer: $('.js-voog-search-modal-inner').get(0),
         // Defines if modal should close on sideclick.
         sideclick: true,
-        // Mobile checkpoint 
+        // Mobile checkpoint
         mobileModeWidth: 480,
         // Updates results on every keypress.
         updateOnKeypress: true,
