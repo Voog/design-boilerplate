@@ -1,7 +1,6 @@
 {
   "name": "voog-design-boilerplate",
   "devDependencies": {
-    "bourbon": "^4.3.4",
-    "jquery": "^3.2.1"
+    "bourbon": "^4.3.4" 
   }
 }
