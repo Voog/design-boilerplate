@@ -22,9 +22,16 @@ $grey-3: #fafafa;
 
 $disabled: #dadada;
 
+
+// Sign out button
+$color-common-gray: rgb(27,33,36);
+$color-toolbar-bg: rgb(238,238,238);
+$color-silver-2: rgb(196,196,196);
+
+
 // Fonts
 $primary-font: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif;
-
+$avenir: 'Avenir Next', 'AvenirX';
 // Media queries
 $tablet-1: 900px;
 $tablet-2: 752px;

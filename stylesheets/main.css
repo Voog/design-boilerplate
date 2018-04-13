@@ -1075,6 +1075,10 @@ body.dark-background {
 }
 
 /* BLOG & BLOG ARTICLE */
+.post-intro-content {
+  padding-bottom: 25px;
+}
+
 .post {
   word-break: break-word;
   word-wrap: break-word;
@@ -1402,4 +1406,48 @@ body.dark-background {
 .footer .voog-reference a:hover {
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.75);
+}
+
+.signout-btn-wrap {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  z-index: 10000;
+  white-space: nowrap;
+  background-color: #eeeeee;
+  height: 35px;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+.signout-btn-wrap:hover {
+  background-color: #c4c4c4;
+}
+.signout-btn-wrap .signout-link {
+  position: relative;
+  z-index: 10;
+  display: block;
+  padding: 0 10px;
+}
+.signout-btn-wrap .signout-name {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Avenir Next", "AvenirX";
+  line-height: 37px;
+  padding-left: 8px;
+  color: rgba(27, 33, 36, 0.8);
+}
+.signout-btn-wrap .signout-name:hover {
+  color: rgba(27, 33, 36, 0.9);
+}
+.signout-btn-wrap .signout-ico {
+  height: 35px;
+  display: inline-block;
+  color: rgba(27, 33, 36, 0.7);
+}
+.signout-btn-wrap .signout-svg {
+  margin-top: 3px;
 }
