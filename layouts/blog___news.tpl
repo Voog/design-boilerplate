@@ -40,6 +40,7 @@
     </div>
   </div>
 
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "template-tools" %}
   <script>

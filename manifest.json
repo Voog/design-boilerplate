@@ -64,6 +64,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/site-signout.tpl",
+      "layout_name": "site-signout",
+      "title": "site-signout"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/menu-level-1.tpl",
       "layout_name": "menu-level-1",
       "title": "menu-level-1"

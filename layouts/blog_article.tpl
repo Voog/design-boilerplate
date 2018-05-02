@@ -78,6 +78,7 @@
     </div>
   </div>
 
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "template-tools" with 'article' %}
   <script>site.initPostPage();</script>

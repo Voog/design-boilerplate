@@ -540,6 +540,30 @@ MMCQ = (function() {
 }).call(this);
 
 ;(function($) {
+  // ===========================================================================
+  // Binds site search functionality.
+  // ===========================================================================
+  var bindSiteSearch = function(searchForm, languageCode, noResultsString) {
+    if (searchForm) {
+      var search = new VoogSearch(searchForm, {
+        // This defines the number of results per query.
+        per_page: 10,
+        // Language code for restricting the search to page language.
+        lang: languageCode,
+        // If given, an DOM element results are rendered inside that element
+        resultsContainer: $('.js-voog-search-modal-inner').get(0),
+        // Defines if modal should close on sideclick.
+        sideclick: true,
+        // Mobile checkpoint 
+        mobileModeWidth: 480,
+        // Updates results on every keypress.
+        updateOnKeypress: true,
+        // String for feedback if no results are found.
+        noResults: noResultsString
+      });
+    }
+  };
+
   // Remove comments if debouncing is used.
   // Function to limit the rate at which a function can fire.
   // var debounce = function(func, wait, immediate) {
@@ -805,7 +829,8 @@ MMCQ = (function() {
     initFrontPage: initFrontPage,
     initCommonPage: initCommonPage,
     initBlogPage: initBlogPage,
-    initPostPage: initPostPage
+    initPostPage: initPostPage,
+    bindSiteSearch: bindSiteSearch
   });
 
   // Initiates site wide functions.
