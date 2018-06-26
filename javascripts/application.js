@@ -554,7 +554,7 @@ MMCQ = (function() {
         resultsContainer: $('.js-voog-search-modal-inner').get(0),
         // Defines if modal should close on sideclick.
         sideclick: true,
-        // Mobile checkpoint 
+        // Mobile checkpoint
         mobileModeWidth: 480,
         // Updates results on every keypress.
         updateOnKeypress: true,
@@ -712,11 +712,19 @@ MMCQ = (function() {
     $(bgPickerArea).find('.js-background-color').first().css({'background-color' : bgPickerColor});
   };
 
+  var normalizeValue = function(value) {
+    if (value == null || (typeof value == 'string' && value.match(/^[\\'"]+$/))) {
+      return '';
+    } else {
+      return value;
+    }
+  };
+
   // Header background image and color save logic function.
   var bgPickerCommit = function(dataBgKey, data, bgPicker, pageType) {
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
-    commitData.imageSizes = data.imageSizes || '';
+    commitData.imageSizes = normalizeValue(data.imageSizes);
     commitData.color = data.color || '';
     commitData.combinedLightness = bgPicker.combinedLightness;
 

@@ -171,11 +171,19 @@
     $(bgPickerArea).find('.js-background-color').first().css({'background-color' : bgPickerColor});
   };
 
+  var normalizeValue = function(value) {
+    if (value == null || (typeof value == 'string' && value.match(/^[\\'"]+$/))) {
+      return '';
+    } else {
+      return value;
+    }
+  };
+
   // Header background image and color save logic function.
   var bgPickerCommit = function(dataBgKey, data, bgPicker, pageType) {
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
-    commitData.imageSizes = data.imageSizes || '';
+    commitData.imageSizes = normalizeValue(data.imageSizes);
     commitData.color = data.color || '';
     commitData.combinedLightness = bgPicker.combinedLightness;
 
