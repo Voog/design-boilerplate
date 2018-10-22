@@ -11,7 +11,7 @@
 <!--
 <ul class="menu">
   {% for language in site.languages %}
-    <li><a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a></li>
+    <li><a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.locale }}">{{ language.title }}</a></li>
   {% endfor %}
   {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
 </ul>

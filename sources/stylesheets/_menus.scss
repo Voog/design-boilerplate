@@ -385,12 +385,11 @@
   }
 }
 
-// Language flag icons positioning in the spritemap.
+/// Language flag icons positioning in the spritemap.
 $flags:
   (sq, 0 0), // Albanian (Albania)
   (hy, -21px 0), // Armenian (Armenia)
   (bn, -42px 0), // Bengali (Bangladesh)
-  // (pt, -63px 0), // Brazilian Portuguese (Brazil)
   (bg, -84px 0), // Bulgarian (Bulgaria)
   (zh, -105px 0), // Chinese (China)
   (hr, -126px 0), // Croatian (Croatia)
@@ -433,18 +432,21 @@ $flags:
 
   (uk, 0 -60px), // Ukrainian (Ukraine)
   (en, -21px -60px), // American English (United States of America)
-  // (fr, -42px -60px), // French (Ivory Coast)
-  // (en, -63px -60px), // British English (Great Britian)
   (pt, -84px -60px), // Portuguese (Portuguese Republic)
-  // (en, -105px -60px), // Canadian English (Canada)
   (sr, -126px -60px), // Serbian (Republic of Serbia)
   (bn, -147px -60px), // Dutch, French, German (Kingdom of Belgium)
-  // (en, -168px -60px), // Australian English (Commonwealth of Australia)
-  (th, -189px -60px) // Thai (Thailand)
+  (th, -189px -60px), // Thai (Thailand)
+  (en_US, -21px -60px), // American English (United States of America)
+  (en_GB, -63px -60px), // British English (Great Britian)
+  (en_AU, -168px -60px), // Australian English (Commonwealth of Australia)
+  (en_CA, -105px -60px), // Canadian English (Canada)
+  (pt_BR, -63px 0), // Brazilian Portuguese (Brazil)
+  (pt_PT, -63px 0), // Brazilian Portuguese (Brazil)
+  (fr_IC, -42px -60px), // French (Ivory Coast)
 ;
 
 @each $flag, $pos in $flags {
-  .lang-flag-#{$flag}:after {
+  [data-lang-code^="#{$flag}"]:after {
     background-position: $pos;
     content: '';
   }
