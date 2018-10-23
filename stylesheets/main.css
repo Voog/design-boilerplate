@@ -917,13 +917,13 @@ body.dark-background {
   content: '';
 }
 
-[data-lang-code^="pt_PT"]:after {
-  background-position: -63px 0;
+[data-lang-code^="fr_IC"]:after {
+  background-position: -42px -60px;
   content: '';
 }
 
-[data-lang-code^="fr_IC"]:after {
-  background-position: -42px -60px;
+[data-lang-code^="fr_CA"]:after {
+  background-position: -105px -60px;
   content: '';
 }
 
