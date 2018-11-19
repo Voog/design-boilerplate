@@ -667,228 +667,263 @@ body.dark-background {
   content: attr(data-lang-code);
 }
 
-.lang-flag-sq:after {
+[data-lang-code^="sq"]:after {
   background-position: 0 0;
   content: '';
 }
 
-.lang-flag-hy:after {
+[data-lang-code^="hy"]:after {
   background-position: -21px 0;
   content: '';
 }
 
-.lang-flag-bn:after {
+[data-lang-code^="bn"]:after {
   background-position: -42px 0;
   content: '';
 }
 
-.lang-flag-bg:after {
+[data-lang-code^="bg"]:after {
   background-position: -84px 0;
   content: '';
 }
 
-.lang-flag-zh:after {
+[data-lang-code^="zh"]:after {
   background-position: -105px 0;
   content: '';
 }
 
-.lang-flag-hr:after {
+[data-lang-code^="hr"]:after {
   background-position: -126px 0;
   content: '';
 }
 
-.lang-flag-da:after {
+[data-lang-code^="da"]:after {
   background-position: -147px 0;
   content: '';
 }
 
-.lang-flag-cs:after {
+[data-lang-code^="cs"]:after {
   background-position: -168px 0;
   content: '';
 }
 
-.lang-flag-et:after {
+[data-lang-code^="et"]:after {
   background-position: -189px 0;
   content: '';
 }
 
-.lang-flag-fi:after {
+[data-lang-code^="fi"]:after {
   background-position: 0 -15px;
   content: '';
 }
 
-.lang-flag-fr:after {
+[data-lang-code^="fr"]:after {
   background-position: -21px -15px;
   content: '';
 }
 
-.lang-flag-ka:after {
+[data-lang-code^="ka"]:after {
   background-position: -42px -15px;
   content: '';
 }
 
-.lang-flag-de:after {
+[data-lang-code^="de"]:after {
   background-position: -63px -15px;
   content: '';
 }
 
-.lang-flag-el:after {
+[data-lang-code^="el"]:after {
   background-position: -84px -15px;
   content: '';
 }
 
-.lang-flag-hu:after {
+[data-lang-code^="hu"]:after {
   background-position: -105px -15px;
   content: '';
 }
 
-.lang-flag-is:after {
+[data-lang-code^="is"]:after {
   background-position: -126px -15px;
   content: '';
 }
 
-.lang-flag-hi:after {
+[data-lang-code^="hi"]:after {
   background-position: -147px -15px;
   content: '';
 }
 
-.lang-flag-id:after {
+[data-lang-code^="id"]:after {
   background-position: -168px -15px;
   content: '';
 }
 
-.lang-flag-fa:after {
+[data-lang-code^="fa"]:after {
   background-position: -189px -15px;
   content: '';
 }
 
-.lang-flag-he:after {
+[data-lang-code^="he"]:after {
   background-position: 0 -30px;
   content: '';
 }
 
-.lang-flag-it:after {
+[data-lang-code^="it"]:after {
   background-position: -21px -30px;
   content: '';
 }
 
-.lang-flag-ja:after {
+[data-lang-code^="ja"]:after {
   background-position: -42px -30px;
   content: '';
 }
 
-.lang-flag-ko:after {
+[data-lang-code^="ko"]:after {
   background-position: -63px -30px;
   content: '';
 }
 
-.lang-flag-lv:after {
+[data-lang-code^="lv"]:after {
   background-position: -84px -30px;
   content: '';
 }
 
-.lang-flag-lt:after {
+[data-lang-code^="lt"]:after {
   background-position: -105px -30px;
   content: '';
 }
 
-.lang-flag-ms:after {
+[data-lang-code^="ms"]:after {
   background-position: -126px -30px;
   content: '';
 }
 
-.lang-flag-nl:after {
+[data-lang-code^="nl"]:after {
   background-position: -147px -30px;
   content: '';
 }
 
-.lang-flag-no:after {
+[data-lang-code^="no"]:after {
   background-position: -168px -30px;
   content: '';
 }
 
-.lang-flag-ur:after {
+[data-lang-code^="ur"]:after {
   background-position: -189px -30px;
   content: '';
 }
 
-.lang-flag-fil:after {
+[data-lang-code^="fil"]:after {
   background-position: 0 -45px;
   content: '';
 }
 
-.lang-flag-pl:after {
+[data-lang-code^="pl"]:after {
   background-position: -21px -45px;
   content: '';
 }
 
-.lang-flag-ro:after {
+[data-lang-code^="ro"]:after {
   background-position: -42px -45px;
   content: '';
 }
 
-.lang-flag-ru:after {
+[data-lang-code^="ru"]:after {
   background-position: -63px -45px;
   content: '';
 }
 
-.lang-flag-ar:after {
+[data-lang-code^="ar"]:after {
   background-position: -84px -45px;
   content: '';
 }
 
-.lang-flag-sk:after {
+[data-lang-code^="sk"]:after {
   background-position: -105px -45px;
   content: '';
 }
 
-.lang-flag-sl:after {
+[data-lang-code^="sl"]:after {
   background-position: -126px -45px;
   content: '';
 }
 
-.lang-flag-es:after {
+[data-lang-code^="es"]:after {
   background-position: -147px -45px;
   content: '';
 }
 
-.lang-flag-sv:after {
+[data-lang-code^="sv"]:after {
   background-position: -168px -45px;
   content: '';
 }
 
-.lang-flag-tr:after {
+[data-lang-code^="tr"]:after {
   background-position: -189px -45px;
   content: '';
 }
 
-.lang-flag-uk:after {
+[data-lang-code^="uk"]:after {
   background-position: 0 -60px;
   content: '';
 }
 
-.lang-flag-en:after {
+[data-lang-code^="en"]:after {
   background-position: -21px -60px;
   content: '';
 }
 
-.lang-flag-pt:after {
+[data-lang-code^="pt"]:after {
   background-position: -84px -60px;
   content: '';
 }
 
-.lang-flag-sr:after {
+[data-lang-code^="sr"]:after {
   background-position: -126px -60px;
   content: '';
 }
 
-.lang-flag-bn:after {
+[data-lang-code^="bn"]:after {
   background-position: -147px -60px;
   content: '';
 }
 
-.lang-flag-th:after {
+[data-lang-code^="th"]:after {
   background-position: -189px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_US"]:after {
+  background-position: -21px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_GB"]:after {
+  background-position: -63px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_AU"]:after {
+  background-position: -168px -60px;
+  content: '';
+}
+
+[data-lang-code^="en_CA"]:after {
+  background-position: -105px -60px;
+  content: '';
+}
+
+[data-lang-code^="pt_BR"]:after {
+  background-position: -63px 0;
+  content: '';
+}
+
+[data-lang-code^="fr_IC"]:after {
+  background-position: -42px -60px;
+  content: '';
+}
+
+[data-lang-code^="fr_CA"]:after {
+  background-position: -105px -60px;
   content: '';
 }
 
