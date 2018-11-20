@@ -16,8 +16,8 @@
 {% if site.data.touch_icon %}<link rel="apple-touch-icon" href="{{ site.data.touch_icon }}">{% endif %}
 
 {% comment %}STYLESHEETS{% endcomment %}
-<!--[if lt IE 9]>{% stylesheet_link "ie8.css" %}<![endif]-->
-{% stylesheet_link "main.css" %}
+<!--[if lt IE 9]>{% stylesheet_link "ie8.css?v=1" %}<![endif]-->
+{% stylesheet_link "main.css?v=1" %}
 {% if editmode %}<link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">{% endif %}
 <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.css">
 
