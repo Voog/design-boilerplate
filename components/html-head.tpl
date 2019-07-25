@@ -25,7 +25,7 @@
 <script src="{{ javascripts_path }}/modernizr.js"></script>
 
 {% comment %}SITE TITLE{% endcomment %}
-{% title %}
+<title>{% title %}</title>
 
 {% include "open-graph" %}
 
