@@ -36,8 +36,7 @@
 <script src="{{ javascripts_path }}/modernizr-custom.min.js"></script>
 
 {% comment %}SITE TITLE{% endcomment %}
-{% capture page_title %}{% if article %}{{ article.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% else %}{% if site.root_item.selected? and page.site_title != "" %}{{ page.site_title }}{% else %}{{ page.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% endif %}{% endif %}{% endcapture %}
-<title>{{ page_title }}</title>
+<title>{% title %}</title>
 
 {% include "template-meta" %}
 
