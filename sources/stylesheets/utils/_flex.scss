@@ -1,0 +1,145 @@
+.flex_ {
+  &box {
+    display: flex;
+  }
+
+  &auto {
+    flex: auto;
+  }
+
+  &wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &row {
+    display: flex;
+    flex-direction: row;
+
+    @include query($tablet-2) {
+      &.reverse-col-tablet {
+        flex-direction: column-reverse;
+      }
+    }
+
+
+    &-4 {
+      flex-wrap: wrap;
+
+      &--item {
+        width: 25%;
+        margin-bottom: 32px;
+
+        @include query($desktop-1) {
+          width: 33%;
+          margin-bottom: 24px;
+        }
+
+        @include query($tablet-1) {
+          width: 50%;
+          margin-bottom: 16px;
+        }
+
+        @include query($mobile-1) {
+          width: 100%;
+        }
+      }
+    }
+
+    &-3 {
+      flex-wrap: wrap;
+
+      &--item {
+        width: 33%;
+        margin-bottom: 32px;
+
+        @include query($tablet-1) {
+          width: 50%;
+
+        }
+
+        @include query($mobile-1) {
+          width: 100%;
+        }
+
+        .product_list & {
+          @include query($desktop-1, 'min-width') {
+            width: var(--product-list-item__width);
+          }
+
+          .semimodal-relative & {
+            @include query($desktop-3, 'min-width') {
+              width: var(--product-list-item__width);
+            }
+
+            @include query($desktop-3) {
+              width: 33%;
+            }
+
+            @include query($tablet-1) {
+              width: 50%;
+            }
+
+            @include query($mobile-1) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &-2 {
+      flex-wrap: wrap;
+
+      &--item {
+        width: 50%;
+        margin-bottom: 32px;
+
+        @include query($tablet-2) {
+          width: 100%;
+        }
+      }
+
+      &--item-60 {
+        width: 60%;
+        margin-bottom: 32px;
+
+        @include query($tablet-2) {
+          width: 100%;
+        }
+      }
+
+      &--item-40 {
+        width: 40%;
+        margin-bottom: 32px;
+
+        @include query($tablet-2) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &a-center {
+    align-items: center;
+  }
+
+  &j-center {
+    justify-content: center;
+
+    &-mobile {
+      @include query($mobile-1) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &j-space-between {
+    justify-content: space-between;
+  }
+}
