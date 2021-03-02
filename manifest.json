@@ -8,13 +8,6 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
       "file": "layouts/front_page.tpl",
       "layout_name": "page_front",
       "title": "Front page"
@@ -25,6 +18,13 @@
       "file": "layouts/product_list.tpl",
       "layout_name": "page_default",
       "title": "Product list"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
     },
     {
       "content_type": "page",
@@ -141,6 +141,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-settings.tpl",
+      "layout_name": "template-settings",
+      "title": "template-settings"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-main-styles.tpl",
       "layout_name": "template-cs-main-styles",
       "title": "template-cs-main-styles"
@@ -179,6 +186,13 @@
       "file": "components/template-styles.tpl",
       "layout_name": "template-styles",
       "title": "template-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-settings-json.tpl",
+      "layout_name": "template-settings-json",
+      "title": "template-settings-json"
     },
     {
       "content_type": "component",
@@ -254,9 +268,27 @@
   "assets": [
     {
       "content_type": "image/svg+xml",
+      "file": "assets/ico-expand.svg",
+      "kind": "assets",
+      "filename": "ico-expand.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-settings.svg",
+      "kind": "assets",
+      "filename": "ico-settings.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
       "file": "assets/ico-flags.svg",
       "kind": "assets",
       "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-delete.svg",
+      "kind": "assets",
+      "filename": "ico-delete.svg"
     },
     {
       "content_type": "image/png",
@@ -266,9 +298,21 @@
     },
     {
       "content_type": "application/javascript",
+      "file": "javascripts/editmode.js",
+      "kind": "javascripts",
+      "filename": "editmode.js"
+    },
+    {
+      "content_type": "application/javascript",
       "file": "javascripts/application.min.js",
       "kind": "javascripts",
       "filename": "application.min.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/editmode.min.js",
+      "kind": "javascripts",
+      "filename": "editmode.min.js"
     },
     {
       "content_type": "application/javascript",

@@ -82,8 +82,11 @@
   </div>
 
   {% include "site-signout" %}
-  {% include "javascripts" %}
+  {% include "javascripts", _productPage: true %}
   {% include "template-tools" %}
+  <script>
+    site.handleProductPageContent();
+  </script>
 </body>
 
 </html>

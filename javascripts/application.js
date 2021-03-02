@@ -4,7 +4,7 @@
 // Basic CoffeeScript port of the (MMCQ) Modified Media Cut Quantization
 // algorithm from the Leptonica library (http://www.leptonica.com/).
 // Return a color map you can use to map original pixels to the reduced palette.
-// 
+//
 // Rewritten from the JavaScript port (http://gist.github.com/1104622)
 // developed by Nick Rabinowitz under the MIT license.
 
@@ -539,11 +539,11 @@ MMCQ = (function() {
 
 }).call(this);
 
-;(function($) {
+; (function ($) {
   // ===========================================================================
   // Binds site search functionality.
   // ===========================================================================
-  var bindSiteSearch = function(searchForm, languageCode, noResultsString) {
+  var bindSiteSearch = function (searchForm, languageCode, noResultsString) {
     if (searchForm) {
       var search = new VoogSearch(searchForm, {
         // This defines the number of results per query.
@@ -566,27 +566,43 @@ MMCQ = (function() {
 
   // Remove comments if debouncing is used.
   // Function to limit the rate at which a function can fire.
-  // var debounce = function(func, wait, immediate) {
-  //   var timeout;
-  //   return function() {
-  //     var context = this, args = arguments;
-  //     var later = function() {
-  //       timeout = null;
-  //       if (!immediate) func.apply(context, args);
-  //     };
-  //     var callNow = immediate && !timeout;
-  //     clearTimeout(timeout);
-  //     timeout = setTimeout(later, wait);
-  //     if (callNow) func.apply(context, args);
-  //   };
-  // };
+  var debounce = function (func, wait, immediate) {
+    var timeout;
+    return function () {
+      var context = this, args = arguments;
+      var later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  var bindSideClicks = function() {
+    $('.container, .bg_img-cover, .content_wrap, .header_fixed, swiper-container').on('mousedown', function(event) {
+      if (!$(event.target).closest('.js-prevent-sideclick').length) {
+        //$('.js-semimodal-toggle').removeClass('semimodal-open');
+        //$('.js-popover').removeClass('expanded');
+        //$('html').removeClass('search-open');
+        //$('.js-search, .menu_popover').removeClass('active');
+        //$('.search-btn').removeClass('open');
+        //$('html').removeClass('menu-language-popover-open');
+        //$('body').removeClass('layout_settings-visible');
+        //$('.editor_default-container').removeClass('active');
+        $('.js-image-settings-popover').toggleClass('active');
+      };
+    });
+  };
 
   var editmode = function () {
     return $('html').hasClass('editmode');
   };
 
-  var bindSideClicks = function() {
-    $('.container').on('mousedown', function(event) {
+  var bindSideClicks = function () {
+    $('.container').on('mousedown', function (event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         $('.js-popover').removeClass('expanded');
         $('.js-search-close-btn').trigger('click');
@@ -595,24 +611,24 @@ MMCQ = (function() {
   };
 
   // Switches the site language to the selected value from the language menu.
-  var handleLanguageSwitch = function() {
-    $('.menu-lang').find('.menu').change(function() {
+  var handleLanguageSwitch = function () {
+    $('.menu-lang').find('.menu').change(function () {
       window.location = $(this).find(':selected').val();
     });
   };
 
   // Shows/hides the popover main menu (visible on smalles screens).
-  var toggleMainMenu = function() {
-    $('.js-menu-btn').click(function() {
+  var toggleMainMenu = function () {
+    $('.js-menu-btn').click(function () {
       $(this).toggleClass('open');
       $('.js-menu-main').toggleClass('expanded');
     });
   };
 
   // Removes optional content elements if element doesn't have any content.
-  var removeOptionalContent = function() {
+  var removeOptionalContent = function () {
     optionalContent = $('.js-content-optional');
-    $.each( $(optionalContent), function(){
+    $.each($(optionalContent), function () {
       optionalContentLength = $(this).text().trim().length;
 
       if (!optionalContentLength > 0) {
@@ -622,8 +638,8 @@ MMCQ = (function() {
   };
 
   // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)
-  var focusFormWithErrors = function() {
-    $(document).ready(function() {
+  var focusFormWithErrors = function () {
+    $(document).ready(function () {
       if ($('.comment-form').hasClass('form_with_errors')) {
         $('html, body').scrollTop($('.comment-form').offset().top);
       } else if ($('form').find('.form_error, .form_notice').length > 0) {
@@ -634,12 +650,12 @@ MMCQ = (function() {
 
   // Wraps tables in the container.
   // TODO: remove if edicy is going to wrap table with the container.
-  var wrapTables = function() {
+  var wrapTables = function () {
     $('.content-formatted table').wrap('<div class="table-container"></div>');
   };
 
   // Returns the suitable version of the image depending on the viewport width.
-  var getImageByWidth = function(sizes, targetWidth) {
+  var getImageByWidth = function (sizes, targetWidth) {
     var prevImage;
 
     for (var i = 0, max = sizes.length; i < max; i++) {
@@ -652,7 +668,7 @@ MMCQ = (function() {
     return sizes[sizes.length - 1];
   };
 
-  var bgPickerImageSizesContains = function(sizes, url) {
+  var bgPickerImageSizesContains = function (sizes, url) {
     for (var i = sizes.length; i--;) {
       if (url.indexOf(sizes[i].url.trim()) > -1) {
         return true;
@@ -662,7 +678,7 @@ MMCQ = (function() {
   };
 
   // Checks the lightness sum of header background image and color and sets the lightness class depending on it's value.
-  var bgPickerContentLightnessClass = function(bgPickerArea, combinedLightness) {
+  var bgPickerContentLightnessClass = function (bgPickerArea, combinedLightness) {
     if (combinedLightness >= 0.5) {
       $(bgPickerArea).find('> .js-background-type').addClass('light-background').removeClass('dark-background');
     } else {
@@ -671,18 +687,18 @@ MMCQ = (function() {
   };
 
   // Header background image and color preview logic function.
-  var bgPickerPreview = function(bgPickerArea, data, bgPicker) {
+  var bgPickerPreview = function (bgPickerArea, data, bgPicker) {
     // Defines the variables used in preview logic.
 
     var bgPickerImagePrevious = $(bgPickerArea).css('background-image'),
-        bgPickerImageSuitable = data.imageSizes ? getImageByWidth(data.imageSizes, $(window).width()) : null,
-        bgPickerImage = (data.image && data.image !== '') ? 'url(' + bgPickerImageSuitable.url + ')' : 'none',
-        bgPickerImageSizes = (data.imageSizes && data.imageSizes !== '') ? data.imageSizes : null,
-        bgPickerColor = (data.color && data.color !== '') ? data.color : 'rgba(0,0,0,0)',
-        bgPickerColorDataLightness = (data.colorData && data.colorData !== '') ? data.colorData.lightness : 1,
-        colorExtractImage = $('<img>'),
-        colorExtractCanvas = $('<canvas>'),
-        colorExtractImageUrl = (data.image && data.image !== '') ? data.image : null;
+      bgPickerImageSuitable = data.imageSizes ? getImageByWidth(data.imageSizes, $(window).width()) : null,
+      bgPickerImage = (data.image && data.image !== '') ? 'url(' + bgPickerImageSuitable.url + ')' : 'none',
+      bgPickerImageSizes = (data.imageSizes && data.imageSizes !== '') ? data.imageSizes : null,
+      bgPickerColor = (data.color && data.color !== '') ? data.color : 'rgba(0,0,0,0)',
+      bgPickerColorDataLightness = (data.colorData && data.colorData !== '') ? data.colorData.lightness : 1,
+      colorExtractImage = $('<img>'),
+      colorExtractCanvas = $('<canvas>'),
+      colorExtractImageUrl = (data.image && data.image !== '') ? data.image : null;
 
     if (colorExtractImageUrl) {
       if (bgPickerImageSizesContains(bgPickerImageSizes, bgPickerImagePrevious)) {
@@ -691,9 +707,9 @@ MMCQ = (function() {
         bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
 
       } else {
-        colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/(photos|voogstock)/g,'/photos'));
-        colorExtractImage.on('load', function() {
-          ColorExtract.extract(colorExtractImage[0], colorExtractCanvas[0], function(data) {
+        colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/(photos|voogstock)/g, '/photos'));
+        colorExtractImage.on('load', function () {
+          ColorExtract.extract(colorExtractImage[0], colorExtractCanvas[0], function (data) {
             bgPicker.imageColor = data.bgColor ? data.bgColor : 'rgba(255,255,255,1)';
             bgPicker.combinedLightness = getCombinedLightness(bgPicker.imageColor, bgPickerColor);
             bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
@@ -708,11 +724,11 @@ MMCQ = (function() {
     };
 
     // Updates the bgPickerContent background image and background color.
-    $(bgPickerArea).find('.js-background-image').first().css({'background-image' : bgPickerImage});
-    $(bgPickerArea).find('.js-background-color').first().css({'background-color' : bgPickerColor});
+    $(bgPickerArea).find('.js-background-image').first().css({ 'background-image': bgPickerImage });
+    $(bgPickerArea).find('.js-background-color').first().css({ 'background-color': bgPickerColor });
   };
 
-  var normalizeValue = function(value) {
+  var normalizeValue = function (value) {
     if (value == null || (typeof value == 'string' && value.match(/^[\\'"]+$/))) {
       return '';
     } else {
@@ -721,7 +737,7 @@ MMCQ = (function() {
   };
 
   // Header background image and color save logic function.
-  var bgPickerCommit = function(dataBgKey, data, bgPicker, pageType) {
+  var bgPickerCommit = function (dataBgKey, data, bgPicker, pageType) {
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
     commitData.imageSizes = normalizeValue(data.imageSizes);
@@ -735,15 +751,15 @@ MMCQ = (function() {
     };
   };
 
-  var colorSum = function(bgColor, fgColor) {
+  var colorSum = function (bgColor, fgColor) {
     if (bgColor && fgColor) {
       if (typeof bgColor == 'string') {
-        bgColor = bgColor.replace(/rgba?\(/,'').replace(/\)/,'').split(',');
-        $.each(bgColor, function(n, x) {bgColor[n] = +x;});
+        bgColor = bgColor.replace(/rgba?\(/, '').replace(/\)/, '').split(',');
+        $.each(bgColor, function (n, x) { bgColor[n] = +x; });
       }
       if (typeof fgColor == 'string') {
-        fgColor = fgColor.replace(/rgba?\(/,'').replace(/\)/,'').split(',');
-        $.each(fgColor, function(n, x) {fgColor[n] = +x;});
+        fgColor = fgColor.replace(/rgba?\(/, '').replace(/\)/, '').split(',');
+        $.each(fgColor, function (n, x) { fgColor[n] = +x; });
       }
       if (typeof bgColor == 'object' && bgColor.hasOwnProperty('length')) {
         if (bgColor.length == 3) { bgColor.push(1.0); }
@@ -757,22 +773,22 @@ MMCQ = (function() {
       result[0] = Math.min(fgColor[0] * fgColor[3] / result[3] + bgColor[0] * bgColor[3] * (1 - fgColor[3]) / result[3], 255);
       result[1] = Math.min(fgColor[1] * fgColor[3] / result[3] + bgColor[1] * bgColor[3] * (1 - fgColor[3]) / result[3], 255);
       result[2] = Math.min(fgColor[2] * fgColor[3] / result[3] + bgColor[2] * bgColor[3] * (1 - fgColor[3]) / result[3], 255);
-      return $.map(result, function(e) { return Math.floor(e); });
+      return $.map(result, function (e) { return Math.floor(e); });
     }
   };
 
-  var getCombinedColor = function(bgColor, fgColor) {
-    var sum = colorSum(bgColor || [255,255,255,1], fgColor || [255,255,255,1]);
+  var getCombinedColor = function (bgColor, fgColor) {
+    var sum = colorSum(bgColor || [255, 255, 255, 1], fgColor || [255, 255, 255, 1]);
     return sum;
   };
 
-  var getCombinedLightness = function(bgColor, fgColor) {
+  var getCombinedLightness = function (bgColor, fgColor) {
     var combinedColor = getCombinedColor(bgColor, fgColor);
     var color = Math.round(((+combinedColor[0]) * 0.2126 + (+combinedColor[1]) * 0.7152 + (+combinedColor[2]) * 0.0722) / 2.55) / 100;
     return color;
   };
 
-  var bgPickerColorScheme = function(lightness) {
+  var bgPickerColorScheme = function (lightness) {
     if (typeof lightness != 'undefined') {
       if (lightness > 0.6) {
         $('.header-wrapper').addClass('light').removeClass('dark');
@@ -782,38 +798,38 @@ MMCQ = (function() {
     }
   };
 
-  var bindCustomTexteditorStyles = function() {
+  var bindCustomTexteditorStyles = function () {
     window.edy = window.edy || [];
-    edy.push(['texteditorStyles', {name: 'Button', tagname:'a', attribute: {'href': '#'}, classname: 'custom-btn', toggle: true}]);
+    edy.push(['texteditorStyles', { name: 'Button', tagname: 'a', attribute: { 'href': '#' }, classname: 'custom-btn', toggle: true }]);
   };
 
   // Initiates the table horisontal scroll function when window is resized.
-  var handleWindowResize = function() {
+  var handleWindowResize = function () {
     // Add functions that should be triggered while resizing the window here.
     // Example:
     // $(window).resize(debounce(yourFunctionName, 3000));
   };
 
   // FUNCTIONS INITIATIONS
-  var initFrontPage = function() {
+  var initFrontPage = function () {
     // Add front page layout specific functions here.
     removeOptionalContent();
   };
 
-  var initCommonPage = function() {
+  var initCommonPage = function () {
     // Add common page specific functions here.
 
   };
 
-  var initBlogPage = function() {
+  var initBlogPage = function () {
     // Add blog listing layout specific functions here.
   };
 
-  var initPostPage = function() {
+  var initPostPage = function () {
     // Add single post layout specific functions here.
   };
 
-  var init = function() {
+  var init = function () {
     // Add site wide functions here.
     bindSideClicks();
     handleLanguageSwitch();
@@ -828,6 +844,70 @@ MMCQ = (function() {
     }
   };
 
+  var toggleImageSettingsPopover = function () {
+    $('.js-image-settings-popover').toggleClass('active');
+  }
+
+  $('.js-toggle-image-settings').click(function () {
+    toggleImageSettingsPopover();
+  });
+
+  // ===========================================================================
+  // Load article cover images only when they are close or appearing in the
+  // viewport.
+  // ===========================================================================
+  var callback_loaded = function (element) {
+    var $contentItemBox = $(element).closest('.js-content-item-box');
+    $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
+  };
+
+  var bindContentItemImageLazyload = new LazyLoad({
+    threshold: 500,
+    elements_selector: ".js-lazyload",
+    callback_loaded: callback_loaded
+  });
+
+  var handleProductPageContent = function () {
+    $(document).ready(function () {
+      changeProductImagePos();
+    });
+
+    $(window).resize(debounce(function () {
+      changeProductImagePos();
+    }, 25));
+
+    var changeProductImagePos = function () {
+      var paroductImage = $('.js-product-page-image');
+      var paroductImageWrap = $('.js-product-page-image-wrap');
+      var buyBtnContent = $('.js-buy-btn-content');
+
+      if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
+        if ($(window).width() <= 752) {
+          if ($('.js-buy-btn-content .js-product-page-image').length <= 0) {
+            buyBtnContent.prepend(paroductImage);
+          }
+        } else {
+          if ($('.js-product-page-image-wrap .js-product-page-image').length <= 0) {
+            paroductImageWrap.prepend(paroductImage);
+          }
+        }
+      }
+    }
+  }
+
+  var handleFocus = function (el, func) {
+    el.focus(function () {
+      $(window).keyup(function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 9) {
+          func()
+        }
+      });
+    });
+  }
+
+  handleFocus($('.js-toggle-image-settings'), toggleImageSettingsPopover);
+
   // Enables the usage of the initiations outside this file.
   // For example add "<script>site.initBlogPage();</script>" at the end of the "Blog & News" page to initiate blog listing view functions.
   window.site = $.extend(window.site || {}, {
@@ -838,9 +918,12 @@ MMCQ = (function() {
     initCommonPage: initCommonPage,
     initBlogPage: initBlogPage,
     initPostPage: initPostPage,
-    bindSiteSearch: bindSiteSearch
+    bindSiteSearch: bindSiteSearch,
+    handleProductPageContent: handleProductPageContent
   });
 
   // Initiates site wide functions.
   init();
 })(jQuery);
+
+

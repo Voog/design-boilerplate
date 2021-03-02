@@ -1,3 +1,4 @@
+{% include "template-settings" %}
 {% capture dont_render %}
   {% comment %}SITE BODY RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
@@ -81,6 +82,10 @@
   {% else %}
     {% assign container_bg_color_data_str = container_bg_color_data | json %}
   {% endif %}
+
+  {%- assign itemImageKey = template_settings.page.item_image.key -%}
+  {%- assign itemImageCropStateKey = template_settings.page.image_crop_state.key -%}
+  {%- assign itemImageAltAttrKey = template_settings.page.image_alt_attr.key -%}
 
   {% comment %}=================================================================
   | Design editor variables.

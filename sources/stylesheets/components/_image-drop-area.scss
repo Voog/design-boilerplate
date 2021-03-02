@@ -1,0 +1,167 @@
+.item-top {
+  @include aspect-ratio(1, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  article & {
+    @include aspect-ratio(2, 1);
+  }
+
+  &:hover {
+    .btn,
+    .custom-btn {
+      opacity: 1;
+      transition: all .6s;
+    }
+  }
+
+  .custom-btn,
+  .btn {
+    opacity: 0;
+    transition: all .6s;
+  }
+
+  .btn {
+    padding: 0;
+    background-color: $editor-grey;
+    border: 0;
+
+    &:hover svg {
+      opacity: .7;
+    }
+  }
+
+  .bg-crop-btn {
+    @include size(45px 40px);
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: $white;
+
+    &.is-visible {
+      display: block;
+    }
+
+    &.is-hidden,
+    .without-image .editmode & {
+      display: none;
+    }
+  }
+
+  .without-image & {
+    background-color: $white;
+    background-image: url('../assets/ico-placeholder.svg');
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .top-inner {
+    // scss-lint:disable ImportantRule
+    display: flex !important;
+    // scss-lint:enable ImportantRule
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+
+    .without-image .editmode & {
+      border: none;
+    }
+
+    .cms-blog-article-add-button & {
+      border: none;
+    }
+  }
+
+  .edy-img-drop-area {
+    opacity: 1;
+  }
+
+  .image-drop-area {
+    // scss-lint:disable ImportantRule
+    background-position: center !important;
+    // scss-lint:enable ImportantRule
+    background-repeat: no-repeat !important;
+
+    &.not-cropped {
+      background-size: contain !important;
+    }
+
+    &.is-cropped {
+      background-size: cover !important;
+    }
+
+    &:not(.active) {
+      border: none;
+    }
+
+    &:hover {
+      .btn {
+        opacity: 1;
+      }
+    }
+
+    .edy-img-drop-area-remove-image {
+      display: none !important;
+    }
+
+    .edy-img-drop-area-placeholder {
+      @media screen and (max-width: $mobile-1) {
+        font-size: 13px;
+        margin-top: 48px;
+      }
+
+      @media screen and (min-width: $mobile-1 + 1) {
+        font-size: 16px;
+        margin-top: 64px;
+      }
+    }
+  }
+}
+
+.item-image {
+  border: 0;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @include transition(transform 200ms);
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
+
+  &.not-cropped {
+    object-fit: contain;
+    font-family: 'object-fit: contain;'; // uses object-fit-images polyfill
+  }
+
+  &.is-cropped {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';  // uses object-fit-images polyfill
+  }
+
+
+  .item-list-page & {
+    display: block;
+  }
+}
+
+
+.item-placeholder {
+  width: 100%;
+  padding: .5em;
+  box-sizing: border-box;
+}
