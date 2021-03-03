@@ -6,8 +6,8 @@
     $('.js-content-item-img-drop-area').each(function (index, imgDropAreaTarget) {
       var $imgDropAreaTarget = $(imgDropAreaTarget),
         $contentItemBox = $imgDropAreaTarget.closest('.js-content-item-box'),
-        $removeBtn = $contentItemBox.find('.image_settings-remove')
-      itemId = $contentItemBox.data('item-id'),
+        $removeBtn = $contentItemBox.find('.image_settings-remove'),
+        itemId = $contentItemBox.data('item-id'),
         itemType = $contentItemBox.data('item-type'),
         itemImageType = $contentItemBox.data('image-type'),
         itemData = new Edicy.CustomData({
@@ -137,12 +137,6 @@
       ;
     el.closest('.js-content-item-box').find('.edy-img-drop-area').removeClass('active');
     el.closest('.image_settings').hide();
-
-    // Remove alt image data
-    el.closest('.js-content-item-box').find('.image_settings-remove--input').val('');
-    el.closest('.js-content-item-box').find('.image_settings-remove--input').trigger('change');
-    el.closest('.js-content-item-box').find('.form_field-cms').removeClass('with-input');
-    $('.image_settings').hide();
   };
 
   // ===========================================================================

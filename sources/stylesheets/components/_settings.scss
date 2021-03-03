@@ -314,6 +314,69 @@ body .edy-settings-editor:not(.editor_default) {
   }
 }
 
+.form_field-cms {
+  margin-bottom: 0;
+  padding: 11px 16px;
+  resize: none;
+  min-height: auto;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 24px;
+  transition: all .3s cubic-bezier(.1,.6,0,1);
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  position: relative;
+
+  &:hover {
+    border-color: #ccc;
+  }
+
+  label {
+    pointer-events: none;
+    position: absolute;
+    top: 16px;
+    left: 9px;
+    font-size: 14px;
+    font-weight: inherit;
+    white-space: nowrap;
+    padding: 0 8px;
+    background-color: transparent;
+    line-height: 16px;
+    color: #8d9091;
+    transition: all .3s cubic-bezier(.1,.6,0,1);
+  }
+
+  input::-webkit-input-placeholder {
+    color: transparent
+  }
+
+  &.with-input {
+    label {
+      top: -8px;
+      font-size: 12px;
+      font-weight: 600;
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  input {
+    flex-grow: 1;
+    background-color: #fff;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font: inherit;
+  }
+
+  label,
+  input {
+    color: black;
+  }
+}
+
 .bottom-settings-popover.edy-popover {
   &.first {
     bottom: 213px !important;

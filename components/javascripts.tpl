@@ -6,7 +6,7 @@
 <script src="{{ javascripts_path }}/application.js?v=1.1"></script>
 
 {%- if editmode -%}
-  <script src="{{ javascripts_path }}/editmode.min.js?v=1"></script>
+  <script src="{{ javascripts_path }}/editmode.js?v=1"></script>
 {%- endif -%}
 
 {% if editmode %}

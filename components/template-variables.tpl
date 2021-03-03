@@ -87,6 +87,9 @@
   {%- assign itemImageCropStateKey = template_settings.page.image_crop_state.key -%}
   {%- assign itemImageAltAttrKey = template_settings.page.image_alt_attr.key -%}
 
+  {% assign product_list_layout = "Product list" %}
+  {% assign product_layout = "Product" %}
+
   {% comment %}=================================================================
   | Design editor variables.
   ============================================================= {% endcomment %}

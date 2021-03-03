@@ -326,34 +326,6 @@
     callback_loaded: callback_loaded
   });
 
-  var handleProductPageContent = function () {
-    $(document).ready(function () {
-      changeProductImagePos();
-    });
-
-    $(window).resize(debounce(function () {
-      changeProductImagePos();
-    }, 25));
-
-    var changeProductImagePos = function () {
-      var paroductImage = $('.js-product-page-image');
-      var paroductImageWrap = $('.js-product-page-image-wrap');
-      var buyBtnContent = $('.js-buy-btn-content');
-
-      if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
-        if ($(window).width() <= 752) {
-          if ($('.js-buy-btn-content .js-product-page-image').length <= 0) {
-            buyBtnContent.prepend(paroductImage);
-          }
-        } else {
-          if ($('.js-product-page-image-wrap .js-product-page-image').length <= 0) {
-            paroductImageWrap.prepend(paroductImage);
-          }
-        }
-      }
-    }
-  }
-
   var handleFocus = function (el, func) {
     el.focus(function () {
       $(window).keyup(function (e) {
@@ -367,12 +339,78 @@
 
   handleFocus($('.js-toggle-image-settings'), toggleImageSettingsPopover);
 
+  var initProductListPage = function() {
+
+    function fadeAnimation(wrapper) {
+      wrapper.find('.js-product-item').each(function() {
+        var item = $(this);
+        var delay = item.index();
+        item.css({'opacity':'0', 'transition': 'none'});
+        setTimeout((function() {
+          item.animate({'opacity':'1'}, 500);
+        }), delay * 40);
+      });
+    }
+
+    $(".product_list-search").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      fadeAnimation($('.product_list'));
+      $(".product_list .js-product-item").filter(function() {
+        $(this).toggle($(this).attr("data-title").toLowerCase().indexOf(value) > -1)
+      });
+    });
+
+    $('.product_list-filter').on('change', function() {
+      if (this.value === 'price-default') {
+        var $wrapper = $('.product_list');
+        fadeAnimation($wrapper);
+        $wrapper.find('.js-product-item').sort(function(a, b) {
+          return +a.dataset.index - +b.dataset.index;
+        })
+        .prependTo($wrapper);
+      } else if (this.value === 'price-ascending') {
+        var $wrapper = $('.product_list');
+        fadeAnimation($wrapper);
+        $wrapper.find('.js-product-item[data-price]').sort(function(a, b) {
+          return +a.dataset.price - +b.dataset.price;
+        })
+        .prependTo($wrapper);
+      } else if (this.value === 'price-descending') {
+        var $wrapper = $('.product_list');
+        fadeAnimation($wrapper);
+        $wrapper.find('.js-product-item[data-price]').sort(function(a, b) {
+          return +b.dataset.price - +a.dataset.price;
+        })
+        .prependTo($wrapper);
+      } else if (this.value === 'title-ascending') {
+        var $wrapper = $('.product_list');
+        fadeAnimation($wrapper);
+        $wrapper.find('.js-product-item').sort(function(a, b) {
+          if(a.dataset.title < b.dataset.title) { return -1; }
+          if(a.dataset.title > b.dataset.title) { return 1; }
+          return 0;
+        })
+        .prependTo($wrapper);
+      } else if (this.value === 'title-descending') {
+        var $wrapper = $('.product_list');
+        fadeAnimation($wrapper);
+        $wrapper.find('.js-product-item').sort(function(a, b) {
+          if(a.dataset.title < b.dataset.title) { return 1; }
+          if(a.dataset.title > b.dataset.title) { return -1; }
+          return 0;
+        })
+        .prependTo($wrapper);
+      }
+    });
+  };
+
   // Enables the usage of the initiations outside this file.
   // For example add "<script>site.initBlogPage();</script>" at the end of the "Blog & News" page to initiate blog listing view functions.
   window.site = $.extend(window.site || {}, {
     bgPickerPreview: bgPickerPreview,
     bgPickerCommit: bgPickerCommit,
     bgPickerColorScheme: bgPickerColorScheme,
+    initProductListPage: initProductListPage,
     initFrontPage: initFrontPage,
     initCommonPage: initCommonPage,
     initBlogPage: initBlogPage,

@@ -66,30 +66,6 @@
         @include query($mobile-1) {
           width: 100%;
         }
-
-        .product_list & {
-          @include query($desktop-1, 'min-width') {
-            width: var(--product-list-item__width);
-          }
-
-          .semimodal-relative & {
-            @include query($desktop-3, 'min-width') {
-              width: var(--product-list-item__width);
-            }
-
-            @include query($desktop-3) {
-              width: 33%;
-            }
-
-            @include query($tablet-1) {
-              width: 50%;
-            }
-
-            @include query($mobile-1) {
-              width: 100%;
-            }
-          }
-        }
       }
     }
 

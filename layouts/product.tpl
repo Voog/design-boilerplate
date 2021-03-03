@@ -42,20 +42,20 @@
                 {% endif %}
 
                 {%- if page.data[itemImageKey] != blank -%}
-                {%- assign productImage = page.data[itemImageKey] -%}
-                {%- assign isProductImage = false -%}
+                  {%- assign productImage = page.data[itemImageKey] -%}
+                  {%- assign isProductImage = false -%}
                 {%- elsif buyButtonImage != blank -%}
-                {%- assign productImage = buyButtonImage -%}
-                {%- assign isProductImage = true -%}
+                  {%- assign productImage = buyButtonImage -%}
+                  {%- assign isProductImage = true -%}
                 {%- else -%}
-                {%- assign productImage = page.image -%}
-                {%- assign isProductImage = false -%}
+                  {%- assign productImage = page.image -%}
+                  {%- assign isProductImage = false -%}
                 {%- endif -%}
 
                 {%- if productImage != blank or editmode -%}
                 <div class="js-product-page-image  mar_b-32">
                   {% include 'content-item', _isProductImage: isProductImage, _imageData: productImage, _entityData:
-                  page, _itemType: 'page', _id: page.id, _staticItem: isPostImageStatic, _targetWidth: '1280' %}
+                  page, _itemType: 'page', _id: page.id, _targetWidth: '1280' %}
                 </div>
                 {%- endif -%}
               </div>
@@ -84,9 +84,6 @@
   {% include "site-signout" %}
   {% include "javascripts", _productPage: true %}
   {% include "template-tools" %}
-  <script>
-    site.handleProductPageContent();
-  </script>
 </body>
 
 </html>

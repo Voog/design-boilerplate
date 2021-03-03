@@ -52,7 +52,7 @@
 
     {% include 'image-src-variable', _data: _imageData, _targetWidth: _targetWidth %} 
 
-    <div class="item-top{% if blog_listing_page == true or blog_article_page == true %} max-h-464{% endif %}">
+    <div class="item-top">
       <div class="top-inner aspect-ratio-inner image-drop-area {{ image_crop_state }} js-content-item-img-drop-area js-lazyload"
         data-image="{{ _src }}"
         {%- if _isProductImage == true -%}
@@ -64,8 +64,8 @@
     </div>
   </div>
 {% else %}
-  <{{wrapperTag}} class="content-item-box {{ item_image_state }} js-content-item-box not-loaded"{% if _staticItem != true %} href="{{ _entityData.url }}"{% endif %}>
-    <div class="item-top{% if blog_listing_page == true or blog_article_page == true %} max-h-464{% endif %}">
+  <{{ wrapperTag }} class="content-item-box {{ item_image_state }} js-content-item-box not-loaded"{% if _staticItem != true %} href="{{ _entityData.url }}"{% endif %}>
+    <div class="item-top">
       <div class="top-inner of-hidden">
         {% if _imageData != blank %}
           <div class="loader js-loader"></div>
@@ -76,5 +76,5 @@
         {% endif %}
       </div>
     </div>
-  </{{wrapperTag}}>
+  </{{ wrapperTag }}>
 {% endif %}
