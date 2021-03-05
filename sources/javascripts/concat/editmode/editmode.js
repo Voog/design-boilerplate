@@ -137,6 +137,12 @@
       ;
     el.closest('.js-content-item-box').find('.edy-img-drop-area').removeClass('active');
     el.closest('.image_settings').hide();
+
+    // Remove alt image data
+    el.closest('.js-content-item-box').find('.image_settings-remove--input').val('');
+    el.closest('.js-content-item-box').find('.image_settings-remove--input').trigger('change');
+    el.closest('.js-content-item-box').find('.form_field-cms').removeClass('with-input');
+    $('.image_settings').hide();
   };
 
   // ===========================================================================
@@ -282,53 +288,6 @@
     };
   };
 
-  var initSettingsEditorBtn = function () {
-    window.addEventListener('DOMContentLoaded', function (event) {
-      var shadowDom = document.querySelector(".edy-next-shadowdom").shadowRoot;
-      var setSettingsBtn = setInterval(function () {
-        if (shadowDom.querySelectorAll('div[class^="toolbar__"]').length) {
-          var toolbarExpandBtn = shadowDom.querySelector('div[class^="toolbar-expand"]');
-          var toolbar = shadowDom.querySelector('div[class^="toolbar__"]');
-          var settingsBtn = document.querySelector(".js-layout_settings-btn");
-          var toolbarItem = shadowDom.querySelector('div[class^="toolbar-content-item__"]');
-
-          settingsBtn.className = toolbarItem.className + ' ' + settingsBtn.className;
-
-          toolbar.insertBefore(settingsBtn, toolbarExpandBtn);
-
-          shadowDom.querySelector(".js-layout_settings-btn").addEventListener(
-            "click", function (e) {
-              document.querySelector('body').classList.toggle('layout_settings-visible');
-              e.stopImmediatePropagation();
-            }
-          );
-
-          var positionPopover = function () {
-            var settingsPopover = $('.js-layout_settings-popover');
-            var settingsPopoverArrow = $('.layout_settings-arrow');
-
-            if ($(window).width() > 768) {
-              settingsPopover.css({ right: window.innerWidth - settingsBtn.getBoundingClientRect().right - (settingsPopover.width() / 2) })
-              settingsPopoverArrow.css({ right: settingsPopover.width() / 2 });
-            } else {
-              settingsPopover.css({ right: 0 });
-              settingsPopoverArrow.css({ right: 72 });
-            }
-          }
-
-          $(window).resize(debounce(function () {
-            positionPopover();
-          }, 25));
-
-          positionPopover();
-          clearInterval(setSettingsBtn);
-        }
-      }, 500);
-
-      $('body').append($('.js-layout_settings-popover'));
-    });
-  }
-
   var bindProductListeners = function (placeholderText, pageId) {
     document.addEventListener('voog:ecommerce:buttonproductsave', function (event) {
       handleProductImage(placeholderText, pageId, event);
@@ -344,7 +303,7 @@
   var init = function () {
     bindCustomTexteditorStyles();
     bindCustomDataItem();
-    //handleDocument();
+    //<handleDocument();
   };
 
   // Enables the usage of the initiations outside this file.
@@ -353,7 +312,6 @@
     bindContentItemImgDropAreas: bindContentItemImgDropAreas,
     bindContentItemImageCropToggle: bindContentItemImageCropToggle,
     bindProductListeners: bindProductListeners,
-    initSettingsEditorBtn: initSettingsEditorBtn
   });
 
   // Initiates site wide functions.

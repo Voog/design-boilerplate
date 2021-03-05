@@ -20,14 +20,14 @@
 @import 'footer';
 @import 'site-signout';
 
-@import 'utils/flex';
-@import 'utils/margins';
-@import 'utils/paddings';
-@import 'utils/utils';
+@import 'content/background-image';
 
 @import 'components/image-drop-area';
 @import 'components/settings';
 
-@import 'content/background-image';
-
 @import 'layouts/product-list';
+
+@import 'utils/flex';
+@import 'utils/margins';
+@import 'utils/paddings';
+@import 'utils/utils';

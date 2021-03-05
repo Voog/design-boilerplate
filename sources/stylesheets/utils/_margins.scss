@@ -1,42 +1,19 @@
 .mar_ {
-  &0-8-neg {
-    margin: 0 -8px;
-  }
 
   &0-16-neg {
     margin: 0 -16px;
-  }
-
-  &0-24-neg {
-    margin: 0 -24px;
   }
 
   &0-32-neg {
     margin: 0 -32px;
   }
 
-  &0-8 {
-    margin: 0 8px;
-  }
-
   &0-16 {
     margin: 0 16px;
   }
 
-  &0-24 {
-    margin: 0 24px;
-  }
-
   &0-32 {
     margin: 0 32px;
-  }
-
-  &8-0 {
-    margin: 8px 0;
-  }
-
-  &b-32-neg {
-    margin-bottom: -32px;
   }
 
   &32-0 {
@@ -47,14 +24,6 @@
     }
   }
 
-  &b-8 {
-    margin-bottom: 8px;
-  }
-
-  &b-16 {
-    margin-bottom: 16px;
-  }
-
   &b-32 {
     margin-bottom: 32px;
 
@@ -63,80 +32,8 @@
     }
   }
 
-  &b-40 {
-    margin-bottom: 40px;
-
-    @include query($tablet-1) {
-      margin-bottom: 16px;
-    }
-  }
-
-  &b-48 {
-    margin-bottom: 48px;
-
-    @include query($tablet-1) {
-      margin-bottom: 24px;
-    }
-  }
-
-  &b-56 {
-    margin-bottom: 56px;
-
-    @include query($tablet-1) {
-      margin-bottom: 24px;
-    }
-  }
-
-  &b-64 {
-    margin-bottom: 64px;
-
-    @include query($tablet-1) {
-      margin-bottom: 32px;
-    }
-  }
-
-  &t-0 {
-    margin-top: 0 !important;
-  }
-
   &t-16 {
     margin-top: 16px;
-  }
-
-  &t-32 {
-    margin-top: 32px;
-  }
-
-  &t-48 {
-    margin-top: 48px;
-
-    @include query($tablet-1) {
-      margin-top: 24px;
-    }
-  }
-
-  &t-96 {
-    margin-top: 96px;
-
-    @include query($tablet-1) {
-      margin-top: 32px;
-    }
-  }
-
-  &l-4 {
-    margin-left: 4px;
-  }
-
-  &l-8 {
-    margin-left: 8px;
-  }
-
-  &l-16 {
-    margin-left: 16px;
-  }
-
-  &l-32 {
-    margin-left: 32px;
   }
 
   &r-8 {
@@ -145,13 +42,5 @@
 
   &r-16 {
     margin-right: 16px;
-  }
-
-  &r-32 {
-    margin-right: 32px;
-  }
-
-  &r-auto {
-    margin-right: auto;
   }
 }

@@ -43,14 +43,6 @@
   var bindSideClicks = function() {
     $('.container, .bg_img-cover, .content_wrap, .header_fixed, swiper-container').on('mousedown', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
-        //$('.js-semimodal-toggle').removeClass('semimodal-open');
-        //$('.js-popover').removeClass('expanded');
-        //$('html').removeClass('search-open');
-        //$('.js-search, .menu_popover').removeClass('active');
-        //$('.search-btn').removeClass('open');
-        //$('html').removeClass('menu-language-popover-open');
-        //$('body').removeClass('layout_settings-visible');
-        //$('.editor_default-container').removeClass('active');
         $('.js-image-settings-popover').toggleClass('active');
       };
     });
@@ -262,6 +254,26 @@
     edy.push(['texteditorStyles', { name: 'Button', tagname: 'a', attribute: { 'href': '#' }, classname: 'custom-btn', toggle: true }]);
   };
 
+  var handleDocument = function() {
+    if ($('.form_field-cms input').length) {
+      if ($('.form_field-cms input').val().length >= 1) {
+        $('.form_field-cms input').closest('.form_field-cms').addClass('with-input');
+      } else {
+        $('.form_field-cms input').closest('.form_field-cms').removeClass('with-input');
+      }
+    }
+
+    $(document).ready(function() {
+      $('.form_field-cms input').keyup(function(e) {
+        if ($(this).val().length >= 1) {
+          $(this).closest('.form_field-cms').addClass('with-input');
+        } else {
+          $(this).closest('.form_field-cms').removeClass('with-input');
+        }
+      });
+    });
+  };
+
   // Initiates the table horisontal scroll function when window is resized.
   var handleWindowResize = function () {
     // Add functions that should be triggered while resizing the window here.
@@ -295,6 +307,7 @@
     toggleMainMenu();
     focusFormWithErrors();
     handleWindowResize();
+    handleDocument();
 
     if (editmode()) {
       bindCustomTexteditorStyles();
@@ -403,6 +416,34 @@
       }
     });
   };
+
+  var handleProductPageContent = function() {
+    $(document).ready(function() {
+      changeProductImagePos();
+    });
+
+    $(window).resize(debounce(function() {
+      changeProductImagePos();
+    }, 25));
+
+    var changeProductImagePos = function() {
+      var paroductImage = $('.js-product-page-image');
+      var paroductImageWrap = $('.js-product-page-image-wrap');
+      var buyBtnContent = $('.js-buy-btn-content');
+
+      if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
+        if ($( window ).width() <= 752) {
+          if ($('.js-buy-btn-content .js-product-page-image').length <= 0) {
+            buyBtnContent.prepend(paroductImage);
+          }
+        } else {
+          if ($('.js-product-page-image-wrap .js-product-page-image').length <= 0) {
+            paroductImageWrap.prepend(paroductImage);
+          }
+        }
+      }
+    }
+  }
 
   // Enables the usage of the initiations outside this file.
   // For example add "<script>site.initBlogPage();</script>" at the end of the "Blog & News" page to initiate blog listing view functions.

@@ -312,6 +312,12 @@
       "filename": "ico-delete.svg"
     },
     {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-placeholder.svg",
+      "kind": "assets",
+      "filename": "ico-placeholder.svg"
+    },
+    {
       "content_type": "image/png",
       "file": "images/ico-flags.png",
       "kind": "images",
