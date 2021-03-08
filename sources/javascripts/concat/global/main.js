@@ -445,6 +445,12 @@
     }
   }
 
+  $('.js-cart-btn').click(function() {
+    if ($(this).data('product-id')) {
+      Voog.ShoppingCart.addProductById($(this).data('product-id'))
+    }
+  });
+
   // Enables the usage of the initiations outside this file.
   // For example add "<script>site.initBlogPage();</script>" at the end of the "Blog & News" page to initiate blog listing view functions.
   window.site = $.extend(window.site || {}, {
