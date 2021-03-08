@@ -273,19 +273,10 @@
     });
   };
 
-  var debounce = function (func, wait, immediate) {
-    var timeout;
-    return function () {
-      var context = this, args = arguments;
-      var later = function () {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
+  // Wraps tables in the container.
+  // TODO: remove if edicy is going to wrap table with the container.
+  var wrapTables = function () {
+    $('.content-formatted table').wrap('<div class="table-container"></div>');
   };
 
   var bindProductListeners = function (placeholderText, pageId) {
@@ -294,16 +285,9 @@
     });
   };
 
-  var handleDocument = function () {
-    window.addEventListener('DOMContentLoaded', function (event) {
-      $('#fc_frame').css('display', 'block!important;');
-    });
-  };
-
   var init = function () {
     bindCustomTexteditorStyles();
     bindCustomDataItem();
-    //<handleDocument();
   };
 
   // Enables the usage of the initiations outside this file.

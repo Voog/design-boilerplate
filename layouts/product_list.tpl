@@ -43,6 +43,7 @@
   {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "template-tools" %}
+  <script>site.initProductListPage();</script>
 </body>
 
 </html>

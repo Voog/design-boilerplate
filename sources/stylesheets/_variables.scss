@@ -33,10 +33,9 @@ $color-silver-2: rgb(196,196,196);
 // Fonts
 $primary-font: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif;
 $avenir: 'Avenir Next', 'AvenirX';
+
 // Media queries
 $desktop-1: 1024px;
-$desktop-2: 1240px;
-$desktop-3: 1340px;
 
 $tablet-1: 900px;
 $tablet-2: 752px;
@@ -50,17 +49,6 @@ $mobile-2: 420px;
 // For example the width of several different elements, that allways have to be with the same height:
 // $box-width: 400px;
 
-$zindex-zero: 0;
-$zindex-swiper-content: 49;
-$zindex-swiper-btn: 50;
-$zindex-bg-picker: 99;
-$zindex-header-fixed: 100;
-$zindex-semimodal: 101;
-$zindex-search: 102;
-$zindex-search-btn: 103;
-$zindex-settings-btn: 104;
-
 $zindex-settings-popover: 56501;
 
-$bold: 600;
 

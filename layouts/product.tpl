@@ -7,7 +7,7 @@
   {% include "template-styles" %}
 </head>
 
-<body class="product_list-page body-bg_picker--area">
+<body class="product_page">
   {% if editmode %}
   <button class="voog-bg-picker-btn js-background-settings" data-bg-key="body_bg" data-bg-picture-boolean="true"
     data-bg-image="{{ body_bg_image }}" data-bg-image-sizes="{{ body_bg_image_sizes_str | escape }}"
@@ -84,6 +84,7 @@
   {% include "site-signout" %}
   {% include "javascripts", _productPage: true %}
   {% include "template-tools" %}
+  <script>site.initProductPage();</script>
 </body>
 
 </html>

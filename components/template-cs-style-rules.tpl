@@ -105,7 +105,6 @@ body.dark-background {
 }
 
 .content-formatted {
-  font-family: var(--main-font-family);
   font-size: var(--content-body-font-size);
   line-height: var(--content-body-line-height);
   color: var(--content-body-color);

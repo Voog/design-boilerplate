@@ -23,7 +23,6 @@
     }
   };
 
-  // Remove comments if debouncing is used.
   // Function to limit the rate at which a function can fire.
   var debounce = function (func, wait, immediate) {
     var timeout;
@@ -40,23 +39,12 @@
     };
   };
 
-  var bindSideClicks = function() {
-    $('.container, .bg_img-cover, .content_wrap, .header_fixed, swiper-container').on('mousedown', function(event) {
-      if (!$(event.target).closest('.js-prevent-sideclick').length) {
-        $('.js-image-settings-popover').toggleClass('active');
-      };
-    });
-  };
-
-  var editmode = function () {
-    return $('html').hasClass('editmode');
-  };
-
   var bindSideClicks = function () {
     $('.container').on('mousedown', function (event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
         $('.js-popover').removeClass('expanded');
         $('.js-search-close-btn').trigger('click');
+        $('.js-image-settings-popover').toggleClass('active');
       };
     });
   };
@@ -97,12 +85,6 @@
         $('html, body').scrollTop($('.form_error, .form_notice').closest('form').offset().top);
       }
     });
-  };
-
-  // Wraps tables in the container.
-  // TODO: remove if edicy is going to wrap table with the container.
-  var wrapTables = function () {
-    $('.content-formatted table').wrap('<div class="table-container"></div>');
   };
 
   // Returns the suitable version of the image depending on the viewport width.
@@ -249,11 +231,6 @@
     }
   };
 
-  var bindCustomTexteditorStyles = function () {
-    window.edy = window.edy || [];
-    edy.push(['texteditorStyles', { name: 'Button', tagname: 'a', attribute: { 'href': '#' }, classname: 'custom-btn', toggle: true }]);
-  };
-
   var handleDocument = function() {
     if ($('.form_field-cms input').length) {
       if ($('.form_field-cms input').val().length >= 1) {
@@ -274,8 +251,16 @@
     });
   };
 
+  var toggleImageSettingsPopover = function () {
+    $('.js-image-settings-popover').toggleClass('active');
+  }
+
+  $('.js-toggle-image-settings').click(function () {
+    toggleImageSettingsPopover();
+  });
+
   // Initiates the table horisontal scroll function when window is resized.
-  var handleWindowResize = function () {
+  var handleWindowResize = function() {
     // Add functions that should be triggered while resizing the window here.
     // Example:
     // $(window).resize(debounce(yourFunctionName, 3000));
@@ -292,6 +277,14 @@
 
   };
 
+  var initProductListPage = function () {
+    // Add product list page specific functions here.
+  };
+
+  var initProductPage = function () {
+    // Add product page specific functions here.
+  };
+
   var initBlogPage = function () {
     // Add blog listing layout specific functions here.
   };
@@ -306,23 +299,9 @@
     handleLanguageSwitch();
     toggleMainMenu();
     focusFormWithErrors();
-    handleWindowResize();
     handleDocument();
-
-    if (editmode()) {
-      bindCustomTexteditorStyles();
-    } else {
-      wrapTables();
-    }
+    handleWindowResize();
   };
-
-  var toggleImageSettingsPopover = function () {
-    $('.js-image-settings-popover').toggleClass('active');
-  }
-
-  $('.js-toggle-image-settings').click(function () {
-    toggleImageSettingsPopover();
-  });
 
   // ===========================================================================
   // Load article cover images only when they are close or appearing in the
@@ -351,71 +330,6 @@
   }
 
   handleFocus($('.js-toggle-image-settings'), toggleImageSettingsPopover);
-
-  var initProductListPage = function() {
-
-    function fadeAnimation(wrapper) {
-      wrapper.find('.js-product-item').each(function() {
-        var item = $(this);
-        var delay = item.index();
-        item.css({'opacity':'0', 'transition': 'none'});
-        setTimeout((function() {
-          item.animate({'opacity':'1'}, 500);
-        }), delay * 40);
-      });
-    }
-
-    $(".product_list-search").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      fadeAnimation($('.product_list'));
-      $(".product_list .js-product-item").filter(function() {
-        $(this).toggle($(this).attr("data-title").toLowerCase().indexOf(value) > -1)
-      });
-    });
-
-    $('.product_list-filter').on('change', function() {
-      if (this.value === 'price-default') {
-        var $wrapper = $('.product_list');
-        fadeAnimation($wrapper);
-        $wrapper.find('.js-product-item').sort(function(a, b) {
-          return +a.dataset.index - +b.dataset.index;
-        })
-        .prependTo($wrapper);
-      } else if (this.value === 'price-ascending') {
-        var $wrapper = $('.product_list');
-        fadeAnimation($wrapper);
-        $wrapper.find('.js-product-item[data-price]').sort(function(a, b) {
-          return +a.dataset.price - +b.dataset.price;
-        })
-        .prependTo($wrapper);
-      } else if (this.value === 'price-descending') {
-        var $wrapper = $('.product_list');
-        fadeAnimation($wrapper);
-        $wrapper.find('.js-product-item[data-price]').sort(function(a, b) {
-          return +b.dataset.price - +a.dataset.price;
-        })
-        .prependTo($wrapper);
-      } else if (this.value === 'title-ascending') {
-        var $wrapper = $('.product_list');
-        fadeAnimation($wrapper);
-        $wrapper.find('.js-product-item').sort(function(a, b) {
-          if(a.dataset.title < b.dataset.title) { return -1; }
-          if(a.dataset.title > b.dataset.title) { return 1; }
-          return 0;
-        })
-        .prependTo($wrapper);
-      } else if (this.value === 'title-descending') {
-        var $wrapper = $('.product_list');
-        fadeAnimation($wrapper);
-        $wrapper.find('.js-product-item').sort(function(a, b) {
-          if(a.dataset.title < b.dataset.title) { return 1; }
-          if(a.dataset.title > b.dataset.title) { return -1; }
-          return 0;
-        })
-        .prependTo($wrapper);
-      }
-    });
-  };
 
   var handleProductPageContent = function() {
     $(document).ready(function() {
@@ -457,9 +371,10 @@
     bgPickerPreview: bgPickerPreview,
     bgPickerCommit: bgPickerCommit,
     bgPickerColorScheme: bgPickerColorScheme,
-    initProductListPage: initProductListPage,
     initFrontPage: initFrontPage,
     initCommonPage: initCommonPage,
+    initProductPage: initProductPage,
+    initProductListPage: initProductListPage,
     initBlogPage: initBlogPage,
     initPostPage: initPostPage,
     bindSiteSearch: bindSiteSearch,

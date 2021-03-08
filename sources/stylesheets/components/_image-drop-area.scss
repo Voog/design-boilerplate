@@ -60,9 +60,7 @@
     background-position: center;
   }
   .top-inner {
-    // scss-lint:disable ImportantRule
     display: flex !important;
-    // scss-lint:enable ImportantRule
     align-items: center;
     justify-content: center;
     font-weight: 300;
@@ -86,9 +84,7 @@
   }
 
   .image-drop-area {
-    // scss-lint:disable ImportantRule
     background-position: center !important;
-    // scss-lint:enable ImportantRule
     background-repeat: no-repeat !important;
 
     &.not-cropped {
@@ -141,12 +137,12 @@
 
   &.not-cropped {
     object-fit: contain;
-    font-family: 'object-fit: contain;'; // uses object-fit-images polyfill
+    font-family: 'object-fit: contain;';
   }
 
   &.is-cropped {
     object-fit: cover;
-    font-family: 'object-fit: cover;';  // uses object-fit-images polyfill
+    font-family: 'object-fit: cover;';
   }
 
 

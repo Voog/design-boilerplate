@@ -1494,18 +1494,6 @@ body.dark-background {
   background-repeat: no-repeat;
 }
 
-.bg_img-cover {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.bg_color-absolute {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
 .item-top {
   position: relative;
   position: relative;
@@ -2031,13 +2019,6 @@ body .edy-popover {
       -ms-flex: auto;
           flex: auto;
 }
-.flex_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
 .flex_col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2064,31 +2045,6 @@ body .edy-popover {
             flex-direction: column-reverse;
   }
 }
-.flex_row-4 {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-.flex_row-4--item {
-  width: 25%;
-  margin-bottom: 32px;
-}
-@media screen and (max-width: 1024px) {
-  .flex_row-4--item {
-    width: 33%;
-    margin-bottom: 24px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .flex_row-4--item {
-    width: 50%;
-    margin-bottom: 16px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .flex_row-4--item {
-    width: 100%;
-  }
-}
 .flex_row-3 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2111,15 +2067,6 @@ body .edy-popover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.flex_row-2--item {
-  width: 50%;
-  margin-bottom: 32px;
-}
-@media screen and (max-width: 752px) {
-  .flex_row-2--item {
-    width: 100%;
-  }
-}
 .flex_row-2--item-60 {
   width: 60%;
   margin-bottom: 32px;
@@ -2137,28 +2084,6 @@ body .edy-popover {
   .flex_row-2--item-40 {
     width: 100%;
   }
-}
-.flex_a-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.flex_j-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-@media screen and (max-width: 480px) {
-  .flex_j-center-mobile {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-.flex_j-space-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .mar_0-16-neg {

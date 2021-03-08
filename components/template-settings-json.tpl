@@ -15,6 +15,6 @@
     "image_alt_attr": {
       "key": "image_alt_attr",
       "value": ""
-    },
+    }
   }
 }
