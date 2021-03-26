@@ -52,11 +52,16 @@ module.exports = function(grunt) {
     },
 
     // Compiles the stylesheet files.
+    // When using Dart Sass, synchronous compilation is twice as fast
+    // as asynchronous compilation by default, due to the overhead of asynchronous callbacks.
+    // To avoid this overhead, fibers package is used
     sass: {
       build_main: {
         options: {
-          style: 'expanded',
-          sourcemap: 'none'
+          implementation: require('node-sass'),
+          sourceMap: false,
+          fiber: require('fibers'),
+          outputStyle: 'expanded'
         },
         files: [{
           expand: true,
@@ -70,8 +75,10 @@ module.exports = function(grunt) {
       // Builds custom style components to temporary folder.
       build_custom_styles: {
         options: {
-          style: 'expanded',
-          sourcemap: 'none'
+          implementation: require('node-sass'),
+          sourceMap: false,
+          fiber: require('fibers'),
+          outputStyle: 'expanded'
         },
         files: [{
           expand: true,
@@ -267,17 +274,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-exec');
-  grunt.loadNpmTasks('grunt-modernizr-builder');
-  grunt.loadNpmTasks('grunt-postcss');
+  require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'copy:assets', 'copy:images', 'copy:javascripts', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'copy:custom_styles', 'clean:remove']);
 
