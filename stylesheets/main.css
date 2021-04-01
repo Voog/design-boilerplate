@@ -1797,6 +1797,10 @@ body.dark-background {
   display: none !important;
 }
 
+.item-top .image-drop-area .edy-img-drop-area-placeholder {
+  color: #000000;
+}
+
 @media screen and (max-width: 480px) {
   .item-top .image-drop-area .edy-img-drop-area-placeholder {
     font-size: 13px;
