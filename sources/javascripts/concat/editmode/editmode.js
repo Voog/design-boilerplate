@@ -377,7 +377,6 @@
   handleProductImage = function(placeholderText, pageId, event, el) {
     var productId = $('.js-buy-btn-content  .partial .edy-buy-button-container').data( "product-id" );
     var productImageEl = $('.js-product-page-image .image-drop-area');
-
     $.ajax({
       type: 'GET',
       contentType: 'application/json',
@@ -398,9 +397,16 @@
           productImageEl.css('background-image', 'url(' + page.image.public_url + ')');
           $('.js-remove-image').css('display', 'flex');
         } else {
-          addProductImagePlaceholder(productImageEl, placeholderText);
+          if ($('.edy-img-drop-area-placeholder').length < 1) {
+            addProductImagePlaceholder(productImageEl, placeholderText);
+          }
         }
       } else if (productId) {
+        function addPlaceholder() {
+          if (el.closest('.content-item-box').find('.edy-img-drop-area-placeholder').length < 1) {
+            addProductImagePlaceholder(el, placeholderText);
+          }
+        }
         $.ajax({
           type: 'GET',
           contentType: 'application/json',
@@ -417,11 +423,11 @@
             productImageEl.css('background-image', 'url(' + page.image.public_url + ')');
             $('.js-remove-image').css('display', 'flex');
           } else {
-            addProductImagePlaceholder(el, placeholderText);
+            addPlaceholder();
           }
         });
       } else {
-        addProductImagePlaceholder(el, placeholderText);
+        addPlaceholder();
       }
     });
   };
