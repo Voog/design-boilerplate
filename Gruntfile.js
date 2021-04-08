@@ -25,19 +25,19 @@ module.exports = function(grunt) {
       }
     },
 
-     // Concatenates the javascript source files to the javascripts folder.
-     concat: {
+    // Concatenates the javascript source files to the javascripts folder.
+    concat: {
       global: {
-        src: [
-          'sources/javascripts/concat/global/*.js'
-        ],
-        dest: 'javascripts/application.js'
+       src: [
+         'sources/javascripts/concat/global/*.js'
+       ],
+       dest: 'javascripts/application.js'
       },
       editmode: {
-        src: [
-          'sources/javascripts/concat/editmode/*.js'
-        ],
-        dest: 'javascripts/editmode.js'
+       src: [
+         'sources/javascripts/concat/editmode/*.js'
+       ],
+       dest: 'javascripts/editmode.js'
       },
     },
 

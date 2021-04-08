@@ -1,9 +1,5 @@
 {
   "page": {
-    "body_bg": {
-      "key": "PREFIX_body_bg",
-      "value": {}
-    },
     "item_image": {
       "key": "item_image",
       "value": {}

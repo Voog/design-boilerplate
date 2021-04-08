@@ -17,7 +17,6 @@
   <div class="background-image js-background-image"></div>
   <div class="background-color js-background-color"></div>
 
-
   <div class="container js-bg-picker-area">
     <div class="js-background-type {{ container_bg_type }}">
       <div class="background-color js-background-color">

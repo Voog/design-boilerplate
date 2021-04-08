@@ -14,10 +14,10 @@
   <script src="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js"></script>
 
     <script>
-      {%- if page.layout_title == product_list_layout or page.layout_title == product_layout -%}
-        {%- assign dropAreaPlaceholder = "drag_picture_for_product_here" | lc: editor_locale | escape -%}
-      {%- else -%}
+      {%- if page.layout_title == product_list_layout -%}
         {%- assign dropAreaPlaceholder = "drag_picture_here" | lc: editor_locale | escape -%}
+      {%- elsif page.layout_title == product_layout -%}
+        {%- assign dropAreaPlaceholder = "drag_picture_for_product_here" | lc: editor_locale | escape -%}
       {%- endif -%}
 
       site.bindContentItemImgDropAreas('{{ dropAreaPlaceholder }}', "{{itemImageKey}}", "{{itemImageCropStateKey}}");

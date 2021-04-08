@@ -39,7 +39,7 @@
 <div class="product_item-details--wrap mar_t-16">
   <div class="flex_auto">
     {%- capture look_closer_btn -%}
-      <a class="product_item-btn{%- if productSettingsData.product_label != blank or _buyButton.product.price != blank %} p-abs{%- else %} p-rel{%- endif -%}" href="{{ _entityData.url }}">
+      <a class="product_item-btn{%- if _buyButton.product.price != blank %} p-abs{%- else %} p-rel{%- endif -%}" href="{{ _entityData.url }}">
         {{ "look_closer" | lc | escape_once }}
       </a>
     {%- endcapture -%}
@@ -52,7 +52,7 @@
         {%- if _buyButton.product.uses_variants == true -%}
           {{look_closer_btn}}
           <div class="product_item-price">
-            <div class="flex_box{% if product_label != blank %} mar_r-16{% endif %}">
+            <div class="flex_box">
               {%- if _buyButton.product.price_max_with_tax != _buyButton.product.price_min_with_tax -%}
                 {{ _buyButton.product.price_min_with_tax | money_with_currency: _buyButton.product.currency }}
                 <span class="pad_0-4">-</span>

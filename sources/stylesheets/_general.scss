@@ -71,6 +71,16 @@ body {
 }
 
 // Styling rules for the independent elements that can be located everywhere in the DOM and always have the same look.
+.btn-no-style {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 .voog-bg-picker-btn {
   @extend %button;
   position: absolute;
