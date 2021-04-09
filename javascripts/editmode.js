@@ -383,6 +383,11 @@
       url: '/admin/api/pages/' + pageId,
       dataType: 'json'
     }).then(function(page) {
+      var addPlaceholder = function() {
+        if (el.closest('.content-item-box').find('.edy-img-drop-area-placeholder').length < 1) {
+          addProductImagePlaceholder(el, placeholderText);
+        }
+      }
       if (event) {
         if (page.data.item_image) {
           productImageEl.css('background-image', 'url(' + page.data.item_image.url + ')');
@@ -402,11 +407,6 @@
           }
         }
       } else if (productId) {
-        function addPlaceholder() {
-          if (el.closest('.content-item-box').find('.edy-img-drop-area-placeholder').length < 1) {
-            addProductImagePlaceholder(el, placeholderText);
-          }
-        }
         $.ajax({
           type: 'GET',
           contentType: 'application/json',
