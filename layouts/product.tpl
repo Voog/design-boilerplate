@@ -27,7 +27,6 @@
         {% endif %}
 
         {% include "header" %}
-        {% include "menu-level-2" %}
 
         <main class="content" role="main" data-search-indexing-allowed="true">
 

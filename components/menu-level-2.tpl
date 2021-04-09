@@ -13,7 +13,9 @@
           {% endfor %}
         {% endif %}
         {% if item.hidden_children.size > 0 %}<li class="edit-btn">{% menubtn item.hidden_children %}</li>{% endif %}
-        {% if editmode %}<li class="edit-btn">{% menuadd parent="item" %}</li>{% endif %}
+        {% if editmode %}
+          {%- include 'add-page-button' _menuItem: item -%}
+        {% endif %}
       </ul>
     </nav>
   {% endif %}
