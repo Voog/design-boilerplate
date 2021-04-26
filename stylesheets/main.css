@@ -1864,38 +1864,6 @@ body.dark-background {
           box-sizing: border-box;
 }
 
-body .edy-popover {
-  z-index: 56502 !important;
-}
-
-.editmode .editor_default-container {
-  position: relative;
-}
-
-.editmode .editor_default-container .editor_default-btn {
-  opacity: 0 !important;
-  top: -34px !important;
-  left: -1px !important;
-  position: absolute !important;
-  z-index: 10699 !important;
-  -webkit-transition: all 300ms;
-  -o-transition: all 300ms;
-  transition: all 300ms;
-}
-
-.editmode .editor_default-container:hover, .editmode .editor_default-container.active {
-  -webkit-box-shadow: 0 0 0 1px #000000;
-          box-shadow: 0 0 0 1px #000000;
-}
-
-.editmode .editor_default-container:hover .editor_default-btn, .editmode .editor_default-container.active .editor_default-btn {
-  opacity: 1 !important;
-}
-
-.editmode .editor_default-container .editor_default-btn.active {
-  opacity: 1 !important;
-}
-
 .content-item-box:hover .image_settings {
   opacity: 1;
   pointer-events: all;
@@ -1947,10 +1915,6 @@ body .edy-popover {
   opacity: .7;
 }
 
-.image_settings-buttons .image_settings-change--image:hover {
-  opacity: .7;
-}
-
 .image_settings-buttons .image_settings-button {
   background-image: url("../assets/ico-settings.svg");
 }
@@ -1965,57 +1929,12 @@ body .edy-popover {
   background-image: url("../assets/ico-delete.svg");
 }
 
-.image_settings-popover {
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: opacity 300ms;
-  -o-transition: opacity 300ms;
-  transition: opacity 300ms;
-  background: white;
-  padding: 16px;
-  position: fixed;
-  top: 48px;
-  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.image_settings-popover--arrow {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 113px;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.image_settings-popover--arrow:after {
-  position: absolute;
-  z-index: 56501;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-  border: solid transparent;
-  border-color: transparent;
-  border-width: 16px;
-  content: '';
-  border-top-color: #fff;
-  -webkit-filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.05));
-          filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.05));
-}
-
-.image_settings-popover.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
 .settings_popover {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: opacity 300ms;
-  -o-transition: opacity 300ms;
-  transition: opacity 300ms;
+  -webkit-transition: opacity 0.3;
+  -o-transition: opacity 0.3;
+  transition: opacity 0.3;
   background: white;
   padding: 16px;
   position: absolute;
@@ -2376,10 +2295,6 @@ body .edy-popover {
   margin-right: 8px;
 }
 
-.mar_r-16 {
-  margin-right: 16px;
-}
-
 .pad_40-0 {
   padding: 40px 0;
 }
@@ -2404,11 +2319,4 @@ body .edy-popover {
 
 .p-rel {
   position: relative;
-}
-
-.hover:hover {
-  -webkit-transition: opacity 400ms;
-  -o-transition: opacity 400ms;
-  transition: opacity 400ms;
-  opacity: .7;
 }

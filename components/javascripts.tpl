@@ -20,8 +20,8 @@
         {%- assign dropAreaPlaceholder = "drag_picture_for_product_here" | lc: editor_locale | escape -%}
       {%- endif -%}
 
-      site.bindContentItemImgDropAreas('{{ dropAreaPlaceholder }}', "{{itemImageKey}}", "{{itemImageCropStateKey}}");
-      site.bindContentItemImageCropToggle("{{itemImageCropStateKey}}");
+      site.bindContentItemImgDropAreas('{{ dropAreaPlaceholder }}', "item_image", "image_crop_state");
+      site.bindContentItemImageCropToggle("image_crop_state");
     </script>
 
     {%- if _productPage -%}

@@ -164,20 +164,20 @@
         target_width: 2048,
         placeholder: '<div class="edy-img-drop-area-placeholder">' + placeholderText + '</div>',
         removeBtn: '<div class="edy-img-drop-area-remove-image">' +
-          '<div class="edy-img-drop-area-remove-image-ico">' +
-          '<svg width="16" height="20" viewBox="0 0 26 30" xmlns="http://www.w3.org/2000/svg">' +
-          '<g fill-rule="nonzero" fill="currentColor">' +
-          '<g transform="translate(2 5)">' +
-          '<path d="M0 .997h2V21c0 1 1 2 2 2h14c1 0 2-1 2-2V1h2v20c0 2.25-1.75 4-4 4H4c-2.25 0-4-1.75-4-4V.997z"/>' +
-          '<rect x="10" y="4" width="2" height="16" rx="1"/>' +
-          '<rect x="5" y="4" width="2" height="16" rx="1"/>' +
-          '<rect x="15" y="4" width="2" height="16" rx="1"/>' +
-          '</g>' +
-          '<path d="M26 4v2H0V4h7V2c0-1 1-2 2-2h8c1 0 2 1 2 2v2h7zM9 4h8V3c0-.5-.5-1-1-1h-6c-.5 0-1 .5-1 1v1z"/>' +
-          '</g>' +
-          '</svg>' +
-          '</div>' +
-          '</div>',
+                      '<div class="edy-img-drop-area-remove-image-ico">' +
+                        '<svg width="16" height="20" viewBox="0 0 26 30" xmlns="http://www.w3.org/2000/svg">' +
+                          '<g fill-rule="nonzero" fill="currentColor">' +
+                            '<g transform="translate(2 5)">' +
+                              '<path d="M0 .997h2V21c0 1 1 2 2 2h14c1 0 2-1 2-2V1h2v20c0 2.25-1.75 4-4 4H4c-2.25 0-4-1.75-4-4V.997z"/>' +
+                              '<rect x="10" y="4" width="2" height="16" rx="1"/>' +
+                              '<rect x="5" y="4" width="2" height="16" rx="1"/>' +
+                              '<rect x="15" y="4" width="2" height="16" rx="1"/>' +
+                            '</g>' +
+                            '<path d="M26 4v2H0V4h7V2c0-1 1-2 2-2h8c1 0 2 1 2 2v2h7zM9 4h8V3c0-.5-.5-1-1-1h-6c-.5 0-1 .5-1 1v1z"/>' +
+                          '</g>' +
+                        '</svg>' +
+                      '</div>' +
+                    '</div>',
 
         change: function (image) {
           var $cropToggleButton = $contentItemBox.find('.js-toggle-crop-state');
@@ -453,9 +453,30 @@
     });
   };
 
+  var handleDocument = function() {
+    if ($('.form_field-cms input').length) {
+      if ($('.form_field-cms input').val().length >= 1) {
+        $('.form_field-cms input').closest('.form_field-cms').addClass('with-input');
+      } else {
+        $('.form_field-cms input').closest('.form_field-cms').removeClass('with-input');
+      }
+    }
+
+    $(document).ready(function() {
+      $('.form_field-cms input').keyup(function(e) {
+        if ($(this).val().length >= 1) {
+          $(this).closest('.form_field-cms').addClass('with-input');
+        } else {
+          $(this).closest('.form_field-cms').removeClass('with-input');
+        }
+      });
+    });
+  };
+
   var init = function () {
     bindCustomTexteditorStyles();
     bindCustomDataItem();
+    handleDocument();
   };
 
   // Enables the usage of the initiations outside this file.

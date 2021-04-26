@@ -11,8 +11,3 @@
 .p-rel {
   position: relative;
 }
-
-.hover:hover {
-  @include transition(opacity 400ms);
-  opacity: .7;
-}

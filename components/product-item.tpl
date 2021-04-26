@@ -4,8 +4,8 @@
   {%- assign buyButtonImage = null -%}
 {% endif %}
 
-{%- if _entityData.data[itemImageKey] != blank -%}
-  {%- assign productImage = _entityData.data[itemImageKey] -%}
+{%- if _entityData.data.item_image != blank -%}
+  {%- assign productImage = _entityData.data.item_image -%}
 {%- elsif buyButtonImage != blank -%}
   {%- assign productImage = buyButtonImage -%}
 {%- else -%}
@@ -16,8 +16,8 @@
   {% assign item_image_state = "without-image" %}
 {% endunless %}
 
-{% if _entityData.data[itemImageCropStateKey] %}
-  {%- assign imageClass = 'item-image ' | append: _entityData.data[itemImageCropStateKey] -%}
+{% if _entityData.data.image_crop_state %}
+  {%- assign imageClass = 'item-image ' | append: _entityData.data.image_crop_state -%}
 {% else %}
   {%- assign imageClass = 'item-image not-cropped' -%}
 {% endif %}
@@ -27,7 +27,7 @@
     <div class="top-inner of-hidden">
       {% include "lazy-image",
         _altAttr:
-        _entityData.data[itemImageAltAttrKey],
+        _entityData.data.image_alt_attr,
         _data: productImage,
         _targetWidth: '700',
         _className: imageClass

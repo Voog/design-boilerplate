@@ -4,8 +4,8 @@
   {% assign item_image_state = "with-image" %}
 {% endunless %}
 
-{% if _entityData.data[itemImageCropStateKey] %}
-  {% assign image_crop_state = _entityData.data[itemImageCropStateKey] %}
+{% if _entityData.data.image_crop_state %}
+  {% assign image_crop_state = _entityData.data.image_crop_state %}
 {% else %}
   {% assign image_crop_state = "not-cropped" %}
 {% endif %}
@@ -39,8 +39,8 @@
             <input
               id="item-image-alt-{{_id}}"
               class="form_field_textfield js-data-item image_settings-remove--input"
-              value="{{_entityData.data[itemImageAltAttrKey]}}"
-              data-name="{{itemImageAltAttrKey}}"
+              value="{{_entityData.data.image_alt_attr}}"
+              data-name="{{image_alt_attr}}"
               data-entity="{{_itemType}}"
               data-id="{{_id}}"
             >
@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    {% include 'image-src-variable', _data: _imageData, _targetWidth: _targetWidth %} 
+    {% include 'image-src-variable', _data: _imageData, _targetWidth: _targetWidth %}
 
     <div class="item-top">
       <div class="top-inner aspect-ratio-inner image-drop-area {{ image_crop_state }} js-content-item-img-drop-area js-lazyload"
@@ -70,7 +70,7 @@
         {% if _imageData != blank %}
           <div class="loader js-loader"></div>
           {%- assign imageClass = "item-image " | append: image_crop_state -%}
-          {% include "lazy-image", _altAttr: _entityData.data[itemImageAltAttrKey], _data: _imageData, _targetWidth: _targetWidth, _className: imageClass  %}
+          {% include "lazy-image", _altAttr: _entityData.data.image_alt_attr, _data: _imageData, _targetWidth: _targetWidth, _className: imageClass  %}
         {% else %}
           <div class="item-image-placeholder"></div>
         {% endif %}

@@ -83,10 +83,6 @@
     {% assign container_bg_color_data_str = container_bg_color_data | json %}
   {% endif %}
 
-  {%- assign itemImageKey = template_settings.page.item_image.key -%}
-  {%- assign itemImageCropStateKey = template_settings.page.image_crop_state.key -%}
-  {%- assign itemImageAltAttrKey = template_settings.page.image_alt_attr.key -%}
-
   {% assign product_list_layout = "Product list" %}
   {% assign product_layout = "Product" %}
 

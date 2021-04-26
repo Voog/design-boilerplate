@@ -1,33 +1,3 @@
-body .edy-popover {
-  z-index: $zindex-settings-popover + 1 !important;
-}
-
-.editmode .editor_default-container {
-  position: relative;
-
-  .editor_default-btn {
-    opacity: 0 !important;
-    top: -34px!important;
-    left: -1px!important;
-    position: absolute !important;
-    z-index: 10699 !important;
-    @include transition(all 300ms);
-  }
-
-  &:hover,
-  &.active {
-    box-shadow: 0 0 0 1px $black;
-
-    .editor_default-btn {
-      opacity: 1 !important;
-    }
-  }
-
-  .editor_default-btn.active {
-    opacity: 1 !important;
-  }
-}
-
 .content-item-box:hover {
   .image_settings {
     opacity: 1;
@@ -68,12 +38,6 @@ body .edy-popover {
       }
     }
 
-    .image_settings-change--image {
-      &:hover {
-        opacity: .7;
-      }
-    }
-
     .image_settings-button {
       background-image: url('../assets/ico-settings.svg');
     }
@@ -88,51 +52,12 @@ body .edy-popover {
       background-image: url('../assets/ico-delete.svg');
     }
   }
-
-  &-popover {
-    opacity: 0;
-    pointer-events: none;
-    @include transition(opacity 300ms);
-    background: white;
-    padding: 16px;
-    position: fixed;
-    top: 48px;
-    box-shadow: $popover-shadow;
-    border-radius: 4px;
-
-    &--arrow {
-      position: absolute;
-      pointer-events: none;
-      top: 0;
-      left: 113px;
-      transform: rotate(180deg);
-
-      &:after {
-        position: absolute;
-        z-index: 56501;
-        width: 0;
-        height: 0;
-        pointer-events: none;
-        border: solid transparent;
-        border-color: transparent;
-        border-width: 16px;
-        content: '';
-        border-top-color: #fff;
-        filter: drop-shadow(0 2px 1px rgba(0, 0, 0, .05));
-      }
-    }
-
-    &.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-  }
 }
 
 .settings_popover {
   opacity: 0;
   pointer-events: none;
-  @include transition(opacity 300ms);
+  transition: opacity 0.3;
   background: white;
   padding: 16px;
   position: absolute;
