@@ -19,6 +19,13 @@
 
   <div class="container js-bg-picker-area">
     <div class="js-background-type {{ container_bg_type }}">
+      <div class="background-color js-background-color">
+        {% if editmode %}
+          <button class="voog-bg-picker-btn js-background-settings" data-bg-key="container_bg"
+          data-bg-picture-boolean="false" data-bg-color="{{ container_bg_color }}"
+          data-bg-color-data="{{ container_bg_color_data_str | escape }}"></button>
+        {% endif %}
+
         {% include "header" %}
 
         <main class="content" role="main" data-search-indexing-allowed="true">
@@ -66,8 +73,9 @@
           </div>
 
         </main>
+      </div>
 
-        {% include "footer" %}
+      {% include "footer" %}
     </div>
   </div>
 

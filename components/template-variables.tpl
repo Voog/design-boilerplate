@@ -1,4 +1,3 @@
-{% include "template-settings" %}
 {% capture dont_render %}
   {% comment %}SITE BODY RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
