@@ -68,7 +68,7 @@
           {%- endif -%}
           <div class="product_item-price">
             <span>
-            {{ _buyButton.product.price_with_tax | money_with_currency: product.currency }}
+            {{ _buyButton.product.price_with_tax | money_with_currency: _buyButton.product.currency }}
             </span>
           </div>
 

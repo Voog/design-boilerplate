@@ -95,51 +95,8 @@
     toggleImageSettingsPopover();
   });
 
-  // Initiates the table horisontal scroll function when window is resized.
-  var handleWindowResize = function() {
-    // Add functions that should be triggered while resizing the window here.
-    // Example:
-    // $(window).resize(debounce(yourFunctionName, 3000));
-  };
-
-  // FUNCTIONS INITIATIONS
-  var initFrontPage = function () {
-    // Add front page layout specific functions here.
-    removeOptionalContent();
-  };
-
-  var initCommonPage = function () {
-    // Add common page specific functions here.
-
-  };
-
-  var initProductListPage = function () {
-    // Add product list page specific functions here.
-  };
-
-  var initProductPage = function () {
-    // Add product page specific functions here.
-  };
-
-  var initBlogPage = function () {
-    // Add blog listing layout specific functions here.
-  };
-
-  var initPostPage = function () {
-    // Add single post layout specific functions here.
-  };
-
-  var init = function () {
-    // Add site wide functions here.
-    bindSideClicks();
-    handleLanguageSwitch();
-    toggleMainMenu();
-    focusFormWithErrors();
-    handleWindowResize();
-  };
-
   // ===========================================================================
-  // Load article cover images only when they are close or appearing in the
+  // Load product cover images only when they are close or appearing in the
   // viewport.
   // ===========================================================================
   var callback_loaded = function (element) {
@@ -199,6 +156,62 @@
       Voog.ShoppingCart.addProductById($(this).data('product-id'))
     }
   });
+
+  var editmode = function () {
+    return $('html').hasClass('editmode');
+  };
+
+  // Wraps tables in the container.
+  // TODO: remove if edicy is going to wrap table with the container.
+  var wrapTables = function () {
+    $('.content-formatted table').wrap('<div class="table-container"></div>');
+  };
+
+// Initiates the table horisontal scroll function when window is resized.
+  var handleWindowResize = function() {
+    // Add functions that should be triggered while resizing the window here.
+    // Example:
+    // $(window).resize(debounce(yourFunctionName, 3000));
+  };
+
+  // FUNCTIONS INITIATIONS
+  var initFrontPage = function () {
+    // Add front page layout specific functions here.
+    removeOptionalContent();
+  };
+
+  var initCommonPage = function () {
+    // Add common page specific functions here.
+
+  };
+
+  var initProductListPage = function () {
+    // Add product list page specific functions here.
+  };
+
+  var initProductPage = function () {
+    // Add product page specific functions here.
+  };
+
+  var initBlogPage = function () {
+    // Add blog listing layout specific functions here.
+  };
+
+  var initPostPage = function () {
+    // Add single post layout specific functions here.
+  };
+
+  var init = function () {
+    // Add site wide functions here.
+    bindSideClicks();
+    handleLanguageSwitch();
+    toggleMainMenu();
+    focusFormWithErrors();
+    handleWindowResize();
+    if (!editmode()) {
+      wrapTables();
+    }
+  };
 
   // Enables the usage of the initiations outside this file.
   // For example add "<script>site.initBlogPage();</script>" at the end of the "Blog & News" page to initiate blog listing view functions.

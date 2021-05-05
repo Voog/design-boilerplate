@@ -441,12 +441,6 @@
     return JSON.stringify(obj) === JSON.stringify({});
   };
 
-  // Wraps tables in the container.
-  // TODO: remove if edicy is going to wrap table with the container.
-  var wrapTables = function () {
-    $('.content-formatted table').wrap('<div class="table-container"></div>');
-  };
-
   var bindProductListeners = function (placeholderText, pageId) {
     document.addEventListener('voog:ecommerce:buttonproductsave', function (event) {
       handleProductImage(placeholderText, pageId, event);
@@ -487,7 +481,7 @@
     bgPickerColorScheme: bgPickerColorScheme,
     bindContentItemImgDropAreas: bindContentItemImgDropAreas,
     bindContentItemImageCropToggle: bindContentItemImageCropToggle,
-    bindProductListeners: bindProductListeners,
+    bindProductListeners: bindProductListeners
   });
 
   // Initiates site wide functions.

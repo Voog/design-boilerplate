@@ -10,13 +10,7 @@
   {% assign image_crop_state = "not-cropped" %}
 {% endif %}
 
-{%- if _staticItem == true -%}
-  {%- assign wrapperTag = 'div' -%}
-{%- else -%}
-  {%- assign wrapperTag = 'a' -%}
-{%- endif -%}
-
-{% if editmode and _staticItem != true %}
+{% if editmode %}
   <div class="content-item-box p-rel {{ item_image_state }} js-content-item-box not-loaded"
     data-item-type="{{_itemType}}"
     data-item-id="{{ _id }}"
@@ -40,7 +34,7 @@
               id="item-image-alt-{{_id}}"
               class="form_field_textfield js-data-item image_settings-remove--input"
               value="{{_entityData.data.image_alt_attr}}"
-              data-name="{{image_alt_attr}}"
+              data-name="image_alt_attr"
               data-entity="{{_itemType}}"
               data-id="{{_id}}"
             >
@@ -64,7 +58,7 @@
     </div>
   </div>
 {% else %}
-  <{{ wrapperTag }} class="content-item-box {{ item_image_state }} js-content-item-box not-loaded"{% if _staticItem != true %} href="{{ _entityData.url }}"{% endif %}>
+  <a class="content-item-box {{ item_image_state }} js-content-item-box not-loaded" href="{{ _entityData.url }}">
     <div class="item-top">
       <div class="top-inner of-hidden">
         {% if _imageData != blank %}
@@ -76,5 +70,5 @@
         {% endif %}
       </div>
     </div>
-  </{{ wrapperTag }}>
+  </a>
 {% endif %}

@@ -2314,7 +2314,7 @@ body.dark-background {
 }
 
 .p-abs {
-  position: absolute !important;
+  position: absolute;
 }
 
 .p-rel {

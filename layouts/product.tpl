@@ -80,7 +80,7 @@
   </div>
 
   {% include "site-signout" %}
-  {% include "javascripts", _productPage: true %}
+  {% include "javascripts" %}
   {% include "template-tools" %}
   <script>site.initProductPage();</script>
 </body>

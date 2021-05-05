@@ -6,7 +6,7 @@
 <script src="{{ javascripts_path }}/application.js?v=1.1"></script>
 
 {%- if editmode -%}
-  <script src="{{ javascripts_path }}/editmode.js?v=1.1"></script>
+  <script src="{{ javascripts_path }}/editmode.min.js?v=1.1"></script>
 {%- endif -%}
 
 {% if editmode %}
@@ -23,11 +23,6 @@
       site.bindContentItemImgDropAreas('{{ dropAreaPlaceholder }}', "item_image", "image_crop_state");
       site.bindContentItemImageCropToggle("image_crop_state");
     </script>
-
-    {%- if _productPage -%}
-      {%- assign dropAreaPlaceholder = "drag_picture_for_product_here" | lc: editor_locale | escape -%}
-      <script>site.bindProductListeners("{{dropAreaPlaceholder}}", {{page.id}});</script>
-    {%- endif -%}
   {% endeditorjsblock %}
 {% endif %}
 
