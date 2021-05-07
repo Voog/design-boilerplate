@@ -12,12 +12,12 @@
 
 {% if editmode %}
   <div class="content-item-box p-rel {{ item_image_state }} js-content-item-box not-loaded"
-    data-item-type="{{_itemType}}"
+    data-item-type="{{ _itemType }}"
     data-item-id="{{ _id }}"
   >
     <div class="image_settings js-prevent-sideclick"{% if _imageData == blank %} style="display: none;"{% endif %}>
       <div class="image_settings-buttons">
-        <div class="image_settings-button--title mar_r-8">{{ "image" | lc }}</div>
+        <div class="image_settings-button--title mar_r-8">{{ "image" | lce | escape_once }}</div>
           <button class="bg_img-contain image_settings-button mar_r-8 btn-no-style js-toggle-image-settings">
           </button>
         <button class="bg_img-contain image_settings-expand mar_r-8 btn-no-style js-toggle-crop-state">
@@ -31,14 +31,14 @@
         <div class="product_alt-attr {{ item_image_state }}">
           <div class="form_field-cms">
             <input
-              id="item-image-alt-{{_id}}"
+              id="item-image-alt-{{ _id }}"
               class="form_field_textfield js-data-item image_settings-remove--input"
-              value="{{_entityData.data.image_alt_attr}}"
+              value="{{ _entityData.data.image_alt_attr | escape_once }}"
               data-name="image_alt_attr"
-              data-entity="{{_itemType}}"
-              data-id="{{_id}}"
+              data-entity="{{ _itemType }}"
+              data-id="{{ _id }}"
             >
-            <label for="item-image-alt-{{_id}}" class="form_field_label">{{ "alt_text" | lc }}</label>
+            <label for="item-image-alt-{{ _id }}" class="form_field_label">{{ "alt_text" | lce | escape_once }}</label>
           </div>
         </div>
       </div>

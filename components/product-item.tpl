@@ -12,9 +12,9 @@
   {%- assign productImage = _entityData.page.image -%}
 {%- endif -%}
 
-{% unless productImage != blank %}
+{% if productImage == blank %}
   {% assign item_image_state = "without-image" %}
-{% endunless %}
+{% endif %}
 
 {% if _entityData.data.image_crop_state %}
   {%- assign imageClass = 'item-image ' | append: _entityData.data.image_crop_state -%}
@@ -29,7 +29,7 @@
         _altAttr:
         _entityData.data.image_alt_attr,
         _data: productImage,
-        _targetWidth: '700',
+        _targetWidth: '1280',
         _className: imageClass
       %}
     </div>
@@ -45,12 +45,12 @@
     {%- endcapture -%}
 
     <a class="p14 bold product_item-title bold" href="{{ _entityData.url }}">
-      {{ _entityData.title }}
+      {{ _entityData.title | escape_once }}
     </a>
     {%- if _buyButton.product != blank and _buyButton.available? -%}
       <div class="product_item-details flex_col">
         {%- if _buyButton.product.uses_variants == true -%}
-          {{look_closer_btn}}
+          {{ look_closer_btn }}
           <div class="product_item-price">
             <div class="flex_box">
               {%- if _buyButton.product.price_max_with_tax != _buyButton.product.price_min_with_tax -%}
@@ -62,7 +62,7 @@
           </div>
         {%- else -%}
           {%- if editmode or buy_button.product.out_of_stock? -%}
-            {{look_closer_btn}}
+            {{ look_closer_btn }}
           {%- else -%}
             <div class="product_item-btn js-cart-btn p-abs" data-product-id="{{ _buyButton.product.id }}">{{ "add_to_cart" | lc | escape_once }}</div>
           {%- endif -%}
@@ -76,7 +76,7 @@
       </div>
     {%- else -%}
       <div class="flex_col product_item-details">
-        {{look_closer_btn}}
+        {{ look_closer_btn }}
       </div>
     {%- endif -%}
   </div>

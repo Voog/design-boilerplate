@@ -9,7 +9,7 @@ q.content.name="body" s="content.position" -%}
       'page', _id: _entityData.page_id, _targetWidth: '600' %}
       <a class="p14 mar_t-16" href="{{ _entityData.url }}">
         <div class="p14 mar_t-16 bold product_item-title">
-          {{ _entityData.title }}
+          {{ _entityData.title | escape_once }}
         </div>
       </a>
       <div class="flex_box product_item-details">

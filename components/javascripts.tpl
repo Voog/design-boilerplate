@@ -15,9 +15,9 @@
 
     <script>
       {%- if page.layout_title == product_list_layout -%}
-        {%- assign dropAreaPlaceholder = "drag_picture_here" | lc: editor_locale | escape -%}
+        {%- assign dropAreaPlaceholder = "drag_picture_here" | lce | escape -%}
       {%- elsif page.layout_title == product_layout -%}
-        {%- assign dropAreaPlaceholder = "drag_picture_for_product_here" | lc: editor_locale | escape -%}
+        {%- assign dropAreaPlaceholder = "drag_picture_for_product_here" | lce | escape -%}
       {%- endif -%}
 
       site.bindContentItemImgDropAreas('{{ dropAreaPlaceholder }}', "item_image", "image_crop_state");

@@ -9,7 +9,7 @@
       "content_type": "page",
       "component": false,
       "file": "layouts/product_list.tpl",
-      "layout_name": "page_default",
+      "layout_name": "product_list",
       "title": "Product list"
     },
     {
@@ -30,7 +30,7 @@
       "content_type": "page",
       "component": false,
       "file": "layouts/product.tpl",
-      "layout_name": "page_default",
+      "layout_name": "product",
       "title": "Product"
     },
     {
