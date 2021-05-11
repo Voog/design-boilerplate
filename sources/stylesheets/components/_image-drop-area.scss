@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: 10px;
 
   &:hover {
     .btn,
@@ -128,6 +129,7 @@
   border: 0;
   text-align: center;
   position: absolute;
+  padding-top: 10px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);

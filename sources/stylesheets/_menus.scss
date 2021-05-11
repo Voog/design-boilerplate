@@ -480,3 +480,46 @@ $flags:
     }
   }
 }
+
+// Product list menu
+.menu-horizontal {
+  .menu-separator {
+    opacity: .36;
+    margin-right: 3px;
+
+    &:first-child {
+      display: none;
+    }
+  }
+
+  &.menu-breadcrumbs {
+    line-height: 16px;
+    padding-top: 10px;
+
+    @media screen and (min-width: $desktop-1 + 1) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: $mobile-1 + 1) and (max-width: $desktop-1) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: $mobile-1) {
+      font-size: 11px;
+    }
+
+    .menu-item {
+      margin-right: 3px;
+    }
+
+    .menu-item {
+      display: inline-block;
+    }
+
+    .menu-item-cms {
+      margin-left: 10px;
+
+      &.float-right {
+        float: right;
+      }
+    }
+  }
+}

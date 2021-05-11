@@ -1,6 +1,6 @@
 .pad_ {
-  &40-0 {
-    padding: 40px 0;
+  &10-0 {
+    padding: 10px 0;
 
     @include query($desktop-1) {
       padding: 24px 0;

@@ -30,6 +30,7 @@
 
         <main class="content" role="main" data-search-indexing-allowed="true">
 
+          {% include "menu-breadcrumbs" %}
           <div class="flex_row flex_row-2 mar_0-32-neg">
             <div class="flex_row-2--item-60">
               <div class="mar_0-32 p-rel js-product-page-image-wrap">

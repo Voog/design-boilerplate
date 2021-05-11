@@ -31,6 +31,7 @@
 
         <main class="content" role="main" data-search-indexing-allowed="true">
           <section class="content-body content-formatted">{% content %}</section>
+          {% include "menu-breadcrumbs" %}
           {% include 'product-list-block' %}
         </main>
 

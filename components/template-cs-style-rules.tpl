@@ -118,6 +118,19 @@ body.dark-background {
   }
 }
 
+.menu-horizontal .menu-breadcrumbs .menu-item a {
+  color: var(--primary-color);
+}
+
+.menu-breadcrumbs .menu-item a:hover {
+  color: var(--third-color);
+}
+
+.menu-breadcrumbs .current a,
+.menu-breadcrumbs .current a:hover {
+  color: var(--third-color);
+}
+
 .footer .voog-reference a {
   color: var(--primary-color);
 }
