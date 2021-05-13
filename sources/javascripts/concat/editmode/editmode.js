@@ -432,6 +432,19 @@
     });
   };
 
+  var handleFocus = function (el, func) {
+    el.focus(function () {
+      $(window).keyup(function (e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 9) {
+          func()
+        }
+      });
+    });
+  }
+
+  handleFocus($('.js-toggle-image-settings'), toggleImageSettingsPopover);
+
   var handleDocument = function() {
     if ($('.form_field-cms input').length) {
       if ($('.form_field-cms input').val().length >= 1) {
@@ -451,6 +464,14 @@
       });
     });
   };
+
+  var toggleImageSettingsPopover = function () {
+    $('.js-image-settings-popover').toggleClass('active');
+  }
+
+  $('.js-toggle-image-settings').click(function () {
+    toggleImageSettingsPopover();
+  });
 
   var init = function () {
     bindCustomTexteditorStyles();

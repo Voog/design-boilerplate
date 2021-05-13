@@ -22,7 +22,7 @@
   {%- assign imageClass = 'item-image not-cropped' -%}
 {% endif %}
 
-<a class="content-item-box {{item_image_state}}" href="{{ _entityData.url }}">
+<a class="content-item-box {{ item_image_state }}" href="{{ _entityData.url }}">
   <div class="item-top p-rel">
     <div class="top-inner of-hidden">
       {% include "lazy-image",

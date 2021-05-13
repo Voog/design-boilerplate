@@ -628,14 +628,6 @@ MMCQ = (function() {
     });
   };
 
-  var toggleImageSettingsPopover = function () {
-    $('.js-image-settings-popover').toggleClass('active');
-  }
-
-  $('.js-toggle-image-settings').click(function () {
-    toggleImageSettingsPopover();
-  });
-
   // ===========================================================================
   // Load product cover images only when they are close or appearing in the
   // viewport.
@@ -650,47 +642,6 @@ MMCQ = (function() {
     elements_selector: ".js-lazyload",
     callback_loaded: callback_loaded
   });
-
-  var handleFocus = function (el, func) {
-    el.focus(function () {
-      $(window).keyup(function (e) {
-        var code = (e.keyCode ? e.keyCode : e.which);
-        if (code == 9) {
-          func()
-        }
-      });
-    });
-  }
-
-  handleFocus($('.js-toggle-image-settings'), toggleImageSettingsPopover);
-
-  var handleProductPageContent = function() {
-    $(document).ready(function() {
-      changeProductImagePos();
-    });
-
-    $(window).resize(debounce(function() {
-      changeProductImagePos();
-    }, 25));
-
-    var changeProductImagePos = function() {
-      var paroductImage = $('.js-product-page-image');
-      var paroductImageWrap = $('.js-product-page-image-wrap');
-      var buyBtnContent = $('.js-buy-btn-content');
-
-      if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
-        if ($( window ).width() <= 752) {
-          if ($('.js-buy-btn-content .js-product-page-image').length <= 0) {
-            buyBtnContent.prepend(paroductImage);
-          }
-        } else {
-          if ($('.js-product-page-image-wrap .js-product-page-image').length <= 0) {
-            paroductImageWrap.prepend(paroductImage);
-          }
-        }
-      }
-    }
-  }
 
   $('.js-cart-btn').click(function() {
     if ($(this).data('product-id')) {

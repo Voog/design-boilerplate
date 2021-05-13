@@ -87,14 +87,6 @@
     });
   };
 
-  var toggleImageSettingsPopover = function () {
-    $('.js-image-settings-popover').toggleClass('active');
-  }
-
-  $('.js-toggle-image-settings').click(function () {
-    toggleImageSettingsPopover();
-  });
-
   // ===========================================================================
   // Load product cover images only when they are close or appearing in the
   // viewport.
@@ -109,19 +101,6 @@
     elements_selector: ".js-lazyload",
     callback_loaded: callback_loaded
   });
-
-  var handleFocus = function (el, func) {
-    el.focus(function () {
-      $(window).keyup(function (e) {
-        var code = (e.keyCode ? e.keyCode : e.which);
-        if (code == 9) {
-          func()
-        }
-      });
-    });
-  }
-
-  handleFocus($('.js-toggle-image-settings'), toggleImageSettingsPopover);
 
   var handleProductPageContent = function() {
     $(document).ready(function() {

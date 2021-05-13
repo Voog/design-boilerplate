@@ -1,8 +1,8 @@
-{% unless _imageData != blank %}
+{% if _imageData == blank %}
   {% assign item_image_state = "without-image" %}
 {% else %}
   {% assign item_image_state = "with-image" %}
-{% endunless %}
+{% endif %}
 
 {% if _entityData.data.image_crop_state %}
   {% assign image_crop_state = _entityData.data.image_crop_state %}
@@ -49,10 +49,8 @@
     <div class="item-top">
       <div class="top-inner aspect-ratio-inner image-drop-area {{ image_crop_state }} js-content-item-img-drop-area js-lazyload"
         data-image="{{ _src }}"
-        {%- if _isProductImage == true -%}
-          {% if _src != blank -%}
+        {%- if _isProductImage == true and _src != blank -%}
             style="background-image: url({{_src}});"
-          {%- endif -%}
         {%- endif -%}
       ></div>
     </div>
@@ -64,7 +62,7 @@
         {% if _imageData != blank %}
           <div class="loader js-loader"></div>
           {%- assign imageClass = "item-image " | append: image_crop_state -%}
-          {% include "lazy-image", _altAttr: _entityData.data.image_alt_attr, _data: _imageData, _targetWidth: _targetWidth, _className: imageClass  %}
+          {% include "lazy-image", _altAttr: _entityData.data.image_alt_attr, _data: _imageData, _targetWidth: _targetWidth, _className: imageClass %}
         {% else %}
           <div class="item-image-placeholder"></div>
         {% endif %}
