@@ -201,8 +201,6 @@
     initProductListPage: initProductListPage,
     initBlogPage: initBlogPage,
     initPostPage: initPostPage,
-    bindSiteSearch: bindSiteSearch,
-    handleProductPageContent: handleProductPageContent
   });
 
   // Initiates site wide functions.
