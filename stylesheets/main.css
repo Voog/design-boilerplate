@@ -514,6 +514,27 @@ body.dark-background {
   color: #0066bb;
 }
 
+.menu .menu-link.with_arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .menu-link.with_arrow::before {
+  content: '';
+  margin-right: 8px;
+  border: solid;
+  border-width: 0px 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
 @media screen and (min-width: 752px) {
   .dark-background .menu .menu-link {
     color: white;
@@ -1039,6 +1060,9 @@ body.dark-background {
 .menu-horizontal.menu-breadcrumbs {
   line-height: 16px;
   padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1060,7 +1084,7 @@ body.dark-background {
 }
 
 .menu-horizontal.menu-breadcrumbs .menu-item {
-  margin-right: 3px;
+  margin-right: 5px;
 }
 
 .menu-horizontal.menu-breadcrumbs .menu-item {

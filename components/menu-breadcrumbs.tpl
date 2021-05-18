@@ -1,26 +1,27 @@
+{%- capture breadcrumbsScript -%}
+  {%- sd_breadcrumbs -%}
+{%- endcapture -%}
+{%- assign breadcrumbsString = breadcrumbsScript | replace: '<script type="application/ld+json">', '' | replace: "</script>", '' | replace: site.url, '' | replace: '@', '' -%}
+{%- assign breadcrumbsObj = breadcrumbsString | json_parse -%}
+
 <ul class="menu menu-horizontal menu-public menu-breadcrumbs">
-  {% if show_product_related_pages_in_main_menu != true and page.level > 0 and site.root_item.layout_title == product_list_layout %}
-    {% menulink site.root_item wrapper-tag="li" wrapper-class="menu-item" %}
-  {% endif %}
+  {%- for listItem in breadcrumbsObj.itemListElement %}
+    {% unless forloop.index == 1 %}
+      {%- assign pageUrl = page.url | remove_first: "/" -%}
 
-  {% include "menu-breadcrumbs-items-loop" %}
+      {%- if pageUrl == listItem.item.id -%}
+        {%- assign breadcrumbTag = 'div' -%}
+        {%- assign isCurrentPage = true -%}
+      {%- else -%}
+        {%- assign breadcrumbTag = 'a' -%}
+        {%- assign isCurrentPage = false -%}
+      {%- endif -%}
 
-  {% if site.root_item.selected? %}
-    {% if editmode %}
-      {% if site.root_item.untranslated_children.size > 0 %}
-        <li class="menu-item menu-item-cms">{% menubtn site.root_item.untranslated_children %}</li>
-      {% endif %}
-
-      {% if site.root_item.hidden_children.size > 0 %}
-        <li class="menu-item menu-item-cms">{% menubtn site.root_item.hidden_children %}</li>
-      {% endif %}
-
-      {% unless site.root_item.layout_title == product_layout %}
-        {% include 'add-page-button', _menuItem: site.root_item %}
-      {% endunless %}
-
-    {% endif %}
-  {% else %}
-    {% include "menu-breadcrumbs-buttons-loop" %}
-  {% endif %}
+      <li class="menu-item">
+        <{{ breadcrumbTag }} class="menu-link {% if forloop.index > 2 %} with_arrow {% endif %} {% if isCurrentPage == true %} active{% endif %}" {% if isCurrentPage == false %}href="/{{ listItem.item.id }}"{% endif %}>
+          {{ listItem.item.name }}
+        </{{ breadcrumbTag }}>
+      </li>
+    {% endunless -%}
+  {% endfor -%}
 </ul>
