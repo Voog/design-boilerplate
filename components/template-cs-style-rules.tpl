@@ -78,12 +78,12 @@ body.dark-background {
   }
 }
 
-.menu .menu-link:hover {
+.menu .menu-linka:hover {
   color: var(--primary-color);
 }
 
 @media screen and (min-width: 752px) {
-  .dark-background .menu .menu-link:hover {
+  .dark-background .menu .menu-linka:hover {
     color: var(--fourth-color);
   }
 }
@@ -116,19 +116,6 @@ body.dark-background {
   .dark-background .menu-sub .menu .menu-item .menu-link.active {
     color: var(--fourth-color);
   }
-}
-
-.menu-horizontal .menu-breadcrumbs .menu-item a {
-  color: var(--primary-color);
-}
-
-.menu-breadcrumbs .menu-item a:hover {
-  color: var(--third-color);
-}
-
-.menu-breadcrumbs .current a,
-.menu-breadcrumbs .current a:hover {
-  color: var(--third-color);
 }
 
 .footer .voog-reference a {

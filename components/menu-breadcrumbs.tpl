@@ -18,7 +18,7 @@
       {%- endif -%}
 
       <li class="menu-item">
-        <{{ breadcrumbTag }} class="menu-link {% if forloop.index > 2 %} with_arrow {% endif %} {% if isCurrentPage == true %} active{% endif %}" {% if isCurrentPage == false %}href="/{{ listItem.item.id }}"{% endif %}>
+        <{{ breadcrumbTag }} class="{% if forloop.index > 2 %}with_arrow{% endif %}{% if isCurrentPage == false %} menu-link" href="/{{ listItem.item.id }}{% endif %}">
           {{ listItem.item.name }}
         </{{ breadcrumbTag }}>
       </li>

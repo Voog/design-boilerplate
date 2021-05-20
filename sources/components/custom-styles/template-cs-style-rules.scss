@@ -149,7 +149,7 @@ body {
       }
     }
 
-    &:hover {
+    &a:hover {
       color: var(--primary-color);
 
       // scss-lint:disable NestingDepth
@@ -226,21 +226,6 @@ body {
       // scss-lint:enable NestingDepth, SelectorDepth
     }
   }
-}
-
-// Menu-breadcrumbs
-
-.menu-horizontal .menu-breadcrumbs .menu-item a {
-  color: var(--primary-color);
-}
-
-.menu-breadcrumbs .menu-item a:hover {
-  color: var(--third-color);
-}
-
-.menu-breadcrumbs .current a,
-.menu-breadcrumbs .current a:hover {
-  color: var(--third-color);
 }
 
 // =============================================================================
