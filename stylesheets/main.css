@@ -1056,24 +1056,7 @@ body.dark-background {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media screen and (min-width: 1025px) {
-  .menu-horizontal.menu-breadcrumbs {
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-  .menu-horizontal.menu-breadcrumbs {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .menu-horizontal.menu-breadcrumbs {
-    font-size: 11px;
-  }
+  font-size: 14px;
 }
 
 .menu-horizontal.menu-breadcrumbs .menu-item {

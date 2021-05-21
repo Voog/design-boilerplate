@@ -20,7 +20,7 @@
       data-srcset="
         {%- for image in _data[imageSizes] -%}
           {%- if image.width <= _maxWidth -%}
-            {{image[urlKey]}} {{image.width}}w
+            {{ image[urlKey] }} {{ image.width }}w
             {%- unless forloop.last -%}
             ,
             {%- endunless -%}

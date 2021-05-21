@@ -505,16 +505,7 @@ $flags:
     padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
-
-    @media screen and (min-width: $desktop-1 + 1) {
-      font-size: 14px;
-    }
-    @media screen and (min-width: $mobile-1 + 1) and (max-width: $desktop-1) {
-      font-size: 12px;
-    }
-    @media screen and (max-width: $mobile-1) {
-      font-size: 11px;
-    }
+    font-size: 14px;
 
     .menu-item {
       display: inline-block;
