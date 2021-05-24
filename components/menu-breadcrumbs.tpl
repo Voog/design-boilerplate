@@ -4,7 +4,7 @@
 {%- assign breadcrumbsString = breadcrumbsScript | replace: '<script type="application/ld+json">', '' | replace: "</script>", '' | replace: site.url, '' | replace: '@', '' -%}
 {%- assign breadcrumbsObj = breadcrumbsString | json_parse -%}
 
-<ul class="menu menu-horizontal menu-public menu-breadcrumbs">
+<ul class="menu menu-horizontal menu-public menu-breadcrumbs" data-search-indexing-allowed="false">
   {%- for listItem in breadcrumbsObj.itemListElement %}
     {% unless forloop.index == 1 %}
       {%- assign pageUrl = page.url | remove_first: "/" -%}
@@ -24,4 +24,10 @@
       </li>
     {% endunless -%}
   {% endfor -%}
+
+  {%- if editmode and page.layout_title == product_list_layout -%}
+    <li class="menu-item">
+      {% include 'add-page-button' _menuItem: page%}
+    </li>
+  {%- endif -%}
 </ul>

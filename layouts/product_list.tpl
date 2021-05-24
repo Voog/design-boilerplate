@@ -31,9 +31,7 @@
 
         <main class="content" role="main">
           <section class="content-body content-formatted" data-search-indexing-allowed="true">{% content %}</section>
-            {%- if editmode -%}
-                {%- include 'add-page-button' _menuItem: page.menuitem -%}
-            {%- endif -%}
+          {% include 'menu-breadcrumbs' %}
           {% include 'product-list-block' %}
         </main>
 
