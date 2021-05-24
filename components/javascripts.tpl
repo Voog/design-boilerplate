@@ -9,24 +9,6 @@
   <script src="{{ javascripts_path }}/editmode.min.js?v=1.1"></script>
 {%- endif -%}
 
-{% if editmode %}
-  {% editorjsblock %}
-  <script src="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js"></script>
-
-    <script>
-      {%- if page.layout_title == product_layout -%}
-        {%- assign dropAreaPlaceholder = "drag_picture_for_product_here" | lce | escape -%}
-        site.bindProductListeners("{{ dropAreaPlaceholder }}", {{ page.id }});
-      {%- else -%}
-        {%- assign dropAreaPlaceholder = "drag_picture_here" | lce | escape -%}
-      {%- endif -%}
-
-      site.bindContentItemImgDropAreas('{{ dropAreaPlaceholder }}', "item_image", "image_crop_state");
-      site.bindContentItemImageCropToggle("image_crop_state");
-    </script>
-  {% endeditorjsblock %}
-{% endif %}
-
 {% sitejs_include %}
 
 {% comment %}Site search related javascript components.{% endcomment %}

@@ -29,8 +29,11 @@
         {% include "header" %}
         {% include "menu-level-2" %}
 
-        <main class="content" role="main" data-search-indexing-allowed="true">
-          <section class="content-body content-formatted">{% content %}</section>
+        <main class="content" role="main">
+          <section class="content-body content-formatted" data-search-indexing-allowed="true">{% content %}</section>
+          {%- if editmode -%}
+              {%- include 'add-page-button' _menuItem: page.menuitem -%}
+          {%- endif -%}
           {% include 'product-list-block' %}
         </main>
 

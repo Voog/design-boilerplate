@@ -12,9 +12,9 @@
   {%- assign productImage = _entityData.page.image -%}
 {%- endif -%}
 
-{% if productImage == blank %}
+{% unless productImage != blank %}
   {% assign item_image_state = "without-image" %}
-{% endif %}
+{% endunless%}
 
 {% if _entityData.data.image_crop_state %}
   {%- assign imageClass = 'item-image ' | append: _entityData.data.image_crop_state -%}

@@ -28,10 +28,10 @@
 
         {% include "header" %}
 
-        <main class="content" role="main" data-search-indexing-allowed="true">
+        <main class="content" role="main">
 
           {% include "menu-breadcrumbs" %}
-          <div class="flex_row flex_row-2 mar_0-32-neg">
+          <div class="flex_row flex_row-2 mar_0-32-neg" data-search-indexing-allowed="true">
             <div class="flex_row-2--item-60">
               <div class="mar_0-32 p-rel js-product-page-image-wrap">
                 {%- load buy_button to "buy_button" q.content.parent_id=page.id q.content.parent_type="page"

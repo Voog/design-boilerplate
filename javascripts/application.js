@@ -719,5 +719,3 @@ MMCQ = (function() {
   // Initiates site wide functions.
   init();
 })(jQuery);
-
-

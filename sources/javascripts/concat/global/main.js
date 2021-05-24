@@ -178,5 +178,3 @@
   // Initiates site wide functions.
   init();
 })(jQuery);
-
-
