@@ -2339,7 +2339,7 @@ body.dark-background {
 
 @media screen and (max-width: 900px) {
   .mar_t-32 {
-    margin: 16px;
+    margin-top: 16px;
   }
 }
 
