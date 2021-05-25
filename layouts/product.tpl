@@ -58,7 +58,7 @@
                   </div>
                 {%- endif -%}
               </div>
-              <section class="content-body content-formatted mar_0-32 mar_t-25" data-search-indexing-allowed="true">
+              <section class="content-body content-formatted mar_0-32 mar_t-32" data-search-indexing-allowed="true">
                 {% content name="gallery" %}
               </section>
             </div>
