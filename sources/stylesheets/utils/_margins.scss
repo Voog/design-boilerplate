@@ -42,5 +42,9 @@
 
   &t-25 {
     margin-top: 32px;
+
+    @include query($tablet-1) {
+      margin: 16px;
+    }
   }
 }

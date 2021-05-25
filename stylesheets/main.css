@@ -2337,6 +2337,12 @@ body.dark-background {
   margin-top: 32px;
 }
 
+@media screen and (max-width: 900px) {
+  .mar_t-25 {
+    margin: 16px;
+  }
+}
+
 .pad_10-0 {
   padding: 10px 0;
 }
