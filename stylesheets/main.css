@@ -2333,12 +2333,12 @@ body.dark-background {
   margin-right: 8px;
 }
 
-.mar_t-25 {
+.mar_t-32 {
   margin-top: 32px;
 }
 
 @media screen and (max-width: 900px) {
-  .mar_t-25 {
+  .mar_t-32 {
     margin: 16px;
   }
 }
