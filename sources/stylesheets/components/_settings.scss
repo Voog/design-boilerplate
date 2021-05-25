@@ -1,0 +1,158 @@
+.content-item-box:hover {
+  .image_settings {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.image_settings {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -20px;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  pointer-events: none;
+
+  &-buttons {
+    display: inline-flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    background: black;
+    padding: 8px 10px;
+    box-shadow: $image-settings-shadow;
+    border-radius: 8px;
+    color: white;
+    align-items: center;
+
+    .image_settings-button,
+    .image_settings-remove,
+    .image_settings-expand {
+      width: 24px;
+      height: 24px;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    .image_settings-button {
+      background-image: url('../assets/ico-settings.svg');
+    }
+
+    .image_settings-expand {
+      background-image: url('../assets/ico-expand.svg');
+      width: 18px;
+      height: 18px;
+    }
+
+    .image_settings-remove {
+      background-image: url('../assets/ico-delete.svg');
+    }
+  }
+}
+
+.settings_popover {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3;
+  background: white;
+  padding: 16px;
+  position: absolute;
+  top: 48px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,.2);
+  border-radius: 4px;
+
+  &-arrow--up {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 128px;
+    transform: rotate(180deg);
+
+    &:after {
+      position: absolute;
+      z-index: 56501;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+      border: solid transparent;
+      border-color: transparent;
+      border-width: 16px;
+      content: '';
+      border-top-color: #fff;
+      filter: drop-shadow(0 2px 1px rgba(0, 0, 0, .05));
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.form_field-cms {
+  margin-bottom: 0;
+  padding: 11px 16px;
+  resize: none;
+  min-height: auto;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 24px;
+  transition: $bezier-default;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  position: relative;
+
+  &:hover {
+    border-color: #ccc;
+  }
+
+  label {
+    pointer-events: none;
+    position: absolute;
+    top: 16px;
+    left: 9px;
+    font-size: 14px;
+    font-weight: inherit;
+    white-space: nowrap;
+    padding: 0 8px;
+    background-color: transparent;
+    line-height: 16px;
+    color: #8d9091;
+    transition: $bezier-default;
+  }
+
+  input::-webkit-input-placeholder {
+    color: transparent
+  }
+
+  &.with-input {
+    label {
+      top: -8px;
+      font-size: 12px;
+      font-weight: 600;
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  input {
+    flex-grow: 1;
+    background-color: #fff;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font: inherit;
+  }
+
+  label,
+  input {
+    color: black;
+  }
+}
+

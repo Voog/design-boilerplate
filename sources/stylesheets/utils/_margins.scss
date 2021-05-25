@@ -1,0 +1,50 @@
+.mar_ {
+
+  &0-16-neg {
+    margin: 0 -16px;
+  }
+
+  &0-32-neg {
+    margin: 0 -32px;
+  }
+
+  &0-16 {
+    margin: 0 16px;
+  }
+
+  &0-32 {
+    margin: 0 32px;
+  }
+
+  &32-0 {
+    margin: 32px 0;
+
+    @include query($tablet-1) {
+      margin: 16px 0;
+    }
+  }
+
+  &b-32 {
+    margin-bottom: 32px;
+
+    @include query($tablet-1) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &t-16 {
+    margin-top: 16px;
+  }
+
+  &r-8 {
+    margin-right: 8px;
+  }
+
+  &t-32 {
+    margin-top: 32px;
+
+    @include query($tablet-1) {
+      margin-top: 16px;
+    }
+  }
+}

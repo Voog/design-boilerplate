@@ -78,12 +78,12 @@ body.dark-background {
   }
 }
 
-.menu .menu-link:hover {
+.menu .menu-link a:hover {
   color: var(--primary-color);
 }
 
 @media screen and (min-width: 752px) {
-  .dark-background .menu .menu-link:hover {
+  .dark-background .menu .menu-link a:hover {
     color: var(--fourth-color);
   }
 }

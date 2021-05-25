@@ -82,6 +82,9 @@
     {% assign container_bg_color_data_str = container_bg_color_data | json %}
   {% endif %}
 
+  {% assign product_list_layout = "Product list" %}
+  {% assign product_layout = "Product" %}
+
   {% comment %}=================================================================
   | Design editor variables.
   ============================================================= {% endcomment %}

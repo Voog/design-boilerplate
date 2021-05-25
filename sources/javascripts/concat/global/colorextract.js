@@ -4,7 +4,7 @@
 // Basic CoffeeScript port of the (MMCQ) Modified Media Cut Quantization
 // algorithm from the Leptonica library (http://www.leptonica.com/).
 // Return a color map you can use to map original pixels to the reduced palette.
-// 
+//
 // Rewritten from the JavaScript port (http://gist.github.com/1104622)
 // developed by Nick Rabinowitz under the MIT license.
 

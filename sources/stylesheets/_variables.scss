@@ -10,6 +10,7 @@ $third-color: #303132;
 // Specific colors
 $black: #000000;
 $white: #ffffff;
+$editor-grey: #1B2124;
 
 $red: #cc0000;
 $green: #60a740;
@@ -22,17 +23,18 @@ $grey-3: #fafafa;
 
 $disabled: #dadada;
 
-
 // Sign out button
 $color-common-gray: rgb(27,33,36);
 $color-toolbar-bg: rgb(238,238,238);
 $color-silver-2: rgb(196,196,196);
 
-
 // Fonts
 $primary-font: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif;
 $avenir: 'Avenir Next', 'AvenirX';
+
 // Media queries
+$desktop-1: 1024px;
+
 $tablet-1: 900px;
 $tablet-2: 752px;
 $tablet-3: 506px;
@@ -44,3 +46,10 @@ $mobile-2: 420px;
 // Define the reusable variables here.
 // For example the width of several different elements, that allways have to be with the same height:
 // $box-width: 400px;
+
+$bezier-default: cubic-bezier(0.1, 0.6, 0, 1);
+
+$popover-shadow: 0px 2px 10px rgba($black, .2);
+$image-settings-shadow: 0px 0px 5px rgba($black, .05), 0px 25px 35px rgba($black, .03);
+
+$zindex-settings-popover: 56501;

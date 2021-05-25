@@ -101,6 +101,22 @@
       }
     }
   }
+
+  .with_arrow {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      margin-right: 8px;
+      border: solid;
+      border-width: 0px 2px 2px 0;
+      display: inline-block;
+      padding: 2px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+  }
 }
 
 // Styling rules for the site's main menu.
@@ -477,6 +493,23 @@ $flags:
 
         }
       }
+    }
+  }
+}
+
+// Product list menu
+.menu-horizontal {
+
+  &.menu-breadcrumbs {
+    line-height: 16px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+
+    .menu-item {
+      display: inline-block;
+      margin-right: 5px;
     }
   }
 }

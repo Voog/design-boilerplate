@@ -8,6 +8,13 @@
     {
       "content_type": "page",
       "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
       "file": "layouts/front_page.tpl",
       "layout_name": "page_front",
       "title": "Front page"
@@ -15,9 +22,16 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
+      "file": "layouts/product_list.tpl",
+      "layout_name": "product_list",
+      "title": "Product list"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/product.tpl",
+      "layout_name": "product",
+      "title": "Product"
     },
     {
       "content_type": "blog",
@@ -36,37 +50,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-lang.tpl",
-      "layout_name": "menu-lang",
-      "title": "menu-lang"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-headings.tpl",
-      "layout_name": "template-cs-headings",
-      "title": "template-cs-headings"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-meta.tpl",
-      "layout_name": "template-meta",
-      "title": "template-meta"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-level-2.tpl",
-      "layout_name": "menu-level-2",
-      "title": "menu-level-2"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-signout.tpl",
-      "layout_name": "site-signout",
-      "title": "site-signout"
+      "file": "components/content-item.tpl",
+      "layout_name": "content-item",
+      "title": "content-item"
     },
     {
       "content_type": "component",
@@ -74,6 +60,13 @@
       "file": "components/menu-level-1.tpl",
       "layout_name": "menu-level-1",
       "title": "menu-level-1"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/product-list-block.tpl",
+      "layout_name": "product-list-block",
+      "title": "product-list-block"
     },
     {
       "content_type": "component",
@@ -92,9 +85,30 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/image-src-variable.tpl",
+      "layout_name": "image-src-variable",
+      "title": "image-src-variable"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/add-page-button.tpl",
+      "layout_name": "add-page-button",
+      "title": "add-page-button"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/search.tpl",
       "layout_name": "search",
       "title": "search"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/product-list-block-item.tpl",
+      "layout_name": "product-list-block-item",
+      "title": "product-list-block-item"
     },
     {
       "content_type": "component",
@@ -113,9 +127,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-content.tpl",
-      "layout_name": "template-cs-content",
-      "title": "template-cs-content"
+      "file": "components/lazy-image.tpl",
+      "layout_name": "lazy-image",
+      "title": "lazy-image"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-lang.tpl",
+      "layout_name": "menu-lang",
+      "title": "menu-lang"
     },
     {
       "content_type": "component",
@@ -197,9 +218,23 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/product-item.tpl",
+      "layout_name": "product-item",
+      "title": "product-item"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/blog-article-variables.tpl",
       "layout_name": "blog-article-variables",
       "title": "blog-article-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-breadcrumbs.tpl",
+      "layout_name": "menu-breadcrumbs",
+      "title": "menu-breadcrumbs"
     },
     {
       "content_type": "component",
@@ -214,14 +249,73 @@
       "file": "components/comment-form.tpl",
       "layout_name": "comment-form",
       "title": "comment-form"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-content.tpl",
+      "layout_name": "template-cs-content",
+      "title": "template-cs-content"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-headings.tpl",
+      "layout_name": "template-cs-headings",
+      "title": "template-cs-headings"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-meta.tpl",
+      "layout_name": "template-meta",
+      "title": "template-meta"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-level-2.tpl",
+      "layout_name": "menu-level-2",
+      "title": "menu-level-2"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-signout.tpl",
+      "layout_name": "site-signout",
+      "title": "site-signout"
     }
   ],
   "assets": [
     {
       "content_type": "image/svg+xml",
+      "file": "assets/ico-expand.svg",
+      "kind": "assets",
+      "filename": "ico-expand.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-settings.svg",
+      "kind": "assets",
+      "filename": "ico-settings.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
       "file": "assets/ico-flags.svg",
       "kind": "assets",
       "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-delete.svg",
+      "kind": "assets",
+      "filename": "ico-delete.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-placeholder.svg",
+      "kind": "assets",
+      "filename": "ico-placeholder.svg"
     },
     {
       "content_type": "image/png",
@@ -231,9 +325,21 @@
     },
     {
       "content_type": "application/javascript",
+      "file": "javascripts/editmode.js",
+      "kind": "javascripts",
+      "filename": "editmode.js"
+    },
+    {
+      "content_type": "application/javascript",
       "file": "javascripts/application.min.js",
       "kind": "javascripts",
       "filename": "application.min.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/editmode.min.js",
+      "kind": "javascripts",
+      "filename": "editmode.min.js"
     },
     {
       "content_type": "application/javascript",
