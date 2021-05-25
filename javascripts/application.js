@@ -714,6 +714,7 @@ MMCQ = (function() {
     initProductListPage: initProductListPage,
     initBlogPage: initBlogPage,
     initPostPage: initPostPage,
+    bindSiteSearch: bindSiteSearch
   });
 
   // Initiates site wide functions.

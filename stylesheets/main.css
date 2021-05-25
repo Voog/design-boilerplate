@@ -2343,18 +2343,12 @@ body.dark-background {
   }
 }
 
-.pad_10-0 {
-  padding: 10px 0;
-}
-
-@media screen and (max-width: 1024px) {
-  .pad_10-0 {
-    padding: 24px 0;
-  }
-}
-
 .pad_0-4 {
   padding: 0 4px;
+}
+
+.pad_16-0 {
+  padding: 16px 0;
 }
 
 .of-hidden {
