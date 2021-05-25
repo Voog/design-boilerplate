@@ -27,7 +27,7 @@
 
   {%- if editmode and page.layout_title == product_list_layout -%}
     <li class="menu-item">
-      {% include 'add-page-button' _menuItem: page%}
+      {% include 'add-page-button' _menuItem: page %}
     </li>
   {%- endif -%}
 </ul>
