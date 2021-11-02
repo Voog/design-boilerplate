@@ -78,13 +78,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/topbar.tpl",
-      "layout_name": "topbar",
-      "title": "topbar"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/image-src-variable.tpl",
       "layout_name": "image-src-variable",
       "title": "image-src-variable"
@@ -200,13 +193,6 @@
       "file": "components/template-styles.tpl",
       "layout_name": "template-styles",
       "title": "template-styles"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/sidebar.tpl",
-      "layout_name": "sidebar",
-      "title": "sidebar"
     },
     {
       "content_type": "component",
