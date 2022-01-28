@@ -244,6 +244,13 @@
       "title": "topbar"
     },
     {
+      "content_type": "product",
+      "component": false,
+      "file": "layouts/auto_generated_product.tpl",
+      "layout_name": "page_default",
+      "title": "Auto generated product"
+    },
+    {
       "content_type": "blog",
       "component": false,
       "file": "layouts/blog___news.tpl",
