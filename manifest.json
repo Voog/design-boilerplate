@@ -22,6 +22,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/buy-button.tpl",
+      "layout_name": "buy-button",
+      "title": "buy-button"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/comment-form.tpl",
       "layout_name": "comment-form",
       "title": "comment-form"
@@ -247,8 +254,8 @@
       "content_type": "product",
       "component": false,
       "file": "layouts/auto_generated_product.tpl",
-      "layout_name": "page_default",
-      "title": "Auto generated product"
+      "layout_name": "auto_generated_product",
+      "title": "Auto-generated product"
     },
     {
       "content_type": "blog",

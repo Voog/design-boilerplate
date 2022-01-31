@@ -422,6 +422,10 @@ body.dark-background {
   margin-top: 25px;
 }
 
+.content-formatted .edy-buy-button-container {
+  margin-top: 32px;
+}
+
 .content-formatted .edy-buy-button-container .form_field {
   padding-top: 15px;
 }
@@ -2197,6 +2201,10 @@ body.dark-background {
 
 .with-image .product_alt-attr {
   display: block;
+}
+
+.product-description {
+  margin: 32px 0;
 }
 
 .flex_box {
