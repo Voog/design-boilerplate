@@ -162,4 +162,120 @@
     "scope": "global"
   */
   --content-link-hover-color: rgba(0, 102, 187, 0.8);
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "price"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global"
+  */
+  --content-area-product-price__font-size: 24px;
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "price"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "700",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --content-area-product-price__font-weight: 700;
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "price"],
+    "titleI18n": "font_style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --content-area-product-price__font-style: normal;
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "price"],
+    "titleI18n": "text_decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --content-area-product-price__text-decoration: none;
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "price"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --content-area-product-price__color: #000;
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "description"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global"
+  */
+  --content-area-product-description__font-size: var(--content-body-font-size);
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "description"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "700",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --content-area-product-description__font-weight: 400;
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "description"],
+    "titleI18n": "font_style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --content-area-product-description__font-style: normal;
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "description"],
+    "titleI18n": "text_decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --content-area-product-description__text-decoration: none;
+  /* VoogStyle
+    "pathI18n": ["{{ content_inner_title }}", "description"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --content-area-product-description__color: rgba(141, 144, 145, 0.6);
 }

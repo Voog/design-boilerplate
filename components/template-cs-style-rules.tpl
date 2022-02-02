@@ -218,3 +218,21 @@ body.dark-background {
           text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
 }
+
+.product-content .product-price {
+  color: var(--content-area-product-price__color);
+  font-size: var(--content-area-product-price__font-size);
+  font-weight: var(--content-area-product-price__font-weight);
+  font-style: var(--content-area-product-price__font-style);
+  -webkit-text-decoration: var(--content-area-product-price__text-decoration);
+          text-decoration: var(--content-area-product-price__text-decoration);
+}
+
+.product-content .product-description {
+  color: var(--content-area-product-description__color);
+  font-size: var(--content-area-product-description__font-size);
+  font-weight: var(--content-area-product-description__font-weight);
+  font-style: var(--content-area-product-description__font-style);
+  -webkit-text-decoration: var(--content-area-product-description__text-decoration);
+          text-decoration: var(--content-area-product-description__text-decoration);
+}
