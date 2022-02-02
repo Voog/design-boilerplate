@@ -67,6 +67,12 @@
               <div class="mar_0-32 flex_col">
                 <section class="content-body content-formatted js-buy-btn-content mar_32-0"
                   data-search-indexing-allowed="true">
+                  <div class="content-item-title content-area" data-search-indexing-allowed="true">
+                    {% contentblock name="page_title" publish_default_content="true" %}
+                      <h1>{{ page.title }}</h1>
+                    {% endcontentblock %}
+                  </div>
+
                   {% contentblock %}{{ "write_product_description_here" | lc: editor_locale }}{% endcontentblock %}
                 </section>
               </div>
