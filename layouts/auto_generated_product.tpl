@@ -2,7 +2,6 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 
 <head prefix="og: http://ogp.me/ns#">
-  {% assign content_inner_title = "product" %}
   {% include "template-variables" %}
   {% include "html-head" %}
   {% include "template-styles" %}
