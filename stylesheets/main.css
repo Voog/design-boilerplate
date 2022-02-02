@@ -331,11 +331,11 @@ body.dark-background {
   opacity: .8;
 }
 
-.public .content-formatted .custom-btn-disabled {
+.content-formatted .custom-btn-disabled {
   cursor: default;
 }
 
-.public .content-formatted .custom-btn-disabled, .public .content-formatted .custom-btn-disabled:hover {
+.content-formatted .custom-btn-disabled.edy-buy-button-disabled, .content-formatted .custom-btn-disabled:hover {
   color: #838586;
   background-color: #dadada;
   border-color: #dadada;
@@ -420,10 +420,6 @@ body.dark-background {
 
 .content-formatted .edy-partial-view {
   margin-top: 25px;
-}
-
-.content-formatted .edy-buy-button-container {
-  margin-top: 32px;
 }
 
 .content-formatted .edy-buy-button-container .form_field {
@@ -2203,8 +2199,46 @@ body.dark-background {
   display: block;
 }
 
+.product-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-content .flex_row-2--item-60,
+.product-content .flex_row-2--item-40 {
+  max-width: 100%;
+}
+
+.product-content .flex_row-2--item-40 > .flex_col {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 104px;
+}
+
+.product-content .edy-buy-button-container {
+  margin: 24px 0;
+}
+
+.product-content .without-image .item-top {
+  background-image: url("../assets/ico-placeholder.svg");
+  background-color: #F2F2F2;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .product-description {
-  margin: 32px 0;
+  margin-bottom: 24px;
+}
+
+.product-price {
+  padding: 8px 0 24px 0;
 }
 
 .flex_box {
@@ -2369,4 +2403,19 @@ body.dark-background {
 
 .p-rel {
   position: relative;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  img {
+    image-rendering: -webkit-optimize-contrast !important;
+  }
+}
+
+/* Unset for Safari 11+ */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    img {
+      image-rendering: unset !important;
+    }
+  }
 }

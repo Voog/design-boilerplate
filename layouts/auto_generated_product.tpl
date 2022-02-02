@@ -2,18 +2,29 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 
 <head prefix="og: http://ogp.me/ns#">
+  {% assign content_inner_title = "product" %}
   {% include "template-variables" %}
   {% include "html-head" %}
   {% include "template-styles" %}
 </head>
 
-<body class="product_page">
-    {%- capture _button_attributes %}
-      data-product-id="{{ product.id }}"
-      data-product="{{ product | json | escape }}"
-      data-settings="{&quot;title&quot;:&quot;{{ "add_to_cart" | lc | escape_once }}&quot;,&quot;button_style&quot;:&quot;with_price&quot;}"
-    {% endcapture -%}
+{% capture bottom_content_html %}
+  {% unless editmode %}
+    {% content bind=product name="content" %}
+  {% endunless %}
+{% endcapture %}
 
+{% assign bottom_content_size = bottom_content_html | strip | size %}
+
+{% capture gallery_content_html %}
+  {% unless editmode %}
+    {% content bind=product name="gallery" %}
+  {% endunless %}
+{% endcapture %}
+
+{% assign gallery_content_size = gallery_content_html | strip | size %}
+
+<body class="product_page">
   <div class="container">
     <div class="js-background-type">
       <div class="background-color js-background-color">
@@ -21,49 +32,49 @@
         {% include "header" %}
 
         <main class="content" role="main">
-          <div class="flex_row flex_row-2 mar_0-32-neg" data-search-indexing-allowed="true">
+
+          {% include "menu-breadcrumbs-sd" %}
+
+          <div class="flex_row flex_row-2 product-content" data-search-indexing-allowed="true">
             <div class="flex_row-2--item-60">
               <div class="mar_0-32 p-rel js-product-page-image-wrap">
-                {%- assign product_image = product.image -%}
-
-                {%- if product_image != blank %}
+                {%- if product.image != blank %}
                   {% assign item_image_state = "with-image" %}
                 {% else %}
                   {% assign item_image_state = "without-image" %}
                 {% endif -%}
 
-                <div class="js-product-page-image mar_b-32">
-                  <div class="content-item-box {{ item_image_state }} js-content-item-box">
-                    <div class="item-top">
-                      <div class="top-inner of-hidden">
-                        {%- if product_image != blank %}
-                          <div class="loader js-loader"></div>
-                          {% image product_image loading: 'lazy' target_width: 1280 class: "item-image not-cropped" %}
-                        {% endif -%}
-                      </div>
+                <div class="content-item-box {{ item_image_state }} js-content-item-box">
+                  <div class="item-top">
+                    <div class="top-inner">
+                      {%- if product.image != blank %}
+                        {% image product.image loading: 'lazy' target_width: "1280" class: "item-image not-cropped" %}
+                      {% endif -%}
                     </div>
                   </div>
                 </div>
               </div>
 
-              <section class="content-body content-formatted mar_0-32 mar_t-32" data-search-indexing-allowed="true">
-                {% content name="gallery" %}
-              </section>
+              {%- if gallery_content_size > 0 or editmode -%}
+                <section class="content-body content-formatted mar_t-32 js-product-gallery" data-search-indexing-allowed="true">
+                  {% content bind=product name="gallery" %}
+                </section>
+              {% endif -%}
             </div>
 
             <div class="flex_row-2--item-40">
-              <div class="mar_0-32 flex_col">
+              <div class="flex_col">
                 <section class="content-body content-formatted js-buy-btn-content mar_32-0" data-search-indexing-allowed="true">
                   <div class="content-item-title content-area">
-                    <h3>{%- editable product.name -%}</h3>
+                    <h1>{%- editable product.name -%}</h1>
                   </div>
 
-                  <div class="product-price bold mar_b-16">
+                  <div class="product-price">
                     {%- if product.price_max_with_tax != product.price_min_with_tax -%}
                     {{ product.price_min_with_tax | money_with_currency: product.currency -}}
                       <span class="pad_0-4">–</span>
                     {%- endif -%}
-                    {{ product.price_max_with_tax | money_with_currency: product.currency }}
+                    {{ product.price_max_with_tax | money_with_currency: product.currency -}}
                   </div>
 
                   {%- if editmode or product.description != blank -%}
@@ -74,23 +85,35 @@
 
                   {% content bind=product %}
 
-                  {% include "buy-button" %}
+                  <div class="js-by-btn-content">
+                    {% include "buy-button" %}
+                  </div>
                 </section>
               </div>
             </div>
           </div>
+
+          {%- if bottom_content_size > 0 or editmode -%}
+            <section
+              class="content-product-wide content-area"
+              data-search-indexing-allowed="true">
+              {% content bind=product name="content" %}
+            </section>
+          {%- endif -%}
+
         </main>
+
+        {% include "footer" %}
+
       </div>
-
-      {% include "footer" %}
-
     </div>
   </div>
 
   {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "template-tools" %}
-  <script>site.initProductPage();</script>
+
+  <script>template && template.handleProductPageContent();</script>
 </body>
 
 </html>
