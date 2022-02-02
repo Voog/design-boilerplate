@@ -136,7 +136,7 @@
       if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
         if ($(window).width() < 752) {
           if ($('.js-buy-btn-content + .js-product-gallery').length === 0) {
-            buyBtnContent.append(productGallery);
+            buyBtnContent.parent().append(productGallery);
           }
         } else {
           if ($('.js-content-item-box + .js-product-gallery').length === 0) {

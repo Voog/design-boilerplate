@@ -63,7 +63,7 @@
 
             <div class="flex_row-2--item-40">
               <div class="flex_col">
-                <section class="content-body content-formatted js-buy-btn-content mar_32-0" data-search-indexing-allowed="true">
+                <section class="content-body content-formatted mar_32-0" data-search-indexing-allowed="true">
                   <div class="content-item-title content-area">
                     <h1>{%- editable product.name -%}</h1>
                   </div>
@@ -82,7 +82,7 @@
                     </div>
                   {% endif -%}
 
-                  <div class="js-by-btn-content">
+                  <div class="js-buy-btn-content">
                     {% include "buy-button" %}
                   </div>
 
