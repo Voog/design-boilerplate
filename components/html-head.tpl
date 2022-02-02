@@ -40,7 +40,10 @@
 {% include "template-meta" %}
 
 {% comment %}BREADCRUMBS{% endcomment %}
-{% sd_breadcrumbs %}
+{%- capture breadcrumbsScript -%}
+  {%- sd_breadcrumbs -%}
+{%- endcapture -%}
+{{ breadcrumbsScript }}
 
 {% if blog %}{{ blog.rss_link }}{% endif %}
 {{ site.stats_header }}

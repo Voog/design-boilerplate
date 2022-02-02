@@ -1,6 +1,3 @@
-{%- capture breadcrumbsScript -%}
-  {%- sd_breadcrumbs -%}
-{%- endcapture -%}
 {%- assign breadcrumbsString = breadcrumbsScript | replace: '<script type="application/ld+json">', '' | replace: "</script>", '' | replace: site.url, '' | replace: '@', '' -%}
 {%- assign breadcrumbsObj = breadcrumbsString | json_parse -%}
 
