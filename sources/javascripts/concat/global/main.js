@@ -118,6 +118,35 @@
     $('.content-formatted table').wrap('<div class="table-container"></div>');
   };
 
+  // Change product image position on narrower screens (mobile devices)
+  var handleProductPageContent = function () {
+    $(document).ready(function () {
+      changeProductImagePos();
+    });
+
+    $(window).resize(debounce(function () {
+      changeProductImagePos();
+    }, 25));
+
+    var changeProductImagePos = function () {
+      var productGallery = $('.js-product-gallery');
+      var productImageContentBox = $('.js-content-item-box');
+      var buyBtnContent = $('.js-buy-btn-content');
+
+      if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
+        if ($(window).width() < 752) {
+          if ($('.js-buy-btn-content + .js-product-gallery').length === 0) {
+            buyBtnContent.append(productGallery);
+          }
+        } else {
+          if ($('.js-content-item-box + .js-product-gallery').length === 0) {
+            productImageContentBox.append(productGallery);
+          }
+        }
+      }
+    }
+  };
+
 // Initiates the table horisontal scroll function when window is resized.
   var handleWindowResize = function() {
     // Add functions that should be triggered while resizing the window here.
@@ -174,6 +203,10 @@
     initBlogPage: initBlogPage,
     initPostPage: initPostPage,
     bindSiteSearch: bindSiteSearch
+  });
+
+  window.template = $.extend(window.template || {}, {
+    handleProductPageContent: handleProductPageContent
   });
 
   // Initiates site wide functions.
