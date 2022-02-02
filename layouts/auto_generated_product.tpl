@@ -82,11 +82,11 @@
                     </div>
                   {% endif -%}
 
-                  {% content bind=product %}
-
                   <div class="js-by-btn-content">
                     {% include "buy-button" %}
                   </div>
+
+                  {% content bind=product %}
                 </section>
               </div>
             </div>
