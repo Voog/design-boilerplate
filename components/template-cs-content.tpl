@@ -163,6 +163,64 @@
   */
   --content-link-hover-color: rgba(0, 102, 187, 0.8);
   /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global"
+  */
+  --content-area-product-title__font-size: 50px;
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "700",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --content-area-product-title__font-weight: 700;
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "font_style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --content-area-product-title__font-style: normal;
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "text_decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --content-area-product-title__text-decoration: none;
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  --content-area-product-title__color: #1b2124;
+  /* VoogStyle
     "pathI18n": ["product", "price"],
     "titleI18n": "size",
     "editor": "rangePicker",

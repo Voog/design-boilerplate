@@ -236,3 +236,12 @@ body.dark-background {
   -webkit-text-decoration: var(--content-area-product-description__text-decoration);
           text-decoration: var(--content-area-product-description__text-decoration);
 }
+
+.product-content .content-item-title h1 {
+  color: var(--content-area-product-title__color);
+  font-size: var(--content-area-product-title__font-size);
+  font-weight: var(--content-area-product-title__font-weight);
+  font-style: var(--content-area-product-title__font-style);
+  -webkit-text-decoration: var(--content-area-product-title__text-decoration);
+          text-decoration: var(--content-area-product-title__text-decoration);
+}
