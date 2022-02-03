@@ -7,21 +7,21 @@
   {% include "template-styles" %}
 </head>
 
-{% capture bottom_content_html %}
-  {% unless editmode %}
-    {% content bind=product name="content" %}
-  {% endunless %}
-{% endcapture %}
+{%- capture bottom_content_html -%}
+  {%- unless editmode -%}
+    {%- content bind=product name="content" -%}
+  {%- endunless -%}
+{%- endcapture -%}
 
-{% assign bottom_content_size = bottom_content_html | strip | size %}
+{%- assign bottom_content_size = bottom_content_html | strip | size -%}
 
-{% capture gallery_content_html %}
-  {% unless editmode %}
-    {% content bind=product name="gallery" %}
-  {% endunless %}
-{% endcapture %}
+{%- capture gallery_content_html -%}
+  {%- unless editmode -%}
+    {%- content bind=product name="gallery" -%}
+  {%- endunless -%}
+{%- endcapture -%}
 
-{% assign gallery_content_size = gallery_content_html | strip | size %}
+{%- assign gallery_content_size = gallery_content_html | strip | size -%}
 
 <body class="product_page">
   <div class="container">
