@@ -1,7 +1,7 @@
 {%- capture _button_attributes %}
   data-product-id="{{ product.id }}"
   data-product="{{ product | json | escape }}"
-  data-settings="{&quot;title&quot;:&quot;{{ "add_to_cart" | lc | escape_once }}&quot;,&quot;button_style&quot;:&quot;with_price&quot;}"
+  data-settings="{&quot;title&quot;:&quot;{{ "add_to_cart" | lc | escape_once }}&quot;}"
 {% endcapture -%}
 
 {% if editmode != true and product.available? == false %}
