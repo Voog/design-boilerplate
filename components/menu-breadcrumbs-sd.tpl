@@ -11,10 +11,4 @@
       </a>
     </li>
   {% endfor -%}
-
-  <li class="menu-item">
-    <div class="with_arrow">
-      {{ product.name }}
-    </div>
-  </li>
 </ul>
