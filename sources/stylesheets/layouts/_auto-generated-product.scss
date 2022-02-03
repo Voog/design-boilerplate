@@ -8,9 +8,11 @@
     max-width: 100%;
   }
 
-  .flex_row-2--item-40 > .flex_col {
-    position: sticky;
-    top: 104px;
+  @media screen and (min-width: $tablet-2) {
+    .flex_row-2--item-40 > .flex_col {
+      position: sticky;
+      top: 104px;
+    }
   }
 
   .edy-buy-button-container {

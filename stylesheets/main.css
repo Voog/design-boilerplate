@@ -2215,10 +2215,12 @@ body.dark-background {
   max-width: 100%;
 }
 
-.product-content .flex_row-2--item-40 > .flex_col {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 104px;
+@media screen and (min-width: 752px) {
+  .product-content .flex_row-2--item-40 > .flex_col {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 104px;
+  }
 }
 
 .product-content .edy-buy-button-container {

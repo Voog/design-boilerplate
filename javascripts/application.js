@@ -672,16 +672,16 @@ MMCQ = (function() {
     var changeProductImagePos = function () {
       var productGallery = $('.js-product-gallery');
       var productImageContentBox = $('.js-content-item-box');
-      var buyBtnContent = $('.js-buy-btn-content');
+      var productContentRight = $('.js-product-content-right');
 
       if ($('.js-buy-btn-content .edy-buy-button-container').length >= 1) {
         if ($(window).width() < 752) {
           if ($('.js-buy-btn-content + .js-product-gallery').length === 0) {
-            buyBtnContent.parent().append(productGallery);
+            productContentRight.append(productGallery);
           }
         } else {
           if ($('.js-content-item-box + .js-product-gallery').length === 0) {
-            productImageContentBox.append(productGallery);
+            productImageContentBox.parent().append(productGallery);
           }
         }
       }
