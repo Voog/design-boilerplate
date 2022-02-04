@@ -36,7 +36,7 @@
 
           <div class="flex_row flex_row-2 product-content" data-search-indexing-allowed="true">
             <div class="flex_row-2--item-60">
-              <div class="mar_0-32 p-rel js-product-page-image-wrap">
+              <div class="mar_0-16 p-rel js-product-page-image-wrap">
                 {%- if product.image != blank %}
                   {% assign item_image_state = "with-image" %}
                 {% else %}
@@ -55,14 +55,14 @@
               </div>
 
               {%- if gallery_content_size > 0 or editmode -%}
-                <section class="mar_0-32 content-body content-formatted mar_t-32 js-product-gallery" data-search-indexing-allowed="true">
+                <section class="mar_0-16 content-body content-formatted mar_t-32 js-product-gallery" data-search-indexing-allowed="true">
                   {% content bind=product name="gallery" %}
                 </section>
               {% endif -%}
             </div>
 
             <div class="flex_row-2--item-40 js-product-content-right">
-              <div class="mar_0-32 flex_col">
+              <div class="mar_0-16 flex_col">
                 <section class="content-body content-formatted" data-search-indexing-allowed="true">
                   <div class="content-item-title content-area">
                     <h1>{%- editable product.name -%}</h1>
@@ -70,7 +70,7 @@
 
                   <div class="product-price">
                     {%- if product.price_max_with_tax != product.price_min_with_tax -%}
-                    {{ product.price_min_with_tax | money_with_currency: product.currency -}}
+                      {{ product.price_min_with_tax | money_with_currency: product.currency -}}
                       <span class="pad_0-4">–</span>
                     {%- endif -%}
                     {{ product.price_max_with_tax | money_with_currency: product.currency -}}
