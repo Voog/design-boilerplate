@@ -1,11 +1,4 @@
 {% capture dont_render %}
-  {% comment %}Detects viewing mode.{% endcomment %}
-  {% if editmode %}
-    {% assign view_mode = "editmode" %}
-  {% else %}
-    {% assign view_mode = "publicmode" %}
-  {% endif %}
-
   {% comment %}SITE BODY RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% if blog_article_page %}

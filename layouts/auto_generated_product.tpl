@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
 
-<html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
+<html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
@@ -114,10 +114,12 @@
   {% include "template-tools" %}
 
   <script>
-    template && template.handleProductPageContent();
-    {%- if editmode and product %}
-      site && site.handleProductImageClick({{ product.id }});
-    {% endif -%}
+    if (site) {
+      site.handleProductPageContent();
+      {%- if editmode and product %}
+        site.handleProductImageClick({{ product.id }});
+      {% endif -%}
+    }
   </script>
 </body>
 

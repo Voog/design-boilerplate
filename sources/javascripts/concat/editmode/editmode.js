@@ -1,8 +1,4 @@
 ; (function ($) {
-  var editmode = function () {
-    return $('html').hasClass('editmode');
-  };
-
   // Returns the suitable version of the image depending on the viewport width.
   var getImageByWidth = function (sizes, targetWidth) {
     var prevImage;
@@ -480,11 +476,9 @@
   // Opens product admin view on product image click
 
   var handleProductImageClick = function(product_id) {
-    if (editmode()) {
-      $('.product-content .product-image').click(function() {
-        window.open('/admin/ecommerce/products/' + product_id, '_blank').focus();
-      });
-    }
+    $('.product-content .product-image').click(function() {
+      window.open('/admin/ecommerce/products/' + product_id, '_blank').focus();
+    });
   };
 
   var init = function () {

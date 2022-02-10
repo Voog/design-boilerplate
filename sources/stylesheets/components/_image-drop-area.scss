@@ -7,7 +7,7 @@
   overflow: hidden;
   margin-top: 10px;
 
-  [data-view-state="editmode"] & {
+  .editmode & {
     cursor: pointer;
   }
 

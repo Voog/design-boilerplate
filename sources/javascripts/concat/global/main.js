@@ -196,6 +196,7 @@
   // Enables the usage of the initiations outside this file.
   // For example add "<script>site.initBlogPage();</script>" at the end of the "Blog & News" page to initiate blog listing view functions.
   window.site = $.extend(window.site || {}, {
+    handleProductPageContent: handleProductPageContent,
     initFrontPage: initFrontPage,
     initCommonPage: initCommonPage,
     initProductPage: initProductPage,
@@ -203,10 +204,6 @@
     initBlogPage: initBlogPage,
     initPostPage: initPostPage,
     bindSiteSearch: bindSiteSearch
-  });
-
-  window.template = $.extend(window.template || {}, {
-    handleProductPageContent: handleProductPageContent
   });
 
   // Initiates site wide functions.

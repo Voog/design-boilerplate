@@ -1733,7 +1733,7 @@ body.dark-background {
   left: 0;
 }
 
-[data-view-state="editmode"] .item-top {
+.editmode .item-top {
   cursor: pointer;
 }
 
