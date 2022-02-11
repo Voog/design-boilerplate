@@ -143,6 +143,10 @@ body {
   .menu-link {
     color: var(--third-color);
 
+    &.current-page {
+      color: var(--primary-color);
+    }
+
     .dark-background & {
       @include query($tablet-2, 'min-width') {
         color: var(--fourth-color);

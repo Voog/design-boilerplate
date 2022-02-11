@@ -72,6 +72,10 @@ body.dark-background {
   color: var(--third-color);
 }
 
+.menu .menu-link.current-page {
+  color: var(--primary-color);
+}
+
 @media screen and (min-width: 752px) {
   .dark-background .menu .menu-link {
     color: var(--fourth-color);

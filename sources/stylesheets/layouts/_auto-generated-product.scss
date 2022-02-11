@@ -12,6 +12,7 @@
     .flex_row-2--item-40 > .flex_col {
       position: sticky;
       top: 104px;
+      z-index: $zindex-ca-interaction-button + 1;
     }
   }
 

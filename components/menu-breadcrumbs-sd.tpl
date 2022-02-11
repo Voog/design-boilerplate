@@ -6,7 +6,7 @@
     {%- assign pageUrl = page.url | remove_first: "/" -%}
 
     <li class="menu-item">
-      <a class="{% if forloop.index > 1 %}with_arrow{% endif %} menu-link" href="/{{ listItem.item.id }}">
+      <a class="{% if forloop.index > 1 %}with_arrow{% endif %}{% if forloop.last %} current-page{% endif %} menu-link" href="/{{ listItem.item.id }}">
         {{ listItem.item.name }}
       </a>
     </li>
