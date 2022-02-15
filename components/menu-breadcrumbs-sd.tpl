@@ -9,7 +9,7 @@
       {% continue %}
     {% endif %}
     <li class="menu-item">
-      <a class="{% if rootShown == false and forloop.index > 2 %} with_arrow{% elsif rootShown == true and forloop.index > 1 %} with_arrow{% endif %}{% if forloop.last %} current-page{% endif %} menu-link" href="/{{ listItem.item.id }}">
+      <a class="{% if rootShown == false and forloop.index > 2 %}with_arrow{% elsif rootShown == true and forloop.index > 1 %}with_arrow{% endif %}{% if forloop.last %} current-page{% endif %} menu-link" href="/{{ listItem.item.id }}">
         {{ listItem.item.name }}
       </a>
     </li>
