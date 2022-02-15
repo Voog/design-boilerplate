@@ -248,4 +248,5 @@ body.dark-background {
   font-style: var(--content-area-product-title__font-style);
   -webkit-text-decoration: var(--content-area-product-title__text-decoration);
           text-decoration: var(--content-area-product-title__text-decoration);
+  text-align: var(--content-area-product-title__alignment);
 }

@@ -164,6 +164,14 @@
   --content-link-hover-color: rgba(0, 102, 187, 0.8);
   /* VoogStyle
     "pathI18n": ["product", "title"],
+    "titleI18n": "alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --content-area-product-title__alignment: left;
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
     "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
