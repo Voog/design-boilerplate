@@ -143,6 +143,10 @@ body {
   .menu-link {
     color: var(--third-color);
 
+    &.current-page {
+      color: var(--primary-color);
+    }
+
     .dark-background & {
       @include query($tablet-2, 'min-width') {
         color: var(--fourth-color);
@@ -371,5 +375,6 @@ body {
     font-weight: var(--content-area-product-title__font-weight);
     font-style: var(--content-area-product-title__font-style);
     text-decoration: var(--content-area-product-title__text-decoration);
+    text-align: var(--content-area-product-title__alignment);
   }
 }

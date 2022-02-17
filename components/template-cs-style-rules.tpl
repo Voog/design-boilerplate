@@ -72,6 +72,10 @@ body.dark-background {
   color: var(--third-color);
 }
 
+.menu .menu-link.current-page {
+  color: var(--primary-color);
+}
+
 @media screen and (min-width: 752px) {
   .dark-background .menu .menu-link {
     color: var(--fourth-color);
@@ -244,4 +248,5 @@ body.dark-background {
   font-style: var(--content-area-product-title__font-style);
   -webkit-text-decoration: var(--content-area-product-title__text-decoration);
           text-decoration: var(--content-area-product-title__text-decoration);
+  text-align: var(--content-area-product-title__alignment);
 }
