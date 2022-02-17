@@ -7,10 +7,9 @@
 {%- endif -%}
 
 <ul class="menu menu-horizontal menu-public menu-breadcrumbs" data-search-indexing-allowed="false">
-  {%- assign rootShown = true -%}
   {%- for listItem in breadcrumbsObj.itemListElement offset: breadcrumbsOffset %}
     <li class="menu-item">
-      <a class="{% if forloop.index > 1 %}with_arrow{% endif %}{% if forloop.last %} current-page{% endif %} menu-link" href="/{{ listItem.item.id }}">
+      <a class="menu-link{% if forloop.index > 1 %} with_arrow{% endif %}{% if forloop.last %} current-page{% endif %}" href="/{{ listItem.item.id }}">
         {{ listItem.item.name }}
       </a>
     </li>
