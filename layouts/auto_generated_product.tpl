@@ -74,7 +74,7 @@
                   <div class="item-top product-image">
                     <div class="top-inner">
                       {%- if product.image != blank %}
-                        {% image product.image loading: 'lazy' target_width: "1280" class: "item-image not-cropped" %}
+                        {% image product.image loading: 'lazy' target_width: "600" class: "item-image not-cropped" %}
                       {% endif -%}
                     </div>
                   </div>
