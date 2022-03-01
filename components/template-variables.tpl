@@ -3,6 +3,9 @@
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% if blog_article_page %}
     {% assign body_bg = article.data.body_bg %}
+  {% elsif product_page %}
+    {% assign body_bg_key = template_settings.product.body_bg.key %}
+    {% assign body_bg = site.data[body_bg_key] %}
   {% else %}
     {% assign body_bg = page.data.body_bg %}
   {% endif %}
@@ -37,6 +40,9 @@
   {% comment %}SITE CONTAINER RELATED VARIABLES.{% endcomment %}
   {% if blog_article_page %}
     {% assign container_bg = article.data.container_bg %}
+  {% elsif product_page %}
+    {% assign container_bg_key = template_settings.product.container_bg.key %}
+    {% assign container_bg = site.data[container_bg_key] %}
   {% else %}
     {% assign container_bg = page.data.container_bg %}
   {% endif %}

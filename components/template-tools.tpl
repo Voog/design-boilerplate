@@ -7,6 +7,8 @@
 
     {% if blog_article_page %}
       var pageType = 'articlePage';
+    {% elsif product_page %}
+      var pageType = 'productPage';
     {% else %}
       var pageType = 'contentPage',
           pageData = new Edicy.CustomData({

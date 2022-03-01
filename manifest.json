@@ -232,6 +232,20 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-settings-json.tpl",
+      "layout_name": "template-settings-json",
+      "title": "template-settings-json"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-settings.tpl",
+      "layout_name": "template-settings",
+      "title": "template-settings"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-styles.tpl",
       "layout_name": "template-styles",
       "title": "template-styles"

@@ -6,7 +6,7 @@
 <script src="{{ javascripts_path }}/application.min.js?v=pripyat-2.3.1"></script>
 
 {%- if editmode -%}
-  <script src="{{ javascripts_path }}/editmode.min.js?v=pripyat-2.3.1"></script>
+  <script src="{{ javascripts_path }}/editmode.min.js?v={{ template_settings.version }}"></script>
 {%- endif -%}
 
 {% sitejs_include %}
