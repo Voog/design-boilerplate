@@ -2,7 +2,7 @@
 {% comment %}https://developers.facebook.com/tools/debug - Debug after each modification{% endcomment %}
 {% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">{% endif %}
 <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
-<meta property="og:url" content="{{ site.url }}{% if article %}{{ article.url | remove_first:'/' }}{% else %}{{ page.url | remove_first:'/' }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{% if article %}{{ article.url | remove_first:'/' }}{% elsif product %}{{ product.url | remove_first:'/' }}{% else %}{{ page.url | remove_first:'/' }}{% endif %}">
 <meta property="og:title" content="{% title %}">
 <meta property="og:site_name" content="{{ page.site_title | escape }}">
 
@@ -10,6 +10,10 @@
 {% if article %}
   {% if article.image? %}
     {% assign og_image = article.image.for-width-1200 %}
+  {% endif %}
+{% elsif product %}
+  {% if product.image? %}
+    {% assign og_image = product.image.for-width-1200 %}
   {% endif %}
 {% elsif page.image? %}
   {% assign og_image = page.image.for-width-1200 %}
