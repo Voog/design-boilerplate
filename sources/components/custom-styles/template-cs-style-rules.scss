@@ -455,3 +455,16 @@ body {
     }
   }
 }
+
+.edy-product-widget-filter-sort option {
+  color: var(--primary-color);
+}
+
+.dark-background {
+  .edy-product-widget-filter-name,
+  .edy-product-widget-filter-sort,
+  .edy-product-widget-filter-label,
+  .edy-product-widget-filter-search-input {
+    color: var(--fourth-color);
+  }
+}

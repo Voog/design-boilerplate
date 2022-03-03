@@ -36,3 +36,14 @@
 .product-price {
   padding: 8px 0 24px 0;
 }
+
+.dark-background {
+  .edy-product-widget-filter-sort,
+  .edy-product-widget-filter-search-input {
+    opacity: .7;
+  }
+
+  .edy-product-widget-filter-label {
+    opacity: .5;
+  }
+}
