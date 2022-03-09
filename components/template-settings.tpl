@@ -2,4 +2,4 @@
   {% include 'template-settings-json' %}
 {%- endcapture -%}
 
-{%- assign template_settings = template_settings_json | replace: "PREFIX", 'pripyat' | json_parse -%}
+{%- assign template_settings = template_settings_json | replace: 'PREFIX', 'pripyat' | json_parse -%}

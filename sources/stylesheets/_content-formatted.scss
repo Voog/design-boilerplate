@@ -183,7 +183,6 @@
       @include border(all, 1px, solid, $white, 0.75);
 
       &:hover {
-        //@include color($white, 1);
         @include border(all,1px,solid,$white, 0.1);
         opacity: .8;
       }

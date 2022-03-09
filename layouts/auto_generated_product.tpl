@@ -7,7 +7,7 @@
 
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
-  {% include "template-styles" body_bg_key: template_settings.product.body_bg.key %}
+  {% include "template-styles" %}
 </head>
 
 {%- capture bottom_content_html -%}
