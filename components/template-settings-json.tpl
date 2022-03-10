@@ -9,5 +9,5 @@
       "value": {}
     }
   },
-  "version": "pripyat-2.3.1"
+  "version": "pripyat-2.3.2"
 }
