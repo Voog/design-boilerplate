@@ -91,6 +91,8 @@
 
     if (pageType === 'articlePage') {
       Edicy.articles.currentArticle.setData(dataBgKey, commitData);
+    } else if (pageType === 'productPage') {
+      siteData.set(dataBgKey, commitData);
     } else {
       pageData.set(dataBgKey, commitData);
     };

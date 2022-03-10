@@ -7,7 +7,13 @@
         background-image: none;
       }
     {% else %}
-      {% for imageSize in page.data.body_bg.imageSizes %}
+      {% if product_page == true %}
+        {% assign imageSizes = site.data[body_bg_key].imageSizes %}
+      {% else %}
+        {% assign imageSizes = page.data.body_bg.imageSizes %}
+      {% endif %}
+
+      {% for imageSize in imageSizes %}
         {% if forloop.first %}
           .background-image {
             background-image: url("{{ imageSize.url }}");

@@ -158,7 +158,8 @@
     margin: 20px 40px;
   }
 
-  .custom-btn {
+  .custom-btn,
+  .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
     display: inline-block;
     padding: 7px 9px;
     font-size: 14px;
@@ -168,6 +169,7 @@
     opacity: .75;
 
     &:hover {
+      @include bg($white);
       @include border(all,1px,solid,$black, 0.1);
     }
 
@@ -177,10 +179,10 @@
 
     .dark-background & {
       @include bg($black);
+      @include color($white, 1);
       @include border(all, 1px, solid, $white, 0.75);
 
       &:hover {
-        @include color($white, 1);
         @include border(all,1px,solid,$white, 0.1);
         opacity: .8;
       }
