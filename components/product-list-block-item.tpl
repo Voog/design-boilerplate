@@ -1,6 +1,5 @@
 {%- load buy_button to "buy_button" q.content.parent_id=_entityData.page_id q.content.parent_type="page"
 q.content.name="body" s="content.position" -%}
-{%- assign product = buy_button.product -%}
 <div class="product_item js-product-item flex_row-3--item">
   <div class="mar_0-16">
     <div class="product_item-wrap product_item_list p-rel">
