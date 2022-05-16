@@ -16,8 +16,8 @@
 <meta property="og:site_name" content="{{ page.site_title | escape }}">
 
 {% comment %}Open Graph image{% endcomment %}
-{% if og_obj.image? %}
-  {% assign og_image = og_obj.image.for-width-1200 %}
+{% if og_obj.og_image? %}
+  {% assign og_image = og_obj.og_image.for-width-1200 %}
 {% endif %}
 
 {% if og_image %}
