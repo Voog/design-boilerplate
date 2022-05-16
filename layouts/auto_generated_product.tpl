@@ -28,13 +28,13 @@
 
 <body class="product_page js-bg-picker-area">
   {% if editmode %}
-    <button 
-      class="voog-bg-picker-btn js-background-settings" 
-      data-bg-key="{{ body_bg_key }}" 
+    <button
+      class="voog-bg-picker-btn js-background-settings"
+      data-bg-key="{{ body_bg_key }}"
       data-bg-picture-boolean="true"
-      data-bg-image="{{ body_bg_image }}" 
+      data-bg-image="{{ body_bg_image }}"
       data-bg-image-sizes="{{ body_bg_image_sizes_str | escape }}"
-      data-bg-color="{{ body_bg_color }}" 
+      data-bg-color="{{ body_bg_color }}"
       data-bg-color-data="{{ body_bg_color_data_str | escape }}">
     </button>
   {% endif %}
@@ -47,9 +47,9 @@
       <div class="background-color js-background-color">
 
         {% if editmode %}
-          <button class="voog-bg-picker-btn js-background-settings" 
+          <button class="voog-bg-picker-btn js-background-settings"
             data-bg-key="{{ container_bg_key }}"
-            data-bg-picture-boolean="false" 
+            data-bg-picture-boolean="false"
             data-bg-color="{{ container_bg_color }}"
             data-bg-color-data="{{ container_bg_color_data_str | escape }}">
           </button>
@@ -83,7 +83,9 @@
 
               {%- if gallery_content_size > 0 or editmode -%}
                 <section class="mar_0-16 content-body content-formatted mar_t-32 js-product-gallery" data-search-indexing-allowed="true">
-                  {% content bind=product name="gallery" %}
+                  {%- assign gallery_title = "gallery" | lce -%}
+                  {%- assign gallery_title_tooltip = "content_tooltip_additional_images" | lce -%}
+                  {% content bind=product name="gallery" title=gallery_title title_tooltip=gallery_title_tooltip %}
                 </section>
               {% endif -%}
             </div>
@@ -113,7 +115,15 @@
                     {% include "buy-button" %}
                   </div>
 
-                  {% content bind=product %}
+                  <div class="mar_b-32">
+                    {%- assign cross_page_info_title = "cross_page_info" | lce  -%}
+                    {%- assign cross_page_info_title_tooltip = "content_tooltip_all_pages_same_type" | lce -%}
+                    {% xcontent name="cross-page-info" title=cross_page_info_title title_tooltip=cross_page_info_title_tooltip %}
+                  </div>
+
+                  {%- assign content_title = "content" | lce -%}
+                  {%- assign content_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                  {% content bind=product title=content_title title_tooltip=content_title_tooltip %}
                 </section>
               </div>
             </div>
@@ -123,7 +133,9 @@
             <section
               class="content-product-wide content-area"
               data-search-indexing-allowed="true">
-              {% content bind=product name="content" %}
+              {%- assign bottom_content_title = "additional_content" | lce -%}
+              {%- assign bottom_content_title_tooltip = "content_tooltip_additional_information" | lce -%}
+              {% content bind=product name="content" title=bottom_content_title title_tooltip=bottom_content_title_tooltip %}
             </section>
           {%- endif -%}
 
