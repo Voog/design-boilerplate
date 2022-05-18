@@ -31,7 +31,8 @@
         {% include "menu-level-2" %}
 
         <main class="content" role="main">
-          <section class="content-body content-formatted" data-search-indexing-allowed="true">{% content %}</section>
+          {%- assign content_slogan_title = "content" | lce -%}
+          <section class="content-body content-formatted" data-search-indexing-allowed="true">{% content title=content_slogan_title %}</section>
           {% include 'menu-breadcrumbs' %}
           {% include 'product-list-block' %}
         </main>

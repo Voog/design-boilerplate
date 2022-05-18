@@ -27,10 +27,11 @@
         {% include "tags-blog" %}
 
         <main class="content" role="main" data-search-indexing-allowed="true">
-          <section class="content-body content-formatted post-intro-content" {{ edy_intro_edit_text }}>{% content %}</section>
+          {%- assign content_default_title = "content" | lce -%}
+          <section class="content-body content-formatted post-intro-content" {{ edy_intro_edit_text }}>{% content title=content_default_title %}</section>
 
           {% addbutton %}
-          
+
           {% for article in articles %}
             {% include "post-box" %}
           {% endfor %}

@@ -33,7 +33,8 @@
             <div class="content-slogan content-formatted js-content-optional">{% content name="slogan" %}</div>
           </header>
 
-          <section class="content-body content-formatted">{% content %}</section>
+          {%- assign content_default_title = "content" | lce -%}
+          <section class="content-body content-formatted">{% content title=content_default_title %}</section>
         </main>
 
         {% include "footer" %}
