@@ -26,6 +26,14 @@
 
 {%- assign gallery_content_size = gallery_content_html | strip | size -%}
 
+{%- capture product_social_html -%}
+  {%- unless editmode -%}
+    {%- xcontent name="product-social" -%}
+  {%- endunless -%}
+{%- endcapture -%}
+
+{%- assign product_social_size = product_social_html | strip | size -%}
+
 <body class="product_page js-bg-picker-area">
   {% if editmode %}
     <button
@@ -115,11 +123,13 @@
                     {% include "buy-button" %}
                   </div>
 
-                  <div class="mar_b-32">
-                    {%- assign cross_page_info_title = "cross_page_info" | lce  -%}
-                    {%- assign cross_page_info_title_tooltip = "content_tooltip_all_pages_same_type" | lce -%}
-                    {% xcontent name="cross-page-info" title=cross_page_info_title title_tooltip=cross_page_info_title_tooltip %}
-                  </div>
+                  {%- if editmode or product_social_size > 0 -%}
+                    <div class="mar_b-32">
+                      {%- assign cross_page_info_title = "cross_page_info" | lce  -%}
+                      {%- assign cross_page_info_title_tooltip = "content_tooltip_all_pages_same_type" | lce -%}
+                      {% xcontent name="product-social" title=cross_page_info_title title_tooltip=cross_page_info_title_tooltip %}
+                    </div>
+                  {%- endif -%}
 
                   {%- assign content_title = "content" | lce -%}
                   {%- assign content_title_tooltip = "content_tooltip_specific_page" | lce -%}

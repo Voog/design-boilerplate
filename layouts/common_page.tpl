@@ -33,7 +33,7 @@
         <main class="content" role="main" data-search-indexing-allowed="true">
           {%- assign content_slogan_title = "title" | lce -%}
           {%- assign content_slogan_title_tooltip = "content_tooltip_current_page_title" | lce -%}
-          <header class="content-header content-formatted" {{ edy_intro_edit_text }}>{% content name="slogan" title=content_slogan_title title_tooltip=content_slogan_title_tooltip %}</header>
+          <header class="content-header content-formatted">{% content name="slogan" title=content_slogan_title title_tooltip=content_slogan_title_tooltip %}</header>
           {%- assign content_default_title = "content" | lce -%}
           <section class="content-body content-formatted">{% content title=content_default_title %}</section>
         </main>
