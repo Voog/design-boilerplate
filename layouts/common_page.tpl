@@ -35,7 +35,8 @@
           {%- assign content_slogan_title_tooltip = "content_tooltip_current_page_title" | lce -%}
           <header class="content-header content-formatted">{% content name="slogan" title=content_slogan_title title_tooltip=content_slogan_title_tooltip %}</header>
           {%- assign content_default_title = "content" | lce -%}
-          <section class="content-body content-formatted">{% content title=content_default_title %}</section>
+          {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+          <section class="content-body content-formatted">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</section>
         </main>
 
         {% include "footer" %}

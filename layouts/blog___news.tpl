@@ -28,7 +28,8 @@
 
         <main class="content" role="main" data-search-indexing-allowed="true">
           {%- assign content_default_title = "content" | lce -%}
-          <section class="content-body content-formatted post-intro-content" {{ edy_intro_edit_text }}>{% content title=content_default_title %}</section>
+          {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+          <section class="content-body content-formatted post-intro-content">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</section>
 
           {% addbutton %}
 

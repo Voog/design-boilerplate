@@ -27,14 +27,15 @@
 
         <main class="content" role="main" data-search-indexing-allowed="true">
           <header class="content-header">
-            {% if editmode or site.header.size > 0 %}<div class="content-title content-formatted" {{ edy_intro_edit_text }}>{% editable site.header %}</div>{% endif %}
+            {% if editmode or site.header.size > 0 %}<div class="content-title content-formatted">{% editable site.header %}</div>{% endif %}
 
             {% capture content_slogan_html %}{% unless editmode %}{% content name="slogan" %}{% endunless %}{% endcapture %}
             <div class="content-slogan content-formatted js-content-optional">{% content name="slogan" %}</div>
           </header>
 
           {%- assign content_default_title = "content" | lce -%}
-          <section class="content-body content-formatted">{% content title=content_default_title %}</section>
+          {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+          <section class="content-body content-formatted">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</section>
         </main>
 
         {% include "footer" %}
