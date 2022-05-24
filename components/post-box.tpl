@@ -22,7 +22,9 @@
     {% if post-box == "article" %}
       <div class="post-excerpt content-formatted" {{ edy_intro_edit_text }}>{% editable article.excerpt %}</div>
       <div class="post-body content-formatted">{% editable article.body %}</div>
-      <div class="post-body content-formatted">{% content name="additional_body" bind="Article" %}</div>
+      {%- assign content_additional_title = "additional_content" | lce -%}
+      {%- assign content_additional_title_tooltip = "content_tooltip_additional_information" | lce -%}
+      <div class="post-body content-formatted">{% content name="additional_body" bind="Article" title=content_additional_title title_tooltip=content_additional_title_tooltip %}</div>
     {% endif %}
   </div>
 

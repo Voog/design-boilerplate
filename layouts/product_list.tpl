@@ -31,7 +31,9 @@
         {% include "menu-level-2" %}
 
         <main class="content" role="main">
-          <section class="content-body content-formatted" data-search-indexing-allowed="true">{% content %}</section>
+          {%- assign content_default_title = "content" | lce -%}
+          {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+          <section class="content-body content-formatted" data-search-indexing-allowed="true">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</section>
           {% include 'menu-breadcrumbs' %}
           {% include 'product-list-block' %}
         </main>

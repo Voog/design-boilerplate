@@ -60,7 +60,9 @@
                 {%- endif -%}
               </div>
               <section class="content-body content-formatted mar_0-32 mar_t-32" data-search-indexing-allowed="true">
-                {% content name="gallery" %}
+                {%- assign gallery_title = "gallery" | lce -%}
+                {%- assign gallery_title_tooltip = "content_tooltip_additional_images" | lce -%}
+                {% content name="gallery" title=gallery_title title_tooltip=gallery_title_tooltip %}
               </section>
             </div>
 
@@ -74,7 +76,9 @@
                     {% endcontentblock %}
                   </div>
 
-                  {% contentblock %}{{ "write_product_description_here" | lc: editor_locale }}{% endcontentblock %}
+                  {%- assign content_title = "content" | lce -%}
+                  {%- assign content_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                  {% contentblock title=content_title title_tooltip=content_title_tooltip %}{{ "write_product_description_here" | lc: editor_locale }}{% endcontentblock %}
                 </section>
               </div>
             </div>
