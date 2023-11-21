@@ -1,14 +1,16 @@
-{%- if product.price_min_with_tax != product.price_max_with_tax -%}
-  {%- assign with_price = true -%}
-{%- else -%}
+{%- if product.price_min_with_tax == product.price_max_with_tax and
+  product.effective_price_min_with_tax == product.effective_price_max_with_tax
+-%}
   {%- assign with_price = false -%}
+{%- else -%}
+  {%- assign with_price = true -%}
 {%- endif -%}
 
 {%- capture _button_attributes %}
   data-product-id="{{ product.id }}"
   data-product="{{ product | json | escape }}"
   data-settings="{&quot;title&quot;:&quot;{{ "add_to_cart" | lc | escape_once }}&quot;
-    {%- if with_price -%}
+    {%- if with_price and product.uses_variants -%}
       ,&quot;button_style&quot;:&quot;with_price&quot;
     {%- endif -%}
   }"
@@ -44,11 +46,9 @@
         {% else %}
           <span class="edy-buy-button-title">{{ 'add_to_cart' | lc | escape_once }}</span>
         {% endif -%}
-
-        {%- if with_price and product.price_min_with_tax == product.price_max_with_tax -%}
-          <span class="edy-buy-button-price">{{ product.price_with_tax | money_with_currency: product.currency }}</span>
-        {%- endif -%}
       </div>
+
+      <div class="edy-buy-button-price-container"></div>
     </div>
   </div>
 {% else %}

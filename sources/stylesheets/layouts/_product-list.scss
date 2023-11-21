@@ -10,7 +10,7 @@
         word-break: break-word;
 
         .dark-background & {
-          color: $white;
+          color: var(--fourth-color);
         }
       }
 
