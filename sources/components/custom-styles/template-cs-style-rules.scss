@@ -340,6 +340,22 @@ body {
       // scss-lint:disable NestingDepth
     }
   }
+
+  .edy-buy-button-price-container {
+    .edy-buy-button-price-original,
+    .edy-buy-button-effective-price {
+      color: var(--primary-color);
+    }
+  }
+
+  .dark-background & {
+    .edy-buy-button-price-container {
+      .edy-buy-button-price-original,
+      .edy-buy-button-effective-price {
+        color: var(--fourth-color);
+      }
+    }
+  }
 }
 
 .blog-page .post-read-more-btn {
@@ -360,7 +376,10 @@ body {
     font-size: var(--content-area-product-price__font-size);
     font-weight: var(--content-area-product-price__font-weight);
     font-style: var(--content-area-product-price__font-style);
-    text-decoration: var(--content-area-product-price__text-decoration);
+
+    .product-price-final {
+      text-decoration: var(--content-area-product-price__text-decoration);
+    }
 
     .dark-background & {
       color: var(--fourth-color);
@@ -399,7 +418,6 @@ body {
         color: var(--fourth-color);
       }
 
-      .edy-product-widget-item-price,
       .edy-product-widget-item-description {
         color: var(--fourth-color);
         opacity: .7;
@@ -426,18 +444,13 @@ body {
   }
 }
 
-.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap {
-  .dark-background & {
+.dark-background {
+  .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap {
     .edy-product-widget-item-header {
       .edy-product-widget-item-title {
         .edy-product-widget-item-link {
           color: var(--fourth-color);
         }
-      }
-
-      .edy-product-widget-item-price {
-        color: var(--fourth-color);
-        opacity: .7;
       }
 
       .edy-product-widget-item-out-of-stock {
@@ -461,10 +474,16 @@ body {
 }
 
 .dark-background {
+  .edy-product-widget-item-price-original,
+  .edy-product-widget-item-price-final,
   .edy-product-widget-filter-name,
   .edy-product-widget-filter-sort,
   .edy-product-widget-filter-label,
   .edy-product-widget-filter-search-input {
     color: var(--fourth-color);
+  }
+
+  .edy-product-widget-item-price-original {
+    opacity: .4;
   }
 }

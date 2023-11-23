@@ -35,6 +35,16 @@
 
 .product-price {
   padding: 8px 0 24px 0;
+
+  .product-price-original {
+    display: inline-block;
+    padding-right: 4px;
+    opacity: .4;
+  }
+
+  .product-price-final {
+    display: inline-block;
+  }
 }
 
 .dark-background {
