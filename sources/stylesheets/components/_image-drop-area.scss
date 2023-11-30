@@ -7,8 +7,10 @@
   overflow: hidden;
   margin-top: 10px;
 
-  .editmode & {
-    cursor: pointer;
+  &:not(.without-pointer) {
+    .editmode & {
+      cursor: pointer;
+    }
   }
 
   &:hover {
