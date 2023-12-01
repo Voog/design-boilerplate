@@ -1746,7 +1746,7 @@ body.dark-background {
   left: 0;
 }
 
-.editmode .item-top {
+.editmode .item-top:not(.without-pointer) {
   cursor: pointer;
 }
 
@@ -2245,12 +2245,16 @@ body.dark-background {
   margin: 24px 0;
 }
 
-.product-content .without-image .item-top {
+.product-content .without-images .item-top {
   background-image: url("../assets/ico-placeholder.svg");
   background-color: #F2F2F2;
   background-size: 40px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.product-content .product-gallery {
+  margin-top: 10px;
 }
 
 .product-description {
