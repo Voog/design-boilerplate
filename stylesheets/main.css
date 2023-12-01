@@ -2253,6 +2253,10 @@ body.dark-background {
   background-position: center;
 }
 
+.product-content .product-gallery {
+  margin-top: 10px;
+}
+
 .product-description {
   margin-bottom: 24px;
 }
